@@ -85,7 +85,13 @@
    "deezer_id": 346,
    "spotify_search_uri": "spotify:search:Jimmy%20Eat%20World",
    "spotify_web_url": "https://open.spotify.com/search/Jimmy%20Eat%20World",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Mainstage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "6:18 PM",
+   "pred_time_min": 1098,
+   "pred_setlen_min": 40,
+   "pred_confidence": "high"
   },
   {
    "name": "Underoath",
@@ -133,7 +139,13 @@
    "deezer_id": 4338,
    "spotify_search_uri": "spotify:search:Underoath",
    "spotify_web_url": "https://open.spotify.com/search/Underoath",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "6:45 PM",
+   "pred_time_min": 1125,
+   "pred_setlen_min": 35,
+   "pred_confidence": "medium"
   },
   {
    "name": "The Devil Wears Prada",
@@ -180,7 +192,13 @@
    "deezer_id": 68213,
    "spotify_search_uri": "spotify:search:The%20Devil%20Wears%20Prada",
    "spotify_web_url": "https://open.spotify.com/search/The%20Devil%20Wears%20Prada",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Mainstage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "4:12 PM",
+   "pred_time_min": 972,
+   "pred_setlen_min": 40,
+   "pred_confidence": "high"
   },
   {
    "name": "Crown the Empire",
@@ -223,7 +241,13 @@
    "deezer_id": 4039184,
    "spotify_search_uri": "spotify:search:Crown%20the%20Empire",
    "spotify_web_url": "https://open.spotify.com/search/Crown%20the%20Empire",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "6:00 PM",
+   "pred_time_min": 1080,
+   "pred_setlen_min": 35,
+   "pred_confidence": "medium"
   },
   {
    "name": "Taking Back Sunday",
@@ -266,7 +290,13 @@
    "deezer_id": 1290,
    "spotify_search_uri": "spotify:search:Taking%20Back%20Sunday",
    "spotify_web_url": "https://open.spotify.com/search/Taking%20Back%20Sunday",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Mainstage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "2:06 PM",
+   "pred_time_min": 846,
+   "pred_setlen_min": 40,
+   "pred_confidence": "high"
   },
   {
    "name": "Story of the Year",
@@ -317,7 +347,13 @@
    "deezer_id": 1288,
    "spotify_search_uri": "spotify:search:Story%20of%20the%20Year",
    "spotify_web_url": "https://open.spotify.com/search/Story%20of%20the%20Year",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "4:30 PM",
+   "pred_time_min": 990,
+   "pred_setlen_min": 35,
+   "pred_confidence": "low"
   },
   {
    "name": "Thrice",
@@ -369,7 +405,13 @@
    "deezer_id": 316,
    "spotify_search_uri": "spotify:search:Thrice",
    "spotify_web_url": "https://open.spotify.com/search/Thrice",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Mainstage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "2:06 PM",
+   "pred_time_min": 846,
+   "pred_setlen_min": 40,
+   "pred_confidence": "high"
   },
   {
    "name": "From First to Last",
@@ -417,7 +459,13 @@
    "deezer_id": 5793,
    "spotify_search_uri": "spotify:search:From%20First%20to%20Last",
    "spotify_web_url": "https://open.spotify.com/search/From%20First%20to%20Last",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "10:04 PM",
+   "pred_time_min": 1324,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Norma Jean",
@@ -454,7 +502,13 @@
    "deezer_id": 2174,
    "spotify_search_uri": "spotify:search:Norma%20Jean",
    "spotify_web_url": "https://open.spotify.com/search/Norma%20Jean",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "9:41 PM",
+   "pred_time_min": 1301,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Motion City Soundtrack",
@@ -497,7 +551,13 @@
    "deezer_id": 953,
    "spotify_search_uri": "spotify:search:Motion%20City%20Soundtrack",
    "spotify_web_url": "https://open.spotify.com/search/Motion%20City%20Soundtrack",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "9:17 PM",
+   "pred_time_min": 1277,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Set Your Goals",
@@ -540,7 +600,13 @@
    "deezer_id": 193436,
    "spotify_search_uri": "spotify:search:Set%20Your%20Goals",
    "spotify_web_url": "https://open.spotify.com/search/Set%20Your%20Goals",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "7:08 PM",
+   "pred_time_min": 1148,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Bayside",
@@ -584,7 +650,13 @@
    "deezer_id": 12836,
    "spotify_search_uri": "spotify:search:Bayside",
    "spotify_web_url": "https://open.spotify.com/search/Bayside",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "5:15 PM",
+   "pred_time_min": 1035,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Hot Mulligan",
@@ -634,7 +706,13 @@
    "deezer_id": 7087965,
    "spotify_search_uri": "spotify:search:Hot%20Mulligan",
    "spotify_web_url": "https://open.spotify.com/search/Hot%20Mulligan",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "3:46 PM",
+   "pred_time_min": 946,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Amigo the Devil",
@@ -673,7 +751,13 @@
    "deezer_id": 7908624,
    "spotify_search_uri": "spotify:search:Amigo%20the%20Devil",
    "spotify_web_url": "https://open.spotify.com/search/Amigo%20the%20Devil",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "2:06 PM",
+   "pred_time_min": 846,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Acceptance",
@@ -708,7 +792,13 @@
    "deezer_id": 4149,
    "spotify_search_uri": "spotify:search:Acceptance",
    "spotify_web_url": "https://open.spotify.com/search/Acceptance",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "1:15 PM",
+   "pred_time_min": 795,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Free Throw",
@@ -752,7 +842,13 @@
    "deezer_id": 4927699,
    "spotify_search_uri": "spotify:search:Free%20Throw",
    "spotify_web_url": "https://open.spotify.com/search/Free%20Throw",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "12:50 PM",
+   "pred_time_min": 770,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Boundaries",
@@ -788,7 +884,13 @@
    "deezer_id": 1022029,
    "spotify_search_uri": "spotify:search:Boundaries",
    "spotify_web_url": "https://open.spotify.com/search/Boundaries",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "10:30 PM",
+   "pred_time_min": 1350,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "The Wrecks",
@@ -822,7 +924,13 @@
    "deezer_id": 8635040,
    "spotify_search_uri": "spotify:search:The%20Wrecks",
    "spotify_web_url": "https://open.spotify.com/search/The%20Wrecks",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "9:41 PM",
+   "pred_time_min": 1301,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Guilt Trip",
@@ -853,7 +961,13 @@
    "deezer_id": 356950372,
    "spotify_search_uri": "spotify:search:Guilt%20Trip",
    "spotify_web_url": "https://open.spotify.com/search/Guilt%20Trip",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "8:28 PM",
+   "pred_time_min": 1228,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Daisy Grenade",
@@ -893,7 +1007,13 @@
    "deezer_id": 161736542,
    "spotify_search_uri": "spotify:search:Daisy%20Grenade",
    "spotify_web_url": "https://open.spotify.com/search/Daisy%20Grenade",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "7:40 PM",
+   "pred_time_min": 1180,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Raue",
@@ -927,7 +1047,13 @@
    "deezer_id": 7250328,
    "spotify_search_uri": "spotify:search:Raue",
    "spotify_web_url": "https://open.spotify.com/search/Raue",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "6:51 PM",
+   "pred_time_min": 1131,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Arm's Length",
@@ -970,7 +1096,13 @@
    "deezer_id": 70275402,
    "spotify_search_uri": "spotify:search:Arm%27s%20Length",
    "spotify_web_url": "https://open.spotify.com/search/Arm%27s%20Length",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "6:51 PM",
+   "pred_time_min": 1131,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Bear Vs. Shark",
@@ -1006,7 +1138,13 @@
    "deezer_id": 1578408,
    "spotify_search_uri": "spotify:search:Bear%20Vs.%20Shark",
    "spotify_web_url": "https://open.spotify.com/search/Bear%20Vs.%20Shark",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "4:50 PM",
+   "pred_time_min": 1010,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Bad Cop Bad Cop",
@@ -1045,7 +1183,13 @@
    "deezer_id": 1441158,
    "spotify_search_uri": "spotify:search:Bad%20Cop%20Bad%20Cop",
    "spotify_web_url": "https://open.spotify.com/search/Bad%20Cop%20Bad%20Cop",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "3:38 PM",
+   "pred_time_min": 938,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Big Ass Truck I.E.",
@@ -1087,7 +1231,13 @@
    "deezer_id": 304704261,
    "spotify_search_uri": "spotify:search:Big%20Ass%20Truck%20I.E.",
    "spotify_web_url": "https://open.spotify.com/search/Big%20Ass%20Truck%20I.E.",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "2:49 PM",
+   "pred_time_min": 889,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Whispers",
@@ -1126,7 +1276,13 @@
    "deezer_id": 342834031,
    "spotify_search_uri": "spotify:search:Whispers",
    "spotify_web_url": "https://open.spotify.com/search/Whispers",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "12:48 PM",
+   "pred_time_min": 768,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Simple Plan",
@@ -1174,7 +1330,13 @@
    "deezer_id": 87,
    "spotify_search_uri": "spotify:search:Simple%20Plan",
    "spotify_web_url": "https://open.spotify.com/search/Simple%20Plan",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Mainstage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "10:30 PM",
+   "pred_time_min": 1350,
+   "pred_setlen_min": 40,
+   "pred_confidence": "high"
   },
   {
    "name": "All Time Low",
@@ -1223,7 +1385,13 @@
    "deezer_id": 13191,
    "spotify_search_uri": "spotify:search:All%20Time%20Low",
    "spotify_web_url": "https://open.spotify.com/search/All%20Time%20Low",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Mainstage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "8:24 PM",
+   "pred_time_min": 1224,
+   "pred_setlen_min": 40,
+   "pred_confidence": "high"
   },
   {
    "name": "Hoobastank",
@@ -1274,7 +1442,13 @@
    "deezer_id": 490,
    "spotify_search_uri": "spotify:search:Hoobastank",
    "spotify_web_url": "https://open.spotify.com/search/Hoobastank",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Mainstage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "12:00 PM",
+   "pred_time_min": 720,
+   "pred_setlen_min": 40,
+   "pred_confidence": "medium"
   },
   {
    "name": "Escape the Fate",
@@ -1325,7 +1499,13 @@
    "deezer_id": 12882,
    "spotify_search_uri": "spotify:search:Escape%20the%20Fate",
    "spotify_web_url": "https://open.spotify.com/search/Escape%20the%20Fate",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "10:30 PM",
+   "pred_time_min": 1350,
+   "pred_setlen_min": 35,
+   "pred_confidence": "medium"
   },
   {
    "name": "The Used",
@@ -1376,7 +1556,13 @@
    "deezer_id": 1285,
    "spotify_search_uri": "spotify:search:The%20Used",
    "spotify_web_url": "https://open.spotify.com/search/The%20Used",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Mainstage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "6:18 PM",
+   "pred_time_min": 1098,
+   "pred_setlen_min": 40,
+   "pred_confidence": "high"
   },
   {
    "name": "We Came as Romans",
@@ -1424,7 +1610,13 @@
    "deezer_id": 356815,
    "spotify_search_uri": "spotify:search:We%20Came%20as%20Romans",
    "spotify_web_url": "https://open.spotify.com/search/We%20Came%20as%20Romans",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Mainstage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "4:12 PM",
+   "pred_time_min": 972,
+   "pred_setlen_min": 40,
+   "pred_confidence": "high"
   },
   {
    "name": "Bowling for Soup",
@@ -1467,7 +1659,13 @@
    "deezer_id": 8693,
    "spotify_search_uri": "spotify:search:Bowling%20for%20Soup",
    "spotify_web_url": "https://open.spotify.com/search/Bowling%20for%20Soup",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "8:15 PM",
+   "pred_time_min": 1215,
+   "pred_setlen_min": 35,
+   "pred_confidence": "medium"
   },
   {
    "name": "Silverstein",
@@ -1518,7 +1716,13 @@
    "deezer_id": 5721,
    "spotify_search_uri": "spotify:search:Silverstein",
    "spotify_web_url": "https://open.spotify.com/search/Silverstein",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "8:15 PM",
+   "pred_time_min": 1215,
+   "pred_setlen_min": 35,
+   "pred_confidence": "medium"
   },
   {
    "name": "Mayday Parade",
@@ -1566,7 +1770,13 @@
    "deezer_id": 13170,
    "spotify_search_uri": "spotify:search:Mayday%20Parade",
    "spotify_web_url": "https://open.spotify.com/search/Mayday%20Parade",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "7:30 PM",
+   "pred_time_min": 1170,
+   "pred_setlen_min": 35,
+   "pred_confidence": "medium"
   },
   {
    "name": "Alexisonfire",
@@ -1619,7 +1829,13 @@
    "deezer_id": 4076,
    "spotify_search_uri": "spotify:search:Alexisonfire",
    "spotify_web_url": "https://open.spotify.com/search/Alexisonfire",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "3:45 PM",
+   "pred_time_min": 945,
+   "pred_setlen_min": 35,
+   "pred_confidence": "low"
   },
   {
    "name": "MxPx",
@@ -1668,7 +1884,13 @@
    "deezer_id": 954,
    "spotify_search_uri": "spotify:search:MxPx",
    "spotify_web_url": "https://open.spotify.com/search/MxPx",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "3:00 PM",
+   "pred_time_min": 900,
+   "pred_setlen_min": 35,
+   "pred_confidence": "low"
   },
   {
    "name": "Dance Gavin Dance",
@@ -1718,7 +1940,13 @@
    "deezer_id": 72709,
    "spotify_search_uri": "spotify:search:Dance%20Gavin%20Dance",
    "spotify_web_url": "https://open.spotify.com/search/Dance%20Gavin%20Dance",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Mainstage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "12:00 PM",
+   "pred_time_min": 720,
+   "pred_setlen_min": 40,
+   "pred_confidence": "high"
   },
   {
    "name": "The Story So Far",
@@ -1760,7 +1988,13 @@
    "deezer_id": 81218,
    "spotify_search_uri": "spotify:search:The%20Story%20So%20Far",
    "spotify_web_url": "https://open.spotify.com/search/The%20Story%20So%20Far",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "12:00 PM",
+   "pred_time_min": 720,
+   "pred_setlen_min": 35,
+   "pred_confidence": "low"
   },
   {
    "name": "Hawthorne Heights",
@@ -1807,7 +2041,13 @@
    "deezer_id": 949,
    "spotify_search_uri": "spotify:search:Hawthorne%20Heights",
    "spotify_web_url": "https://open.spotify.com/search/Hawthorne%20Heights",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "10:30 PM",
+   "pred_time_min": 1350,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "The Ataris",
@@ -1852,7 +2092,13 @@
    "deezer_id": 4224,
    "spotify_search_uri": "spotify:search:The%20Ataris",
    "spotify_web_url": "https://open.spotify.com/search/The%20Ataris",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "9:39 PM",
+   "pred_time_min": 1299,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "The Summer Set",
@@ -1895,7 +2141,13 @@
    "deezer_id": 390116,
    "spotify_search_uri": "spotify:search:The%20Summer%20Set",
    "spotify_web_url": "https://open.spotify.com/search/The%20Summer%20Set",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "9:14 PM",
+   "pred_time_min": 1274,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Scary Kids Scaring Kids",
@@ -1936,7 +2188,13 @@
    "deezer_id": 70050,
    "spotify_search_uri": "spotify:search:Scary%20Kids%20Scaring%20Kids",
    "spotify_web_url": "https://open.spotify.com/search/Scary%20Kids%20Scaring%20Kids",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "8:24 PM",
+   "pred_time_min": 1224,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Emery",
@@ -1977,7 +2235,13 @@
    "deezer_id": 1230,
    "spotify_search_uri": "spotify:search:Emery",
    "spotify_web_url": "https://open.spotify.com/search/Emery",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "7:58 PM",
+   "pred_time_min": 1198,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Drop Dead, Gorgeous",
@@ -2020,7 +2284,13 @@
    "deezer_id": 72766,
    "spotify_search_uri": "spotify:search:Drop%20Dead%2C%20Gorgeous",
    "spotify_web_url": "https://open.spotify.com/search/Drop%20Dead%2C%20Gorgeous",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "7:40 PM",
+   "pred_time_min": 1180,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Glassjaw",
@@ -2072,7 +2342,13 @@
    "deezer_id": 11113,
    "spotify_search_uri": "spotify:search:Glassjaw",
    "spotify_web_url": "https://open.spotify.com/search/Glassjaw",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "6:43 PM",
+   "pred_time_min": 1123,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "The Starting Line",
@@ -2115,7 +2391,13 @@
    "deezer_id": 1289,
    "spotify_search_uri": "spotify:search:The%20Starting%20Line",
    "spotify_web_url": "https://open.spotify.com/search/The%20Starting%20Line",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "6:03 PM",
+   "pred_time_min": 1083,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Citizen",
@@ -2167,7 +2449,13 @@
    "deezer_id": 313452,
    "spotify_search_uri": "spotify:search:Citizen",
    "spotify_web_url": "https://open.spotify.com/search/Citizen",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "5:52 PM",
+   "pred_time_min": 1072,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Joyce Manor",
@@ -2217,7 +2505,13 @@
    "deezer_id": 1005305,
    "spotify_search_uri": "spotify:search:Joyce%20Manor",
    "spotify_web_url": "https://open.spotify.com/search/Joyce%20Manor",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "4:37 PM",
+   "pred_time_min": 997,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Dinosaur Pile-Up",
@@ -2261,7 +2555,13 @@
    "deezer_id": 282471,
    "spotify_search_uri": "spotify:search:Dinosaur%20Pile-Up",
    "spotify_web_url": "https://open.spotify.com/search/Dinosaur%20Pile-Up",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "4:02 PM",
+   "pred_time_min": 962,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "The Early November",
@@ -2301,7 +2601,13 @@
    "deezer_id": 1360,
    "spotify_search_uri": "spotify:search:The%20Early%20November",
    "spotify_web_url": "https://open.spotify.com/search/The%20Early%20November",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "1:36 PM",
+   "pred_time_min": 816,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "The Paradox",
@@ -2344,7 +2650,13 @@
    "deezer_id": 650581,
    "spotify_search_uri": "spotify:search:The%20Paradox",
    "spotify_web_url": "https://open.spotify.com/search/The%20Paradox",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "12:48 PM",
+   "pred_time_min": 768,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Meet Me @ The Altar",
@@ -2392,7 +2704,13 @@
    "deezer_id": 10292864,
    "spotify_search_uri": "spotify:search:Meet%20Me%20%40%20The%20Altar",
    "spotify_web_url": "https://open.spotify.com/search/Meet%20Me%20%40%20The%20Altar",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "12:24 PM",
+   "pred_time_min": 744,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Origami Angel",
@@ -2434,7 +2752,13 @@
    "deezer_id": 12956753,
    "spotify_search_uri": "spotify:search:Origami%20Angel",
    "spotify_web_url": "https://open.spotify.com/search/Origami%20Angel",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "12:00 PM",
+   "pred_time_min": 720,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Winona Fighter",
@@ -2471,7 +2795,13 @@
    "deezer_id": 210719647,
    "spotify_search_uri": "spotify:search:Winona%20Fighter",
    "spotify_web_url": "https://open.spotify.com/search/Winona%20Fighter",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "5:39 PM",
+   "pred_time_min": 1059,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Millington",
@@ -2517,7 +2847,13 @@
    "deezer_id": 10954100,
    "spotify_search_uri": "spotify:search:Millington",
    "spotify_web_url": "https://open.spotify.com/search/Millington",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "3:38 PM",
+   "pred_time_min": 938,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Papa Roach",
@@ -2565,7 +2901,13 @@
    "deezer_id": 89,
    "spotify_search_uri": "spotify:search:Papa%20Roach",
    "spotify_web_url": "https://open.spotify.com/search/Papa%20Roach",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Mainstage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "10:30 PM",
+   "pred_time_min": 1350,
+   "pred_setlen_min": 40,
+   "pred_confidence": "high"
   },
   {
    "name": "Plain White T's",
@@ -2610,7 +2952,13 @@
    "deezer_id": 959,
    "spotify_search_uri": "spotify:search:Plain%20White%20T%27s",
    "spotify_web_url": "https://open.spotify.com/search/Plain%20White%20T%27s",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "9:00 PM",
+   "pred_time_min": 1260,
+   "pred_setlen_min": 35,
+   "pred_confidence": "medium"
   },
   {
    "name": "Third Eye Blind",
@@ -2656,7 +3004,13 @@
    "deezer_id": 2473,
    "spotify_search_uri": "spotify:search:Third%20Eye%20Blind",
    "spotify_web_url": "https://open.spotify.com/search/Third%20Eye%20Blind",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "5:15 PM",
+   "pred_time_min": 1035,
+   "pred_setlen_min": 35,
+   "pred_confidence": "low"
   },
   {
    "name": "Lagwagon",
@@ -2700,7 +3054,13 @@
    "deezer_id": 1485,
    "spotify_search_uri": "spotify:search:Lagwagon",
    "spotify_web_url": "https://open.spotify.com/search/Lagwagon",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "3:45 PM",
+   "pred_time_min": 945,
+   "pred_setlen_min": 35,
+   "pred_confidence": "low"
   },
   {
    "name": "Reel Big Fish",
@@ -2744,7 +3104,13 @@
    "deezer_id": 2115,
    "spotify_search_uri": "spotify:search:Reel%20Big%20Fish",
    "spotify_web_url": "https://open.spotify.com/search/Reel%20Big%20Fish",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "2:15 PM",
+   "pred_time_min": 855,
+   "pred_setlen_min": 35,
+   "pred_confidence": "low"
   },
   {
    "name": "Phantom Planet",
@@ -2788,7 +3154,13 @@
    "deezer_id": 2230,
    "spotify_search_uri": "spotify:search:Phantom%20Planet",
    "spotify_web_url": "https://open.spotify.com/search/Phantom%20Planet",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "8:49 PM",
+   "pred_time_min": 1249,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "I Set My Friends on Fire",
@@ -2835,7 +3207,13 @@
    "deezer_id": 135241,
    "spotify_search_uri": "spotify:search:I%20Set%20My%20Friends%20on%20Fire",
    "spotify_web_url": "https://open.spotify.com/search/I%20Set%20My%20Friends%20on%20Fire",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "8:28 PM",
+   "pred_time_min": 1228,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Magnolia Park",
@@ -2876,7 +3254,13 @@
    "deezer_id": 48876371,
    "spotify_search_uri": "spotify:search:Magnolia%20Park",
    "spotify_web_url": "https://open.spotify.com/search/Magnolia%20Park",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "5:39 PM",
+   "pred_time_min": 1059,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Stand Atlantic",
@@ -2915,7 +3299,13 @@
    "deezer_id": 7837348,
    "spotify_search_uri": "spotify:search:Stand%20Atlantic",
    "spotify_web_url": "https://open.spotify.com/search/Stand%20Atlantic",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "5:02 PM",
+   "pred_time_min": 1022,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "South Arcade",
@@ -2955,7 +3345,13 @@
    "deezer_id": 157647322,
    "spotify_search_uri": "spotify:search:South%20Arcade",
    "spotify_web_url": "https://open.spotify.com/search/South%20Arcade",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "4:12 PM",
+   "pred_time_min": 972,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Dying Wish",
@@ -3000,7 +3396,13 @@
    "deezer_id": 138915322,
    "spotify_search_uri": "spotify:search:Dying%20Wish",
    "spotify_web_url": "https://open.spotify.com/search/Dying%20Wish",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "10:30 PM",
+   "pred_time_min": 1350,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Fox Lake",
@@ -3034,7 +3436,13 @@
    "deezer_id": 12084286,
    "spotify_search_uri": "spotify:search:Fox%20Lake",
    "spotify_web_url": "https://open.spotify.com/search/Fox%20Lake",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "8:53 PM",
+   "pred_time_min": 1253,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Pain of Truth",
@@ -3078,7 +3486,13 @@
    "deezer_id": 8401726,
    "spotify_search_uri": "spotify:search:Pain%20of%20Truth",
    "spotify_web_url": "https://open.spotify.com/search/Pain%20of%20Truth",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "8:04 PM",
+   "pred_time_min": 1204,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Leisure Hour",
@@ -3113,7 +3527,13 @@
    "deezer_id": 98333002,
    "spotify_search_uri": "spotify:search:Leisure%20Hour",
    "spotify_web_url": "https://open.spotify.com/search/Leisure%20Hour",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "1:36 PM",
+   "pred_time_min": 816,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Haywire",
@@ -3151,7 +3571,13 @@
    "deezer_id": 334977281,
    "spotify_search_uri": "spotify:search:Haywire",
    "spotify_web_url": "https://open.spotify.com/search/Haywire",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "1:12 PM",
+   "pred_time_min": 792,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Trxvis",
@@ -3185,7 +3611,13 @@
    "deezer_id": 131770302,
    "spotify_search_uri": "spotify:search:Trxvis",
    "spotify_web_url": "https://open.spotify.com/search/Trxvis",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "12:00 PM",
+   "pred_time_min": 720,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "The Academy Is...",
@@ -3229,7 +3661,13 @@
    "deezer_id": 2926,
    "spotify_search_uri": "spotify:search:The%20Academy%20Is...",
    "spotify_web_url": "https://open.spotify.com/search/The%20Academy%20Is...",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "1:30 PM",
+   "pred_time_min": 810,
+   "pred_setlen_min": 35,
+   "pred_confidence": "low"
   },
   {
    "name": "Doobie",
@@ -3272,7 +3710,13 @@
    "deezer_id": 337610,
    "spotify_search_uri": "spotify:search:Doobie",
    "spotify_web_url": "https://open.spotify.com/search/Doobie",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "10:30 PM",
+   "pred_time_min": 1350,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Mad Caddies",
@@ -3318,7 +3762,13 @@
    "deezer_id": 955,
    "spotify_search_uri": "spotify:search:Mad%20Caddies",
    "spotify_web_url": "https://open.spotify.com/search/Mad%20Caddies",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "10:05 PM",
+   "pred_time_min": 1325,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Waterparks",
@@ -3363,7 +3813,13 @@
    "deezer_id": 1678689,
    "spotify_search_uri": "spotify:search:Waterparks",
    "spotify_web_url": "https://open.spotify.com/search/Waterparks",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "8:53 PM",
+   "pred_time_min": 1253,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Fame on Fire",
@@ -3396,7 +3852,13 @@
    "deezer_id": 7046191,
    "spotify_search_uri": "spotify:search:Fame%20on%20Fire",
    "spotify_web_url": "https://open.spotify.com/search/Fame%20on%20Fire",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "7:16 PM",
+   "pred_time_min": 1156,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Kennyhoopla",
@@ -3433,7 +3895,13 @@
    "deezer_id": 13025827,
    "spotify_search_uri": "spotify:search:Kennyhoopla",
    "spotify_web_url": "https://open.spotify.com/search/Kennyhoopla",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "5:27 PM",
+   "pred_time_min": 1047,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Boston Manor",
@@ -3468,7 +3936,13 @@
    "deezer_id": 440759,
    "spotify_search_uri": "spotify:search:Boston%20Manor",
    "spotify_web_url": "https://open.spotify.com/search/Boston%20Manor",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "4:26 PM",
+   "pred_time_min": 986,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Games we Play",
@@ -3501,7 +3975,13 @@
    "deezer_id": 6792173,
    "spotify_search_uri": "spotify:search:Games%20we%20Play",
    "spotify_web_url": "https://open.spotify.com/search/Games%20we%20Play",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "9:17 PM",
+   "pred_time_min": 1277,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Blnko",
@@ -3534,7 +4014,13 @@
    "deezer_id": 69524312,
    "spotify_search_uri": "spotify:search:Blnko",
    "spotify_web_url": "https://open.spotify.com/search/Blnko",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "8:53 PM",
+   "pred_time_min": 1253,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Lakeview",
@@ -3567,7 +4053,13 @@
    "deezer_id": 482930,
    "spotify_search_uri": "spotify:search:Lakeview",
    "spotify_web_url": "https://open.spotify.com/search/Lakeview",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "8:28 PM",
+   "pred_time_min": 1228,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Codefendants",
@@ -3608,7 +4100,13 @@
    "deezer_id": 180018307,
    "spotify_search_uri": "spotify:search:Codefendants",
    "spotify_web_url": "https://open.spotify.com/search/Codefendants",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "6:27 PM",
+   "pred_time_min": 1107,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Oxymorrons",
@@ -3641,7 +4139,13 @@
    "deezer_id": 4043358,
    "spotify_search_uri": "spotify:search:Oxymorrons",
    "spotify_web_url": "https://open.spotify.com/search/Oxymorrons",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "5:15 PM",
+   "pred_time_min": 1035,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Vienna Vienna",
@@ -3683,7 +4187,13 @@
    "deezer_id": 258643872,
    "spotify_search_uri": "spotify:search:Vienna%20Vienna",
    "spotify_web_url": "https://open.spotify.com/search/Vienna%20Vienna",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "12:24 PM",
+   "pred_time_min": 744,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Scarlet House",
@@ -3718,7 +4228,13 @@
    "deezer_id": 1337926,
    "spotify_search_uri": "spotify:search:Scarlet%20House",
    "spotify_web_url": "https://open.spotify.com/search/Scarlet%20House",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "3:13 PM",
+   "pred_time_min": 913,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Hot Milk",
@@ -3756,7 +4272,13 @@
    "deezer_id": 221160325,
    "spotify_search_uri": "spotify:search:Hot%20Milk",
    "spotify_web_url": "https://open.spotify.com/search/Hot%20Milk",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "3:13 PM",
+   "pred_time_min": 913,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Good Sleepy",
@@ -3789,7 +4311,13 @@
    "deezer_id": 14737449,
    "spotify_search_uri": "spotify:search:Good%20Sleepy",
    "spotify_web_url": "https://open.spotify.com/search/Good%20Sleepy",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "12:48 PM",
+   "pred_time_min": 768,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Jutes",
@@ -3828,7 +4356,13 @@
    "deezer_id": 4739350,
    "spotify_search_uri": "spotify:search:Jutes",
    "spotify_web_url": "https://open.spotify.com/search/Jutes",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "6:27 PM",
+   "pred_time_min": 1107,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Honey Revenge",
@@ -3859,7 +4393,13 @@
    "deezer_id": 11861469,
    "spotify_search_uri": "spotify:search:Honey%20Revenge",
    "spotify_web_url": "https://open.spotify.com/search/Honey%20Revenge",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "10:05 PM",
+   "pred_time_min": 1325,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Suicide Silence",
@@ -3900,7 +4440,13 @@
    "deezer_id": 170672,
    "spotify_search_uri": "spotify:search:Suicide%20Silence",
    "spotify_web_url": "https://open.spotify.com/search/Suicide%20Silence",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "10:30 PM",
+   "pred_time_min": 1350,
+   "pred_setlen_min": 35,
+   "pred_confidence": "medium"
   },
   {
    "name": "Sleeping With Sirens",
@@ -3945,7 +4491,13 @@
    "deezer_id": 389588,
    "spotify_search_uri": "spotify:search:Sleeping%20With%20Sirens",
    "spotify_web_url": "https://open.spotify.com/search/Sleeping%20With%20Sirens",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Mainstage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "8:24 PM",
+   "pred_time_min": 1224,
+   "pred_setlen_min": 40,
+   "pred_confidence": "high"
   },
   {
    "name": "3OH!3",
@@ -3985,7 +4537,13 @@
    "deezer_id": 74882,
    "spotify_search_uri": "spotify:search:3OH%213",
    "spotify_web_url": "https://open.spotify.com/search/3OH%213",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "9:45 PM",
+   "pred_time_min": 1305,
+   "pred_setlen_min": 35,
+   "pred_confidence": "medium"
   },
   {
    "name": "División Minúscula",
@@ -4029,7 +4587,13 @@
    "deezer_id": 427421,
    "spotify_search_uri": "spotify:search:Divisi%C3%B3n%20Min%C3%BAscula",
    "spotify_web_url": "https://open.spotify.com/search/Divisi%C3%B3n%20Min%C3%BAscula",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "9:45 PM",
+   "pred_time_min": 1305,
+   "pred_setlen_min": 35,
+   "pred_confidence": "medium"
   },
   {
    "name": "Grandson",
@@ -4072,7 +4636,13 @@
    "deezer_id": 324922,
    "spotify_search_uri": "spotify:search:Grandson",
    "spotify_web_url": "https://open.spotify.com/search/Grandson",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "7:30 PM",
+   "pred_time_min": 1170,
+   "pred_setlen_min": 35,
+   "pred_confidence": "medium"
   },
   {
    "name": "Jinjer",
@@ -4119,7 +4689,13 @@
    "deezer_id": 2544561,
    "spotify_search_uri": "spotify:search:Jinjer",
    "spotify_web_url": "https://open.spotify.com/search/Jinjer",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "6:45 PM",
+   "pred_time_min": 1125,
+   "pred_setlen_min": 35,
+   "pred_confidence": "medium"
   },
   {
    "name": "Set It Off",
@@ -4162,7 +4738,13 @@
    "deezer_id": 472399,
    "spotify_search_uri": "spotify:search:Set%20It%20Off",
    "spotify_web_url": "https://open.spotify.com/search/Set%20It%20Off",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "6:00 PM",
+   "pred_time_min": 1080,
+   "pred_setlen_min": 35,
+   "pred_confidence": "medium"
   },
   {
    "name": "Hot Chelle Rae",
@@ -4197,7 +4779,13 @@
    "deezer_id": 274241,
    "spotify_search_uri": "spotify:search:Hot%20Chelle%20Rae",
    "spotify_web_url": "https://open.spotify.com/search/Hot%20Chelle%20Rae",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "6:18 PM",
+   "pred_time_min": 1098,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Breathe Carolina",
@@ -4240,7 +4828,13 @@
    "deezer_id": 132264,
    "spotify_search_uri": "spotify:search:Breathe%20Carolina",
    "spotify_web_url": "https://open.spotify.com/search/Breathe%20Carolina",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "5:15 PM",
+   "pred_time_min": 1035,
+   "pred_setlen_min": 35,
+   "pred_confidence": "low"
   },
   {
    "name": "The Ghost Inside",
@@ -4284,7 +4878,13 @@
    "deezer_id": 1040345,
    "spotify_search_uri": "spotify:search:The%20Ghost%20Inside",
    "spotify_web_url": "https://open.spotify.com/search/The%20Ghost%20Inside",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "4:30 PM",
+   "pred_time_min": 990,
+   "pred_setlen_min": 35,
+   "pred_confidence": "low"
   },
   {
    "name": "Attila",
@@ -4326,7 +4926,13 @@
    "deezer_id": 12340,
    "spotify_search_uri": "spotify:search:Attila",
    "spotify_web_url": "https://open.spotify.com/search/Attila",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "3:00 PM",
+   "pred_time_min": 900,
+   "pred_setlen_min": 35,
+   "pred_confidence": "low"
   },
   {
    "name": "Upon a Burning Body",
@@ -4369,7 +4975,13 @@
    "deezer_id": 392408,
    "spotify_search_uri": "spotify:search:Upon%20a%20Burning%20Body",
    "spotify_web_url": "https://open.spotify.com/search/Upon%20a%20Burning%20Body",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "12:00 PM",
+   "pred_time_min": 720,
+   "pred_setlen_min": 35,
+   "pred_confidence": "low"
   },
   {
    "name": "Nova Twins",
@@ -4413,7 +5025,13 @@
    "deezer_id": 10444072,
    "spotify_search_uri": "spotify:search:Nova%20Twins",
    "spotify_web_url": "https://open.spotify.com/search/Nova%20Twins",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "8:04 PM",
+   "pred_time_min": 1204,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Letlive.",
@@ -4459,7 +5077,13 @@
    "deezer_id": 374918,
    "spotify_search_uri": "spotify:search:Letlive.",
    "spotify_web_url": "https://open.spotify.com/search/Letlive.",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "6:51 PM",
+   "pred_time_min": 1131,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "The Aggrolites",
@@ -4499,7 +5123,13 @@
    "deezer_id": 254260,
    "spotify_search_uri": "spotify:search:The%20Aggrolites",
    "spotify_web_url": "https://open.spotify.com/search/The%20Aggrolites",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "6:27 PM",
+   "pred_time_min": 1107,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Save Ferris",
@@ -4538,7 +5168,13 @@
    "deezer_id": 3510,
    "spotify_search_uri": "spotify:search:Save%20Ferris",
    "spotify_web_url": "https://open.spotify.com/search/Save%20Ferris",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "4:50 PM",
+   "pred_time_min": 1010,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Caskets",
@@ -4582,7 +5218,13 @@
    "deezer_id": 12551392,
    "spotify_search_uri": "spotify:search:Caskets",
    "spotify_web_url": "https://open.spotify.com/search/Caskets",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "3:38 PM",
+   "pred_time_min": 938,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Deathbyromy",
@@ -4622,7 +5264,13 @@
    "deezer_id": 15005995,
    "spotify_search_uri": "spotify:search:Deathbyromy",
    "spotify_web_url": "https://open.spotify.com/search/Deathbyromy",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "3:21 PM",
+   "pred_time_min": 921,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Hepcat",
@@ -4659,7 +5307,13 @@
    "deezer_id": 3926,
    "spotify_search_uri": "spotify:search:Hepcat",
    "spotify_web_url": "https://open.spotify.com/search/Hepcat",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "2:49 PM",
+   "pred_time_min": 889,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Girlfriends",
@@ -4696,7 +5350,13 @@
    "deezer_id": 440526,
    "spotify_search_uri": "spotify:search:Girlfriends",
    "spotify_web_url": "https://open.spotify.com/search/Girlfriends",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "2:31 PM",
+   "pred_time_min": 871,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "DRAIN",
@@ -4736,7 +5396,13 @@
    "deezer_id": 1033306,
    "spotify_search_uri": "spotify:search:DRAIN",
    "spotify_web_url": "https://open.spotify.com/search/DRAIN",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "2:01 PM",
+   "pred_time_min": 841,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Aries",
@@ -4772,7 +5438,13 @@
    "deezer_id": 51100072,
    "spotify_search_uri": "spotify:search:Aries",
    "spotify_web_url": "https://open.spotify.com/search/Aries",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "4:26 PM",
+   "pred_time_min": 986,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Jiluka",
@@ -4815,7 +5487,13 @@
    "deezer_id": 215890815,
    "spotify_search_uri": "spotify:search:Jiluka",
    "spotify_web_url": "https://open.spotify.com/search/Jiluka",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "12:25 PM",
+   "pred_time_min": 745,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Vana",
@@ -4856,7 +5534,13 @@
    "deezer_id": 204647227,
    "spotify_search_uri": "spotify:search:Vana",
    "spotify_web_url": "https://open.spotify.com/search/Vana",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "12:00 PM",
+   "pred_time_min": 720,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "BEAUTY SCHOOL DROPOUT",
@@ -4889,7 +5573,13 @@
    "deezer_id": 345914,
    "spotify_search_uri": "spotify:search:BEAUTY%20SCHOOL%20DROPOUT",
    "spotify_web_url": "https://open.spotify.com/search/BEAUTY%20SCHOOL%20DROPOUT",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "8:04 PM",
+   "pred_time_min": 1204,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Chase Petra",
@@ -4927,7 +5617,13 @@
    "deezer_id": 11884683,
    "spotify_search_uri": "spotify:search:Chase%20Petra",
    "spotify_web_url": "https://open.spotify.com/search/Chase%20Petra",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "7:16 PM",
+   "pred_time_min": 1156,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Lower Definition",
@@ -4969,7 +5665,13 @@
    "deezer_id": 74877,
    "spotify_search_uri": "spotify:search:Lower%20Definition",
    "spotify_web_url": "https://open.spotify.com/search/Lower%20Definition",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "6:03 PM",
+   "pred_time_min": 1083,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Good Terms",
@@ -5007,7 +5709,13 @@
    "deezer_id": 104931852,
    "spotify_search_uri": "spotify:search:Good%20Terms",
    "spotify_web_url": "https://open.spotify.com/search/Good%20Terms",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "4:50 PM",
+   "pred_time_min": 1010,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Who Cares",
@@ -5046,7 +5754,13 @@
    "deezer_id": 5082148,
    "spotify_search_uri": "spotify:search:Who%20Cares",
    "spotify_web_url": "https://open.spotify.com/search/Who%20Cares",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "2:25 PM",
+   "pred_time_min": 865,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Initiate",
@@ -5084,7 +5798,13 @@
    "deezer_id": 7139689,
    "spotify_search_uri": "spotify:search:Initiate",
    "spotify_web_url": "https://open.spotify.com/search/Initiate",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "2:25 PM",
+   "pred_time_min": 865,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Start Today",
@@ -5120,7 +5840,13 @@
    "deezer_id": 10499095,
    "spotify_search_uri": "spotify:search:Start%20Today",
    "spotify_web_url": "https://open.spotify.com/search/Start%20Today",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "1:12 PM",
+   "pred_time_min": 792,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Gritty in Pink Jam",
@@ -5160,7 +5886,13 @@
    "deezer_id": null,
    "spotify_search_uri": "spotify:search:Gritty%20in%20Pink%20Jam",
    "spotify_web_url": "https://open.spotify.com/search/Gritty%20in%20Pink%20Jam",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "12:00 PM",
+   "pred_time_min": 720,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "G-Eazy",
@@ -5194,7 +5926,13 @@
    "deezer_id": 810507,
    "spotify_search_uri": "spotify:search:G-Eazy",
    "spotify_web_url": "https://open.spotify.com/search/G-Eazy",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "9:00 PM",
+   "pred_time_min": 1260,
+   "pred_setlen_min": 35,
+   "pred_confidence": "low"
   },
   {
    "name": "Gym Class Heroes",
@@ -5231,7 +5969,13 @@
    "deezer_id": 5576,
    "spotify_search_uri": "spotify:search:Gym%20Class%20Heroes",
    "spotify_web_url": "https://open.spotify.com/search/Gym%20Class%20Heroes",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "2:15 PM",
+   "pred_time_min": 855,
+   "pred_setlen_min": 35,
+   "pred_confidence": "low"
   },
   {
    "name": "Yelawolf",
@@ -5266,7 +6010,13 @@
    "deezer_id": 410734,
    "spotify_search_uri": "spotify:search:Yelawolf",
    "spotify_web_url": "https://open.spotify.com/search/Yelawolf",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "1:30 PM",
+   "pred_time_min": 810,
+   "pred_setlen_min": 35,
+   "pred_confidence": "low"
   },
   {
    "name": "The Cab",
@@ -5297,7 +6047,13 @@
    "deezer_id": 73413,
    "spotify_search_uri": "spotify:search:The%20Cab",
    "spotify_web_url": "https://open.spotify.com/search/The%20Cab",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "12:45 PM",
+   "pred_time_min": 765,
+   "pred_setlen_min": 35,
+   "pred_confidence": "low"
   },
   {
    "name": "Allison",
@@ -5325,7 +6081,13 @@
    "deezer_id": 403774,
    "spotify_search_uri": "spotify:search:Allison",
    "spotify_web_url": "https://open.spotify.com/search/Allison",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Side Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "12:45 PM",
+   "pred_time_min": 765,
+   "pred_setlen_min": 35,
+   "pred_confidence": "low"
   },
   {
    "name": "The Expendables",
@@ -5356,7 +6118,13 @@
    "deezer_id": 390234,
    "spotify_search_uri": "spotify:search:The%20Expendables",
    "spotify_web_url": "https://open.spotify.com/search/The%20Expendables",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "7:33 PM",
+   "pred_time_min": 1173,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Shakewell",
@@ -5389,7 +6157,13 @@
    "deezer_id": 429296,
    "spotify_search_uri": "spotify:search:Shakewell",
    "spotify_web_url": "https://open.spotify.com/search/Shakewell",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "9:41 PM",
+   "pred_time_min": 1301,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Sammy Adams",
@@ -5424,7 +6198,13 @@
    "deezer_id": 1521229,
    "spotify_search_uri": "spotify:search:Sammy%20Adams",
    "spotify_web_url": "https://open.spotify.com/search/Sammy%20Adams",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "9:17 PM",
+   "pred_time_min": 1277,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Carolesdaughter",
@@ -5458,7 +6238,13 @@
    "deezer_id": 95447492,
    "spotify_search_uri": "spotify:search:Carolesdaughter",
    "spotify_web_url": "https://open.spotify.com/search/Carolesdaughter",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "3:13 PM",
+   "pred_time_min": 913,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Red Leather",
@@ -5489,7 +6275,13 @@
    "deezer_id": 170785347,
    "spotify_search_uri": "spotify:search:Red%20Leather",
    "spotify_web_url": "https://open.spotify.com/search/Red%20Leather",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "2:56 PM",
+   "pred_time_min": 896,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Wesghost",
@@ -5520,7 +6312,13 @@
    "deezer_id": 204879517,
    "spotify_search_uri": "spotify:search:Wesghost",
    "spotify_web_url": "https://open.spotify.com/search/Wesghost",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "2:25 PM",
+   "pred_time_min": 865,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Lø Spirit",
@@ -5551,7 +6349,13 @@
    "deezer_id": 156382652,
    "spotify_search_uri": "spotify:search:L%C3%B8%20Spirit",
    "spotify_web_url": "https://open.spotify.com/search/L%C3%B8%20Spirit",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "1:40 PM",
+   "pred_time_min": 820,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "Peelingflesh",
@@ -5585,7 +6389,13 @@
    "deezer_id": 136386472,
    "spotify_search_uri": "spotify:search:Peelingflesh",
    "spotify_web_url": "https://open.spotify.com/search/Peelingflesh",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Discovery Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "1:12 PM",
+   "pred_time_min": 792,
+   "pred_setlen_min": 30,
+   "pred_confidence": "low"
   },
   {
    "name": "LØLØ",
@@ -5616,7 +6426,13 @@
    "deezer_id": 99161532,
    "spotify_search_uri": "spotify:search:L%C3%98L%C3%98",
    "spotify_web_url": "https://open.spotify.com/search/L%C3%98L%C3%98",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "10:05 PM",
+   "pred_time_min": 1325,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Delux",
@@ -5647,7 +6463,13 @@
    "deezer_id": 5524151,
    "spotify_search_uri": "spotify:search:Delux",
    "spotify_web_url": "https://open.spotify.com/search/Delux",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "7:40 PM",
+   "pred_time_min": 1180,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Alemeda",
@@ -5678,7 +6500,13 @@
    "deezer_id": 108967132,
    "spotify_search_uri": "spotify:search:Alemeda",
    "spotify_web_url": "https://open.spotify.com/search/Alemeda",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "7:16 PM",
+   "pred_time_min": 1156,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Holy Wars",
@@ -5709,7 +6537,13 @@
    "deezer_id": 12481124,
    "spotify_search_uri": "spotify:search:Holy%20Wars",
    "spotify_web_url": "https://open.spotify.com/search/Holy%20Wars",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "6:03 PM",
+   "pred_time_min": 1083,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "People R Ugly",
@@ -5740,7 +6574,13 @@
    "deezer_id": 139885782,
    "spotify_search_uri": "spotify:search:People%20R%20Ugly",
    "spotify_web_url": "https://open.spotify.com/search/People%20R%20Ugly",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "5:39 PM",
+   "pred_time_min": 1059,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Sace6",
@@ -5771,7 +6611,13 @@
    "deezer_id": 118352442,
    "spotify_search_uri": "spotify:search:Sace6",
    "spotify_web_url": "https://open.spotify.com/search/Sace6",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "5:15 PM",
+   "pred_time_min": 1035,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Slay Squad",
@@ -5802,7 +6648,13 @@
    "deezer_id": 9651326,
    "spotify_search_uri": "spotify:search:Slay%20Squad",
    "spotify_web_url": "https://open.spotify.com/search/Slay%20Squad",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "4:26 PM",
+   "pred_time_min": 986,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "DENM",
@@ -5842,7 +6694,13 @@
    "deezer_id": 301073,
    "spotify_search_uri": "spotify:search:DENM",
    "spotify_web_url": "https://open.spotify.com/search/DENM",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "4:02 PM",
+   "pred_time_min": 962,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "XComm",
@@ -5873,7 +6731,13 @@
    "deezer_id": 275546541,
    "spotify_search_uri": "spotify:search:XComm",
    "spotify_web_url": "https://open.spotify.com/search/XComm",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "4:02 PM",
+   "pred_time_min": 962,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Rosecoloredworld",
@@ -5904,7 +6768,13 @@
    "deezer_id": 56144252,
    "spotify_search_uri": "spotify:search:Rosecoloredworld",
    "spotify_web_url": "https://open.spotify.com/search/Rosecoloredworld",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "2:49 PM",
+   "pred_time_min": 889,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Tillie",
@@ -5941,7 +6811,13 @@
    "deezer_id": 59101902,
    "spotify_search_uri": "spotify:search:Tillie",
    "spotify_web_url": "https://open.spotify.com/search/Tillie",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "2:01 PM",
+   "pred_time_min": 841,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Surfer Girl",
@@ -5972,7 +6848,13 @@
    "deezer_id": 4852217,
    "spotify_search_uri": "spotify:search:Surfer%20Girl",
    "spotify_web_url": "https://open.spotify.com/search/Surfer%20Girl",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "2:01 PM",
+   "pred_time_min": 841,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Villanelle",
@@ -6003,7 +6885,13 @@
    "deezer_id": 345761421,
    "spotify_search_uri": "spotify:search:Villanelle",
    "spotify_web_url": "https://open.spotify.com/search/Villanelle",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sat Jul 25",
+   "pred_time": "1:36 PM",
+   "pred_time_min": 816,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   },
   {
    "name": "Brayton",
@@ -6034,7 +6922,29 @@
    "deezer_id": 4742831,
    "spotify_search_uri": "spotify:search:Brayton",
    "spotify_web_url": "https://open.spotify.com/search/Brayton",
-   "user_status": null
+   "user_status": null,
+   "pred_stage": "Local/Opener Stage",
+   "pred_day": "Sun Jul 26",
+   "pred_time": "12:24 PM",
+   "pred_time_min": 744,
+   "pred_setlen_min": 25,
+   "pred_confidence": "low"
   }
- ]
+ ],
+ "schedule": {
+  "status": "PREDICTED",
+  "disclaimer": "These stage and set-time assignments are a HEURISTIC PREDICTION, not official. Warped Tour only releases real set times on-site via the inflatable schedule board when gates open. Use this for planning, not as fact.",
+  "method": "Stage tier from artist draw (named-headliner status + Deezer fan count, with streaming-only crossover acts dampened). Day split balances draw across Sat/Sun. Time slot spreads each stage across ~12:00 PM–10:30 PM with openers first and headliners closing. Confidence: high = named headliner, medium = main-stage/high-draw, low = inferred.",
+  "stages": [
+   "Mainstage",
+   "Side Stage",
+   "Discovery Stage",
+   "Local/Opener Stage"
+  ],
+  "days": [
+   "Sat Jul 25",
+   "Sun Jul 26"
+  ],
+  "real_times_available": false
+ }
 }
