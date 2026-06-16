@@ -1,0 +1,15 @@
+# lineup.txt — Warped Tour Long Beach 2026 band names, one per line.
+# Lines that are blank or start with "#" are ignored; duplicates are dropped.
+#
+# Edit this when bands are announced, then regenerate:
+#     node scripts/refresh-data.mjs
+# (Editing this file alone does nothing until the script is run and the
+#  regenerated public/bands.json is committed — CLAUDE.md.)
+#
+# STUB — replace the lines below with the real lineup before refreshing.
+Jimmy Eat World
+The Used
+Sum 41
+A Day to Remember
+Letlive.
+The Academy Is...

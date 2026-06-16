@@ -1,26 +1,48 @@
 @import "tailwindcss";
 
+/* Semantic surface tokens (light). Exposed to Tailwind as utilities via
+   @theme inline below: bg-card, border-border, text-muted-foreground, etc.
+   They flip with the OS color scheme in the @media block, so components
+   stay theme-agnostic. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fafafa;
+  --foreground: #18181b;
+  --card: #ffffff;
+  --border: #e4e4e7;
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+  --accent: #db2777; /* pink-600 — festival accent */
+  --accent-foreground: #ffffff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #09090b;
+    --foreground: #fafafa;
+    --card: #18181b;
+    --border: #27272a;
+    --muted: #27272a;
+    --muted-foreground: #a1a1aa;
+    --accent: #ec4899; /* pink-500 — a touch brighter on dark */
+    --accent-foreground: #ffffff;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
 }

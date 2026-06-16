@@ -18,9 +18,9 @@ A single-user, static web app that helps me prep for **Vans Warped Tour — Long
 | Route | Purpose | Notes |
 |---|---|---|
 | `/` | Main list/explorer view | Search, filter, sort, band rows. Default landing. |
-| `/band/[slug]` OR modal | Band detail view | May be implemented as a route or an in-page modal/drawer — implementer's choice. Detail content per Section 5. |
+| (in-page modal) | Band detail view | **Implemented as an in-page modal/drawer, not a route.** Chosen over `/band/[slug]` to avoid slug/punctuation issues (band names contain `.`, `,`, `...`). Detail content per Section 5. |
 
-This is a small app. A single-page approach with a detail modal is acceptable and probably preferable to a second route. If using a route, derive `slug` from the band name (slugify; names are unique in the dataset).
+This is a small app and the detail view is an in-page modal opened from the list — there is **no `/band` route**. Rows and personal state are keyed by exact band `name` (unique in the dataset), so no slugification is needed.
 
 ## 3. Data Model
 

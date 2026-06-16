@@ -67,7 +67,7 @@ Deferred:         [anything not completed, or "none"]
 | Env vars / API keys | None. If multi-user is ever built, Spotify OAuth secrets are server-only — never `NEXT_PUBLIC_*` |
 | Spotify links | Search URLs (`spotify:search:`), not artist-ID deep links — see PRD §6 |
 | Deploy target | Vercel |
-| Local repo | _(set on first commit)_ |
+| Local repo | https://github.com/cgradbad89/WarpedTour |
 
 ## Architecture Quick Reference
 
