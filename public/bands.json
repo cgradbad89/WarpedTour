@@ -1,0 +1,5698 @@
+{
+ "event": {
+  "name": "Vans Warped Tour — Long Beach 2026",
+  "dates": "July 25–26, 2026",
+  "venue": "Shoreline Waterfront, Long Beach, CA",
+  "band_count": 141
+ },
+ "scoring": {
+  "windows": [
+   "1 month (weight 1.0)",
+   "6 months (0.7)",
+   "lifetime (0.55)"
+  ],
+  "method": "Recency-weighted artist match (dominant) + genre floor. Similar artists via Deezer, genre tags via MusicBrainz, previews via Deezer.",
+  "note": "5.0 = currently in your rotation; 4.5 = must-see by taste; lower = exploratory."
+ },
+ "all_genres": [
+  "alternative",
+  "electronic",
+  "emo",
+  "hardcore",
+  "hip hop",
+  "metal",
+  "metalcore",
+  "pop",
+  "pop punk",
+  "post-hardcore",
+  "punk",
+  "rock",
+  "ska"
+ ],
+ "buckets": [
+  "In your rotation",
+  "Must see",
+  "High match",
+  "Long shot",
+  "Discovery"
+ ],
+ "bands": [
+  {
+   "name": "Jimmy Eat World",
+   "score": 5.0,
+   "bucket": "In your rotation",
+   "match_kind": "direct-now",
+   "why": "You've had this on repeat in the last month.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "emo"
+   ],
+   "raw_tags": [
+    "rock",
+    "alternative rock",
+    "american",
+    "usa",
+    "indie rock",
+    "powerpop"
+   ],
+   "bio": "Jimmy Eat World is a pop punk act from United States, active since 1993. This one's in heavy rotation for you right now — prioritize it.",
+   "similar_you_listen": [
+    "New Found Glory",
+    "blink-182",
+    "AFI",
+    "Green Day"
+   ],
+   "similar_general": [
+    "Yellowcard",
+    "Angels and Airwaves",
+    "Good Charlotte",
+    "Goldfinger",
+    "Dashboard Confessional",
+    "Simple Plan"
+   ],
+   "genre_overlap": [
+    "emo",
+    "emo pop",
+    "indie rock",
+    "pop punk"
+   ],
+   "top_track": "The Middle",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/8/2/c/0/82c5505b0d9725c9dedf9939fb02368b.mp3?hdnea=exp=1781610487~acl=/api/1/1/8/2/c/0/82c5505b0d9725c9dedf9939fb02368b.mp3*~data=user_id=0,application_id=42~hmac=d9e2ab75dab0e99ff6c9925ca1b700c8ba3b0141ff178ca83749b530ad5f1b1a",
+   "album": "Bleed American",
+   "image": "https://cdn-images.dzcdn.net/images/artist/25f9c306de8391736e0937f7239a314d/250x250-000000-80-0-0.jpg",
+   "fans": 221038,
+   "deezer_id": 346,
+   "spotify_search_uri": "spotify:search:Jimmy%20Eat%20World",
+   "spotify_web_url": "https://open.spotify.com/search/Jimmy%20Eat%20World",
+   "user_status": null
+  },
+  {
+   "name": "Underoath",
+   "score": 5.0,
+   "bucket": "In your rotation",
+   "match_kind": "direct-now",
+   "why": "You've had this on repeat in the last month.",
+   "genres": [
+    "post-hardcore",
+    "metalcore",
+    "hardcore"
+   ],
+   "raw_tags": [
+    "hardcore",
+    "metal",
+    "metalcore",
+    "christian",
+    "post-hardcore",
+    "christian hardcore"
+   ],
+   "bio": "Underoath is a post-hardcore act from United States, active since 1997. This one's in heavy rotation for you right now — prioritize it.",
+   "similar_you_listen": [
+    "From First To Last"
+   ],
+   "similar_general": [
+    "Silverstein",
+    "A Day to Remember",
+    "Escape the Fate",
+    "Blessthefall",
+    "Enter Shikari",
+    "Alexisonfire"
+   ],
+   "genre_overlap": [
+    "deathcore",
+    "hardcore",
+    "metal",
+    "metalcore",
+    "post-hardcore"
+   ],
+   "top_track": "Reinventing Your Exit",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/0/2/0/0/020c4b59f50b5444efd15f8e0b48b7e5.mp3?hdnea=exp=1781610558~acl=/api/1/1/0/2/0/0/020c4b59f50b5444efd15f8e0b48b7e5.mp3*~data=user_id=0,application_id=42~hmac=5069230ef6a0b1ee67cec652b68ce7940c946fd9eba95a88668a22f69ca773ed",
+   "album": "They're Only Chasing Safety",
+   "image": "https://cdn-images.dzcdn.net/images/artist/62af962d6a8e28e7a4feaa72f7be36bb/250x250-000000-80-0-0.jpg",
+   "fans": 96515,
+   "deezer_id": 4338,
+   "spotify_search_uri": "spotify:search:Underoath",
+   "spotify_web_url": "https://open.spotify.com/search/Underoath",
+   "user_status": null
+  },
+  {
+   "name": "The Devil Wears Prada",
+   "score": 5.0,
+   "bucket": "In your rotation",
+   "match_kind": "direct-now",
+   "why": "You've had this on repeat in the last month.",
+   "genres": [
+    "post-hardcore",
+    "metalcore",
+    "hardcore"
+   ],
+   "raw_tags": [
+    "rock",
+    "hardcore",
+    "metalcore",
+    "christian",
+    "hard rock",
+    "post-hardcore"
+   ],
+   "bio": "The Devil Wears Prada is a post-hardcore act from United States, active since 2005. This one's in heavy rotation for you right now — prioritize it.",
+   "similar_you_listen": [
+    "Crown The Empire"
+   ],
+   "similar_general": [
+    "Memphis May Fire",
+    "Of Mice & Men",
+    "Blessthefall",
+    "The Amity Affliction",
+    "We Came As Romans",
+    "Wage War"
+   ],
+   "genre_overlap": [
+    "hard rock",
+    "hardcore",
+    "metalcore",
+    "post-hardcore"
+   ],
+   "top_track": "Legions",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/b/5/4/0/b54764de197b3394f6a190e5346fcf52.mp3?hdnea=exp=1781610545~acl=/api/1/1/b/5/4/0/b54764de197b3394f6a190e5346fcf52.mp3*~data=user_id=0,application_id=42~hmac=b9a0f39d229ae32d428c1feda7c514deda81d9d47b0cc9614a5af57be144b768",
+   "album": "Season of Surrender",
+   "image": "https://cdn-images.dzcdn.net/images/artist/ce8738d5e5bfbfa515d9ba9ec4a0c62a/250x250-000000-80-0-0.jpg",
+   "fans": 90181,
+   "deezer_id": 68213,
+   "spotify_search_uri": "spotify:search:The%20Devil%20Wears%20Prada",
+   "spotify_web_url": "https://open.spotify.com/search/The%20Devil%20Wears%20Prada",
+   "user_status": null
+  },
+  {
+   "name": "Crown the Empire",
+   "score": 5.0,
+   "bucket": "In your rotation",
+   "match_kind": "direct-now",
+   "why": "You've had this on repeat in the last month.",
+   "genres": [
+    "post-hardcore",
+    "metalcore",
+    "hardcore"
+   ],
+   "raw_tags": [
+    "electronic",
+    "alternative hardcore",
+    "post-hardcore",
+    "metalcore",
+    "trancecore",
+    "post-screamo"
+   ],
+   "bio": "Crown the Empire is a post-hardcore act from United States, active since 2010. This one's in heavy rotation for you right now — prioritize it.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "We Came As Romans",
+    "Blessthefall",
+    "Asking Alexandria",
+    "Of Mice & Men",
+    "I See Stars",
+    "Palisades"
+   ],
+   "genre_overlap": [
+    "metalcore",
+    "post-hardcore"
+   ],
+   "top_track": "BLURRY (out of place)",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/b/a/c/0/bac26b9faae822dce41c24a68c122f0a.mp3?hdnea=exp=1781610446~acl=/api/1/1/b/a/c/0/bac26b9faae822dce41c24a68c122f0a.mp3*~data=user_id=0,application_id=42~hmac=c4147746e1059a0fc665b95d1b1441196a30c9fc6485807ce78526151a8762d2",
+   "album": "Sudden Sky",
+   "image": "https://cdn-images.dzcdn.net/images/artist/ac48f3342733c73377cb70f8822cf37e/250x250-000000-80-0-0.jpg",
+   "fans": 83965,
+   "deezer_id": 4039184,
+   "spotify_search_uri": "spotify:search:Crown%20the%20Empire",
+   "spotify_web_url": "https://open.spotify.com/search/Crown%20the%20Empire",
+   "user_status": null
+  },
+  {
+   "name": "Taking Back Sunday",
+   "score": 5.0,
+   "bucket": "In your rotation",
+   "match_kind": "direct-now",
+   "why": "You've had this on repeat in the last month.",
+   "genres": [
+    "emo",
+    "rock",
+    "alternative"
+   ],
+   "raw_tags": [
+    "rock",
+    "emo",
+    "rock and indie"
+   ],
+   "bio": "Taking Back Sunday is a emo act from United States, active since 1999. This one's in heavy rotation for you right now — prioritize it.",
+   "similar_you_listen": [
+    "New Found Glory",
+    "Bayside",
+    "Motion City Soundtrack"
+   ],
+   "similar_general": [
+    "Brand New",
+    "The Used",
+    "Hawthorne Heights",
+    "Senses Fail",
+    "Mayday Parade",
+    "The Starting Line"
+   ],
+   "genre_overlap": [
+    "emo"
+   ],
+   "top_track": "MakeDamnSure",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/a/5/7/0/a576646ddfd2fdad5d6347fc82292f6f.mp3?hdnea=exp=1781610540~acl=/api/1/1/a/5/7/0/a576646ddfd2fdad5d6347fc82292f6f.mp3*~data=user_id=0,application_id=42~hmac=598c2e574a6e590f682c38afcc574c06ee304740e4e88f79236a9732bf199935",
+   "album": "Louder Now (Deluxe Edition)",
+   "image": "https://cdn-images.dzcdn.net/images/artist/103ebe202f506bbf4e710f57e7260b6d/250x250-000000-80-0-0.jpg",
+   "fans": 74266,
+   "deezer_id": 1290,
+   "spotify_search_uri": "spotify:search:Taking%20Back%20Sunday",
+   "spotify_web_url": "https://open.spotify.com/search/Taking%20Back%20Sunday",
+   "user_status": null
+  },
+  {
+   "name": "Story of the Year",
+   "score": 5.0,
+   "bucket": "In your rotation",
+   "match_kind": "direct-now",
+   "why": "You've had this on repeat in the last month.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "emo"
+   ],
+   "raw_tags": [
+    "alternative rock",
+    "emo",
+    "screamo",
+    "post-grunge",
+    "pop punk",
+    "post-hardcore"
+   ],
+   "bio": "Story of the Year is a pop punk act from United States, active since 2002. This one's in heavy rotation for you right now — prioritize it.",
+   "similar_you_listen": [
+    "Thrice",
+    "Underoath",
+    "From First To Last"
+   ],
+   "similar_general": [
+    "The Red Jumpsuit Apparatus",
+    "A Day to Remember",
+    "Silverstein",
+    "Escape the Fate",
+    "As December Falls",
+    "Sleeping With Sirens"
+   ],
+   "genre_overlap": [
+    "emo",
+    "emo pop",
+    "emo punk",
+    "pop punk",
+    "post-grunge",
+    "post-hardcore"
+   ],
+   "top_track": "Until the Day I Die",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/7/a/2/0/7a2977e8d60b29234b1bb2ba05ada0c1.mp3?hdnea=exp=1781610538~acl=/api/1/1/7/a/2/0/7a2977e8d60b29234b1bb2ba05ada0c1.mp3*~data=user_id=0,application_id=42~hmac=68bec2db3b1921cb00fa28c0688c0b18261d518e12aace2e90021b122157ee85",
+   "album": "Page Avenue",
+   "image": "https://cdn-images.dzcdn.net/images/artist/8b682142ac69372739e54526cf1daf5c/250x250-000000-80-0-0.jpg",
+   "fans": 59669,
+   "deezer_id": 1288,
+   "spotify_search_uri": "spotify:search:Story%20of%20the%20Year",
+   "spotify_web_url": "https://open.spotify.com/search/Story%20of%20the%20Year",
+   "user_status": null
+  },
+  {
+   "name": "Thrice",
+   "score": 5.0,
+   "bucket": "In your rotation",
+   "match_kind": "direct-now",
+   "why": "You've had this on repeat in the last month.",
+   "genres": [
+    "punk",
+    "emo",
+    "post-hardcore"
+   ],
+   "raw_tags": [
+    "alternative rock",
+    "hard rock",
+    "indie rock",
+    "emo",
+    "melodic hardcore",
+    "post-hardcore"
+   ],
+   "bio": "Thrice is a punk act from United States, active since 1998. This one's in heavy rotation for you right now — prioritize it.",
+   "similar_you_listen": [
+    "Underoath",
+    "Story Of The Year",
+    "AFI",
+    "From First To Last",
+    "Rise Against"
+   ],
+   "similar_general": [
+    "Alexisonfire",
+    "Coheed and Cambria",
+    "Silverstein",
+    "Anberlin",
+    "The Used",
+    "A Day to Remember"
+   ],
+   "genre_overlap": [
+    "emo",
+    "hard rock",
+    "indie rock",
+    "melodic hardcore",
+    "post-hardcore"
+   ],
+   "top_track": "Black Honey",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/d/f/6/0/df66efda00265b3341fc9faf4b66b1af.mp3?hdnea=exp=1781610555~acl=/api/1/1/d/f/6/0/df66efda00265b3341fc9faf4b66b1af.mp3*~data=user_id=0,application_id=42~hmac=dc97c8ef1c659be37c5993c011f8f21eb546875fd7a9f65878ee5970e70135be",
+   "album": "Black Honey",
+   "image": "https://cdn-images.dzcdn.net/images/artist/c44a776034a16f635f50f7b27f3cdc2e/250x250-000000-80-0-0.jpg",
+   "fans": 44360,
+   "deezer_id": 316,
+   "spotify_search_uri": "spotify:search:Thrice",
+   "spotify_web_url": "https://open.spotify.com/search/Thrice",
+   "user_status": null
+  },
+  {
+   "name": "From First to Last",
+   "score": 5.0,
+   "bucket": "In your rotation",
+   "match_kind": "direct-now",
+   "why": "You've had this on repeat in the last month.",
+   "genres": [
+    "emo",
+    "post-hardcore",
+    "hardcore"
+   ],
+   "raw_tags": [
+    "rock",
+    "pop",
+    "alternative rock",
+    "emo",
+    "screamo",
+    "post-hardcore"
+   ],
+   "bio": "From First to Last is a emo act from Los Angeles, active since 1999. This one's in heavy rotation for you right now — prioritize it.",
+   "similar_you_listen": [
+    "Thrice",
+    "Underoath",
+    "Story Of The Year"
+   ],
+   "similar_general": [
+    "Saosin",
+    "Alexisonfire",
+    "Silverstein",
+    "A Day to Remember",
+    "Scary Kids Scaring Kids",
+    "The Used"
+   ],
+   "genre_overlap": [
+    "emo",
+    "post-hardcore",
+    "screamo"
+   ],
+   "top_track": "Note to Self",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/c/1/5/0/c1571c35c087041d59489e29e2690116.mp3?hdnea=exp=1781610464~acl=/api/1/1/c/1/5/0/c1571c35c087041d59489e29e2690116.mp3*~data=user_id=0,application_id=42~hmac=ee8efa1ed046b8d40b645662c4c44fd6c70daf9c11f9b1d3f2299743e4285f6d",
+   "album": "Dear Diary, My Teen Angst Has A Body Count",
+   "image": "https://cdn-images.dzcdn.net/images/artist/211d43c30966c2c4e014f8af40ed4d96/250x250-000000-80-0-0.jpg",
+   "fans": 21525,
+   "deezer_id": 5793,
+   "spotify_search_uri": "spotify:search:From%20First%20to%20Last",
+   "spotify_web_url": "https://open.spotify.com/search/From%20First%20to%20Last",
+   "user_status": null
+  },
+  {
+   "name": "Norma Jean",
+   "score": 5.0,
+   "bucket": "In your rotation",
+   "match_kind": "direct-now",
+   "why": "You've had this on repeat in the last month.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [
+    "country"
+   ],
+   "bio": "Norma Jean is a alternative act from United States, active since 1938. Country artist Norma Jean Beasler. This one's in heavy rotation for you right now — prioritize it.",
+   "similar_you_listen": [
+    "All That Remains"
+   ],
+   "similar_general": [
+    "Caliban",
+    "August Burns Red",
+    "Attila",
+    "Breakdown Of Sanity",
+    "Stick To Your Guns",
+    "Bury Tomorrow"
+   ],
+   "genre_overlap": [
+    "country"
+   ],
+   "top_track": "Falling From The Sky: Day Seven",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/f/2/1/0/f21b80384e0b80126d2f2857d843b24d.mp3?hdnea=exp=1781610506~acl=/api/1/1/f/2/1/0/f21b80384e0b80126d2f2857d843b24d.mp3*~data=user_id=0,application_id=42~hmac=f7fec9ab1072cb554eb69d0d0f6528af34714b0359d33a204c93e87f0583e546",
+   "album": "Meridional",
+   "image": "https://cdn-images.dzcdn.net/images/artist/0a9dadb95723d42e93162b91adf44fb2/250x250-000000-80-0-0.jpg",
+   "fans": 21074,
+   "deezer_id": 2174,
+   "spotify_search_uri": "spotify:search:Norma%20Jean",
+   "spotify_web_url": "https://open.spotify.com/search/Norma%20Jean",
+   "user_status": null
+  },
+  {
+   "name": "Motion City Soundtrack",
+   "score": 5.0,
+   "bucket": "In your rotation",
+   "match_kind": "direct-now",
+   "why": "You've had this on repeat in the last month.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "rock"
+   ],
+   "raw_tags": [
+    "usa",
+    "rock and indie",
+    "pop punk",
+    "punk"
+   ],
+   "bio": "Motion City Soundtrack is a pop punk act from United States, active since 1997. Minnesota pop punk band. This one's in heavy rotation for you right now — prioritize it.",
+   "similar_you_listen": [
+    "Taking Back Sunday"
+   ],
+   "similar_general": [
+    "Relient K",
+    "Something Corporate",
+    "The Starting Line",
+    "State Champs",
+    "Cute Is What We Aim For",
+    "Cartel"
+   ],
+   "genre_overlap": [
+    "pop punk",
+    "punk"
+   ],
+   "top_track": "Everything Is Alright",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/8/c/2/0/8c21703eec66266811b312f4fe7a162c.mp3?hdnea=exp=1781610504~acl=/api/1/1/8/c/2/0/8c21703eec66266811b312f4fe7a162c.mp3*~data=user_id=0,application_id=42~hmac=6c9389778ac3a0f39e55dc797e8530c5d058f96f172933d1911b5bfd618432da",
+   "album": "Commit This To Memory (Deluxe Edition)",
+   "image": "https://cdn-images.dzcdn.net/images/artist/91f70449554f9ba174e0db3d1a9fd28b/250x250-000000-80-0-0.jpg",
+   "fans": 19325,
+   "deezer_id": 953,
+   "spotify_search_uri": "spotify:search:Motion%20City%20Soundtrack",
+   "spotify_web_url": "https://open.spotify.com/search/Motion%20City%20Soundtrack",
+   "user_status": null
+  },
+  {
+   "name": "Set Your Goals",
+   "score": 5.0,
+   "bucket": "In your rotation",
+   "match_kind": "direct-now",
+   "why": "You've had this on repeat in the last month.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "post-hardcore"
+   ],
+   "raw_tags": [
+    "easycore",
+    "steal your goals",
+    "pop punk",
+    "post-hardcore"
+   ],
+   "bio": "Set Your Goals is a pop punk act from United States, active since 2004. This one's in heavy rotation for you right now — prioritize it.",
+   "similar_you_listen": [
+    "New Found Glory"
+   ],
+   "similar_general": [
+    "The Story So Far",
+    "Four Year Strong",
+    "Alkaline Trio",
+    "Settle Your Scores",
+    "WSTR",
+    "Yellowcard"
+   ],
+   "genre_overlap": [
+    "pop punk",
+    "post-hardcore"
+   ],
+   "top_track": "summer jam",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/8/e/f/0/8ef9f283bb2503fcca9b738bfcb32aac.mp3?hdnea=exp=1781610526~acl=/api/1/1/8/e/f/0/8ef9f283bb2503fcca9b738bfcb32aac.mp3*~data=user_id=0,application_id=42~hmac=53ee2abd95f2aecd9f88bd5b48a8940af7f5b54ba9e079fc08afcb5b7acffc27",
+   "album": "This Will Be The Death Of Us",
+   "image": "https://cdn-images.dzcdn.net/images/artist/6cfbf882d441dccd078f51bda60eca2f/250x250-000000-80-0-0.jpg",
+   "fans": 12219,
+   "deezer_id": 193436,
+   "spotify_search_uri": "spotify:search:Set%20Your%20Goals",
+   "spotify_web_url": "https://open.spotify.com/search/Set%20Your%20Goals",
+   "user_status": null
+  },
+  {
+   "name": "Bayside",
+   "score": 5.0,
+   "bucket": "In your rotation",
+   "match_kind": "direct-now",
+   "why": "You've had this on repeat in the last month.",
+   "genres": [
+    "punk",
+    "emo",
+    "rock"
+   ],
+   "raw_tags": [
+    "rock",
+    "emo",
+    "alternative rock",
+    "punk rock"
+   ],
+   "bio": "Bayside is a punk act from United States, active since 2000. This one's in heavy rotation for you right now — prioritize it.",
+   "similar_you_listen": [
+    "New Found Glory",
+    "Taking Back Sunday",
+    "Motion City Soundtrack"
+   ],
+   "similar_general": [
+    "Mayday Parade",
+    "The Used",
+    "Senses Fail",
+    "All Time Low",
+    "Say Anything",
+    "Brand New"
+   ],
+   "genre_overlap": [
+    "emo"
+   ],
+   "top_track": "Sick, Sick, Sick",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/2/5/a/0/25a13378fa0698a449bbf4e5d9b7f5af.mp3?hdnea=exp=1781610431~acl=/api/1/1/2/5/a/0/25a13378fa0698a449bbf4e5d9b7f5af.mp3*~data=user_id=0,application_id=42~hmac=7734dda933006619f78e55dc548fb11d189bb6eaa1ed43f5268dbd9d2533bef8",
+   "album": "Killing Time",
+   "image": "https://cdn-images.dzcdn.net/images/artist/3dd5e9028ee07a94a1048df07f93acd0/250x250-000000-80-0-0.jpg",
+   "fans": 9563,
+   "deezer_id": 12836,
+   "spotify_search_uri": "spotify:search:Bayside",
+   "spotify_web_url": "https://open.spotify.com/search/Bayside",
+   "user_status": null
+  },
+  {
+   "name": "Amigo the Devil",
+   "score": 5.0,
+   "bucket": "In your rotation",
+   "match_kind": "direct-now",
+   "why": "You've had this on repeat in the last month.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [
+    "murderfolk",
+    "folk",
+    "southern gothic",
+    "indie",
+    "americana"
+   ],
+   "bio": "Amigo the Devil is a alternative act from Spicewood. This one's in heavy rotation for you right now — prioritize it.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "The Bridge City Sinners",
+    "The Devil Makes Three",
+    "Tejon Street Corner Thieves",
+    "Yes Ma'am",
+    "Clyde and the Milltailers",
+    "Beggars Canyon"
+   ],
+   "genre_overlap": [
+    "southern gothic"
+   ],
+   "top_track": "Hell and You",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/4/e/f/0/4ef4ca06f5e9d9a6377806291c01ce3a.mp3?hdnea=exp=1781610426~acl=/api/1/1/4/e/f/0/4ef4ca06f5e9d9a6377806291c01ce3a.mp3*~data=user_id=0,application_id=42~hmac=df5a3486113ad0550dc6adbada5c1a646cd174a52980e6c2c8472c64a6dd27f0",
+   "album": "Volume 1",
+   "image": "https://cdn-images.dzcdn.net/images/artist/c13b6eecae94a766892a462240c65ded/250x250-000000-80-0-0.jpg",
+   "fans": 4794,
+   "deezer_id": 7908624,
+   "spotify_search_uri": "spotify:search:Amigo%20the%20Devil",
+   "spotify_web_url": "https://open.spotify.com/search/Amigo%20the%20Devil",
+   "user_status": null
+  },
+  {
+   "name": "Acceptance",
+   "score": 5.0,
+   "bucket": "In your rotation",
+   "match_kind": "direct-now",
+   "why": "You've had this on repeat in the last month.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Acceptance is a alternative act from United States, active since 1998. This one's in heavy rotation for you right now — prioritize it.",
+   "similar_you_listen": [
+    "Jimmy Eat World",
+    "Motion City Soundtrack",
+    "AFI"
+   ],
+   "similar_general": [
+    "Finch",
+    "Anberlin",
+    "The Used",
+    "The Red Jumpsuit Apparatus",
+    "Madina Lake",
+    "Deaf Havana"
+   ],
+   "genre_overlap": [],
+   "top_track": "So Contagious (Album Version)",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/3/d/c/0/3dc16ac0621a00b9f802ae96c6bd21db.mp3?hdnea=exp=1781610420~acl=/api/1/1/3/d/c/0/3dc16ac0621a00b9f802ae96c6bd21db.mp3*~data=user_id=0,application_id=42~hmac=99257a157a27f8715d221accdfe7e13f01e5acd1cf59094bdd25d91b2973d80d",
+   "album": "Phantoms",
+   "image": "https://cdn-images.dzcdn.net/images/artist/ac88fc43414f5ff0d90402bcbea47142/250x250-000000-80-0-0.jpg",
+   "fans": 4011,
+   "deezer_id": 4149,
+   "spotify_search_uri": "spotify:search:Acceptance",
+   "spotify_web_url": "https://open.spotify.com/search/Acceptance",
+   "user_status": null
+  },
+  {
+   "name": "Free Throw",
+   "score": 5.0,
+   "bucket": "In your rotation",
+   "match_kind": "direct-now",
+   "why": "You've had this on repeat in the last month.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "emo"
+   ],
+   "raw_tags": [
+    "emo",
+    "pop punk",
+    "midwest emo"
+   ],
+   "bio": "Free Throw is a pop punk act from Nashville, active since 2012. US emo group. This one's in heavy rotation for you right now — prioritize it.",
+   "similar_you_listen": [
+    "Hot Mulligan",
+    "Tigers Jaw"
+   ],
+   "similar_general": [
+    "Joyce Manor",
+    "Tiny Moving Parts",
+    "saturdays at your place",
+    "Origami Angel",
+    "Prince Daddy & the Hyena",
+    "Mom Jeans."
+   ],
+   "genre_overlap": [
+    "emo",
+    "midwest emo",
+    "pop punk"
+   ],
+   "top_track": "Two Beers In",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/b/8/9/0/b89d32c35ef8f5de5d59b1ccb527454e.mp3?hdnea=exp=1781610463~acl=/api/1/1/b/8/9/0/b89d32c35ef8f5de5d59b1ccb527454e.mp3*~data=user_id=0,application_id=42~hmac=a95aeb5f20d24e5e9d513e70826d03eb2ee827da9e678b43a0453244bbbe5bdb",
+   "album": "Those Days Are Gone",
+   "image": "https://cdn-images.dzcdn.net/images/artist/78881458c0494b8d8a015a2bd9c74bfe/250x250-000000-80-0-0.jpg",
+   "fans": 3516,
+   "deezer_id": 4927699,
+   "spotify_search_uri": "spotify:search:Free%20Throw",
+   "spotify_web_url": "https://open.spotify.com/search/Free%20Throw",
+   "user_status": null
+  },
+  {
+   "name": "Boundaries",
+   "score": 5.0,
+   "bucket": "In your rotation",
+   "match_kind": "direct-now",
+   "why": "You've had this on repeat in the last month.",
+   "genres": [
+    "metalcore",
+    "metal"
+   ],
+   "raw_tags": [
+    "metalcore"
+   ],
+   "bio": "Boundaries is a metalcore act from United States, active since 2013. Metalcore band from Connecticut. This one's in heavy rotation for you right now — prioritize it.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Counterparts",
+    "Dying Wish",
+    "Thornhill",
+    "Malevolence",
+    "Stray From The Path",
+    "Unprocessed"
+   ],
+   "genre_overlap": [
+    "metalcore"
+   ],
+   "top_track": "My Body Is A Cage",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/6/0/8/0/6087d7e4aa252e48f9c340ce3ef11038.mp3?hdnea=exp=1781610436~acl=/api/1/1/6/0/8/0/6087d7e4aa252e48f9c340ce3ef11038.mp3*~data=user_id=0,application_id=42~hmac=2ee7a56bb0837cff4bb8fdcbf6f3eb80cc94196beab5b1f8fb9d0fc608091346",
+   "album": "Burying Brightness",
+   "image": "https://cdn-images.dzcdn.net/images/artist/b749c9a6c17a9eaf230a7e404fb87a9f/250x250-000000-80-0-0.jpg",
+   "fans": 2493,
+   "deezer_id": 1022029,
+   "spotify_search_uri": "spotify:search:Boundaries",
+   "spotify_web_url": "https://open.spotify.com/search/Boundaries",
+   "user_status": null
+  },
+  {
+   "name": "The Wrecks",
+   "score": 5.0,
+   "bucket": "In your rotation",
+   "match_kind": "direct-now",
+   "why": "You've had this on repeat in the last month.",
+   "genres": [
+    "rock",
+    "pop"
+   ],
+   "raw_tags": [
+    "pop rock"
+   ],
+   "bio": "The Wrecks is a rock act from Los Angeles, active since 2015. LA-based indie-rock band. This one's in heavy rotation for you right now — prioritize it.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Weathers",
+    "The Happy Fits",
+    "half·alive",
+    "Anarbor",
+    "Call Me Karizma",
+    "Panic! At the Disco"
+   ],
+   "genre_overlap": [],
+   "top_track": "Favorite Liar",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/b/5/d/0/b5dcb9a433db3fc609a85562dd4043f6.mp3?hdnea=exp=1781610554~acl=/api/1/1/b/5/d/0/b5dcb9a433db3fc609a85562dd4043f6.mp3*~data=user_id=0,application_id=42~hmac=699e4f90ad8872cfa1152c4f6d8ec6a20f7dd8d842f2856aa110616552efaec3",
+   "album": "Favorite Liar",
+   "image": "https://cdn-images.dzcdn.net/images/artist/8bc553643d6293601920ac57a46631bc/250x250-000000-80-0-0.jpg",
+   "fans": 2080,
+   "deezer_id": 8635040,
+   "spotify_search_uri": "spotify:search:The%20Wrecks",
+   "spotify_web_url": "https://open.spotify.com/search/The%20Wrecks",
+   "user_status": null
+  },
+  {
+   "name": "Guilt Trip",
+   "score": 5.0,
+   "bucket": "In your rotation",
+   "match_kind": "direct-now",
+   "why": "You've had this on repeat in the last month.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Guilt Trip is a alternative act from Sweden, active since 1999. Swedish industrial band. This one's in heavy rotation for you right now — prioritize it.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Nasty",
+    "Malevolence",
+    "Knocked Loose",
+    "Get The Shot",
+    "Kublai Khan TX",
+    "Stray From The Path"
+   ],
+   "genre_overlap": [],
+   "top_track": "One By One",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/f/f/8/0/ff8dd2b78d96cd035ff8bc33adf9ebe8.mp3?hdnea=exp=1781610474~acl=/api/1/1/f/f/8/0/ff8dd2b78d96cd035ff8bc33adf9ebe8.mp3*~data=user_id=0,application_id=42~hmac=9233b170d3167c608f00940f931e9583c147dd7aba96f755b6ea4d6d361e5683",
+   "album": "Armour Of Angels",
+   "image": "https://cdn-images.dzcdn.net/images/artist/fdfe497ad2a785b44704679a0de4ad2a/250x250-000000-80-0-0.jpg",
+   "fans": 1564,
+   "deezer_id": 356950372,
+   "spotify_search_uri": "spotify:search:Guilt%20Trip",
+   "spotify_web_url": "https://open.spotify.com/search/Guilt%20Trip",
+   "user_status": null
+  },
+  {
+   "name": "Daisy Grenade",
+   "score": 5.0,
+   "bucket": "In your rotation",
+   "match_kind": "direct-now",
+   "why": "You've had this on repeat in the last month.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "rock"
+   ],
+   "raw_tags": [
+    "bubblegrunge",
+    "pop punk",
+    "rock",
+    "power pop"
+   ],
+   "bio": "Daisy Grenade is a pop punk act from Brooklyn. New York bubblegrunge duo. This one's in heavy rotation for you right now — prioritize it.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Honey Revenge",
+    "Lilith Czar",
+    "Mothica",
+    "Charlotte Sands",
+    "PVRIS",
+    "Hot Milk"
+   ],
+   "genre_overlap": [
+    "pop punk"
+   ],
+   "top_track": "How To Hide A Body",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/3/c/0/0/3c0cf3e57571d128061e75f66424722f.mp3?hdnea=exp=1781610447~acl=/api/1/1/3/c/0/0/3c0cf3e57571d128061e75f66424722f.mp3*~data=user_id=0,application_id=42~hmac=571d9e4e7625f61b126b141bca57343ac1477557719306bffbd201444ee96fd8",
+   "album": "How To Hide A Body",
+   "image": "https://cdn-images.dzcdn.net/images/artist/09ce1505f4615fda1534cc1dc34ded0d/250x250-000000-80-0-0.jpg",
+   "fans": 1305,
+   "deezer_id": 161736542,
+   "spotify_search_uri": "spotify:search:Daisy%20Grenade",
+   "spotify_web_url": "https://open.spotify.com/search/Daisy%20Grenade",
+   "user_status": null
+  },
+  {
+   "name": "Raue",
+   "score": 5.0,
+   "bucket": "In your rotation",
+   "match_kind": "direct-now",
+   "why": "You've had this on repeat in the last month.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Raue is a alternative act from Santa Cruz, active since 2020. This one's in heavy rotation for you right now — prioritize it.",
+   "similar_you_listen": [
+    "Title Fight",
+    "Narrow Head"
+   ],
+   "similar_general": [
+    "Midrift",
+    "Fleshwater",
+    "Soul Blind",
+    "Modern Color",
+    "Leaving Time",
+    "julie"
+   ],
+   "genre_overlap": [],
+   "top_track": "Karma",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/8/c/3/0/8c304ba7c63a087e8767e0cff186ede7.mp3?hdnea=exp=1781610517~acl=/api/1/1/8/c/3/0/8c304ba7c63a087e8767e0cff186ede7.mp3*~data=user_id=0,application_id=42~hmac=c7d5b04cf5f7d415f6a3a3fe0c8be00756c20b995c6d3d7e43d26e2631ec65fb",
+   "album": "KARMA!!",
+   "image": "https://cdn-images.dzcdn.net/images/artist/f92b0aa47d6e9ca4a308570ff2eb3260/250x250-000000-80-0-0.jpg",
+   "fans": 1149,
+   "deezer_id": 7250328,
+   "spotify_search_uri": "spotify:search:Raue",
+   "spotify_web_url": "https://open.spotify.com/search/Raue",
+   "user_status": null
+  },
+  {
+   "name": "Arm's Length",
+   "score": 5.0,
+   "bucket": "In your rotation",
+   "match_kind": "direct-now",
+   "why": "You've had this on repeat in the last month.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "emo"
+   ],
+   "raw_tags": [
+    "emo",
+    "pop punk"
+   ],
+   "bio": "Arm's Length is a pop punk act from Canada. Emo band from Ontario. This one's in heavy rotation for you right now — prioritize it.",
+   "similar_you_listen": [
+    "Free Throw",
+    "Hot Mulligan",
+    "Movements"
+   ],
+   "similar_general": [
+    "Heart Attack Man",
+    "Tiny Moving Parts",
+    "Origami Angel",
+    "Real Friends",
+    "The Story So Far",
+    "Ben Quad"
+   ],
+   "genre_overlap": [
+    "emo",
+    "pop punk"
+   ],
+   "top_track": "Object Permanence",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/1/e/f/0/1efee93794eb79ab4395f421524b96ca.mp3?hdnea=exp=1781610428~acl=/api/1/1/1/e/f/0/1efee93794eb79ab4395f421524b96ca.mp3*~data=user_id=0,application_id=42~hmac=473673bdffa44c9d97816b4bde9eb89c0b6eb8ddaf1655fbdedfcfb763788de8",
+   "album": "Never Before Seen, Never Again Found",
+   "image": "https://cdn-images.dzcdn.net/images/artist/c9a3d05d8ed6b5ad247e30785007afed/250x250-000000-80-0-0.jpg",
+   "fans": 1100,
+   "deezer_id": 70275402,
+   "spotify_search_uri": "spotify:search:Arm%27s%20Length",
+   "spotify_web_url": "https://open.spotify.com/search/Arm%27s%20Length",
+   "user_status": null
+  },
+  {
+   "name": "Bear Vs. Shark",
+   "score": 5.0,
+   "bucket": "In your rotation",
+   "match_kind": "direct-now",
+   "why": "You've had this on repeat in the last month.",
+   "genres": [
+    "post-hardcore",
+    "hardcore"
+   ],
+   "raw_tags": [
+    "post-hardcore"
+   ],
+   "bio": "Bear Vs. Shark is a post-hardcore act from United States, active since 2001. This one's in heavy rotation for you right now — prioritize it.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Samiam",
+    "Frenzal Rhomb",
+    "No Fun At All",
+    "American Nightmare",
+    "The Unseen",
+    "Screeching Weasel"
+   ],
+   "genre_overlap": [
+    "post-hardcore"
+   ],
+   "top_track": "Buses/No Buses",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/7/7/b/0/77b866b6b9f76cbada9f5108e2a88010.mp3?hdnea=exp=1781610432~acl=/api/1/1/7/7/b/0/77b866b6b9f76cbada9f5108e2a88010.mp3*~data=user_id=0,application_id=42~hmac=858d355c3de3ef6ba0816a7ecc8fc6fde7f1a8be4c5b42880b222f9ad5a9e63f",
+   "album": "Right Now, You're in the Best of Hands",
+   "image": "https://cdn-images.dzcdn.net/images/artist/debb586143cc05f33e7e541d26dce660/250x250-000000-80-0-0.jpg",
+   "fans": 733,
+   "deezer_id": 1578408,
+   "spotify_search_uri": "spotify:search:Bear%20Vs.%20Shark",
+   "spotify_web_url": "https://open.spotify.com/search/Bear%20Vs.%20Shark",
+   "user_status": null
+  },
+  {
+   "name": "Bad Cop Bad Cop",
+   "score": 5.0,
+   "bucket": "In your rotation",
+   "match_kind": "direct-now",
+   "why": "You've had this on repeat in the last month.",
+   "genres": [
+    "punk",
+    "rock"
+   ],
+   "raw_tags": [
+    "punk",
+    "punk rock"
+   ],
+   "bio": "Bad Cop Bad Cop is a punk act from United States, active since 2011. This one's in heavy rotation for you right now — prioritize it.",
+   "similar_you_listen": [
+    "NOFX"
+   ],
+   "similar_general": [
+    "Propagandhi",
+    "Descendents",
+    "Lars Frederiksen And The Bastards",
+    "Bad Religion",
+    "Street Dogs",
+    "Rancid"
+   ],
+   "genre_overlap": [
+    "punk"
+   ],
+   "top_track": "Retrograde",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/5/b/c/0/5bcb2362e809d9f783fdb9e4fe15dbbd.mp3?hdnea=exp=1781610430~acl=/api/1/1/5/b/c/0/5bcb2362e809d9f783fdb9e4fe15dbbd.mp3*~data=user_id=0,application_id=42~hmac=6f27cd80d6c1e43836d067252948c85e14dce49db6773489f70f21ffc825dd53",
+   "album": "Warriors",
+   "image": "https://cdn-images.dzcdn.net/images/artist/edf7241fd95e5386d8900eb738dee1c6/250x250-000000-80-0-0.jpg",
+   "fans": 528,
+   "deezer_id": 1441158,
+   "spotify_search_uri": "spotify:search:Bad%20Cop%20Bad%20Cop",
+   "spotify_web_url": "https://open.spotify.com/search/Bad%20Cop%20Bad%20Cop",
+   "user_status": null
+  },
+  {
+   "name": "Big Ass Truck I.E.",
+   "score": 5.0,
+   "bucket": "In your rotation",
+   "match_kind": "direct-now",
+   "why": "You've had this on repeat in the last month.",
+   "genres": [
+    "metalcore",
+    "hardcore",
+    "metal"
+   ],
+   "raw_tags": [
+    "metal",
+    "metalcore",
+    "beatdown hardcore"
+   ],
+   "bio": "Big Ass Truck I.E. is a metalcore act from California. Metalcore band from California. This one's in heavy rotation for you right now — prioritize it.",
+   "similar_you_listen": [
+    "Guilt Trip"
+   ],
+   "similar_general": [
+    "Varials",
+    "Bodysnatcher",
+    "Better Lovers",
+    "Kanine",
+    "Mirar",
+    "SPEED"
+   ],
+   "genre_overlap": [
+    "metal",
+    "metalcore"
+   ],
+   "top_track": "BIG ASS TRUCK",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/4/5/d/0/45d2093f3e40425b0cb7402af2cc7c1e.mp3?hdnea=exp=1781610433~acl=/api/1/1/4/5/d/0/45d2093f3e40425b0cb7402af2cc7c1e.mp3*~data=user_id=0,application_id=42~hmac=8045b722a2a0387ee0fb2f187dda2efb4b04697e8cb7664fb1b4016b0ef99b77",
+   "album": "BIG ASS DEMO",
+   "image": "https://cdn-images.dzcdn.net/images/artist/af6ad56f296f3033a8130dd8e034597a/250x250-000000-80-0-0.jpg",
+   "fans": 368,
+   "deezer_id": 304704261,
+   "spotify_search_uri": "spotify:search:Big%20Ass%20Truck%20I.E.",
+   "spotify_web_url": "https://open.spotify.com/search/Big%20Ass%20Truck%20I.E.",
+   "user_status": null
+  },
+  {
+   "name": "Whispers",
+   "score": 5.0,
+   "bucket": "In your rotation",
+   "match_kind": "direct-now",
+   "why": "You've had this on repeat in the last month.",
+   "genres": [
+    "rock",
+    "pop"
+   ],
+   "raw_tags": [
+    "soul",
+    "disco",
+    "boogie",
+    "classic pop and rock",
+    "pop soul",
+    "smooth soul"
+   ],
+   "bio": "Whispers is a rock act from United States, active since 1963. US R&B/dance vocal group. This one's in heavy rotation for you right now — prioritize it.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Incendiary",
+    "Terror",
+    "Harm's Way",
+    "Lionheart",
+    "Sorcerer",
+    "SPEED"
+   ],
+   "genre_overlap": [],
+   "top_track": "Bangkok Evilcore",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/9/1/8/0/918b850456a3b2dbe0e776c4a43e2c31.mp3?hdnea=exp=1781610566~acl=/api/1/1/9/1/8/0/918b850456a3b2dbe0e776c4a43e2c31.mp3*~data=user_id=0,application_id=42~hmac=bb8fe199325df513e95377296b0e4b10ee81cf3c8286f87e56ed1d378302b165",
+   "album": "Yom-Ma-Lok",
+   "image": "https://cdn-images.dzcdn.net/images/artist/eb9e5924d59f3195ef451fe8f0e29b4c/250x250-000000-80-0-0.jpg",
+   "fans": 118,
+   "deezer_id": 342834031,
+   "spotify_search_uri": "spotify:search:Whispers",
+   "spotify_web_url": "https://open.spotify.com/search/Whispers",
+   "user_status": null
+  },
+  {
+   "name": "Simple Plan",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "emo"
+   ],
+   "raw_tags": [
+    "alternative rock",
+    "pop punk",
+    "mix",
+    "pop and chart",
+    "emo-pop",
+    "post-emo"
+   ],
+   "bio": "Simple Plan is a pop punk act from Canada, active since 1999. If you like Sum 41, New Found Glory and Jimmy Eat World, you'll want to be there.",
+   "similar_you_listen": [
+    "Sum 41",
+    "New Found Glory",
+    "Jimmy Eat World",
+    "blink-182",
+    "Green Day"
+   ],
+   "similar_general": [
+    "Good Charlotte",
+    "The All-American Rejects",
+    "Yellowcard",
+    "All Time Low",
+    "Fall Out Boy",
+    "Paramore"
+   ],
+   "genre_overlap": [
+    "pop punk"
+   ],
+   "top_track": "I'm Just a Kid",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/e/5/6/0/e56c70f18490460f5e3c137dcea9d205.mp3?hdnea=exp=1781610529~acl=/api/1/1/e/5/6/0/e56c70f18490460f5e3c137dcea9d205.mp3*~data=user_id=0,application_id=42~hmac=2ba6698ed6086d72d82d0a77d5f4572e1a88398dfa73694ba3c7862e34680d04",
+   "album": "No Pads, No Helmets...Just Balls (15th Anniversary Tour Edition)",
+   "image": "https://cdn-images.dzcdn.net/images/artist/1e412c04fde69f9a22bd3874adf5f60d/250x250-000000-80-0-0.jpg",
+   "fans": 1694192,
+   "deezer_id": 87,
+   "spotify_search_uri": "spotify:search:Simple%20Plan",
+   "spotify_web_url": "https://open.spotify.com/search/Simple%20Plan",
+   "user_status": null
+  },
+  {
+   "name": "All Time Low",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "emo"
+   ],
+   "raw_tags": [
+    "pop",
+    "alternative rock",
+    "punk",
+    "powerpop",
+    "power pop",
+    "emo"
+   ],
+   "bio": "All Time Low is a pop punk act from United States, active since 2003. Pop punk from Maryland. If you like New Found Glory, Taking Back Sunday and Story Of The Year, you'll want to be there.",
+   "similar_you_listen": [
+    "New Found Glory",
+    "Taking Back Sunday",
+    "Story Of The Year"
+   ],
+   "similar_general": [
+    "Mayday Parade",
+    "Simple Plan",
+    "Fall Out Boy",
+    "Stand Atlantic",
+    "You Me At Six",
+    "Yellowcard"
+   ],
+   "genre_overlap": [
+    "emo",
+    "emo pop",
+    "pop punk",
+    "punk"
+   ],
+   "top_track": "Dear Maria, Count Me In",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/f/7/6/0/f761524a925388fffc58005e86f8de29.mp3?hdnea=exp=1781610424~acl=/api/1/1/f/7/6/0/f761524a925388fffc58005e86f8de29.mp3*~data=user_id=0,application_id=42~hmac=4b207b79201a984b0f7984a44658a07054c36ab6d51dc22fc108dcc63b2c9827",
+   "album": "So Wrong, It's Right",
+   "image": "https://cdn-images.dzcdn.net/images/artist/3f73c5dded7afe2037a60bd82be48b4f/250x250-000000-80-0-0.jpg",
+   "fans": 388863,
+   "deezer_id": 13191,
+   "spotify_search_uri": "spotify:search:All%20Time%20Low",
+   "spotify_web_url": "https://open.spotify.com/search/All%20Time%20Low",
+   "user_status": null
+  },
+  {
+   "name": "Hoobastank",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "metal",
+    "rock",
+    "pop"
+   ],
+   "raw_tags": [
+    "alternative rock",
+    "hard rock",
+    "nu metal",
+    "post-grunge",
+    "alternative metal",
+    "pop rock"
+   ],
+   "bio": "Hoobastank is a metal act from United States, active since 1994. If you like Sum 41, AFI and Green Day, you'll want to be there.",
+   "similar_you_listen": [
+    "Sum 41",
+    "AFI",
+    "Green Day",
+    "Rise Against",
+    "The Offspring"
+   ],
+   "similar_general": [
+    "3 Doors Down",
+    "Thirty Seconds to Mars",
+    "Nickelback",
+    "The Rasmus",
+    "Linkin Park",
+    "Seether"
+   ],
+   "genre_overlap": [
+    "alternative metal",
+    "hard rock",
+    "nu metal",
+    "post-grunge"
+   ],
+   "top_track": "The Reason (Radio Edit)",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/8/3/1/0/8315ff8f0ae24df9c2beb7a18ba6621e.mp3?hdnea=exp=1781610481~acl=/api/1/1/8/3/1/0/8315ff8f0ae24df9c2beb7a18ba6621e.mp3*~data=user_id=0,application_id=42~hmac=9cd70be05f14e3e64471e46203c29342ee4763ffb9adb40a9c98117cff939168",
+   "album": "Generación Rock 00's",
+   "image": "https://cdn-images.dzcdn.net/images/artist/cc73698ecf7d3ce03f3b1079888d9c03/250x250-000000-80-0-0.jpg",
+   "fans": 378116,
+   "deezer_id": 490,
+   "spotify_search_uri": "spotify:search:Hoobastank",
+   "spotify_web_url": "https://open.spotify.com/search/Hoobastank",
+   "user_status": null
+  },
+  {
+   "name": "Escape the Fate",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "emo",
+    "post-hardcore",
+    "metalcore"
+   ],
+   "raw_tags": [
+    "metalcore",
+    "hard rock",
+    "emo",
+    "post-hardcore",
+    "alternative hardcore",
+    "emo pop"
+   ],
+   "bio": "Escape the Fate is a emo act from United States, active since 2004. If you like Bring Me The Horizon, Crown The Empire and Underoath, you'll want to be there.",
+   "similar_you_listen": [
+    "Bring Me The Horizon",
+    "Crown The Empire",
+    "Underoath",
+    "Story Of The Year"
+   ],
+   "similar_general": [
+    "A Day to Remember",
+    "Our Last Night",
+    "Falling In Reverse",
+    "Silverstein",
+    "Black Veil Brides",
+    "Asking Alexandria"
+   ],
+   "genre_overlap": [
+    "emo",
+    "emo pop",
+    "hard rock",
+    "metalcore",
+    "post-hardcore"
+   ],
+   "top_track": "Situations",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/9/b/a/0/9ba2b8b6be4f905306dd3bb00ad05db0.mp3?hdnea=exp=1781610459~acl=/api/1/1/9/b/a/0/9ba2b8b6be4f905306dd3bb00ad05db0.mp3*~data=user_id=0,application_id=42~hmac=bb6a10442270fc20cd5ff105bdc471b3ff5f50b20a78cc3acf7672b1663b1e6d",
+   "album": "Dying Is Your Latest Fashion",
+   "image": "https://cdn-images.dzcdn.net/images/artist/b83ab807a1482acd58100b56f47bcb42/250x250-000000-80-0-0.jpg",
+   "fans": 374410,
+   "deezer_id": 12882,
+   "spotify_search_uri": "spotify:search:Escape%20the%20Fate",
+   "spotify_web_url": "https://open.spotify.com/search/Escape%20the%20Fate",
+   "user_status": null
+  },
+  {
+   "name": "The Used",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "emo"
+   ],
+   "raw_tags": [
+    "rock",
+    "alternative rock",
+    "emo",
+    "screamo",
+    "pop punk",
+    "post-hardcore"
+   ],
+   "bio": "The Used is a pop punk act from United States, active since 2001. American post hardcore band. If you like Thrice, Taking Back Sunday and Story Of The Year, you'll want to be there.",
+   "similar_you_listen": [
+    "Thrice",
+    "Taking Back Sunday",
+    "Story Of The Year",
+    "AFI"
+   ],
+   "similar_general": [
+    "All Time Low",
+    "The Red Jumpsuit Apparatus",
+    "You Me At Six",
+    "Anberlin",
+    "Coheed and Cambria",
+    "Funeral for a Friend"
+   ],
+   "genre_overlap": [
+    "emo",
+    "emo pop",
+    "pop punk",
+    "post-hardcore",
+    "screamo"
+   ],
+   "top_track": "I Caught Fire",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/0/1/d/0/01d494ee5495ca31aa847c59fba3b172.mp3?hdnea=exp=1781610553~acl=/api/1/1/0/1/d/0/01d494ee5495ca31aa847c59fba3b172.mp3*~data=user_id=0,application_id=42~hmac=9bdeb8a1d01b9dcbcf6e6fb5d6daa4946bd79d163f651066f3bcddf85d1a636c",
+   "album": "In Love and Death",
+   "image": "https://cdn-images.dzcdn.net/images/artist/8246674fa6bde7502ee14eb5522ea1db/250x250-000000-80-0-0.jpg",
+   "fans": 149407,
+   "deezer_id": 1285,
+   "spotify_search_uri": "spotify:search:The%20Used",
+   "spotify_web_url": "https://open.spotify.com/search/The%20Used",
+   "user_status": null
+  },
+  {
+   "name": "We Came as Romans",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "post-hardcore",
+    "metalcore",
+    "hardcore"
+   ],
+   "raw_tags": [
+    "hardcore",
+    "metalcore",
+    "screamo",
+    "post-hardcore",
+    "melodic metalcore",
+    "electronicore"
+   ],
+   "bio": "We Came as Romans is a post-hardcore act from United States, active since 2005. If you like Crown The Empire and The Devil Wears Prada, you'll want to be there.",
+   "similar_you_listen": [
+    "Crown The Empire",
+    "The Devil Wears Prada"
+   ],
+   "similar_general": [
+    "The Amity Affliction",
+    "Memphis May Fire",
+    "Of Mice & Men",
+    "Blessthefall",
+    "Beartooth",
+    "I Prevail"
+   ],
+   "genre_overlap": [
+    "hardcore",
+    "metalcore",
+    "post-hardcore",
+    "screamo"
+   ],
+   "top_track": "Black Hole",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/3/5/a/0/35aed7fcf012fce2cc64d343dcc069c5.mp3?hdnea=exp=1781610564~acl=/api/1/1/3/5/a/0/35aed7fcf012fce2cc64d343dcc069c5.mp3*~data=user_id=0,application_id=42~hmac=a25127d588c248edc515fc1f0aeb08a5faec49291c26535e5fed421e5d500398",
+   "album": "Black Hole",
+   "image": "https://cdn-images.dzcdn.net/images/artist/724efa2a1f1b75a487e330d40c347207/250x250-000000-80-0-0.jpg",
+   "fans": 134629,
+   "deezer_id": 356815,
+   "spotify_search_uri": "spotify:search:We%20Came%20as%20Romans",
+   "spotify_web_url": "https://open.spotify.com/search/We%20Came%20as%20Romans",
+   "user_status": null
+  },
+  {
+   "name": "Bowling for Soup",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "rock"
+   ],
+   "raw_tags": [
+    "punk rock",
+    "pop punk"
+   ],
+   "bio": "Bowling for Soup is a pop punk act from United States, active since 1994. If you like New Found Glory, Jimmy Eat World and blink-182, you'll want to be there.",
+   "similar_you_listen": [
+    "New Found Glory",
+    "Jimmy Eat World",
+    "blink-182",
+    "Taking Back Sunday"
+   ],
+   "similar_general": [
+    "American Hi-Fi",
+    "Good Charlotte",
+    "Relient K",
+    "Simple Plan",
+    "Yellowcard",
+    "MxPx"
+   ],
+   "genre_overlap": [
+    "pop punk"
+   ],
+   "top_track": "1985",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/7/6/e/0/76ed64090fb407d037c3d3cff0593d0c.mp3?hdnea=exp=1781610437~acl=/api/1/1/7/6/e/0/76ed64090fb407d037c3d3cff0593d0c.mp3*~data=user_id=0,application_id=42~hmac=f41b0cef020f8592269de2d4a2528d20081a39379d44fc40f58abf074d692b5d",
+   "album": "A Hangover You Don't Deserve",
+   "image": "https://cdn-images.dzcdn.net/images/artist/a35b96f762e4ae8a348ca684750be263/250x250-000000-80-0-0.jpg",
+   "fans": 118351,
+   "deezer_id": 8693,
+   "spotify_search_uri": "spotify:search:Bowling%20for%20Soup",
+   "spotify_web_url": "https://open.spotify.com/search/Bowling%20for%20Soup",
+   "user_status": null
+  },
+  {
+   "name": "Silverstein",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "emo"
+   ],
+   "raw_tags": [
+    "rock",
+    "hardcore",
+    "punk",
+    "metalcore",
+    "hard rock",
+    "emo"
+   ],
+   "bio": "Silverstein is a pop punk act from Canada, active since 2000. If you like Underoath, Story Of The Year and From First To Last, you'll want to be there.",
+   "similar_you_listen": [
+    "Underoath",
+    "Story Of The Year",
+    "From First To Last"
+   ],
+   "similar_general": [
+    "Sleeping With Sirens",
+    "Escape the Fate",
+    "A Day to Remember",
+    "A Skylit Drive",
+    "Saosin",
+    "Dance Gavin Dance"
+   ],
+   "genre_overlap": [
+    "emo",
+    "hard rock",
+    "hardcore",
+    "melodic hardcore",
+    "metalcore",
+    "pop punk"
+   ],
+   "top_track": "Smile In Your Sleep",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/a/a/d/0/aadcde0cf050c024f68bbb3bd0032d93.mp3?hdnea=exp=1781610528~acl=/api/1/1/a/a/d/0/aadcde0cf050c024f68bbb3bd0032d93.mp3*~data=user_id=0,application_id=42~hmac=05aec380ffe93a30c695ebe7a1a85bbde848a1d01ef497d807984eec1865c5f1",
+   "album": "Discovering The Waterfront",
+   "image": "https://cdn-images.dzcdn.net/images/artist/7974245240364b5a39d5ef8fc6be194c/250x250-000000-80-0-0.jpg",
+   "fans": 118025,
+   "deezer_id": 5721,
+   "spotify_search_uri": "spotify:search:Silverstein",
+   "spotify_web_url": "https://open.spotify.com/search/Silverstein",
+   "user_status": null
+  },
+  {
+   "name": "Mayday Parade",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "emo"
+   ],
+   "raw_tags": [
+    "alternative rock",
+    "emo",
+    "pop punk",
+    "power pop",
+    "emo pop",
+    "indie rock"
+   ],
+   "bio": "Mayday Parade is a pop punk act from United States, active since 2005. US pop punk/emo pop band. If you like Bayside and Taking Back Sunday, you'll want to be there.",
+   "similar_you_listen": [
+    "Bayside",
+    "Taking Back Sunday"
+   ],
+   "similar_general": [
+    "All Time Low",
+    "State Champs",
+    "Neck Deep",
+    "We Are the In Crowd",
+    "Every Avenue",
+    "Hey Monday"
+   ],
+   "genre_overlap": [
+    "emo",
+    "emo pop",
+    "indie rock",
+    "pop punk"
+   ],
+   "top_track": "Jamie All Over",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/0/2/8/0/028e4730ffbd4071c1096464676b30b5.mp3?hdnea=exp=1781610501~acl=/api/1/1/0/2/8/0/028e4730ffbd4071c1096464676b30b5.mp3*~data=user_id=0,application_id=42~hmac=27d57fa19334a9d450461413f80a9a0560efa99e53d1f7138300029b6d0a788a",
+   "album": "A Lesson In Romantics",
+   "image": "https://cdn-images.dzcdn.net/images/artist/8dc38d92ea68f1004aa0209bc07d3a4a/250x250-000000-80-0-0.jpg",
+   "fans": 114385,
+   "deezer_id": 13170,
+   "spotify_search_uri": "spotify:search:Mayday%20Parade",
+   "spotify_web_url": "https://open.spotify.com/search/Mayday%20Parade",
+   "user_status": null
+  },
+  {
+   "name": "Alexisonfire",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "punk",
+    "emo",
+    "post-hardcore"
+   ],
+   "raw_tags": [
+    "rock",
+    "alternative rock",
+    "punk",
+    "emo",
+    "screamo",
+    "post-grunge"
+   ],
+   "bio": "Alexisonfire is a punk act from Canada, active since 2001. Canadian post‐hardcore band. If you like Thrice, Underoath and Story Of The Year, you'll want to be there.",
+   "similar_you_listen": [
+    "Thrice",
+    "Underoath",
+    "Story Of The Year",
+    "AFI",
+    "From First To Last"
+   ],
+   "similar_general": [
+    "A Day to Remember",
+    "Silverstein",
+    "Coheed and Cambria",
+    "The Used",
+    "Escape the Fate",
+    "Saosin"
+   ],
+   "genre_overlap": [
+    "alternative metal",
+    "emo",
+    "post-grunge",
+    "post-hardcore",
+    "punk",
+    "screamo"
+   ],
+   "top_track": "This Could Be Anywhere In The World",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/2/2/d/0/22d08db4d6fc2cbba11550e83a0c3274.mp3?hdnea=exp=1781610423~acl=/api/1/1/2/2/d/0/22d08db4d6fc2cbba11550e83a0c3274.mp3*~data=user_id=0,application_id=42~hmac=3082f02e1d967a3c103811a9b423df5cca1fee0e47e1464a509e0d60dbc4394f",
+   "album": "Crisis",
+   "image": "https://cdn-images.dzcdn.net/images/artist/9ccf5a3510f1ddadef757032c3c03838/250x250-000000-80-0-0.jpg",
+   "fans": 54578,
+   "deezer_id": 4076,
+   "spotify_search_uri": "spotify:search:Alexisonfire",
+   "spotify_web_url": "https://open.spotify.com/search/Alexisonfire",
+   "user_status": null
+  },
+  {
+   "name": "MxPx",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "ska"
+   ],
+   "raw_tags": [
+    "rock",
+    "punk",
+    "american",
+    "punk rock",
+    "usa",
+    "pop punk"
+   ],
+   "bio": "MxPx is a pop punk act from United States, active since 1992. American punk rock band. If you like New Found Glory, blink-182 and AFI, you'll want to be there.",
+   "similar_you_listen": [
+    "New Found Glory",
+    "blink-182",
+    "AFI",
+    "NOFX"
+   ],
+   "similar_general": [
+    "Goldfinger",
+    "Reel Big Fish",
+    "No Use for a Name",
+    "Alkaline Trio",
+    "The Ataris",
+    "Less Than Jake"
+   ],
+   "genre_overlap": [
+    "pop punk",
+    "punk",
+    "skate punk"
+   ],
+   "top_track": "(I'm Gonna Be) 500 Miles",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/e/1/b/0/e1bf55ba8e7ac8669cc8b344e558e37a.mp3?hdnea=exp=1781610505~acl=/api/1/1/e/1/b/0/e1bf55ba8e7ac8669cc8b344e558e37a.mp3*~data=user_id=0,application_id=42~hmac=379af3340058cdd9a3cbc1a97d86a59b0f1233de2e5534cdce754be86b8f0ad1",
+   "album": "On The Cover II",
+   "image": "https://cdn-images.dzcdn.net/images/artist/bd1a31e64b47fd7f50df53dca252e8a3/250x250-000000-80-0-0.jpg",
+   "fans": 47294,
+   "deezer_id": 954,
+   "spotify_search_uri": "spotify:search:MxPx",
+   "spotify_web_url": "https://open.spotify.com/search/MxPx",
+   "user_status": null
+  },
+  {
+   "name": "Dance Gavin Dance",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "emo",
+    "post-hardcore",
+    "metalcore"
+   ],
+   "raw_tags": [
+    "rock",
+    "pop",
+    "progressive rock",
+    "hardcore",
+    "metalcore",
+    "experimental"
+   ],
+   "bio": "Dance Gavin Dance is a emo act from United States, active since 2005. If you like Crown The Empire and Underoath, you'll want to be there.",
+   "similar_you_listen": [
+    "Crown The Empire",
+    "Underoath"
+   ],
+   "similar_general": [
+    "Issues",
+    "Sleeping With Sirens",
+    "Emarosa",
+    "Hands Like Houses",
+    "We Came As Romans",
+    "Blessthefall"
+   ],
+   "genre_overlap": [
+    "emo",
+    "hardcore",
+    "math rock",
+    "metalcore",
+    "post-hardcore",
+    "progressive rock"
+   ],
+   "top_track": "Frozen One",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/8/b/3/0/8b334747da578b90a46d83426bb642ee.mp3?hdnea=exp=1781610448~acl=/api/1/1/8/b/3/0/8b334747da578b90a46d83426bb642ee.mp3*~data=user_id=0,application_id=42~hmac=37f0b31c1d83ac41eaadc57d107ae77e5de9de0b3d12e75d8688db22ce530783",
+   "album": "Mothership",
+   "image": "https://cdn-images.dzcdn.net/images/artist/80ff500afd7a5a42ebd08a198df91f89/250x250-000000-80-0-0.jpg",
+   "fans": 38607,
+   "deezer_id": 72709,
+   "spotify_search_uri": "spotify:search:Dance%20Gavin%20Dance",
+   "spotify_web_url": "https://open.spotify.com/search/Dance%20Gavin%20Dance",
+   "user_status": null
+  },
+  {
+   "name": "The Story So Far",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "rock"
+   ],
+   "raw_tags": [
+    "punk rock",
+    "pop punk"
+   ],
+   "bio": "The Story So Far is a pop punk act from United States, active since 2007. Pop punk band from Walnut Creek, CA, 2007–present. If you like New Found Glory, Bayside and Taking Back Sunday, you'll want to be there.",
+   "similar_you_listen": [
+    "New Found Glory",
+    "Bayside",
+    "Taking Back Sunday"
+   ],
+   "similar_general": [
+    "Neck Deep",
+    "Four Year Strong",
+    "Real Friends",
+    "Knuckle Puck",
+    "Mayday Parade",
+    "State Champs"
+   ],
+   "genre_overlap": [
+    "pop punk"
+   ],
+   "top_track": "Keep This Up",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/b/8/0/0/b80d37013f7afc7cb34f9d6c68d4aad9.mp3?hdnea=exp=1781610552~acl=/api/1/1/b/8/0/0/b80d37013f7afc7cb34f9d6c68d4aad9.mp3*~data=user_id=0,application_id=42~hmac=4ffd6c484b4ef78b2c1c365114de9cb311e3075f8f93ff973f0dcacec52676b2",
+   "album": "Proper Dose",
+   "image": "https://cdn-images.dzcdn.net/images/artist/59824357aab999d9607b9e61eb0dbca4/250x250-000000-80-0-0.jpg",
+   "fans": 30259,
+   "deezer_id": 81218,
+   "spotify_search_uri": "spotify:search:The%20Story%20So%20Far",
+   "spotify_web_url": "https://open.spotify.com/search/The%20Story%20So%20Far",
+   "user_status": null
+  },
+  {
+   "name": "The Ataris",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "pop"
+   ],
+   "raw_tags": [
+    "punk",
+    "pop punk"
+   ],
+   "bio": "The Ataris is a pop punk act from United States, active since 1996. US pop/punk band. If you like New Found Glory, Jimmy Eat World and blink-182, you'll want to be there.",
+   "similar_you_listen": [
+    "New Found Glory",
+    "Jimmy Eat World",
+    "blink-182",
+    "Taking Back Sunday",
+    "AFI"
+   ],
+   "similar_general": [
+    "Alkaline Trio",
+    "MxPx",
+    "The Menzingers",
+    "Zebrahead",
+    "Yellowcard",
+    "Anti-Flag"
+   ],
+   "genre_overlap": [
+    "pop punk",
+    "punk"
+   ],
+   "top_track": "The Boys of Summer",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/c/9/6/0/c96f946e0f45e977513b5bc8880acc9e.mp3?hdnea=exp=1781610543~acl=/api/1/1/c/9/6/0/c96f946e0f45e977513b5bc8880acc9e.mp3*~data=user_id=0,application_id=42~hmac=127ff47fafaf7c515db35665b024fa8f8ae88de714bc0e246ecacfb87092916f",
+   "album": "So Long, Astoria",
+   "image": "https://cdn-images.dzcdn.net/images/artist/6b3cd08dd1650ea73676de8afa2c619b/250x250-000000-80-0-0.jpg",
+   "fans": 20278,
+   "deezer_id": 4224,
+   "spotify_search_uri": "spotify:search:The%20Ataris",
+   "spotify_web_url": "https://open.spotify.com/search/The%20Ataris",
+   "user_status": null
+  },
+  {
+   "name": "Scary Kids Scaring Kids",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "post-hardcore",
+    "hardcore"
+   ],
+   "raw_tags": [
+    "post-hardcore"
+   ],
+   "bio": "Scary Kids Scaring Kids is a post-hardcore act from United States, active since 2002. If you like Thrice, Underoath and Story Of The Year, you'll want to be there.",
+   "similar_you_listen": [
+    "Thrice",
+    "Underoath",
+    "Story Of The Year",
+    "From First To Last"
+   ],
+   "similar_general": [
+    "Four Year Strong",
+    "Silverstein",
+    "Sleeping With Sirens",
+    "Escape the Fate",
+    "Alesana",
+    "Saosin"
+   ],
+   "genre_overlap": [
+    "post-hardcore"
+   ],
+   "top_track": "Faces",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/f/5/7/0/f57bae52b06717192c9f398740cedc7d.mp3?hdnea=exp=1781610524~acl=/api/1/1/f/5/7/0/f57bae52b06717192c9f398740cedc7d.mp3*~data=user_id=0,application_id=42~hmac=c3f080ac174b836cbdf6df1aaf81574989eb4bcb17068b1c8a1e3bb8ca03ded9",
+   "album": "Scary Kids Scaring Kids",
+   "image": "https://cdn-images.dzcdn.net/images/artist/861f7b55034a32995635e0775dfd38ff/250x250-000000-80-0-0.jpg",
+   "fans": 15107,
+   "deezer_id": 70050,
+   "spotify_search_uri": "spotify:search:Scary%20Kids%20Scaring%20Kids",
+   "spotify_web_url": "https://open.spotify.com/search/Scary%20Kids%20Scaring%20Kids",
+   "user_status": null
+  },
+  {
+   "name": "Emery",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "post-hardcore",
+    "hardcore"
+   ],
+   "raw_tags": [
+    "post-hardcore",
+    "usa"
+   ],
+   "bio": "Emery is a post-hardcore act from United States, active since 2001. US post-hardcore band. If you like Bayside, Taking Back Sunday and From First To Last, you'll want to be there.",
+   "similar_you_listen": [
+    "Bayside",
+    "Taking Back Sunday",
+    "From First To Last"
+   ],
+   "similar_general": [
+    "Saosin",
+    "Circa Survive",
+    "Hawthorne Heights",
+    "Armor for Sleep",
+    "Senses Fail",
+    "Chiodos"
+   ],
+   "genre_overlap": [
+    "post-hardcore"
+   ],
+   "top_track": "Walls",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/c/7/7/0/c77e6509a6d94a06e2c0d7b609ba8b2d.mp3?hdnea=exp=1781610458~acl=/api/1/1/c/7/7/0/c77e6509a6d94a06e2c0d7b609ba8b2d.mp3*~data=user_id=0,application_id=42~hmac=d276c2d0098e55880d62a5ed41a1ee05df01ca8fbd15869eda5ed56c83a4280a",
+   "album": "The Weak's End",
+   "image": "https://cdn-images.dzcdn.net/images/artist/510ef32ac2a36a663f91a33702d09c9d/250x250-000000-80-0-0.jpg",
+   "fans": 14013,
+   "deezer_id": 1230,
+   "spotify_search_uri": "spotify:search:Emery",
+   "spotify_web_url": "https://open.spotify.com/search/Emery",
+   "user_status": null
+  },
+  {
+   "name": "Drop Dead, Gorgeous",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "post-hardcore",
+    "hardcore"
+   ],
+   "raw_tags": [
+    "hardcore",
+    "screamo",
+    "post-hardcore"
+   ],
+   "bio": "Drop Dead, Gorgeous is a post-hardcore act from United States, active since 2004. Denver, CO post-hardcore band. If you like Crown The Empire and The Devil Wears Prada, you'll want to be there.",
+   "similar_you_listen": [
+    "Crown The Empire",
+    "The Devil Wears Prada"
+   ],
+   "similar_general": [
+    "The Amity Affliction",
+    "Enter Shikari",
+    "Blessthefall",
+    "DON BROCO",
+    "Memphis May Fire",
+    "Rising Insane"
+   ],
+   "genre_overlap": [
+    "hardcore",
+    "post-hardcore",
+    "screamo"
+   ],
+   "top_track": "Dressed For Friend Requests",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/3/1/c/0/31cefd4e38189e99f6f61600ea185dbf.mp3?hdnea=exp=1781610456~acl=/api/1/1/3/1/c/0/31cefd4e38189e99f6f61600ea185dbf.mp3*~data=user_id=0,application_id=42~hmac=4f2ed28f9fb2f4a3017e99e558ab06a6c38540e30798d71b1e3f194b2d7bbff5",
+   "album": "In Vogue",
+   "image": "https://cdn-images.dzcdn.net/images/artist/9302ab62aba11d77c50f911dabca282c/250x250-000000-80-0-0.jpg",
+   "fans": 13904,
+   "deezer_id": 72766,
+   "spotify_search_uri": "spotify:search:Drop%20Dead%2C%20Gorgeous",
+   "spotify_web_url": "https://open.spotify.com/search/Drop%20Dead%2C%20Gorgeous",
+   "user_status": null
+  },
+  {
+   "name": "Glassjaw",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "post-hardcore",
+    "hardcore",
+    "metal"
+   ],
+   "raw_tags": [
+    "rock",
+    "hardcore",
+    "nu metal",
+    "screamo",
+    "alternative metal",
+    "post-hardcore"
+   ],
+   "bio": "Glassjaw is a post-hardcore act from United States, active since 1993. If you like Thrice, Underoath and Story Of The Year, you'll want to be there.",
+   "similar_you_listen": [
+    "Thrice",
+    "Underoath",
+    "Story Of The Year",
+    "AFI",
+    "From First To Last"
+   ],
+   "similar_general": [
+    "Alexisonfire",
+    "Coheed and Cambria",
+    "From Autumn to Ashes",
+    "Funeral for a Friend",
+    "The Fall of Troy",
+    "The Used"
+   ],
+   "genre_overlap": [
+    "alternative metal",
+    "hardcore",
+    "nu metal",
+    "post-hardcore",
+    "screamo"
+   ],
+   "top_track": "Siberian Kiss (2009 Remaster)",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/5/f/1/0/5f1c477bd10ce70248231644a156ac3e.mp3?hdnea=exp=1781610469~acl=/api/1/1/5/f/1/0/5f1c477bd10ce70248231644a156ac3e.mp3*~data=user_id=0,application_id=42~hmac=cf61894f1d9322da759812fe5ebf7e2129abbfb420f6f439ada1a4b4f8ffff45",
+   "album": "Everything You Ever Wanted To Know About Silence Remaster",
+   "image": "https://cdn-images.dzcdn.net/images/artist/fc87a0bcff81ff41bfe243f7651af35b/250x250-000000-80-0-0.jpg",
+   "fans": 12034,
+   "deezer_id": 11113,
+   "spotify_search_uri": "spotify:search:Glassjaw",
+   "spotify_web_url": "https://open.spotify.com/search/Glassjaw",
+   "user_status": null
+  },
+  {
+   "name": "The Starting Line",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "emo"
+   ],
+   "raw_tags": [
+    "emo",
+    "pop punk"
+   ],
+   "bio": "The Starting Line is a pop punk act from Philadelphia, active since 1999. US rock. If you like Bayside, Taking Back Sunday and Motion City Soundtrack, you'll want to be there.",
+   "similar_you_listen": [
+    "Bayside",
+    "Taking Back Sunday",
+    "Motion City Soundtrack"
+   ],
+   "similar_general": [
+    "Four Year Strong",
+    "State Champs",
+    "Knuckle Puck",
+    "Chunk! No, captain chunk!",
+    "Cute Is What We Aim For",
+    "Hawthorne Heights"
+   ],
+   "genre_overlap": [
+    "emo",
+    "pop punk"
+   ],
+   "top_track": "The Best Of Me",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/f/7/9/0/f795eb351d00bfff56bb37b5407c07ee.mp3?hdnea=exp=1781610551~acl=/api/1/1/f/7/9/0/f795eb351d00bfff56bb37b5407c07ee.mp3*~data=user_id=0,application_id=42~hmac=e46dd54279976ba3885d9db9e1191c5a8959574df1bc383e550ef3477f84b4ee",
+   "album": "Say It Like You Mean It",
+   "image": "https://cdn-images.dzcdn.net/images/artist/4ea4d1aa87b8242adf7bf62de63c82be/250x250-000000-80-0-0.jpg",
+   "fans": 10304,
+   "deezer_id": 1289,
+   "spotify_search_uri": "spotify:search:The%20Starting%20Line",
+   "spotify_web_url": "https://open.spotify.com/search/The%20Starting%20Line",
+   "user_status": null
+  },
+  {
+   "name": "Citizen",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "direct-life",
+   "why": "A longtime favorite in your library.",
+   "genres": [
+    "emo",
+    "post-hardcore",
+    "hardcore"
+   ],
+   "raw_tags": [
+    "rock",
+    "alternative rock",
+    "grunge",
+    "indie rock",
+    "emo",
+    "pop rock"
+   ],
+   "bio": "Citizen is a emo act from United States, active since 2009. Michigan/Ohio emo band. Already one of yours — an easy set to lock in.",
+   "similar_you_listen": [
+    "Free Throw",
+    "Hot Mulligan",
+    "Movements",
+    "Tigers Jaw",
+    "Balance and Composure",
+    "Title Fight"
+   ],
+   "similar_general": [
+    "La Dispute",
+    "Sunny Day Real Estate",
+    "Sweet Pill",
+    "Cap'n Jazz",
+    "Moose Blood",
+    "Joyce Manor"
+   ],
+   "genre_overlap": [
+    "emo",
+    "grunge",
+    "indie rock",
+    "post-hardcore"
+   ],
+   "top_track": "Highs and Lows",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/0/0/9/0/009b5966e3e70a2b41e3197d0a54c3a3.mp3?hdnea=exp=1781610444~acl=/api/1/1/0/0/9/0/009b5966e3e70a2b41e3197d0a54c3a3.mp3*~data=user_id=0,application_id=42~hmac=3692e92b0bb84b469f005c27ce9e3411670ed8cff60f3492af4883a2fd1bfb36",
+   "album": "Halcyon Blues",
+   "image": "https://cdn-images.dzcdn.net/images/artist/c6bf5c54f6759ca533c6d8d7f716538b/250x250-000000-80-0-0.jpg",
+   "fans": 10233,
+   "deezer_id": 313452,
+   "spotify_search_uri": "spotify:search:Citizen",
+   "spotify_web_url": "https://open.spotify.com/search/Citizen",
+   "user_status": null
+  },
+  {
+   "name": "Dinosaur Pile-Up",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "rock",
+    "alternative"
+   ],
+   "raw_tags": [
+    "rock",
+    "alternative rock",
+    "grunge",
+    "alternative"
+   ],
+   "bio": "Dinosaur Pile-Up is a rock act from United Kingdom, active since 2007. If you like Thrice, Rise Against and The Offspring, you'll want to be there.",
+   "similar_you_listen": [
+    "Thrice",
+    "Rise Against",
+    "The Offspring",
+    "Foo Fighters"
+   ],
+   "similar_general": [
+    "Frank Carter & The Rattlesnakes",
+    "Marmozets",
+    "Turnstile",
+    "Highly Suspect",
+    "Billy Talent",
+    "Bloodhound Gang"
+   ],
+   "genre_overlap": [
+    "grunge"
+   ],
+   "top_track": "Back Foot",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/4/d/e/0/4deddf5fef99600afead417b3c518b2c.mp3?hdnea=exp=1781610452~acl=/api/1/1/4/d/e/0/4deddf5fef99600afead417b3c518b2c.mp3*~data=user_id=0,application_id=42~hmac=df3f062bb9de0458520b559c8e3a178cc115715cd65a6624f5f5ad123d8c4a11",
+   "album": "Celebrity Mansions",
+   "image": "https://cdn-images.dzcdn.net/images/artist/9832398c4c539e5a2793f85e0eb4ed8c/250x250-000000-80-0-0.jpg",
+   "fans": 7152,
+   "deezer_id": 282471,
+   "spotify_search_uri": "spotify:search:Dinosaur%20Pile-Up",
+   "spotify_web_url": "https://open.spotify.com/search/Dinosaur%20Pile-Up",
+   "user_status": null
+  },
+  {
+   "name": "The Early November",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "emo"
+   ],
+   "raw_tags": [
+    "emo",
+    "usa"
+   ],
+   "bio": "The Early November is a emo act from United States, active since 1999. If you like New Found Glory, Taking Back Sunday and Motion City Soundtrack, you'll want to be there.",
+   "similar_you_listen": [
+    "New Found Glory",
+    "Taking Back Sunday",
+    "Motion City Soundtrack"
+   ],
+   "similar_general": [
+    "Senses Fail",
+    "The Story So Far",
+    "Saves the Day",
+    "Real Friends",
+    "Neck Deep",
+    "The Starting Line"
+   ],
+   "genre_overlap": [
+    "emo"
+   ],
+   "top_track": "About Me",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/3/8/2/0/38252e5d85f0823a92e464911a89b179.mp3?hdnea=exp=1781610547~acl=/api/1/1/3/8/2/0/38252e5d85f0823a92e464911a89b179.mp3*~data=user_id=0,application_id=42~hmac=44941aee7f31563c9a168e11cc907c6cd8b367aa78bb188df4dd45e9f63f5c61",
+   "album": "The Early November",
+   "image": "https://cdn-images.dzcdn.net/images/artist/f06a4e3bc8b57861794c0f429a0a567f/250x250-000000-80-0-0.jpg",
+   "fans": 4271,
+   "deezer_id": 1360,
+   "spotify_search_uri": "spotify:search:The%20Early%20November",
+   "spotify_web_url": "https://open.spotify.com/search/The%20Early%20November",
+   "user_status": null
+  },
+  {
+   "name": "The Paradox",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "pop"
+   ],
+   "raw_tags": [
+    "punk",
+    "pop punk"
+   ],
+   "bio": "The Paradox is a pop punk act from United States, active since 2024. US pop punk band. If you like New Found Glory, Taking Back Sunday and Motion City Soundtrack, you'll want to be there.",
+   "similar_you_listen": [
+    "New Found Glory",
+    "Taking Back Sunday",
+    "Motion City Soundtrack"
+   ],
+   "similar_general": [
+    "State Champs",
+    "Neck Deep",
+    "Yellowcard",
+    "The Story So Far",
+    "With Confidence",
+    "Alkaline Trio"
+   ],
+   "genre_overlap": [
+    "pop punk",
+    "punk"
+   ],
+   "top_track": "Do Me Like That",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/3/d/2/0/3d2b315d666ebe25c760269dc15ab9f9.mp3?hdnea=exp=1781610550~acl=/api/1/1/3/d/2/0/3d2b315d666ebe25c760269dc15ab9f9.mp3*~data=user_id=0,application_id=42~hmac=99195664c0e13c790b3bf9957f4e367058f27c98f6e219f915cd146c43aeeec9",
+   "album": "Do Me Like That",
+   "image": "https://cdn-images.dzcdn.net/images/artist/7c084c2d7ab1f7bdc6036eeeba6527d0/250x250-000000-80-0-0.jpg",
+   "fans": 3448,
+   "deezer_id": 650581,
+   "spotify_search_uri": "spotify:search:The%20Paradox",
+   "spotify_web_url": "https://open.spotify.com/search/The%20Paradox",
+   "user_status": null
+  },
+  {
+   "name": "Meet Me @ The Altar",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "emo"
+   ],
+   "raw_tags": [
+    "punk",
+    "punk rock",
+    "emo",
+    "pop punk",
+    "easycore"
+   ],
+   "bio": "Meet Me @ The Altar is a pop punk act from United States, active since 2015. American pop punk band. If you like New Found Glory, Bayside and Taking Back Sunday, you'll want to be there.",
+   "similar_you_listen": [
+    "New Found Glory",
+    "Bayside",
+    "Taking Back Sunday",
+    "Motion City Soundtrack"
+   ],
+   "similar_general": [
+    "Waterparks",
+    "AS IT IS",
+    "Stand Atlantic",
+    "Neck Deep",
+    "With Confidence",
+    "State Champs"
+   ],
+   "genre_overlap": [
+    "emo",
+    "pop punk",
+    "punk"
+   ],
+   "top_track": "Strung Out",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/1/5/a/0/15a54a4845c4656eca65c186918dbc22.mp3?hdnea=exp=1781610502~acl=/api/1/1/1/5/a/0/15a54a4845c4656eca65c186918dbc22.mp3*~data=user_id=0,application_id=42~hmac=98c811e91f159279702ab0da9206153323b9cc458ca3baa015651d77c1738a47",
+   "album": "Strung Out",
+   "image": "https://cdn-images.dzcdn.net/images/artist/7e216610fa7439f9adb43b2b5f6acdd4/250x250-000000-80-0-0.jpg",
+   "fans": 3120,
+   "deezer_id": 10292864,
+   "spotify_search_uri": "spotify:search:Meet%20Me%20%40%20The%20Altar",
+   "spotify_web_url": "https://open.spotify.com/search/Meet%20Me%20%40%20The%20Altar",
+   "user_status": null
+  },
+  {
+   "name": "Origami Angel",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "emo",
+    "rock"
+   ],
+   "raw_tags": [
+    "rock",
+    "emo",
+    "easycore"
+   ],
+   "bio": "Origami Angel is a emo act from United States, active since 2016. If you like Free Throw, Hot Mulligan and Tigers Jaw, you'll want to be there.",
+   "similar_you_listen": [
+    "Free Throw",
+    "Hot Mulligan",
+    "Tigers Jaw"
+   ],
+   "similar_general": [
+    "Mom Jeans.",
+    "saturdays at your place",
+    "Tiny Moving Parts",
+    "Ben Quad",
+    "The Hotelier",
+    "Marietta"
+   ],
+   "genre_overlap": [
+    "emo"
+   ],
+   "top_track": "The Title Track",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/8/7/6/0/876830728771d7b491009f12e5c531e2.mp3?hdnea=exp=1781610508~acl=/api/1/1/8/7/6/0/876830728771d7b491009f12e5c531e2.mp3*~data=user_id=0,application_id=42~hmac=25778c5b1748d1da7fd7a298e2f912ca750b8ca078a4207ccc400c572f17d440",
+   "album": "Somewhere City",
+   "image": "https://cdn-images.dzcdn.net/images/artist/4237142cc6f5c8148784e0dbe6bd5452/250x250-000000-80-0-0.jpg",
+   "fans": 2922,
+   "deezer_id": 12956753,
+   "spotify_search_uri": "spotify:search:Origami%20Angel",
+   "spotify_web_url": "https://open.spotify.com/search/Origami%20Angel",
+   "user_status": null
+  },
+  {
+   "name": "Winona Fighter",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "direct-life",
+   "why": "A longtime favorite in your library.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Winona Fighter is a alternative act from Nashville, active since 2022. Already one of yours — an easy set to lock in.",
+   "similar_you_listen": [
+    "Sum 41",
+    "Thrice",
+    "AFI",
+    "My Chemical Romance",
+    "Rise Against"
+   ],
+   "similar_general": [
+    "All Time Low",
+    "You Me At Six",
+    "Fall Out Boy",
+    "Coheed and Cambria",
+    "Zebrahead",
+    "The Red Jumpsuit Apparatus"
+   ],
+   "genre_overlap": [],
+   "top_track": "HAMMS IN A GLASS",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/2/c/d/0/2cd19ab9f983b367c39628905db6ea7d.mp3?hdnea=exp=1781610569~acl=/api/1/1/2/c/d/0/2cd19ab9f983b367c39628905db6ea7d.mp3*~data=user_id=0,application_id=42~hmac=4d26e51458853185e5bd8f55a7f44f26c787cfdf5d5329c67e051cb21ecc9f30",
+   "album": "My Apologies To The Chef",
+   "image": "https://cdn-images.dzcdn.net/images/artist/c83872d6f7a7f3b4945a9666220a2e2e/250x250-000000-80-0-0.jpg",
+   "fans": 857,
+   "deezer_id": 210719647,
+   "spotify_search_uri": "spotify:search:Winona%20Fighter",
+   "spotify_web_url": "https://open.spotify.com/search/Winona%20Fighter",
+   "user_status": null
+  },
+  {
+   "name": "Millington",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "ska"
+   ],
+   "raw_tags": [
+    "brass punk",
+    "ska punk",
+    "pop punk",
+    "ska"
+   ],
+   "bio": "Millington is a pop punk act from New York, active since 2018. Brass Emo band. If you like New Found Glory, blink-182 and Taking Back Sunday, you'll want to be there.",
+   "similar_you_listen": [
+    "New Found Glory",
+    "blink-182",
+    "Taking Back Sunday"
+   ],
+   "similar_general": [
+    "Alkaline Trio",
+    "Goldfinger",
+    "Fenix TX",
+    "Neck Deep",
+    "The Ataris",
+    "Zebrahead"
+   ],
+   "genre_overlap": [
+    "pop punk",
+    "ska",
+    "ska punk"
+   ],
+   "top_track": "FML",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/1/e/4/0/1e474fe60fd64141327b38b0ff86f991.mp3?hdnea=exp=1781610503~acl=/api/1/1/1/e/4/0/1e474fe60fd64141327b38b0ff86f991.mp3*~data=user_id=0,application_id=42~hmac=dcda9fb107ae74662ff2401145af29c3e0b79322dd05359db00831d25616f561",
+   "album": "Better Safe and Sorry",
+   "image": "https://cdn-images.dzcdn.net/images/artist/41e5e0925e58fe2bae037b84ca8ccf38/250x250-000000-80-0-0.jpg",
+   "fans": 503,
+   "deezer_id": 10954100,
+   "spotify_search_uri": "spotify:search:Millington",
+   "spotify_web_url": "https://open.spotify.com/search/Millington",
+   "user_status": null
+  },
+  {
+   "name": "Papa Roach",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "metal",
+    "rock",
+    "pop"
+   ],
+   "raw_tags": [
+    "rock",
+    "alternative rock",
+    "heavy metal",
+    "metal",
+    "hard rock",
+    "nu metal"
+   ],
+   "bio": "Papa Roach is a metal act from United States, active since 1993. If you like Rise Against, you'll want to be there.",
+   "similar_you_listen": [
+    "Rise Against"
+   ],
+   "similar_general": [
+    "Seether",
+    "Linkin Park",
+    "Breaking Benjamin",
+    "Shinedown",
+    "Three Days Grace",
+    "Thirty Seconds to Mars"
+   ],
+   "genre_overlap": [
+    "alternative metal",
+    "hard rock",
+    "heavy metal",
+    "metal",
+    "nu metal"
+   ],
+   "top_track": "Last Resort",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/d/f/1/0/df18bc3feb6e47fc695b0b3910fb6db4.mp3?hdnea=exp=1781610511~acl=/api/1/1/d/f/1/0/df18bc3feb6e47fc695b0b3910fb6db4.mp3*~data=user_id=0,application_id=42~hmac=f12bec046a8b9d7322d25b8c91195bb9c56e2e15e7d0402f775d209319b040fc",
+   "album": "To Be Loved: The Best Of Papa Roach (Explicit Version)",
+   "image": "https://cdn-images.dzcdn.net/images/artist/0552943ebc46bc507c72bcc2135b68b8/250x250-000000-80-0-0.jpg",
+   "fans": 1983694,
+   "deezer_id": 89,
+   "spotify_search_uri": "spotify:search:Papa%20Roach",
+   "spotify_web_url": "https://open.spotify.com/search/Papa%20Roach",
+   "user_status": null
+  },
+  {
+   "name": "Plain White T's",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "emo"
+   ],
+   "raw_tags": [
+    "alternative rock",
+    "american",
+    "usa",
+    "américain",
+    "acoustic rock",
+    "pop punk"
+   ],
+   "bio": "Plain White T's is a pop punk act from United States, active since 1997. If you like Jimmy Eat World, you'll want to be there.",
+   "similar_you_listen": [
+    "Jimmy Eat World"
+   ],
+   "similar_general": [
+    "Secondhand Serenade",
+    "The Fray",
+    "Simple Plan",
+    "Avril Lavigne",
+    "The Click Five",
+    "Dashboard Confessional"
+   ],
+   "genre_overlap": [
+    "emo pop",
+    "pop punk"
+   ],
+   "top_track": "Hey There Delilah",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/c/d/4/0/cd43b6da6e0b8b9f70407fa2dc2569a4.mp3?hdnea=exp=1781610516~acl=/api/1/1/c/d/4/0/cd43b6da6e0b8b9f70407fa2dc2569a4.mp3*~data=user_id=0,application_id=42~hmac=465b8f7dad07b8c6a9df87a61e9eb6aaf9fa8225d0596e4feba2800b2403bfc8",
+   "album": "All That We Needed (Deluxe Edition)",
+   "image": "https://cdn-images.dzcdn.net/images/artist/6bda44dea31979321c90e6a32ccde8f8/250x250-000000-80-0-0.jpg",
+   "fans": 139433,
+   "deezer_id": 959,
+   "spotify_search_uri": "spotify:search:Plain%20White%20T%27s",
+   "spotify_web_url": "https://open.spotify.com/search/Plain%20White%20T%27s",
+   "user_status": null
+  },
+  {
+   "name": "Lagwagon",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "punk",
+    "ska",
+    "rock"
+   ],
+   "raw_tags": [
+    "punk",
+    "punk rock",
+    "usa",
+    "skate punk"
+   ],
+   "bio": "Lagwagon is a punk act from United States, active since 1990. If you like AFI and NOFX, you'll want to be there.",
+   "similar_you_listen": [
+    "AFI",
+    "NOFX"
+   ],
+   "similar_general": [
+    "Pennywise",
+    "Millencolin",
+    "No Use for a Name",
+    "Bad Religion",
+    "Strung Out",
+    "Face to Face"
+   ],
+   "genre_overlap": [
+    "punk",
+    "skate punk"
+   ],
+   "top_track": "The Cog in the Machine",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/4/9/6/0/4961e413d8e44ba6fb8e45fdc9cf0826.mp3?hdnea=exp=1781610491~acl=/api/1/1/4/9/6/0/4961e413d8e44ba6fb8e45fdc9cf0826.mp3*~data=user_id=0,application_id=42~hmac=c2767a90515bf2b52c8d0835e5603b4ad8d873b80f6b85452ac541d4af69a0fd",
+   "album": "Hang",
+   "image": "https://cdn-images.dzcdn.net/images/artist/6048ed89a22a4e896d0e8b9da2a9b7b1/250x250-000000-80-0-0.jpg",
+   "fans": 53888,
+   "deezer_id": 1485,
+   "spotify_search_uri": "spotify:search:Lagwagon",
+   "spotify_web_url": "https://open.spotify.com/search/Lagwagon",
+   "user_status": null
+  },
+  {
+   "name": "Phantom Planet",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "rock",
+    "pop",
+    "alternative"
+   ],
+   "raw_tags": [
+    "rock",
+    "pop",
+    "alternative rock",
+    "american",
+    "indie rock",
+    "pop and chart"
+   ],
+   "bio": "Phantom Planet is a rock act from United States, active since 1994. US rock band. If you like Jimmy Eat World, you'll want to be there.",
+   "similar_you_listen": [
+    "Jimmy Eat World"
+   ],
+   "similar_general": [
+    "Busted",
+    "Biffy Clyro",
+    "Wheatus",
+    "Third Eye Blind",
+    "Plain White T's",
+    "The Killers"
+   ],
+   "genre_overlap": [
+    "indie rock"
+   ],
+   "top_track": "California (Tchad Blake Mix)",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/0/b/b/0/0bb589be56c4232349401d768dba7983.mp3?hdnea=exp=1781610515~acl=/api/1/1/0/b/b/0/0bb589be56c4232349401d768dba7983.mp3*~data=user_id=0,application_id=42~hmac=e2338303616d290f4d2cb57ea880811c8bdc06fcc198d9db25557d536a062b05",
+   "album": "The Guest (Expanded Edition)",
+   "image": "https://cdn-images.dzcdn.net/images/artist/65489c1e1debcbdced20df7816058d4d/250x250-000000-80-0-0.jpg",
+   "fans": 17936,
+   "deezer_id": 2230,
+   "spotify_search_uri": "spotify:search:Phantom%20Planet",
+   "spotify_web_url": "https://open.spotify.com/search/Phantom%20Planet",
+   "user_status": null
+  },
+  {
+   "name": "I Set My Friends on Fire",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "post-hardcore",
+    "metalcore",
+    "hardcore"
+   ],
+   "raw_tags": [
+    "electronica",
+    "electronicore",
+    "post-hardcore",
+    "metalcore",
+    "experimental rock",
+    "electronic rock"
+   ],
+   "bio": "I Set My Friends on Fire is a post-hardcore act from United States, active since 2007. If you like Underoath and From First To Last, you'll want to be there.",
+   "similar_you_listen": [
+    "Underoath",
+    "From First To Last"
+   ],
+   "similar_general": [
+    "Silverstein",
+    "A Skylit Drive",
+    "Chiodos",
+    "Alexisonfire",
+    "Circa Survive",
+    "Alesana"
+   ],
+   "genre_overlap": [
+    "hardcore",
+    "metalcore",
+    "post-hardcore"
+   ],
+   "top_track": "Things That Rhyme With Orange",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/c/f/4/0/cf4f6b70dcae8e54814c878802c812df.mp3?hdnea=exp=1781610484~acl=/api/1/1/c/f/4/0/cf4f6b70dcae8e54814c878802c812df.mp3*~data=user_id=0,application_id=42~hmac=51db41e709b14012fd96ebf41903cfca81ea7160a3f40bebf057d825f8dc130c",
+   "album": "You Can't Spell Slaughter Without Laughter",
+   "image": "https://cdn-images.dzcdn.net/images/artist/a1802ad312502e68ebf728d2d52b6393/250x250-000000-80-0-0.jpg",
+   "fans": 16684,
+   "deezer_id": 135241,
+   "spotify_search_uri": "spotify:search:I%20Set%20My%20Friends%20on%20Fire",
+   "spotify_web_url": "https://open.spotify.com/search/I%20Set%20My%20Friends%20on%20Fire",
+   "user_status": null
+  },
+  {
+   "name": "Magnolia Park",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "rock"
+   ],
+   "raw_tags": [
+    "pop punk",
+    "alternative rock"
+   ],
+   "bio": "Magnolia Park is a pop punk act from United States. Pop punk/alternative rock band. If you like Crown The Empire and The Devil Wears Prada, you'll want to be there.",
+   "similar_you_listen": [
+    "Crown The Empire",
+    "The Devil Wears Prada"
+   ],
+   "similar_general": [
+    "Point North",
+    "Bilmuri",
+    "DON BROCO",
+    "Melrose Avenue",
+    "Boston Manor",
+    "Zero 9:36"
+   ],
+   "genre_overlap": [
+    "pop punk"
+   ],
+   "top_track": "SHALLOW",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/e/f/4/0/ef4f5ceaa5dcd8d01e8a4680b3afab6a.mp3?hdnea=exp=1781610500~acl=/api/1/1/e/f/4/0/ef4f5ceaa5dcd8d01e8a4680b3afab6a.mp3*~data=user_id=0,application_id=42~hmac=9191c917ea5f261d014a8ff3ad13f28ce3127447f3b7ecccb515d773c0b65676",
+   "album": "Shallow",
+   "image": "https://cdn-images.dzcdn.net/images/artist/90584dc28ceb29ebd7e289cbfe8d1ce4/250x250-000000-80-0-0.jpg",
+   "fans": 9886,
+   "deezer_id": 48876371,
+   "spotify_search_uri": "spotify:search:Magnolia%20Park",
+   "spotify_web_url": "https://open.spotify.com/search/Magnolia%20Park",
+   "user_status": null
+  },
+  {
+   "name": "Stand Atlantic",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "pop"
+   ],
+   "raw_tags": [
+    "pop punk"
+   ],
+   "bio": "Stand Atlantic is a pop punk act from Australia, active since 2015. If you like New Found Glory, you'll want to be there.",
+   "similar_you_listen": [
+    "New Found Glory"
+   ],
+   "similar_general": [
+    "Yours Truly",
+    "AS IT IS",
+    "All Time Low",
+    "Story Untold",
+    "Neck Deep",
+    "State Champs"
+   ],
+   "genre_overlap": [
+    "pop punk"
+   ],
+   "top_track": "Lavender Bones",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/8/a/4/0/8a4cf564cee3f5cfd1acf6d96257616a.mp3?hdnea=exp=1781610534~acl=/api/1/1/8/a/4/0/8a4cf564cee3f5cfd1acf6d96257616a.mp3*~data=user_id=0,application_id=42~hmac=3fb8da6ba41f7a5a4e741f9a8b946131fac95a02d9ff8101c6785517786c4496",
+   "album": "Lavender Bones",
+   "image": "https://cdn-images.dzcdn.net/images/artist/522c8f99f2debe32b7d1f02169dc70e8/250x250-000000-80-0-0.jpg",
+   "fans": 9155,
+   "deezer_id": 7837348,
+   "spotify_search_uri": "spotify:search:Stand%20Atlantic",
+   "spotify_web_url": "https://open.spotify.com/search/Stand%20Atlantic",
+   "user_status": null
+  },
+  {
+   "name": "South Arcade",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "rock"
+   ],
+   "raw_tags": [
+    "alternative rock",
+    "pop punk"
+   ],
+   "bio": "South Arcade is a pop punk act from United Kingdom, active since 2021. If you like Bring Me The Horizon, you'll want to be there.",
+   "similar_you_listen": [
+    "Bring Me The Horizon"
+   ],
+   "similar_general": [
+    "Palaye Royale",
+    "The Haunt",
+    "Cassyette",
+    "Honey Revenge",
+    "Hot Milk",
+    "Pierce the Veil"
+   ],
+   "genre_overlap": [
+    "pop punk"
+   ],
+   "top_track": "2005",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/a/b/9/0/ab9ef36e43927b8e2cf47a3fbd8499a6.mp3?hdnea=exp=1781610533~acl=/api/1/1/a/b/9/0/ab9ef36e43927b8e2cf47a3fbd8499a6.mp3*~data=user_id=0,application_id=42~hmac=84c8a5a68ac9a6cbacf9e21b5d01f6b84a4bc3393a394aa79a2e2ee286156228",
+   "album": "2005",
+   "image": "https://cdn-images.dzcdn.net/images/artist/8ae99ac0666891ed25112d763e947557/250x250-000000-80-0-0.jpg",
+   "fans": 7230,
+   "deezer_id": 157647322,
+   "spotify_search_uri": "spotify:search:South%20Arcade",
+   "spotify_web_url": "https://open.spotify.com/search/South%20Arcade",
+   "user_status": null
+  },
+  {
+   "name": "Dying Wish",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "metalcore",
+    "hardcore",
+    "metal"
+   ],
+   "raw_tags": [
+    "hardcore",
+    "melodic death metal",
+    "metalcore",
+    "melodic metalcore"
+   ],
+   "bio": "Dying Wish is a metalcore act from Portland. Portland hardcore. If you like Guilt Trip and Boundaries, you'll want to be there.",
+   "similar_you_listen": [
+    "Guilt Trip",
+    "Boundaries"
+   ],
+   "similar_general": [
+    "Malevolence",
+    "Thornhill",
+    "Heriot",
+    "Lionheart",
+    "Paleface Swiss",
+    "thrown"
+   ],
+   "genre_overlap": [
+    "hardcore",
+    "melodic death metal",
+    "metalcore"
+   ],
+   "top_track": "Revenge In Carnage",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/8/1/3/0/813135ddff7424f08a932b9c72156163.mp3?hdnea=exp=1781610457~acl=/api/1/1/8/1/3/0/813135ddff7424f08a932b9c72156163.mp3*~data=user_id=0,application_id=42~hmac=1d00a8de0380253571608fcfcb797ac8284b591a7fe2f0d731d88fcf271cfc29",
+   "album": "Flesh Stays Together",
+   "image": "https://cdn-images.dzcdn.net/images/artist/03f131a52b7715b7e2d95f987af64fd4/250x250-000000-80-0-0.jpg",
+   "fans": 2576,
+   "deezer_id": 138915322,
+   "spotify_search_uri": "spotify:search:Dying%20Wish",
+   "spotify_web_url": "https://open.spotify.com/search/Dying%20Wish",
+   "user_status": null
+  },
+  {
+   "name": "Fox Lake",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Fox Lake is a alternative act from Denver, active since 2017. Denver hardcore/nu-metal. If you like Guilt Trip and Boundaries, you'll want to be there.",
+   "similar_you_listen": [
+    "Guilt Trip",
+    "Boundaries"
+   ],
+   "similar_general": [
+    "Counterparts",
+    "Varials",
+    "Knocked Loose",
+    "Paleface Swiss",
+    "Aviana",
+    "Abbie Falls"
+   ],
+   "genre_overlap": [],
+   "top_track": "Freestyle",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/f/9/5/0/f9510a1b1ed59bdec3bcb19f520e6841.mp3?hdnea=exp=1781610462~acl=/api/1/1/f/9/5/0/f9510a1b1ed59bdec3bcb19f520e6841.mp3*~data=user_id=0,application_id=42~hmac=54de77b61677d75a34505656394358cd1087931f9b5fc84d37273c7c4b0ab003",
+   "album": "Freestyle",
+   "image": "https://cdn-images.dzcdn.net/images/artist/4630f56471e37a828b5a8fe73d47298f/250x250-000000-80-0-0.jpg",
+   "fans": 1681,
+   "deezer_id": 12084286,
+   "spotify_search_uri": "spotify:search:Fox%20Lake",
+   "spotify_web_url": "https://open.spotify.com/search/Fox%20Lake",
+   "user_status": null
+  },
+  {
+   "name": "Pain of Truth",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "metalcore",
+    "hardcore",
+    "metal"
+   ],
+   "raw_tags": [
+    "beatdown hardcore",
+    "metal",
+    "metalcore",
+    "groove metal"
+   ],
+   "bio": "Pain of Truth is a metalcore act from Long Island, active since 2020. Beatdown from Long Island, NY. If you like Guilt Trip, you'll want to be there.",
+   "similar_you_listen": [
+    "Guilt Trip"
+   ],
+   "similar_general": [
+    "Defeater",
+    "SPEED",
+    "Nasty",
+    "Harm's Way",
+    "Counterparts",
+    "Stray From The Path"
+   ],
+   "genre_overlap": [
+    "groove metal",
+    "metal",
+    "metalcore"
+   ],
+   "top_track": "Shattered Past",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/4/5/9/0/4595e536825653e9227e2273a30ac404.mp3?hdnea=exp=1781610510~acl=/api/1/1/4/5/9/0/4595e536825653e9227e2273a30ac404.mp3*~data=user_id=0,application_id=42~hmac=4258dccd9e27c6323dfe10a0de300a89cd64dd303819af5dda99de20c6ea703f",
+   "album": "Coast To Coast Split",
+   "image": "https://cdn-images.dzcdn.net/images/artist/e02c30bfc404750bcaadeae6de5010be/250x250-000000-80-0-0.jpg",
+   "fans": 1473,
+   "deezer_id": 8401726,
+   "spotify_search_uri": "spotify:search:Pain%20of%20Truth",
+   "spotify_web_url": "https://open.spotify.com/search/Pain%20of%20Truth",
+   "user_status": null
+  },
+  {
+   "name": "Leisure Hour",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Leisure Hour is a alternative act from Muncie, active since 2020. If you like Free Throw, Hot Mulligan and The Front Bottoms, you'll want to be there.",
+   "similar_you_listen": [
+    "Free Throw",
+    "Hot Mulligan",
+    "The Front Bottoms"
+   ],
+   "similar_general": [
+    "Mom Jeans.",
+    "Sorority Noise",
+    "Prince Daddy & the Hyena",
+    "McCafferty",
+    "Modern Baseball",
+    "La Dispute"
+   ],
+   "genre_overlap": [],
+   "top_track": "jenny",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/d/e/1/0/de162935488c28692461c4474106fb51.mp3?hdnea=exp=1781610493~acl=/api/1/1/d/e/1/0/de162935488c28692461c4474106fb51.mp3*~data=user_id=0,application_id=42~hmac=00ed1bc812257a2e0e7d35c2730189ae044732d5d1c32cdf855286af7b6f203b",
+   "album": "jenny",
+   "image": "https://cdn-images.dzcdn.net/images/artist/318084eda252c202f5fba3f386d2b938/250x250-000000-80-0-0.jpg",
+   "fans": 202,
+   "deezer_id": 98333002,
+   "spotify_search_uri": "spotify:search:Leisure%20Hour",
+   "spotify_web_url": "https://open.spotify.com/search/Leisure%20Hour",
+   "user_status": null
+  },
+  {
+   "name": "Haywire",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "rock"
+   ],
+   "raw_tags": [
+    "hard rock"
+   ],
+   "bio": "Haywire is a rock act from Canada, active since 1982. Canadian hard rock band. If you like Guilt Trip and Boundaries, you'll want to be there.",
+   "similar_you_listen": [
+    "Guilt Trip",
+    "Boundaries"
+   ],
+   "similar_general": [
+    "LOCKED SHUT",
+    "Heriot",
+    "Harm's Way",
+    "Pain of Truth",
+    "Stick To Your Guns",
+    "Nasty"
+   ],
+   "genre_overlap": [
+    "hard rock"
+   ],
+   "top_track": "Born of Rotten Earth",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/9/f/7/0/9f7b90ae0d4e1e13a36c73c9b67a562f.mp3?hdnea=exp=1781610477~acl=/api/1/1/9/f/7/0/9f7b90ae0d4e1e13a36c73c9b67a562f.mp3*~data=user_id=0,application_id=42~hmac=ecadc1df8d9112fe3bfa1603f8e1068df452226432bab701bc3f9f1f54633344",
+   "album": "Rotten Earth",
+   "image": "https://cdn-images.dzcdn.net/images/artist/683d59c8fcb518b69dfcd2e0795569ef/250x250-000000-80-0-0.jpg",
+   "fans": 175,
+   "deezer_id": 334977281,
+   "spotify_search_uri": "spotify:search:Haywire",
+   "spotify_web_url": "https://open.spotify.com/search/Haywire",
+   "user_status": null
+  },
+  {
+   "name": "Trxvis",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Trxvis is a alternative act from California. Travis Riker. If you like New Found Glory and Motion City Soundtrack, you'll want to be there.",
+   "similar_you_listen": [
+    "New Found Glory",
+    "Motion City Soundtrack"
+   ],
+   "similar_general": [
+    "The Wonder Years",
+    "Dashboard Confessional",
+    "Yellowcard",
+    "Ray Hawthorne",
+    "Millington",
+    "Man Overboard"
+   ],
+   "genre_overlap": [],
+   "top_track": "LOUD MOUTH",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/e/a/8/0/ea85e6d84597c6f13e3f99eaccf3eb80.mp3?hdnea=exp=1781610557~acl=/api/1/1/e/a/8/0/ea85e6d84597c6f13e3f99eaccf3eb80.mp3*~data=user_id=0,application_id=42~hmac=68b80ee16563ab4aba547d53aa8a7c898bd85257dbdf73aedf8ec5cd43082fc6",
+   "album": "LOUD MOUTH",
+   "image": "https://cdn-images.dzcdn.net/images/artist/042f2eab8d740275454c2055b841a91f/250x250-000000-80-0-0.jpg",
+   "fans": 47,
+   "deezer_id": 131770302,
+   "spotify_search_uri": "spotify:search:Trxvis",
+   "spotify_web_url": "https://open.spotify.com/search/Trxvis",
+   "user_status": null
+  },
+  {
+   "name": "The Academy Is...",
+   "score": 3.5,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "rock"
+   ],
+   "raw_tags": [
+    "power pop",
+    "pop punk",
+    "indie rock",
+    "alternative rock",
+    "post-punk revival"
+   ],
+   "bio": "The Academy Is... is a pop punk act from United States, active since 2003. Chicago rock band. If you like Motion City Soundtrack, you'll want to be there.",
+   "similar_you_listen": [
+    "Motion City Soundtrack"
+   ],
+   "similar_general": [
+    "Hawthorne Heights",
+    "Knuckle Puck",
+    "Alkaline Trio",
+    "Cartel",
+    "Mayday Parade",
+    "Brand New"
+   ],
+   "genre_overlap": [
+    "indie rock",
+    "pop punk"
+   ],
+   "top_track": "About a Girl",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/9/3/c/0/93c73a57b445055647d72f80e153333b.mp3?hdnea=exp=1781610541~acl=/api/1/1/9/3/c/0/93c73a57b445055647d72f80e153333b.mp3*~data=user_id=0,application_id=42~hmac=b3db3bcab50d0a0ae00bb0b0579fc4c5f7b3b95372a9854524ad38e14326fd55",
+   "album": "Fast Times At Barrington High",
+   "image": "https://cdn-images.dzcdn.net/images/artist/5b0e9666ffea384f8e62a4a91602c250/250x250-000000-80-0-0.jpg",
+   "fans": 34936,
+   "deezer_id": 2926,
+   "spotify_search_uri": "spotify:search:The%20Academy%20Is...",
+   "spotify_web_url": "https://open.spotify.com/search/The%20Academy%20Is...",
+   "user_status": null
+  },
+  {
+   "name": "Doobie",
+   "score": 3.5,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "rock",
+    "pop"
+   ],
+   "raw_tags": [
+    "rock",
+    "pop",
+    "folk rock",
+    "classic rock",
+    "soft rock",
+    "pop rock"
+   ],
+   "bio": "Doobie is a rock act from United States, active since 1970. If you like All That Remains, you'll want to be there.",
+   "similar_you_listen": [
+    "All That Remains"
+   ],
+   "similar_general": [
+    "Bad Wolves",
+    "Pop Evil",
+    "Killswitch Engage",
+    "Grey Daze",
+    "Chaoseum",
+    "Saliva"
+   ],
+   "genre_overlap": [
+    "classic rock"
+   ],
+   "top_track": "Nikki Sixx",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/9/2/0/0/92005d81c58beed2c1363438d0aca9ec.mp3?hdnea=exp=1781610455~acl=/api/1/1/9/2/0/0/92005d81c58beed2c1363438d0aca9ec.mp3*~data=user_id=0,application_id=42~hmac=dd6ab08d0ad58481678bbcbfc604f811332a164a46374c0cb0fafe645627309f",
+   "album": "Nikki Sixx",
+   "image": "https://cdn-images.dzcdn.net/images/artist/000ba81364f85e1c7bfd58b1752d9071/250x250-000000-80-0-0.jpg",
+   "fans": 25899,
+   "deezer_id": 337610,
+   "spotify_search_uri": "spotify:search:Doobie",
+   "spotify_web_url": "https://open.spotify.com/search/Doobie",
+   "user_status": null
+  },
+  {
+   "name": "Mad Caddies",
+   "score": 3.5,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "punk",
+    "ska",
+    "rock"
+   ],
+   "raw_tags": [
+    "punk",
+    "ska",
+    "ska punk",
+    "usa",
+    "california",
+    "rock and indie"
+   ],
+   "bio": "Mad Caddies is a punk act from United States, active since 1995. If you like NOFX, you'll want to be there.",
+   "similar_you_listen": [
+    "NOFX"
+   ],
+   "similar_general": [
+    "Streetlight Manifesto",
+    "The Interrupters",
+    "Reel Big Fish",
+    "The Suicide Machines",
+    "Catch 22",
+    "The Mighty Mighty Bosstones"
+   ],
+   "genre_overlap": [
+    "punk",
+    "ska",
+    "ska punk"
+   ],
+   "top_track": "Road Rash",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/6/0/9/0/6090d3e8c34356fe2c3d3f9977a4534d.mp3?hdnea=exp=1781610498~acl=/api/1/1/6/0/9/0/6090d3e8c34356fe2c3d3f9977a4534d.mp3*~data=user_id=0,application_id=42~hmac=50bbe8293cc2875ebfae78eb050fd75c6d81e8b9dcf0d71e6bcd5cb5168fc6b0",
+   "album": "Duck and Cover",
+   "image": "https://cdn-images.dzcdn.net/images/artist/e36acd0a113caac42173596d322c5a81/250x250-000000-80-0-0.jpg",
+   "fans": 25122,
+   "deezer_id": 955,
+   "spotify_search_uri": "spotify:search:Mad%20Caddies",
+   "spotify_web_url": "https://open.spotify.com/search/Mad%20Caddies",
+   "user_status": null
+  },
+  {
+   "name": "Waterparks",
+   "score": 3.5,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "emo"
+   ],
+   "raw_tags": [
+    "pop rock",
+    "emo pop",
+    "neon pop punk",
+    "pop punk",
+    "alternative rock",
+    "pop"
+   ],
+   "bio": "Waterparks is a pop punk act from Houston, active since 2011. US rock band. If you like My Chemical Romance, you'll want to be there.",
+   "similar_you_listen": [
+    "My Chemical Romance"
+   ],
+   "similar_general": [
+    "Panic! At the Disco",
+    "Anarbor",
+    "Fall Out Boy",
+    "All Time Low",
+    "Marianas Trench",
+    "Charlotte Sands"
+   ],
+   "genre_overlap": [
+    "emo pop",
+    "pop punk"
+   ],
+   "top_track": "Stupid for You",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/3/3/c/0/33c43c95980eba273a2661397355cd04.mp3?hdnea=exp=1781610563~acl=/api/1/1/3/3/c/0/33c43c95980eba273a2661397355cd04.mp3*~data=user_id=0,application_id=42~hmac=d40887b3d288f7de2de3f3a33184cce7e1c48a105a80c855a3b0171d93ead1ca",
+   "album": "Double Dare",
+   "image": "https://cdn-images.dzcdn.net/images/artist/6cd954f3117338517621600cc892ed31/250x250-000000-80-0-0.jpg",
+   "fans": 18667,
+   "deezer_id": 1678689,
+   "spotify_search_uri": "spotify:search:Waterparks",
+   "spotify_web_url": "https://open.spotify.com/search/Waterparks",
+   "user_status": null
+  },
+  {
+   "name": "Fame on Fire",
+   "score": 3.5,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Fame on Fire is a alternative act from United States. If you like Crown The Empire, you'll want to be there.",
+   "similar_you_listen": [
+    "Crown The Empire"
+   ],
+   "similar_general": [
+    "Our Last Night",
+    "From Ashes To New",
+    "Dead by April",
+    "We Came As Romans",
+    "Memphis May Fire",
+    "Blind Channel"
+   ],
+   "genre_overlap": [],
+   "top_track": "Without Me",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/5/5/b/0/55b520699b834830677c9f728f839373.mp3?hdnea=exp=1781610460~acl=/api/1/1/5/5/b/0/55b520699b834830677c9f728f839373.mp3*~data=user_id=0,application_id=42~hmac=3766ea4cd6abf3720f170f7f4c7f6b42a6585eb1ca96fa6a3bc1d04e5456d43d",
+   "album": "Without Me",
+   "image": "https://cdn-images.dzcdn.net/images/artist/eb1d065f40ddd8e32086bd54a60ad27a/250x250-000000-80-0-0.jpg",
+   "fans": 12402,
+   "deezer_id": 7046191,
+   "spotify_search_uri": "spotify:search:Fame%20on%20Fire",
+   "spotify_web_url": "https://open.spotify.com/search/Fame%20on%20Fire",
+   "user_status": null
+  },
+  {
+   "name": "Kennyhoopla",
+   "score": 3.5,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [
+    "new wave",
+    "indie",
+    "alternative"
+   ],
+   "bio": "Kennyhoopla is a alternative act from Cleveland, active since 1997. Indie/alternative artist from Cleveland, Ohio. If you like New Found Glory, you'll want to be there.",
+   "similar_you_listen": [
+    "New Found Glory"
+   ],
+   "similar_general": [
+    "Stand Atlantic",
+    "Mod Sun",
+    "Girlfriends",
+    "Neck Deep",
+    "Settle Your Scores",
+    "Sueco"
+   ],
+   "genre_overlap": [],
+   "top_track": "hollywood sucks//",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/2/7/6/0/276574d5d6de93b236d38bc9a14b03da.mp3?hdnea=exp=1781610490~acl=/api/1/1/2/7/6/0/276574d5d6de93b236d38bc9a14b03da.mp3*~data=user_id=0,application_id=42~hmac=55b0ca1c9ae958911ac0e209e4b1737fd5b1e50f594e03e63f0c6467d5d95206",
+   "album": "hollywood sucks//",
+   "image": "https://cdn-images.dzcdn.net/images/artist/1a7164e983e07c51903148b318144e5f/250x250-000000-80-0-0.jpg",
+   "fans": 9632,
+   "deezer_id": 13025827,
+   "spotify_search_uri": "spotify:search:Kennyhoopla",
+   "spotify_web_url": "https://open.spotify.com/search/Kennyhoopla",
+   "user_status": null
+  },
+  {
+   "name": "Boston Manor",
+   "score": 3.5,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "rock"
+   ],
+   "raw_tags": [
+    "rock"
+   ],
+   "bio": "Boston Manor is a rock act from Blackpool, active since 2013. If you like Crown The Empire, you'll want to be there.",
+   "similar_you_listen": [
+    "Crown The Empire"
+   ],
+   "similar_general": [
+    "DON BROCO",
+    "Our Last Night",
+    "Enter Shikari",
+    "The Plot In You",
+    "Issues",
+    "Hot Milk"
+   ],
+   "genre_overlap": [],
+   "top_track": "Halo",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/8/8/1/0/881ff26cec967922ec897bfedb963513.mp3?hdnea=exp=1781610435~acl=/api/1/1/8/8/1/0/881ff26cec967922ec897bfedb963513.mp3*~data=user_id=0,application_id=42~hmac=98c00f35860b2fb15fbb3367ec55c38ed279edcb01ad059eba144e571d32e1c0",
+   "album": "Welcome to the Neighbourhood",
+   "image": "https://cdn-images.dzcdn.net/images/artist/1b406e76ad92d6b70605d9d4dcebea90/250x250-000000-80-0-0.jpg",
+   "fans": 7431,
+   "deezer_id": 440759,
+   "spotify_search_uri": "spotify:search:Boston%20Manor",
+   "spotify_web_url": "https://open.spotify.com/search/Boston%20Manor",
+   "user_status": null
+  },
+  {
+   "name": "Games we Play",
+   "score": 3.5,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Games we Play is a alternative act from United States. Pop punk band. If you like New Found Glory, you'll want to be there.",
+   "similar_you_listen": [
+    "New Found Glory"
+   ],
+   "similar_general": [
+    "KennyHoopla",
+    "Mod Sun",
+    "Stand Atlantic",
+    "Neck Deep",
+    "Girlfriends",
+    "408"
+   ],
+   "genre_overlap": [],
+   "top_track": "I Hope You’re Happy",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/f/8/f/0/f8faa1bc62dae516622f8f2a92f707d5.mp3?hdnea=exp=1781610467~acl=/api/1/1/f/8/f/0/f8faa1bc62dae516622f8f2a92f707d5.mp3*~data=user_id=0,application_id=42~hmac=473f983ab469a20a96ac70b4ac6fa297900fa542ef1ded02163faecd099303b0",
+   "album": "I Hope You’re Happy",
+   "image": "https://cdn-images.dzcdn.net/images/artist/aa91f0f708492ce1a7ef9b86832fd43c/250x250-000000-80-0-0.jpg",
+   "fans": 1809,
+   "deezer_id": 6792173,
+   "spotify_search_uri": "spotify:search:Games%20we%20Play",
+   "spotify_web_url": "https://open.spotify.com/search/Games%20we%20Play",
+   "user_status": null
+  },
+  {
+   "name": "Blnko",
+   "score": 3.5,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Blnko is a alternative act from Mexico. If you like División Minúscula, you'll want to be there.",
+   "similar_you_listen": [
+    "División Minúscula"
+   ],
+   "similar_general": [
+    "San Venus",
+    "José Madero",
+    "Javier Blake",
+    "Lola Club",
+    "Serbia",
+    "León Larregui"
+   ],
+   "genre_overlap": [],
+   "top_track": "La Luz De La Ambulancia",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/6/0/2/0/602c165039e748b6ee1e16cee6d7415b.mp3?hdnea=exp=1781610434~acl=/api/1/1/6/0/2/0/602c165039e748b6ee1e16cee6d7415b.mp3*~data=user_id=0,application_id=42~hmac=7d399c4d0d4d7d13da710ce702ff1a365d55226227cf807b87c73c09629ed4bf",
+   "album": "Mi Psicóloga Me Dijo Que Hiciera Este Disco",
+   "image": "https://cdn-images.dzcdn.net/images/artist/394091ff9028354cdf2328836d9440c6/250x250-000000-80-0-0.jpg",
+   "fans": 1709,
+   "deezer_id": 69524312,
+   "spotify_search_uri": "spotify:search:Blnko",
+   "spotify_web_url": "https://open.spotify.com/search/Blnko",
+   "user_status": null
+  },
+  {
+   "name": "Lakeview",
+   "score": 3.5,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Lakeview is a alternative act from Nashville. Country band from Nashville, formerly Pittsburgh. If you like The Devil Wears Prada, you'll want to be there.",
+   "similar_you_listen": [
+    "The Devil Wears Prada"
+   ],
+   "similar_general": [
+    "Royale Lynn",
+    "Ice Nine Kills",
+    "We Came As Romans",
+    "Thousand Below",
+    "As Everything Unfolds",
+    "Bilmuri"
+   ],
+   "genre_overlap": [],
+   "top_track": "Wreck My Night",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/7/6/a/0/76a500b2ac617474ca9438d6b7f2cf1c.mp3?hdnea=exp=1781610492~acl=/api/1/1/7/6/a/0/76a500b2ac617474ca9438d6b7f2cf1c.mp3*~data=user_id=0,application_id=42~hmac=82de1bdcfd69d6fa598b07f5f98ae8b81abd55ca6941a6214aa3d2d98a63a552",
+   "album": "Wreck My Night",
+   "image": "https://cdn-images.dzcdn.net/images/artist/ded7e3ed7b5266832fc22d1aa8cdb09a/250x250-000000-80-0-0.jpg",
+   "fans": 1642,
+   "deezer_id": 482930,
+   "spotify_search_uri": "spotify:search:Lakeview",
+   "spotify_web_url": "https://open.spotify.com/search/Lakeview",
+   "user_status": null
+  },
+  {
+   "name": "Codefendants",
+   "score": 3.5,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "punk",
+    "rock",
+    "hip hop"
+   ],
+   "raw_tags": [
+    "hip hop",
+    "rap rock",
+    "folk punk"
+   ],
+   "bio": "Codefendants is a punk act from United States, active since 2022. Hip-hop/punk group formed by Fat Mike of NOFX and Sam King. If you like NOFX, you'll want to be there.",
+   "similar_you_listen": [
+    "NOFX"
+   ],
+   "similar_general": [
+    "Social Distortion",
+    "Good Riddance",
+    "Propagandhi",
+    "The Flatliners",
+    "Grade 2",
+    "The Casualties"
+   ],
+   "genre_overlap": [
+    "folk punk"
+   ],
+   "top_track": "Abscessed",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/d/e/1/0/de12691425a48bba8a9e0dba239fff9d.mp3?hdnea=exp=1781610445~acl=/api/1/1/d/e/1/0/de12691425a48bba8a9e0dba239fff9d.mp3*~data=user_id=0,application_id=42~hmac=a8e1c01f6d49814e0520734464d6c536686aa84cbcc21ae6de539fa4c1cadbdd",
+   "album": "This is Crime Wave",
+   "image": "https://cdn-images.dzcdn.net/images/artist/d23d264bea0bf6650b3b7e5cabff9216/250x250-000000-80-0-0.jpg",
+   "fans": 1028,
+   "deezer_id": 180018307,
+   "spotify_search_uri": "spotify:search:Codefendants",
+   "spotify_web_url": "https://open.spotify.com/search/Codefendants",
+   "user_status": null
+  },
+  {
+   "name": "Oxymorrons",
+   "score": 3.5,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Oxymorrons is a alternative act, active since 2016. If you like The Devil Wears Prada, you'll want to be there.",
+   "similar_you_listen": [
+    "The Devil Wears Prada"
+   ],
+   "similar_general": [
+    "Annisokay",
+    "Any Given Day",
+    "Black Coast",
+    "Her Last Sight",
+    "Wage War",
+    "Tetrarch"
+   ],
+   "genre_overlap": [],
+   "top_track": "Definition (ft. Jason Aalon Of Fever 333)",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/7/e/7/0/7e7b5eed5f7d3ac4038db89da00f1606.mp3?hdnea=exp=1781610509~acl=/api/1/1/7/e/7/0/7e7b5eed5f7d3ac4038db89da00f1606.mp3*~data=user_id=0,application_id=42~hmac=24929bf6113c18155e087706e045085e460a35164f58898d8bcaf7ba30bf8868",
+   "album": "Mohawks & Durags",
+   "image": "https://cdn-images.dzcdn.net/images/artist/ba2dc94966230fe9ef32f6ef9160eef0/250x250-000000-80-0-0.jpg",
+   "fans": 769,
+   "deezer_id": 4043358,
+   "spotify_search_uri": "spotify:search:Oxymorrons",
+   "spotify_web_url": "https://open.spotify.com/search/Oxymorrons",
+   "user_status": null
+  },
+  {
+   "name": "Vienna Vienna",
+   "score": 3.5,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "pop"
+   ],
+   "raw_tags": [
+    "pop",
+    "glam",
+    "queer",
+    "queercore",
+    "coin",
+    "charlie puth"
+   ],
+   "bio": "Vienna Vienna is a pop act from United States. F/k/a \"James Barre\". If you like The Wrecks, you'll want to be there.",
+   "similar_you_listen": [
+    "The Wrecks"
+   ],
+   "similar_general": [
+    "Friday Pilots Club",
+    "Rare Americans",
+    "Brick + Mortar",
+    "Weathers",
+    "Seb Lowe",
+    "The Happy Fits"
+   ],
+   "genre_overlap": [
+    "queercore"
+   ],
+   "top_track": "God Save The Queens",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/d/6/8/0/d68d54a5ae2aa59e01dec29c118ad23e.mp3?hdnea=exp=1781610561~acl=/api/1/1/d/6/8/0/d68d54a5ae2aa59e01dec29c118ad23e.mp3*~data=user_id=0,application_id=42~hmac=465d1302fb6636900d0395bbcf80ce6eccdaaf8c819443e1cfc576d3226d5382",
+   "album": "God Save The Queens",
+   "image": "https://cdn-images.dzcdn.net/images/artist/b3b5a0926c0b4ec263cad973fc6e2f6a/250x250-000000-80-0-0.jpg",
+   "fans": 738,
+   "deezer_id": 258643872,
+   "spotify_search_uri": "spotify:search:Vienna%20Vienna",
+   "spotify_web_url": "https://open.spotify.com/search/Vienna%20Vienna",
+   "user_status": null
+  },
+  {
+   "name": "Scarlet House",
+   "score": 3.5,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Scarlet House is a alternative act from Charlotte. If you like Basement, Superheaven and Narrow Head, you'll want to be there.",
+   "similar_you_listen": [
+    "Basement",
+    "Superheaven",
+    "Narrow Head"
+   ],
+   "similar_general": [
+    "Bleed",
+    "Soul Blind",
+    "Split Chain",
+    "Fleshwater",
+    "Midrift",
+    "never easy"
+   ],
+   "genre_overlap": [],
+   "top_track": "CHERISH",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/c/0/9/0/c092991a5c3dd30f0e68e97dbf52bb56.mp3?hdnea=exp=1781610523~acl=/api/1/1/c/0/9/0/c092991a5c3dd30f0e68e97dbf52bb56.mp3*~data=user_id=0,application_id=42~hmac=e275ad921e9ed6288497e763e4fc6639cf7ad0233ab301104e2ba0233599aa08",
+   "album": "CHERISH",
+   "image": "https://cdn-images.dzcdn.net/images/artist/c9631442023454736adafb5d58aa17ff/250x250-000000-80-0-0.jpg",
+   "fans": 492,
+   "deezer_id": 1337926,
+   "spotify_search_uri": "spotify:search:Scarlet%20House",
+   "spotify_web_url": "https://open.spotify.com/search/Scarlet%20House",
+   "user_status": null
+  },
+  {
+   "name": "Hot Milk",
+   "score": 3.5,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "rock"
+   ],
+   "raw_tags": [
+    "hard rock",
+    "rock"
+   ],
+   "bio": "Hot Milk is a rock act from United Kingdom, active since 2018. Manchester, UK. If you like Story Of The Year, you'll want to be there.",
+   "similar_you_listen": [
+    "Story Of The Year"
+   ],
+   "similar_general": [
+    "All Time Low",
+    "Against The Current",
+    "Sueco",
+    "As December Falls",
+    "Sleeping With Sirens",
+    "Silverstein"
+   ],
+   "genre_overlap": [
+    "hard rock"
+   ],
+   "top_track": "BREATHING UNDERWATER",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/0/f/4/0/0f4f6177830f19b1109cffa174d2fdb6.mp3?hdnea=exp=1781610483~acl=/api/1/1/0/f/4/0/0f4f6177830f19b1109cffa174d2fdb6.mp3*~data=user_id=0,application_id=42~hmac=02953dee65fa8ded75a0cdad3a7b5014145979c2ecf3668b59d6d3208513e210",
+   "album": "A Call To The Void",
+   "image": "https://cdn-images.dzcdn.net/images/artist/fb0c86c5cd9292e34e811d1885406105/250x250-000000-80-0-0.jpg",
+   "fans": 470,
+   "deezer_id": 221160325,
+   "spotify_search_uri": "spotify:search:Hot%20Milk",
+   "spotify_web_url": "https://open.spotify.com/search/Hot%20Milk",
+   "user_status": null
+  },
+  {
+   "name": "Good Sleepy",
+   "score": 3.5,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Good Sleepy is a alternative act. If you like Free Throw, you'll want to be there.",
+   "similar_you_listen": [
+    "Free Throw"
+   ],
+   "similar_general": [
+    "Midwest Pen Pals",
+    "Trsh",
+    "Hospital Bracelet",
+    "Marietta",
+    "Foxtails",
+    "Origami Angel"
+   ],
+   "genre_overlap": [],
+   "top_track": "Covers",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/0/4/c/0/04c5b30e359452f3c03c215463415be7.mp3?hdnea=exp=1781610470~acl=/api/1/1/0/4/c/0/04c5b30e359452f3c03c215463415be7.mp3*~data=user_id=0,application_id=42~hmac=f668e96d05dbc4d73ffdb3e6df01e2dd69a9b76a4a5425468d71e95380e92f0e",
+   "album": "A Doggone Split",
+   "image": "https://cdn-images.dzcdn.net/images/artist/ae2e3d536a689262852d4a3c53bdf30a/250x250-000000-80-0-0.jpg",
+   "fans": 128,
+   "deezer_id": 14737449,
+   "spotify_search_uri": "spotify:search:Good%20Sleepy",
+   "spotify_web_url": "https://open.spotify.com/search/Good%20Sleepy",
+   "user_status": null
+  },
+  {
+   "name": "Jutes",
+   "score": 2.0,
+   "bucket": "Long shot",
+   "match_kind": "scene",
+   "why": "Adjacent to bands you're into.",
+   "genres": [
+    "pop",
+    "hip hop"
+   ],
+   "raw_tags": [
+    "jutes",
+    "canadian",
+    "rap",
+    "hip hop",
+    "chode",
+    "life"
+   ],
+   "bio": "Jutes is a pop act from Toronto.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "The Home Team",
+    "Sleep Token",
+    "Kami Kehoe",
+    "Arankai",
+    "Dayseeker",
+    "Rivals"
+   ],
+   "genre_overlap": [],
+   "top_track": "Limerence",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/9/6/c/0/96ce8668e86c2d2504dbcadc8f1b206e.mp3?hdnea=exp=1781610489~acl=/api/1/1/9/6/c/0/96ce8668e86c2d2504dbcadc8f1b206e.mp3*~data=user_id=0,application_id=42~hmac=dc33c0f5ee0c771b05f6e3dca7ac6ade7f9cd8f3964c644361ffa4dc892a59d1",
+   "album": "Dilworth",
+   "image": "https://cdn-images.dzcdn.net/images/artist/28cfe9a1ffa9646209df3c9f103fde67/250x250-000000-80-0-0.jpg",
+   "fans": 6761,
+   "deezer_id": 4739350,
+   "spotify_search_uri": "spotify:search:Jutes",
+   "spotify_web_url": "https://open.spotify.com/search/Jutes",
+   "user_status": null
+  },
+  {
+   "name": "Honey Revenge",
+   "score": 2.0,
+   "bucket": "Long shot",
+   "match_kind": "scene",
+   "why": "Adjacent to bands you're into.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Honey Revenge is a alternative act from California, active since 2021. 2020s California pop-rock duo.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Arrows in Action",
+    "Hot Milk",
+    "Stand Atlantic",
+    "The Haunt",
+    "Beauty School Dropout",
+    "As December Falls"
+   ],
+   "genre_overlap": [],
+   "top_track": "Airhead",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/1/1/8/0/118c205c5ab0f7e11b43ca8a977baf84.mp3?hdnea=exp=1781610480~acl=/api/1/1/1/1/8/0/118c205c5ab0f7e11b43ca8a977baf84.mp3*~data=user_id=0,application_id=42~hmac=b64ec08ab20303a58f3f2e61769aee9f28cc7fb5e980537fbf4b35e40b301da2",
+   "album": "Retrovision",
+   "image": "https://cdn-images.dzcdn.net/images/artist/d8e6d48309a8858ceb4375b84e3fe82a/250x250-000000-80-0-0.jpg",
+   "fans": 2474,
+   "deezer_id": 11861469,
+   "spotify_search_uri": "spotify:search:Honey%20Revenge",
+   "spotify_web_url": "https://open.spotify.com/search/Honey%20Revenge",
+   "user_status": null
+  },
+  {
+   "name": "Suicide Silence",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "metalcore",
+    "metal"
+   ],
+   "raw_tags": [
+    "american",
+    "deathcore",
+    "metalcore",
+    "nu metal"
+   ],
+   "bio": "Suicide Silence is a metalcore act from United States, active since 2002.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Chelsea Grin",
+    "Slaughter to Prevail",
+    "Thy Art Is Murder",
+    "Whitechapel",
+    "Emmure",
+    "Lorna Shore"
+   ],
+   "genre_overlap": [
+    "deathcore",
+    "metalcore",
+    "nu metal"
+   ],
+   "top_track": "You Only Live Once",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/c/e/2/0/ce2e9db440fd4263bbbd63233929bc72.mp3?hdnea=exp=1781610539~acl=/api/1/1/c/e/2/0/ce2e9db440fd4263bbbd63233929bc72.mp3*~data=user_id=0,application_id=42~hmac=958def716ad15d97d8afb030fc1e887bb45f96513230db82f4eee961a355f157",
+   "album": "The Black Crown",
+   "image": "https://cdn-images.dzcdn.net/images/artist/4650083eb25b840cf7a7ea977916c820/250x250-000000-80-0-0.jpg",
+   "fans": 324771,
+   "deezer_id": 170672,
+   "spotify_search_uri": "spotify:search:Suicide%20Silence",
+   "spotify_web_url": "https://open.spotify.com/search/Suicide%20Silence",
+   "user_status": null
+  },
+  {
+   "name": "Sleeping With Sirens",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "emo"
+   ],
+   "raw_tags": [
+    "emo pop",
+    "acoustic",
+    "metalcore",
+    "post-hardcore",
+    "pop punk",
+    "alternative rock"
+   ],
+   "bio": "Sleeping With Sirens is a pop punk act from United States, active since 2009.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Dance Gavin Dance",
+    "Escape the Fate",
+    "Pierce the Veil",
+    "Alesana",
+    "Issues",
+    "Falling In Reverse"
+   ],
+   "genre_overlap": [
+    "emo pop",
+    "metalcore",
+    "pop punk",
+    "post-hardcore"
+   ],
+   "top_track": "If You Can't Hang",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/d/2/4/0/d241186d4482c360492d5146b9b5200a.mp3?hdnea=exp=1781610532~acl=/api/1/1/d/2/4/0/d241186d4482c360492d5146b9b5200a.mp3*~data=user_id=0,application_id=42~hmac=78147299a1a7a2f1d2f940cbf50ada62b2f1956810dd1670289f8679b4053531",
+   "album": "Let's Cheers To This",
+   "image": "https://cdn-images.dzcdn.net/images/artist/7664fa13f400718a0f6de5182f730c76/250x250-000000-80-0-0.jpg",
+   "fans": 318145,
+   "deezer_id": 389588,
+   "spotify_search_uri": "spotify:search:Sleeping%20With%20Sirens",
+   "spotify_web_url": "https://open.spotify.com/search/Sleeping%20With%20Sirens",
+   "user_status": null
+  },
+  {
+   "name": "3OH!3",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "rock",
+    "pop",
+    "hip hop"
+   ],
+   "raw_tags": [
+    "synthpop",
+    "crunkcore",
+    "electronic rock",
+    "synth-pop",
+    "electropop",
+    "pop rock"
+   ],
+   "bio": "3OH!3 is a rock act from United States, active since 2004.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Cobra Starship",
+    "Brokencyde",
+    "Panic! At the Disco",
+    "Blood on the Dance Floor",
+    "Marianas Trench",
+    "Set It Off"
+   ],
+   "genre_overlap": [],
+   "top_track": "RICHMAN",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/a/1/4/0/a1481b029fde75c382fafab72b1d9f63.mp3?hdnea=exp=1781610419~acl=/api/1/1/a/1/4/0/a1481b029fde75c382fafab72b1d9f63.mp3*~data=user_id=0,application_id=42~hmac=e6a4e95f141c17ceef497e2b9bcd1ec47eb472322d78172c7e10c919d449f45f",
+   "album": "WANT",
+   "image": "https://cdn-images.dzcdn.net/images/artist/1853a5af0d6b27f01f8e2fd56ac3312d/250x250-000000-80-0-0.jpg",
+   "fans": 236962,
+   "deezer_id": 74882,
+   "spotify_search_uri": "spotify:search:3OH%213",
+   "spotify_web_url": "https://open.spotify.com/search/3OH%213",
+   "user_status": null
+  },
+  {
+   "name": "Division Miniscula",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "punk",
+    "rock",
+    "pop"
+   ],
+   "raw_tags": [
+    "rock",
+    "synthpop",
+    "alternative rock",
+    "70s",
+    "80s",
+    "punk"
+   ],
+   "bio": "Division Miniscula is a punk act from United Kingdom, active since 1978.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "DLD",
+    "Kinky",
+    "Enjambre",
+    "La Gusana Ciega",
+    "Panda",
+    "Zoé"
+   ],
+   "genre_overlap": [
+    "indie rock",
+    "post-punk",
+    "punk"
+   ],
+   "top_track": "Sognare",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/3/9/2/0/39261d06b01f610a96e48cb0fa3c07f6.mp3?hdnea=exp=1781610453~acl=/api/1/1/3/9/2/0/39261d06b01f610a96e48cb0fa3c07f6.mp3*~data=user_id=0,application_id=42~hmac=3a06e665377308516c8d4a8565c87090c50f4451f607dd4fe38f6a377bf33820",
+   "album": "Defecto Perfecto",
+   "image": "https://cdn-images.dzcdn.net/images/artist/f1abfc4f4ff75402bf255b98a71b310a/250x250-000000-80-0-0.jpg",
+   "fans": 167469,
+   "deezer_id": 427421,
+   "spotify_search_uri": "spotify:search:Division%20Miniscula",
+   "spotify_web_url": "https://open.spotify.com/search/Division%20Miniscula",
+   "user_status": null
+  },
+  {
+   "name": "Flogging Molly",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "punk",
+    "rock"
+   ],
+   "raw_tags": [
+    "folk",
+    "punk",
+    "american",
+    "punk rock",
+    "usa",
+    "folk rock"
+   ],
+   "bio": "Flogging Molly is a punk act from United States, active since 1997.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Dropkick Murphys",
+    "The Rumjacks",
+    "The Mahones",
+    "The Real McKenzies",
+    "The Tossers",
+    "Fiddler's Green"
+   ],
+   "genre_overlap": [
+    "folk punk",
+    "punk"
+   ],
+   "top_track": "Drunken Lullabies",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/e/a/9/0/ea9481afb4fa3448e18529ce2be51f4b.mp3?hdnea=exp=1781610461~acl=/api/1/1/e/a/9/0/ea9481afb4fa3448e18529ce2be51f4b.mp3*~data=user_id=0,application_id=42~hmac=ac3f77a733717df655eb6c0ef2348454c4900620df29d355f2375bdae560b2f6",
+   "album": "Drunken Lullabies",
+   "image": "https://cdn-images.dzcdn.net/images/artist/290024a479d9a053a99ae64b98ba23ff/250x250-000000-80-0-0.jpg",
+   "fans": 114419,
+   "deezer_id": 1386,
+   "spotify_search_uri": "spotify:search:Flogging%20Molly",
+   "spotify_web_url": "https://open.spotify.com/search/Flogging%20Molly",
+   "user_status": null
+  },
+  {
+   "name": "Grandson",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "metal",
+    "rock",
+    "hip hop"
+   ],
+   "raw_tags": [
+    "alternative rock",
+    "indie rock",
+    "nu metal",
+    "rap rock",
+    "political hip hop",
+    "politically charged"
+   ],
+   "bio": "Grandson is a metal act from Canada, active since 1993.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Bohnes",
+    "Arrested Youth",
+    "Call Me Karizma",
+    "Unlike Pluto",
+    "8 Graves",
+    "MISSIO"
+   ],
+   "genre_overlap": [
+    "indie rock",
+    "nu metal"
+   ],
+   "top_track": "Blood // Water",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/a/c/6/0/ac6a11258a25405ec6a93ed1dac9a8ea.mp3?hdnea=exp=1781610472~acl=/api/1/1/a/c/6/0/ac6a11258a25405ec6a93ed1dac9a8ea.mp3*~data=user_id=0,application_id=42~hmac=27906511bf1cea46a9745f1f28a8d549ee4d1ebacb59fafbcb1deb0df716afc4",
+   "album": "Blood // Water",
+   "image": "https://cdn-images.dzcdn.net/images/artist/46be123131f61e8e359c8b05248290b5/250x250-000000-80-0-0.jpg",
+   "fans": 114287,
+   "deezer_id": 324922,
+   "spotify_search_uri": "spotify:search:Grandson",
+   "spotify_web_url": "https://open.spotify.com/search/Grandson",
+   "user_status": null
+  },
+  {
+   "name": "Jinjer",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "metalcore",
+    "hardcore",
+    "metal"
+   ],
+   "raw_tags": [
+    "hardcore",
+    "heavy metal",
+    "progressive metal",
+    "metal",
+    "metalcore",
+    "groove metal"
+   ],
+   "bio": "Jinjer is a metalcore act from Ukraine, active since 2009. Ukrainian metalcore/progressive metal.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Machine Head",
+    "In Flames",
+    "Rise Of The Northstar",
+    "Dagoba",
+    "Alien Weaponry",
+    "Lamb of God"
+   ],
+   "genre_overlap": [
+    "djent",
+    "groove metal",
+    "hardcore",
+    "heavy metal",
+    "metal",
+    "metalcore"
+   ],
+   "top_track": "Pisces",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/b/f/4/0/bf4af4755736f945ba294209c1d6a8f7.mp3?hdnea=exp=1781610488~acl=/api/1/1/b/f/4/0/bf4af4755736f945ba294209c1d6a8f7.mp3*~data=user_id=0,application_id=42~hmac=cf1f645347b18bde9d6839144b3ee010935c7a0ca3996e6a387807cad448a2d0",
+   "album": "King of Everything",
+   "image": "https://cdn-images.dzcdn.net/images/artist/dfe01d1aa96e28f11d579df505f7987e/250x250-000000-80-0-0.jpg",
+   "fans": 97873,
+   "deezer_id": 2544561,
+   "spotify_search_uri": "spotify:search:Jinjer",
+   "spotify_web_url": "https://open.spotify.com/search/Jinjer",
+   "user_status": null
+  },
+  {
+   "name": "Set It Off",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "emo"
+   ],
+   "raw_tags": [
+    "rock",
+    "alternative rock",
+    "power pop",
+    "emo",
+    "alternative",
+    "pop rock"
+   ],
+   "bio": "Set It Off is a pop punk act from United States, active since 2008. USA rock band, 2008–present.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Hollywood Undead",
+    "TX2",
+    "Get Scared",
+    "New Medicine",
+    "Icon For Hire",
+    "Palaye Royale"
+   ],
+   "genre_overlap": [
+    "emo",
+    "pop punk"
+   ],
+   "top_track": "Wolf in Sheep's Clothing (feat. William Beckett)",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/f/b/b/0/fbbf75193908af43218f77754d56b114.mp3?hdnea=exp=1781610525~acl=/api/1/1/f/b/b/0/fbbf75193908af43218f77754d56b114.mp3*~data=user_id=0,application_id=42~hmac=2fb807e5af4c06b7dd7134977d522ad89f5c787bfe6130b621ca1ad8857dea92",
+   "album": "Duality",
+   "image": "https://cdn-images.dzcdn.net/images/artist/cb9c301a124e5059bf0a1af65b3731dc/250x250-000000-80-0-0.jpg",
+   "fans": 83507,
+   "deezer_id": 472399,
+   "spotify_search_uri": "spotify:search:Set%20It%20Off",
+   "spotify_web_url": "https://open.spotify.com/search/Set%20It%20Off",
+   "user_status": null
+  },
+  {
+   "name": "Hot Chelle Rae",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "pop"
+   ],
+   "raw_tags": [
+    "pop",
+    "electropop",
+    "teen pop"
+   ],
+   "bio": "Hot Chelle Rae is a pop act from United States, active since 2005.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Owl City",
+    "Hedley",
+    "Kelly Clarkson",
+    "Adam Lambert",
+    "Maroon 5",
+    "P!nk"
+   ],
+   "genre_overlap": [],
+   "top_track": "Tonight Tonight",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/0/9/c/0/09caf6d7540dee3ecad3efd9f981374e.mp3?hdnea=exp=1781610482~acl=/api/1/1/0/9/c/0/09caf6d7540dee3ecad3efd9f981374e.mp3*~data=user_id=0,application_id=42~hmac=1b55002c543451930dfd89d4210b4a620250cc026f31bd2cf8f63b7a1ec6f28b",
+   "album": "Whatever",
+   "image": "https://cdn-images.dzcdn.net/images/artist/a932fec559924876717f97bf37a920cf/250x250-000000-80-0-0.jpg",
+   "fans": 70589,
+   "deezer_id": 274241,
+   "spotify_search_uri": "spotify:search:Hot%20Chelle%20Rae",
+   "spotify_web_url": "https://open.spotify.com/search/Hot%20Chelle%20Rae",
+   "user_status": null
+  },
+  {
+   "name": "Breathe Carolina",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "emo",
+    "post-hardcore",
+    "hardcore"
+   ],
+   "raw_tags": [
+    "rock",
+    "electronic",
+    "pop",
+    "dubstep",
+    "dance",
+    "house"
+   ],
+   "bio": "Breathe Carolina is a emo act from United States, active since 2007.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Steve Aoki",
+    "Afrojack",
+    "Sander van doorn",
+    "Firebeatz",
+    "Nicky Romero",
+    "Quintino"
+   ],
+   "genre_overlap": [
+    "emo",
+    "post-hardcore"
+   ],
+   "top_track": "Blackout",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/5/9/4/0/594f1ad4ed9ef82f2868854e89a3adbd.mp3?hdnea=exp=1781610440~acl=/api/1/1/5/9/4/0/594f1ad4ed9ef82f2868854e89a3adbd.mp3*~data=user_id=0,application_id=42~hmac=c994f05389bdc5b57fff7620a5da4a8791f1f662b0cc2ba30843cb1a6c4e822e",
+   "album": "Hell Is What You Make It",
+   "image": "https://cdn-images.dzcdn.net/images/artist/3cd779f1cbe88c84ea47b862a632616a/250x250-000000-80-0-0.jpg",
+   "fans": 66092,
+   "deezer_id": 132264,
+   "spotify_search_uri": "spotify:search:Breathe%20Carolina",
+   "spotify_web_url": "https://open.spotify.com/search/Breathe%20Carolina",
+   "user_status": null
+  },
+  {
+   "name": "The Ghost Inside",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "punk",
+    "post-hardcore",
+    "metalcore"
+   ],
+   "raw_tags": [
+    "melodic metalcore",
+    "hardcore",
+    "post-hardcore",
+    "metalcore",
+    "melodic hardcore"
+   ],
+   "bio": "The Ghost Inside is a punk act from United States, active since 2006.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Fit For A King",
+    "Wage War",
+    "Stick To Your Guns",
+    "August Burns Red",
+    "Caliban",
+    "Attila"
+   ],
+   "genre_overlap": [
+    "hardcore",
+    "melodic hardcore",
+    "metalcore",
+    "post-hardcore"
+   ],
+   "top_track": "Safe And Sound",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/e/e/6/0/ee6b1ad877f42e66d2ce0d9ff71c75c9.mp3?hdnea=exp=1781610549~acl=/api/1/1/e/e/6/0/ee6b1ad877f42e66d2ce0d9ff71c75c9.mp3*~data=user_id=0,application_id=42~hmac=f6b1c145436f5b611e6b885cb88ee0ffc4842bdde1af70401f4e8fe04a990755",
+   "album": "Safe And Sound",
+   "image": "https://cdn-images.dzcdn.net/images/artist/1d6fc4e6c54884308eb6a55c173cc5ea/250x250-000000-80-0-0.jpg",
+   "fans": 61004,
+   "deezer_id": 1040345,
+   "spotify_search_uri": "spotify:search:The%20Ghost%20Inside",
+   "spotify_web_url": "https://open.spotify.com/search/The%20Ghost%20Inside",
+   "user_status": null
+  },
+  {
+   "name": "Attila",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "metalcore",
+    "hardcore",
+    "metal"
+   ],
+   "raw_tags": [
+    "deathcore",
+    "metalcore",
+    "experimental",
+    "hardcore"
+   ],
+   "bio": "Attila is a metalcore act from United States, active since 2005. US metalcore band.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Caliban",
+    "August Burns Red",
+    "As I Lay Dying",
+    "Fit For A King",
+    "Upon A Burning Body",
+    "Crystal Lake"
+   ],
+   "genre_overlap": [
+    "deathcore",
+    "hardcore",
+    "metalcore"
+   ],
+   "top_track": "Moshpit",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/5/f/d/0/5fd0713e62c1effe41ffc2af1e39aa28.mp3?hdnea=exp=1781610429~acl=/api/1/1/5/f/d/0/5fd0713e62c1effe41ffc2af1e39aa28.mp3*~data=user_id=0,application_id=42~hmac=7c15e6d48da539df09f43b4d5e414826daab1562b1b3355534be243928ebe054",
+   "album": "Chaos",
+   "image": "https://cdn-images.dzcdn.net/images/artist/e21cf41ff13d5fceaef415717f310509/250x250-000000-80-0-0.jpg",
+   "fans": 53324,
+   "deezer_id": 12340,
+   "spotify_search_uri": "spotify:search:Attila",
+   "spotify_web_url": "https://open.spotify.com/search/Attila",
+   "user_status": null
+  },
+  {
+   "name": "Upon a Burning Body",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "metalcore",
+    "hardcore",
+    "metal"
+   ],
+   "raw_tags": [
+    "hardcore",
+    "metalcore",
+    "death metal",
+    "deathcore"
+   ],
+   "bio": "Upon a Burning Body is a metalcore act from United States, active since 2005.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Attila",
+    "Emmure",
+    "Whitechapel",
+    "Breakdown Of Sanity",
+    "Bleed From Within",
+    "Heart of a Coward"
+   ],
+   "genre_overlap": [
+    "death metal",
+    "deathcore",
+    "hardcore",
+    "metalcore"
+   ],
+   "top_track": "My Distorted Reflection",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/9/7/6/0/976219a2eb4db13e5b117e27d491822f.mp3?hdnea=exp=1781610559~acl=/api/1/1/9/7/6/0/976219a2eb4db13e5b117e27d491822f.mp3*~data=user_id=0,application_id=42~hmac=e469a857f51c7cafa7e8561314119cf688051eda9ced3eccfb6f462544ccf177",
+   "album": "Straight From The Barrio",
+   "image": "https://cdn-images.dzcdn.net/images/artist/09c81f1e1b336c90644b1aa75cc876ce/250x250-000000-80-0-0.jpg",
+   "fans": 27638,
+   "deezer_id": 392408,
+   "spotify_search_uri": "spotify:search:Upon%20a%20Burning%20Body",
+   "spotify_web_url": "https://open.spotify.com/search/Upon%20a%20Burning%20Body",
+   "user_status": null
+  },
+  {
+   "name": "Nova Twins",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "punk",
+    "metal",
+    "rock"
+   ],
+   "raw_tags": [
+    "uk",
+    "alternative rock",
+    "rock",
+    "pop rock",
+    "nu metal",
+    "punk rock"
+   ],
+   "bio": "Nova Twins is a punk act from United Kingdom, active since 2014.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Poppy",
+    "Cassyette",
+    "South Arcade",
+    "FEVER 333",
+    "Dead Poet Society",
+    "WARGASM (UK)"
+   ],
+   "genre_overlap": [
+    "metal",
+    "nu metal",
+    "punk"
+   ],
+   "top_track": "1x1 (feat. Nova Twins)",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/d/e/7/0/de7e468871da6710dcd609aa77f23f98.mp3?hdnea=exp=1781610507~acl=/api/1/1/d/e/7/0/de7e468871da6710dcd609aa77f23f98.mp3*~data=user_id=0,application_id=42~hmac=f96a8a0d5adb900c977fbe4ded418a41bef0d1fb68da8de84f9539dfe4c8499f",
+   "album": "POST HUMAN: SURVIVAL HORROR",
+   "image": "https://cdn-images.dzcdn.net/images/artist/40705d166184049e087a7b9849789122/250x250-000000-80-0-0.jpg",
+   "fans": 14158,
+   "deezer_id": 10444072,
+   "spotify_search_uri": "spotify:search:Nova%20Twins",
+   "spotify_web_url": "https://open.spotify.com/search/Nova%20Twins",
+   "user_status": null
+  },
+  {
+   "name": "Letlive.",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "punk",
+    "emo",
+    "post-hardcore"
+   ],
+   "raw_tags": [
+    "rock",
+    "alternative rock",
+    "hardcore",
+    "experimental",
+    "indie rock",
+    "emo"
+   ],
+   "bio": "Letlive. is a punk act from United States, active since 2002.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "DON BROCO",
+    "Bury Tomorrow",
+    "Ice Nine Kills",
+    "The Funeral Portrait",
+    "Ankor",
+    "Thornhill"
+   ],
+   "genre_overlap": [
+    "emo",
+    "hardcore",
+    "hardcore punk",
+    "indie rock",
+    "post-hardcore"
+   ],
+   "top_track": "A Weak Ago",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/a/f/3/0/af3657ff13b021e27c2ac3ca68c7bb0f.mp3?hdnea=exp=1781610494~acl=/api/1/1/a/f/3/0/af3657ff13b021e27c2ac3ca68c7bb0f.mp3*~data=user_id=0,application_id=42~hmac=e11112b248bee27ab3f075f4f82fa4ea332d5547f3d7fc6932cecc9b12f275f2",
+   "album": "If I'm The Devil...",
+   "image": "https://cdn-images.dzcdn.net/images/artist/5da5372ac07068503c25f9fc231eeb5a/250x250-000000-80-0-0.jpg",
+   "fans": 12045,
+   "deezer_id": 374918,
+   "spotify_search_uri": "spotify:search:Letlive.",
+   "spotify_web_url": "https://open.spotify.com/search/Letlive.",
+   "user_status": null
+  },
+  {
+   "name": "The Aggrolites",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "ska",
+    "rock",
+    "pop"
+   ],
+   "raw_tags": [
+    "skinhead reggae",
+    "ska",
+    "reggae",
+    "classic pop and rock"
+   ],
+   "bio": "The Aggrolites is a ska act from United States, active since 2002. US reggae band.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "The Slackers",
+    "Hepcat",
+    "Prince Buster",
+    "Laurel Aitken",
+    "The Upsetters",
+    "Desmond Dekker"
+   ],
+   "genre_overlap": [
+    "ska"
+   ],
+   "top_track": "Super Atomic",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/6/2/d/0/62ddfad87db658cbd575c3a6d66ff745.mp3?hdnea=exp=1781610542~acl=/api/1/1/6/2/d/0/62ddfad87db658cbd575c3a6d66ff745.mp3*~data=user_id=0,application_id=42~hmac=71e24246d739ba0054fbe67ae8c7f7d3cbd0b6017a918a42a9d5a8cd64b58587",
+   "album": "Super Atomic",
+   "image": "https://cdn-images.dzcdn.net/images/artist/3ce67b67a0a38c3d442e8550d2556c09/250x250-000000-80-0-0.jpg",
+   "fans": 10755,
+   "deezer_id": 254260,
+   "spotify_search_uri": "spotify:search:The%20Aggrolites",
+   "spotify_web_url": "https://open.spotify.com/search/The%20Aggrolites",
+   "user_status": null
+  },
+  {
+   "name": "Save Ferris",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "punk",
+    "ska"
+   ],
+   "raw_tags": [
+    "ska",
+    "ska punk",
+    "third wave ska"
+   ],
+   "bio": "Save Ferris is a punk act from United States, active since 1995. USA ska punk.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Reel Big Fish",
+    "The Mighty Mighty Bosstones",
+    "MU330",
+    "Less Than Jake",
+    "Streetlight Manifesto",
+    "Skankin' Pickle"
+   ],
+   "genre_overlap": [
+    "ska",
+    "ska punk"
+   ],
+   "top_track": "Come on Eileen",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/1/c/e/0/1cebdae154ad2ed9ce3ce97139c72a74.mp3?hdnea=exp=1781610522~acl=/api/1/1/1/c/e/0/1cebdae154ad2ed9ce3ce97139c72a74.mp3*~data=user_id=0,application_id=42~hmac=afe494fef2d05956332ab4ecb5127811a1972c2912a7de0c721440ef550e4d04",
+   "album": "It Means Everything",
+   "image": "https://cdn-images.dzcdn.net/images/artist/7ad4c9d0150a16a387b9d04892b6b553/250x250-000000-80-0-0.jpg",
+   "fans": 8967,
+   "deezer_id": 3510,
+   "spotify_search_uri": "spotify:search:Save%20Ferris",
+   "spotify_web_url": "https://open.spotify.com/search/Save%20Ferris",
+   "user_status": null
+  },
+  {
+   "name": "Caskets",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "post-hardcore",
+    "metalcore",
+    "hardcore"
+   ],
+   "raw_tags": [
+    "alternative rock",
+    "metalcore",
+    "alternative metal",
+    "post-hardcore",
+    "post-screamo",
+    "easycore"
+   ],
+   "bio": "Caskets is a post-hardcore act from Leeds. English alternative metal group.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Dayseeker",
+    "Normandie",
+    "Rain City Drive",
+    "Nevertel",
+    "Thousand Below",
+    "Holding Absence"
+   ],
+   "genre_overlap": [
+    "alternative metal",
+    "metalcore",
+    "post-hardcore"
+   ],
+   "top_track": "Glass Heart",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/9/c/0/0/9c0e2a230f320440f685ba79090be5e1.mp3?hdnea=exp=1781610442~acl=/api/1/1/9/c/0/0/9c0e2a230f320440f685ba79090be5e1.mp3*~data=user_id=0,application_id=42~hmac=c6b41522d765aae10863b3b633e1cb5970064a67c3271c1bc79ef44063930df1",
+   "album": "Glass Heart",
+   "image": "https://cdn-images.dzcdn.net/images/artist/40799e130de62519814ada1452b5133e/250x250-000000-80-0-0.jpg",
+   "fans": 6051,
+   "deezer_id": 12551392,
+   "spotify_search_uri": "spotify:search:Caskets",
+   "spotify_web_url": "https://open.spotify.com/search/Caskets",
+   "user_status": null
+  },
+  {
+   "name": "Deathbyromy",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "rock",
+    "pop",
+    "hip hop"
+   ],
+   "raw_tags": [
+    "rock",
+    "electronic",
+    "pop",
+    "industrial",
+    "industrial rock",
+    "electropop"
+   ],
+   "bio": "Deathbyromy is a rock act from United States, active since 1999.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Vana",
+    "Poppy",
+    "Scene Queen",
+    "Mothica",
+    "Bambie Thug",
+    "FKA Rayne"
+   ],
+   "genre_overlap": [],
+   "top_track": "PRAY TO ME",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/f/7/f/0/f7f66e2a0eeec9a5adc16c8a3fedef5e.mp3?hdnea=exp=1781610449~acl=/api/1/1/f/7/f/0/f7f66e2a0eeec9a5adc16c8a3fedef5e.mp3*~data=user_id=0,application_id=42~hmac=bffeef7799c71a13f9b1bfdb13a5fde0f0a835a479a56fad45aae35bc186a2f8",
+   "album": "PRAY TO ME",
+   "image": "https://cdn-images.dzcdn.net/images/artist/367f8f2bc95adae2f4decbd1d2e1cf1a/250x250-000000-80-0-0.jpg",
+   "fans": 5872,
+   "deezer_id": 15005995,
+   "spotify_search_uri": "spotify:search:Deathbyromy",
+   "spotify_web_url": "https://open.spotify.com/search/Deathbyromy",
+   "user_status": null
+  },
+  {
+   "name": "Hepcat",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "ska",
+    "rock"
+   ],
+   "raw_tags": [
+    "ska",
+    "rocksteady"
+   ],
+   "bio": "Hepcat is a ska act from United States, active since 1989.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "The Slackers",
+    "The Aggrolites",
+    "Judge Dread",
+    "Skatalites",
+    "The Skatalites",
+    "Desmond Dekker"
+   ],
+   "genre_overlap": [
+    "ska"
+   ],
+   "top_track": "Dance Wid' Me",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/b/4/e/0/b4e1c1bbe4edb2d88262463f1f70934d.mp3?hdnea=exp=1781610478~acl=/api/1/1/b/4/e/0/b4e1c1bbe4edb2d88262463f1f70934d.mp3*~data=user_id=0,application_id=42~hmac=855c4818659d0ed39b0811190486c7f4ba94836a11de4644a51082af4d1d7407",
+   "album": "Out Of Nowhere",
+   "image": "https://cdn-images.dzcdn.net/images/artist/8528848712d0a4b492d3790ba1ad945f/250x250-000000-80-0-0.jpg",
+   "fans": 4989,
+   "deezer_id": 3926,
+   "spotify_search_uri": "spotify:search:Hepcat",
+   "spotify_web_url": "https://open.spotify.com/search/Hepcat",
+   "user_status": null
+  },
+  {
+   "name": "Girlfriends",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "pop"
+   ],
+   "raw_tags": [
+    "pop punk"
+   ],
+   "bio": "Girlfriends is a pop punk act from Riverside, active since 2020. Pop punk duo from California.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Mod Sun",
+    "jxdn",
+    "KennyHoopla",
+    "Huddy",
+    "LIL LOTUS",
+    "nothing,nowhere."
+   ],
+   "genre_overlap": [
+    "pop punk"
+   ],
+   "top_track": "Thanks Anyway",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/3/f/d/0/3fd2f1118c602c3895fe88f7fc4a6c6a.mp3?hdnea=exp=1781610468~acl=/api/1/1/3/f/d/0/3fd2f1118c602c3895fe88f7fc4a6c6a.mp3*~data=user_id=0,application_id=42~hmac=eebce3b7def1dd798a67057409a84ea6890fc0d271895ef0c256a377bf97ef88",
+   "album": "Over My Dead Body EP",
+   "image": "https://cdn-images.dzcdn.net/images/artist/a1ee32fb80ff7d239d5e93356f151316/250x250-000000-80-0-0.jpg",
+   "fans": 4950,
+   "deezer_id": 440526,
+   "spotify_search_uri": "spotify:search:Girlfriends",
+   "spotify_web_url": "https://open.spotify.com/search/Girlfriends",
+   "user_status": null
+  },
+  {
+   "name": "Aries",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "pop",
+    "hip hop"
+   ],
+   "raw_tags": [
+    "pop",
+    "pop rap",
+    "trap"
+   ],
+   "bio": "Aries is a pop act from United States. American singer, songwriter, rapper, and YouTuber.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "347aidan",
+    "Iann Dior",
+    "LUND",
+    "Lil Xan",
+    "YNG Martyr",
+    "Yung Pinch"
+   ],
+   "genre_overlap": [],
+   "top_track": "FOREVER",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/5/7/e/0/57e6970d8705fe423cc06fb94d3a4e4b.mp3?hdnea=exp=1781610427~acl=/api/1/1/5/7/e/0/57e6970d8705fe423cc06fb94d3a4e4b.mp3*~data=user_id=0,application_id=42~hmac=5a472199e8cbb5712e40c7f1b7260f8b0081d970eb21c700f8a9c01423bc0497",
+   "album": "WELCOME HOME [deluxe]",
+   "image": "https://cdn-images.dzcdn.net/images/artist/db9050a60c4e609a1f6cd36ad91e644d/250x250-000000-80-0-0.jpg",
+   "fans": 4041,
+   "deezer_id": 51100072,
+   "spotify_search_uri": "spotify:search:Aries",
+   "spotify_web_url": "https://open.spotify.com/search/Aries",
+   "user_status": null
+  },
+  {
+   "name": "Jiluka",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "metalcore",
+    "metal",
+    "electronic"
+   ],
+   "raw_tags": [
+    "electronic",
+    "industrial metal",
+    "metal",
+    "metalcore",
+    "visual kei",
+    "digital"
+   ],
+   "bio": "Jiluka is a metalcore act from Japan, active since 2013. Visual kei.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "DEXCORE",
+    "Imminence",
+    "DEVILOOF",
+    "NOCTURNAL BLOODLUST",
+    "Madmans Esprit",
+    "Dir en grey"
+   ],
+   "genre_overlap": [
+    "metal",
+    "metalcore"
+   ],
+   "top_track": "DeViLs",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/0/9/0/0/0904a816216535bbf46f95762dbda268.mp3?hdnea=exp=1781610486~acl=/api/1/1/0/9/0/0/0904a816216535bbf46f95762dbda268.mp3*~data=user_id=0,application_id=42~hmac=6b8a3db0caa1baa91bdaa58c81a44258f3d6a4191766c78b1b2fda083656bb6d",
+   "album": "DeViLs",
+   "image": "https://cdn-images.dzcdn.net/images/artist/c6c4c59f52236aec9e14e7afd758ba36/250x250-000000-80-0-0.jpg",
+   "fans": 3446,
+   "deezer_id": 215890815,
+   "spotify_search_uri": "spotify:search:Jiluka",
+   "spotify_web_url": "https://open.spotify.com/search/Jiluka",
+   "user_status": null
+  },
+  {
+   "name": "Vana",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "metal",
+    "rock",
+    "pop"
+   ],
+   "raw_tags": [
+    "metal",
+    "pop rock",
+    "alternative pop",
+    "pop metal",
+    "darkcore"
+   ],
+   "bio": "Vana is a metal act from Auckland. Singer and rock guitarist from New Zealand.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "DeathbyRomy",
+    "Poppy",
+    "VUKOVI",
+    "Cassyette",
+    "Mothica",
+    "SKYND"
+   ],
+   "genre_overlap": [
+    "metal"
+   ],
+   "top_track": "Foggy Windows",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/3/2/b/0/32bd488f94a61a7032a076f929106a13.mp3?hdnea=exp=1781610560~acl=/api/1/1/3/2/b/0/32bd488f94a61a7032a076f929106a13.mp3*~data=user_id=0,application_id=42~hmac=bb7fee5cf46af10c533e55bbf5b8e02d5bca822d0e7d24e47d87381c5945c0ff",
+   "album": "Foggy Windows",
+   "image": "https://cdn-images.dzcdn.net/images/artist/d24f7f35f5f5eea0657f6d181ad16a29/250x250-000000-80-0-0.jpg",
+   "fans": 2674,
+   "deezer_id": 204647227,
+   "spotify_search_uri": "spotify:search:Vana",
+   "spotify_web_url": "https://open.spotify.com/search/Vana",
+   "user_status": null
+  },
+  {
+   "name": "Chase Petra",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "rock"
+   ],
+   "raw_tags": [
+    "alternative rock",
+    "pop punk"
+   ],
+   "bio": "Chase Petra is a pop punk act from Long Beach, active since 2017.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Mother Mother",
+    "Madds Buckley",
+    "Baby Bugs",
+    "Rabbitology",
+    "The Crane Wives",
+    "Autoheart"
+   ],
+   "genre_overlap": [
+    "pop punk"
+   ],
+   "top_track": "405",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/f/f/4/0/ff43a9c4ffdd149f527de0bbffa80058.mp3?hdnea=exp=1781610443~acl=/api/1/1/f/f/4/0/ff43a9c4ffdd149f527de0bbffa80058.mp3*~data=user_id=0,application_id=42~hmac=4c22b46676bd19c438626e9febb5fcd0f09243d376985a0366298fd54812301f",
+   "album": "Soda Pop",
+   "image": "https://cdn-images.dzcdn.net/images/artist/7f24cde0752bd7300a750724d9d39807/250x250-000000-80-0-0.jpg",
+   "fans": 1217,
+   "deezer_id": 11884683,
+   "spotify_search_uri": "spotify:search:Chase%20Petra",
+   "spotify_web_url": "https://open.spotify.com/search/Chase%20Petra",
+   "user_status": null
+  },
+  {
+   "name": "Lower Definition",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "punk",
+    "post-hardcore",
+    "hardcore"
+   ],
+   "raw_tags": [
+    "metal",
+    "experimental rock",
+    "melodic hardcore",
+    "post-hardcore"
+   ],
+   "bio": "Lower Definition is a punk act from United States, active since 2002.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Hopesfall",
+    "DON’T TRY",
+    "Twitching Tongues",
+    "Artifex Pereo",
+    "Napoleon",
+    "Coalesce"
+   ],
+   "genre_overlap": [
+    "melodic hardcore",
+    "metal",
+    "post-hardcore"
+   ],
+   "top_track": "Apparition Room",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/e/b/7/0/eb756109ba4cfd968d18b54c01fb4dac.mp3?hdnea=exp=1781610497~acl=/api/1/1/e/b/7/0/eb756109ba4cfd968d18b54c01fb4dac.mp3*~data=user_id=0,application_id=42~hmac=bbb54a788e685d7fab519722c8c70cdc9065f272eff29cc964e32ddc1c7b1de0",
+   "album": "The Purpose of the Moon",
+   "image": "https://cdn-images.dzcdn.net/images/artist/12ce354bc373e85fe123775a0c534363/250x250-000000-80-0-0.jpg",
+   "fans": 947,
+   "deezer_id": 74877,
+   "spotify_search_uri": "spotify:search:Lower%20Definition",
+   "spotify_web_url": "https://open.spotify.com/search/Lower%20Definition",
+   "user_status": null
+  },
+  {
+   "name": "Good Terms",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "punk",
+    "emo"
+   ],
+   "raw_tags": [
+    "emo",
+    "punk"
+   ],
+   "bio": "Good Terms is a punk act from Los Angeles. Emo Band.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Being As An Ocean",
+    "The Amity Affliction",
+    "Magnolia Park",
+    "Enter Shikari",
+    "DON BROCO",
+    "Destroy Rebuild Until God Shows"
+   ],
+   "genre_overlap": [
+    "emo",
+    "punk"
+   ],
+   "top_track": "Blurry",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/f/7/c/0/f7cb22ff0979c8c6f05eec93ccf12d32.mp3?hdnea=exp=1781610471~acl=/api/1/1/f/7/c/0/f7cb22ff0979c8c6f05eec93ccf12d32.mp3*~data=user_id=0,application_id=42~hmac=412e81005771b22a39068e04e3f0430dcadd2bfc6ca7a5bd8cce61d7852b3836",
+   "album": "Burnout",
+   "image": "https://cdn-images.dzcdn.net/images/artist/cdb658b9b6e371767e80a96dee5dc88a/250x250-000000-80-0-0.jpg",
+   "fans": 699,
+   "deezer_id": 104931852,
+   "spotify_search_uri": "spotify:search:Good%20Terms",
+   "spotify_web_url": "https://open.spotify.com/search/Good%20Terms",
+   "user_status": null
+  },
+  {
+   "name": "Who Cares",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "rock"
+   ],
+   "raw_tags": [
+    "blues rock",
+    "country folk",
+    "roots rock",
+    "americana",
+    "singer-songwriter"
+   ],
+   "bio": "Who Cares is a rock act from Austria, active since 1995. \"The Band\" Vienna.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Braaheim",
+    "KALUMA",
+    "NALYRO",
+    "BeatItPunk",
+    "Hr. Troels",
+    "XD"
+   ],
+   "genre_overlap": [
+    "blues rock"
+   ],
+   "top_track": "Holy Water",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/1/4/d/0/14d8150caebe95ffb3cfb77359f26a05.mp3?hdnea=exp=1781610567~acl=/api/1/1/1/4/d/0/14d8150caebe95ffb3cfb77359f26a05.mp3*~data=user_id=0,application_id=42~hmac=cffc7c6a1d803a93dbc5a2bd683a676651eb3ad064df0a0aa26c4c830b7c0de1",
+   "album": "Whocares",
+   "image": "https://cdn-images.dzcdn.net/images/artist/1869d108d32f719861be7e5bd942132c/250x250-000000-80-0-0.jpg",
+   "fans": 340,
+   "deezer_id": 5082148,
+   "spotify_search_uri": "spotify:search:Who%20Cares",
+   "spotify_web_url": "https://open.spotify.com/search/Who%20Cares",
+   "user_status": null
+  },
+  {
+   "name": "Initiate",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "punk",
+    "hardcore"
+   ],
+   "raw_tags": [
+    "hardcore",
+    "hardcore punk"
+   ],
+   "bio": "Initiate is a punk act from California, active since 2016. Hardcore from California.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Have Heart",
+    "Incendiary",
+    "Trapped Under Ice",
+    "Haywire 617",
+    "Sorcerer",
+    "Angel Du$t"
+   ],
+   "genre_overlap": [
+    "hardcore",
+    "hardcore punk"
+   ],
+   "top_track": "Fire Starter",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/9/2/6/0/92655e61df8dfb6f9fdd62a0b98c6af5.mp3?hdnea=exp=1781610485~acl=/api/1/1/9/2/6/0/92655e61df8dfb6f9fdd62a0b98c6af5.mp3*~data=user_id=0,application_id=42~hmac=81735d04e483365066d70c10433b5ea27a6a619966ca1390875bed62f0572c22",
+   "album": "Cerebral Circus",
+   "image": "https://cdn-images.dzcdn.net/images/artist/f869bdcc77f36f06c7b75b73881dbb65/250x250-000000-80-0-0.jpg",
+   "fans": 331,
+   "deezer_id": 7139689,
+   "spotify_search_uri": "spotify:search:Initiate",
+   "spotify_web_url": "https://open.spotify.com/search/Initiate",
+   "user_status": null
+  },
+  {
+   "name": "Start Today",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "punk",
+    "hardcore"
+   ],
+   "raw_tags": [
+    "hardcore punk"
+   ],
+   "bio": "Start Today is a punk act from California, active since 2024. Hardcore punk & youth crew from California.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Secret World",
+    "Bracewar",
+    "concealer.",
+    "Hold My Own",
+    "Twitching Tongues",
+    "True Colors"
+   ],
+   "genre_overlap": [
+    "hardcore punk"
+   ],
+   "top_track": "No Space",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/0/f/a/0/0fad8dc8e9450edcc7830e9eb8b778db.mp3?hdnea=exp=1781610536~acl=/api/1/1/0/f/a/0/0fad8dc8e9450edcc7830e9eb8b778db.mp3*~data=user_id=0,application_id=42~hmac=0270479cd8a63104ab842870e38fa951697184acef0df5734acd7106a795bc5e",
+   "album": "Nothing To You",
+   "image": "https://cdn-images.dzcdn.net/images/artist/d7053eb306fc086b8e0ff2b00d7ebaa0/250x250-000000-80-0-0.jpg",
+   "fans": 149,
+   "deezer_id": 10499095,
+   "spotify_search_uri": "spotify:search:Start%20Today",
+   "spotify_web_url": "https://open.spotify.com/search/Start%20Today",
+   "user_status": null
+  },
+  {
+   "name": "Gritty in Pink Jam",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "rock",
+    "pop",
+    "alternative"
+   ],
+   "raw_tags": [
+    "rock",
+    "alternative rock",
+    "american",
+    "seattle",
+    "grunge",
+    "hard rock"
+   ],
+   "bio": "Gritty in Pink Jam is a rock act from United States, active since 1990.",
+   "similar_you_listen": [],
+   "similar_general": [],
+   "genre_overlap": [
+    "classic rock",
+    "funk rock",
+    "grunge",
+    "hard rock",
+    "indie rock",
+    "post-grunge"
+   ],
+   "top_track": null,
+   "preview_url": "",
+   "album": "",
+   "image": "",
+   "fans": 0,
+   "deezer_id": null,
+   "spotify_search_uri": "spotify:search:Gritty%20in%20Pink%20Jam",
+   "spotify_web_url": "https://open.spotify.com/search/Gritty%20in%20Pink%20Jam",
+   "user_status": null
+  },
+  {
+   "name": "G-Eazy",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "none",
+   "why": "Outside your usual lane — a wildcard.",
+   "genres": [
+    "hip hop"
+   ],
+   "raw_tags": [
+    "hip hop",
+    "trap"
+   ],
+   "bio": "G-Eazy is a hip hop act from United States, active since 1989.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Tyga",
+    "YG",
+    "Wiz Khalifa",
+    "French Montana",
+    "Meek Mill",
+    "Russ"
+   ],
+   "genre_overlap": [],
+   "top_track": "Me, Myself & I",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/c/d/5/0/cd5cc90c57333056216740863f9492f7.mp3?hdnea=exp=1781610466~acl=/api/1/1/c/d/5/0/cd5cc90c57333056216740863f9492f7.mp3*~data=user_id=0,application_id=42~hmac=1c39c13061ecbe6398b589ed577d88e8666448c76c6eeca3c34aab3092ce7104",
+   "album": "When It's Dark Out",
+   "image": "https://cdn-images.dzcdn.net/images/artist/7aefb7c297e45f7bea82cf0c2d34120d/250x250-000000-80-0-0.jpg",
+   "fans": 1079578,
+   "deezer_id": 810507,
+   "spotify_search_uri": "spotify:search:G-Eazy",
+   "spotify_web_url": "https://open.spotify.com/search/G-Eazy",
+   "user_status": null
+  },
+  {
+   "name": "Gym Class Heroes",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "none",
+   "why": "Outside your usual lane — a wildcard.",
+   "genres": [
+    "pop",
+    "hip hop"
+   ],
+   "raw_tags": [
+    "hip hop",
+    "dance-pop",
+    "pop rap",
+    "pop and chart"
+   ],
+   "bio": "Gym Class Heroes is a pop act from United States, active since 1997. American rap rock.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Timbaland",
+    "Nelly",
+    "JAY Z",
+    "Will Smith",
+    "Ludacris",
+    "Sean Kingston"
+   ],
+   "genre_overlap": [],
+   "top_track": "Stereo Hearts (feat. Adam Levine)",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/8/e/e/0/8ee644308ec05efe3a1b31e720512d5f.mp3?hdnea=exp=1781610476~acl=/api/1/1/8/e/e/0/8ee644308ec05efe3a1b31e720512d5f.mp3*~data=user_id=0,application_id=42~hmac=7a3ee49bef3a461722aef7a71b38f08dccaaf7ed78cfeb4f95137cc1dbbd350e",
+   "album": "The Papercut Chronicles II",
+   "image": "https://cdn-images.dzcdn.net/images/artist/e5273927b9e83a654b04a26656147695/250x250-000000-80-0-0.jpg",
+   "fans": 313745,
+   "deezer_id": 5576,
+   "spotify_search_uri": "spotify:search:Gym%20Class%20Heroes",
+   "spotify_web_url": "https://open.spotify.com/search/Gym%20Class%20Heroes",
+   "user_status": null
+  },
+  {
+   "name": "Yelawolf",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "none",
+   "why": "Outside your usual lane — a wildcard.",
+   "genres": [
+    "hip hop"
+   ],
+   "raw_tags": [
+    "rap",
+    "hip hop",
+    "phone skit"
+   ],
+   "bio": "Yelawolf is a hip hop act from United States, active since 1979. US rapper.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Tech N9ne",
+    "Chris Webby",
+    "Eminem",
+    "Merkules",
+    "Hopsin",
+    "Slaughterhouse"
+   ],
+   "genre_overlap": [],
+   "top_track": "Till It's Gone",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/b/3/6/0/b3632e6b3e41ec8d0fea64e93b69da3c.mp3?hdnea=exp=1781610571~acl=/api/1/1/b/3/6/0/b3632e6b3e41ec8d0fea64e93b69da3c.mp3*~data=user_id=0,application_id=42~hmac=2980aaeb3696da00bc7716294c9925319c849f94692656e0e857563668e3faae",
+   "album": "Love Story",
+   "image": "https://cdn-images.dzcdn.net/images/artist/9ba20b3046e83b8d6d08f830c0b85570/250x250-000000-80-0-0.jpg",
+   "fans": 225619,
+   "deezer_id": 410734,
+   "spotify_search_uri": "spotify:search:Yelawolf",
+   "spotify_web_url": "https://open.spotify.com/search/Yelawolf",
+   "user_status": null
+  },
+  {
+   "name": "The Cab",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "none",
+   "why": "Outside your usual lane — a wildcard.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "The Cab is a alternative act from United States, active since 2004.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Against The Current",
+    "Marianas Trench",
+    "You Me At Six",
+    "Fall Out Boy",
+    "Panic! At the Disco",
+    "Patent Pending"
+   ],
+   "genre_overlap": [],
+   "top_track": "Angel With a Shotgun",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/a/b/a/0/abab9216333518ccd9b9751c167dece6.mp3?hdnea=exp=1781610544~acl=/api/1/1/a/b/a/0/abab9216333518ccd9b9751c167dece6.mp3*~data=user_id=0,application_id=42~hmac=62915b9c133b81297895cf5d4627c058bfabd7ca30b697a30ff6a0533d52aa78",
+   "album": "Symphony Soldier",
+   "image": "https://cdn-images.dzcdn.net/images/artist/5afb867b928a3618a9c5ff87bc5502b5/250x250-000000-80-0-0.jpg",
+   "fans": 32719,
+   "deezer_id": 73413,
+   "spotify_search_uri": "spotify:search:The%20Cab",
+   "spotify_web_url": "https://open.spotify.com/search/The%20Cab",
+   "user_status": null
+  },
+  {
+   "name": "Allison",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "none",
+   "why": "Outside your usual lane — a wildcard.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [
+    "jazz",
+    "blues",
+    "jazz blues"
+   ],
+   "bio": "Allison is a alternative act from United States, active since 1927.",
+   "similar_you_listen": [],
+   "similar_general": [],
+   "genre_overlap": [],
+   "top_track": "Aquí",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/6/5/a/0/65a7707503aa022ffa90e24782048308.mp3?hdnea=exp=1781610425~acl=/api/1/1/6/5/a/0/65a7707503aa022ffa90e24782048308.mp3*~data=user_id=0,application_id=42~hmac=2b2c9dbaa78ecdc78df3dbfdb50004a2597c5f0925d198906599b4ee5d262c11",
+   "album": "Allison (Edición Especial)",
+   "image": "https://cdn-images.dzcdn.net/images/artist/cb14d6a15087766342a81d9a663dc83e/250x250-000000-80-0-0.jpg",
+   "fans": 30396,
+   "deezer_id": 403774,
+   "spotify_search_uri": "spotify:search:Allison",
+   "spotify_web_url": "https://open.spotify.com/search/Allison",
+   "user_status": null
+  },
+  {
+   "name": "The Expendables",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "none",
+   "why": "Outside your usual lane — a wildcard.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "The Expendables is a alternative act from New Zealand. 80s band from Christchurch, New Zealand.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Pepper",
+    "Slightly Stoopid",
+    "Long Beach Dub Allstars",
+    "Iration",
+    "Dirty Heads",
+    "Tomorrows Bad Seeds"
+   ],
+   "genre_overlap": [],
+   "top_track": "Bowl For Two",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/6/5/8/0/658e54707170e342021eacdacf9ec96a.mp3?hdnea=exp=1781610548~acl=/api/1/1/6/5/8/0/658e54707170e342021eacdacf9ec96a.mp3*~data=user_id=0,application_id=42~hmac=55a11707650104c9cf9467edece90a961e8dd49d099cdcf8550523b86b6f3a47",
+   "album": "Gettin' Filthy",
+   "image": "https://cdn-images.dzcdn.net/images/artist/9d8b1bd516aa15512d12ba7e1fa44597/250x250-000000-80-0-0.jpg",
+   "fans": 13560,
+   "deezer_id": 390234,
+   "spotify_search_uri": "spotify:search:The%20Expendables",
+   "spotify_web_url": "https://open.spotify.com/search/The%20Expendables",
+   "user_status": null
+  },
+  {
+   "name": "Shakewell",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "none",
+   "why": "Outside your usual lane — a wildcard.",
+   "genres": [
+    "hip hop"
+   ],
+   "raw_tags": [
+    "hip hop"
+   ],
+   "bio": "Shakewell is a hip hop act from United States. Rapper.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "$uicideboy$",
+    "Pouya",
+    "Ramirez",
+    "Bones",
+    "Xavier Wulf",
+    "Scrim"
+   ],
+   "genre_overlap": [],
+   "top_track": "Six Lines, Two Dragons, and a Messiah",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/b/5/e/0/b5ed35b3d4a51e4dc13e1f593fbd4e48.mp3?hdnea=exp=1781610527~acl=/api/1/1/b/5/e/0/b5ed35b3d4a51e4dc13e1f593fbd4e48.mp3*~data=user_id=0,application_id=42~hmac=72313a4200645abf1657de8978826adc1b083e5304b670db0beb7030797e0f9c",
+   "album": "SHAMELESS $UICIDE",
+   "image": "https://cdn-images.dzcdn.net/images/artist/76459839e7eb255626729ee81439f441/250x250-000000-80-0-0.jpg",
+   "fans": 13553,
+   "deezer_id": 429296,
+   "spotify_search_uri": "spotify:search:Shakewell",
+   "spotify_web_url": "https://open.spotify.com/search/Shakewell",
+   "user_status": null
+  },
+  {
+   "name": "Sammy Adams",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "none",
+   "why": "Outside your usual lane — a wildcard.",
+   "genres": [
+    "pop",
+    "hip hop"
+   ],
+   "raw_tags": [
+    "pop-rap",
+    "hip hop"
+   ],
+   "bio": "Sammy Adams is a pop act from United States, active since 1987.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "B.o.B",
+    "Flo Rida",
+    "Jason Derulo",
+    "Macklemore & Ryan Lewis",
+    "Bryce Vine",
+    "Taio Cruz"
+   ],
+   "genre_overlap": [],
+   "top_track": "L.A. Story (feat. Mike Posner)",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/a/9/9/0/a99241baf3e13126256ac4b847516856.mp3?hdnea=exp=1781610521~acl=/api/1/1/a/9/9/0/a99241baf3e13126256ac4b847516856.mp3*~data=user_id=0,application_id=42~hmac=34f772b3633712b1e05f5cf8f2c9f777cc9eb182d1071bf5d1c5eea3789a37fc",
+   "album": "L.A. Story (feat. Mike Posner)",
+   "image": "https://cdn-images.dzcdn.net/images/artist/eba984729191f265f34bbae2d6f733b1/250x250-000000-80-0-0.jpg",
+   "fans": 12588,
+   "deezer_id": 1521229,
+   "spotify_search_uri": "spotify:search:Sammy%20Adams",
+   "spotify_web_url": "https://open.spotify.com/search/Sammy%20Adams",
+   "user_status": null
+  },
+  {
+   "name": "Carolesdaughter",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "none",
+   "why": "Outside your usual lane — a wildcard.",
+   "genres": [
+    "pop",
+    "alternative"
+   ],
+   "raw_tags": [
+    "alternative pop"
+   ],
+   "bio": "Carolesdaughter is a pop act from California.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Sir Chloe",
+    "Cavetown",
+    "Beach Bunny",
+    "Baby Bugs",
+    "Wilbur Soot",
+    "Penelope Scott"
+   ],
+   "genre_overlap": [],
+   "top_track": "Violent",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/c/d/2/0/cd2d122c6ba44aad6f8baf4befec449e.mp3?hdnea=exp=1781610441~acl=/api/1/1/c/d/2/0/cd2d122c6ba44aad6f8baf4befec449e.mp3*~data=user_id=0,application_id=42~hmac=80556bb8d17f3bb4fafbc1f2f1ed8a1bf52cb9a06d2424b1e20063463116f11a",
+   "album": "Violent",
+   "image": "https://cdn-images.dzcdn.net/images/artist/60ef5c11db6672c90eada1e001aeda72/250x250-000000-80-0-0.jpg",
+   "fans": 5434,
+   "deezer_id": 95447492,
+   "spotify_search_uri": "spotify:search:Carolesdaughter",
+   "spotify_web_url": "https://open.spotify.com/search/Carolesdaughter",
+   "user_status": null
+  },
+  {
+   "name": "Red Leather",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "none",
+   "why": "Outside your usual lane — a wildcard.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Red Leather is a alternative act from United States, active since 2022.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Connor Kauffman",
+    "Stellar",
+    "RudyWade",
+    "VOILÀ",
+    "Mytch",
+    "Arrested Youth"
+   ],
+   "genre_overlap": [],
+   "top_track": "CAN'T GET HIGH",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/e/7/f/0/e7ffacd189e5e72ba30dc014af0a6656.mp3?hdnea=exp=1781610518~acl=/api/1/1/e/7/f/0/e7ffacd189e5e72ba30dc014af0a6656.mp3*~data=user_id=0,application_id=42~hmac=51d11ddc85d163cbbe4c374f3ae97d40ce21fd229f893633cf4939d8262b4bb7",
+   "album": "CAN'T GET HIGH",
+   "image": "https://cdn-images.dzcdn.net/images/artist/b5386ef59471d5a0c6a76604c45866d8/250x250-000000-80-0-0.jpg",
+   "fans": 5093,
+   "deezer_id": 170785347,
+   "spotify_search_uri": "spotify:search:Red%20Leather",
+   "spotify_web_url": "https://open.spotify.com/search/Red%20Leather",
+   "user_status": null
+  },
+  {
+   "name": "Wesghost",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "none",
+   "why": "Outside your usual lane — a wildcard.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Wesghost is a alternative act from United States.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Mylie Taylor",
+    "Diggy Graves",
+    "ThxSoMch",
+    "Palaye Royale",
+    "VOILÀ",
+    "Witchz"
+   ],
+   "genre_overlap": [],
+   "top_track": "SPINE",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/1/6/f/0/16f3ec19adf98c80c4afef16fbdff443.mp3?hdnea=exp=1781610565~acl=/api/1/1/1/6/f/0/16f3ec19adf98c80c4afef16fbdff443.mp3*~data=user_id=0,application_id=42~hmac=2910cafd01ea5457cd6acaf7f5f43b1e3984cabd918edfaa6b3cb6f8a4d1ae15",
+   "album": "SPINE",
+   "image": "https://cdn-images.dzcdn.net/images/artist/fe2b95f5203081a49a7ef909463d4cd1/250x250-000000-80-0-0.jpg",
+   "fans": 4816,
+   "deezer_id": 204879517,
+   "spotify_search_uri": "spotify:search:Wesghost",
+   "spotify_web_url": "https://open.spotify.com/search/Wesghost",
+   "user_status": null
+  },
+  {
+   "name": "Lo Spirit",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "none",
+   "why": "Outside your usual lane — a wildcard.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Lo Spirit is a alternative act from Atlanta.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Normandie",
+    "elijah",
+    "Nate Vickers",
+    "Phix",
+    "Melrose Avenue",
+    "Zero 9:36"
+   ],
+   "genre_overlap": [],
+   "top_track": "GOOD THINGS",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/2/e/4/0/2e4625e8e0436e6e6ba5bef6a5ae3d05.mp3?hdnea=exp=1781610495~acl=/api/1/1/2/e/4/0/2e4625e8e0436e6e6ba5bef6a5ae3d05.mp3*~data=user_id=0,application_id=42~hmac=07eec39023580419e71fe7f61cd8daaca0b25902df94561eabb1a7db584c2edc",
+   "album": "GOOD THINGS",
+   "image": "https://cdn-images.dzcdn.net/images/artist/98d06de9e72078680db6120a6f7a836e/250x250-000000-80-0-0.jpg",
+   "fans": 4304,
+   "deezer_id": 156382652,
+   "spotify_search_uri": "spotify:search:Lo%20Spirit",
+   "spotify_web_url": "https://open.spotify.com/search/Lo%20Spirit",
+   "user_status": null
+  },
+  {
+   "name": "Peelingflesh",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "none",
+   "why": "Outside your usual lane — a wildcard.",
+   "genres": [
+    "metal"
+   ],
+   "raw_tags": [
+    "brutal death metal",
+    "slam death metal"
+   ],
+   "bio": "Peelingflesh is a metal act from Oklahoma, active since 2021. Brutal death metal group from Oklahoma, USA.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Snuffed on Sight",
+    "Extermination Dismemberment",
+    "Corpse Pile",
+    "The Acacia Strain",
+    "Ingested",
+    "Analepsy"
+   ],
+   "genre_overlap": [],
+   "top_track": "Shoot 2 Kill",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/d/f/0/0/df0f7ae16587723cb35adcf38417fc38.mp3?hdnea=exp=1781610513~acl=/api/1/1/d/f/0/0/df0f7ae16587723cb35adcf38417fc38.mp3*~data=user_id=0,application_id=42~hmac=f36a5ea882dd1b9a5b7938dc91e57ed6ddd23c5b0223b5a7be6a36598cb4bb1b",
+   "album": "The G Code",
+   "image": "https://cdn-images.dzcdn.net/images/artist/aa1b573062f715d3f1ce502498712582/250x250-000000-80-0-0.jpg",
+   "fans": 3773,
+   "deezer_id": 136386472,
+   "spotify_search_uri": "spotify:search:Peelingflesh",
+   "spotify_web_url": "https://open.spotify.com/search/Peelingflesh",
+   "user_status": null
+  },
+  {
+   "name": "Lolo",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "none",
+   "why": "Outside your usual lane — a wildcard.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Lolo is a alternative act from Belgium. Trance.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Charlotte Sands",
+    "Maggie Lindemann",
+    "Taylor Acorn",
+    "Waterparks",
+    "Huddy",
+    "The Maine"
+   ],
+   "genre_overlap": [],
+   "top_track": "dumbest girl in the world",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/5/9/c/0/59cf14665701821de99f6c212b6bc38a.mp3?hdnea=exp=1781610496~acl=/api/1/1/5/9/c/0/59cf14665701821de99f6c212b6bc38a.mp3*~data=user_id=0,application_id=42~hmac=933ee2d35a819afac20d4ca84aaa53278e51461b2c34875abe586aef52833153",
+   "album": "god forbid a girl spits out her feelings!",
+   "image": "https://cdn-images.dzcdn.net/images/artist/1f4c4cfa7d38bb423338e55f37d488dc/250x250-000000-80-0-0.jpg",
+   "fans": 2322,
+   "deezer_id": 99161532,
+   "spotify_search_uri": "spotify:search:Lolo",
+   "spotify_web_url": "https://open.spotify.com/search/Lolo",
+   "user_status": null
+  },
+  {
+   "name": "Delux",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "none",
+   "why": "Outside your usual lane — a wildcard.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Delux is a alternative act from Mexico, active since 2000. Mexican punk band.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Crystal Fighters",
+    "Cut Copy",
+    "Bad Sounds",
+    "RAC",
+    "Speelburg",
+    "Grouplove"
+   ],
+   "genre_overlap": [],
+   "top_track": "Better at Making Time",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/7/8/8/0/7882719f1161e039dacc19fa57603256.mp3?hdnea=exp=1781610450~acl=/api/1/1/7/8/8/0/7882719f1161e039dacc19fa57603256.mp3*~data=user_id=0,application_id=42~hmac=5205ebf2220e4a67b089feb32dab97431e9ee13d943f7ec6dd758972db637c68",
+   "album": "Voyage",
+   "image": "https://cdn-images.dzcdn.net/images/artist/39bb4e9c22868aec5e1993c088039019/250x250-000000-80-0-0.jpg",
+   "fans": 1378,
+   "deezer_id": 5524151,
+   "spotify_search_uri": "spotify:search:Delux",
+   "spotify_web_url": "https://open.spotify.com/search/Delux",
+   "user_status": null
+  },
+  {
+   "name": "Alemeda",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "none",
+   "why": "Outside your usual lane — a wildcard.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Alemeda is a alternative act from United States.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Lily Allen",
+    "Absolutely",
+    "Chloe Qisha",
+    "Hemlocke Springs",
+    "Haute & Freddy",
+    "Amma"
+   ],
+   "genre_overlap": [],
+   "top_track": "Gonna Bleach My Eyebrows",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/c/8/2/0/c82f86e5db9ded1fb84a822717f8a12b.mp3?hdnea=exp=1781610421~acl=/api/1/1/c/8/2/0/c82f86e5db9ded1fb84a822717f8a12b.mp3*~data=user_id=0,application_id=42~hmac=9ab23cf398a064303c9983fcdd84bfef4280f6c5184fd9c5fc4cdc44b52cb809",
+   "album": "Gonna Bleach My Eyebrows",
+   "image": "https://cdn-images.dzcdn.net/images/artist/00c7372047f4e85b670281ca92a07f64/250x250-000000-80-0-0.jpg",
+   "fans": 1218,
+   "deezer_id": 108967132,
+   "spotify_search_uri": "spotify:search:Alemeda",
+   "spotify_web_url": "https://open.spotify.com/search/Alemeda",
+   "user_status": null
+  },
+  {
+   "name": "Holy Wars",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "none",
+   "why": "Outside your usual lane — a wildcard.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Holy Wars is a alternative act from United States, active since 2013.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Cassyette",
+    "Lilith Czar",
+    "Poppy",
+    "WARGASM (UK)",
+    "RedHook",
+    "Nova Twins"
+   ],
+   "genre_overlap": [],
+   "top_track": "BODY//TEMPLE",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/4/6/c/0/46c1c81ee4ac105423849f2d7ee642c2.mp3?hdnea=exp=1781610479~acl=/api/1/1/4/6/c/0/46c1c81ee4ac105423849f2d7ee642c2.mp3*~data=user_id=0,application_id=42~hmac=263153f096ea21f11c3cc95a2e57789617596f8744ac5ec6b60bd6632c160a11",
+   "album": "BODY//TEMPLE",
+   "image": "https://cdn-images.dzcdn.net/images/artist/d79aa2858331a97bfc42ad2217e42598/250x250-000000-80-0-0.jpg",
+   "fans": 988,
+   "deezer_id": 12481124,
+   "spotify_search_uri": "spotify:search:Holy%20Wars",
+   "spotify_web_url": "https://open.spotify.com/search/Holy%20Wars",
+   "user_status": null
+  },
+  {
+   "name": "People R Ugly",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "none",
+   "why": "Outside your usual lane — a wildcard.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "People R Ugly is a alternative act.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "The Maine",
+    "Mod Sun",
+    "Titus",
+    "Taylor Acorn",
+    "mgk",
+    "Games We Play"
+   ],
+   "genre_overlap": [],
+   "top_track": "What's Up?",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/2/c/5/0/2c52a9c303120fbdd8ee513641465971.mp3?hdnea=exp=1781610514~acl=/api/1/1/2/c/5/0/2c52a9c303120fbdd8ee513641465971.mp3*~data=user_id=0,application_id=42~hmac=079cef005938a0c44819b1bc737486160b69ef2d0c01f349826907286b84622d",
+   "album": "What's Up?",
+   "image": "https://cdn-images.dzcdn.net/images/artist/6d05fcca74da896d5447a51d5a9c6205/250x250-000000-80-0-0.jpg",
+   "fans": 840,
+   "deezer_id": 139885782,
+   "spotify_search_uri": "spotify:search:People%20R%20Ugly",
+   "spotify_web_url": "https://open.spotify.com/search/People%20R%20Ugly",
+   "user_status": null
+  },
+  {
+   "name": "Sace6",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "none",
+   "why": "Outside your usual lane — a wildcard.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Sace6 is a alternative act from United States. US | rock.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Holywatr",
+    "Siamese",
+    "Jutes",
+    "Bilmuri",
+    "breakkaway",
+    "Colorblind"
+   ],
+   "genre_overlap": [],
+   "top_track": "nepenthe",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/5/e/5/0/5e5895e23320b08a89278941ffbb3f60.mp3?hdnea=exp=1781610520~acl=/api/1/1/5/e/5/0/5e5895e23320b08a89278941ffbb3f60.mp3*~data=user_id=0,application_id=42~hmac=5be7916f2abcfc13ee90a32ec1a87c746b65a8ade0ba2885c9c1f5c2de781556",
+   "album": "brutalist",
+   "image": "https://cdn-images.dzcdn.net/images/artist/fd38db22ccbe13c328ce0613e20c933b/250x250-000000-80-0-0.jpg",
+   "fans": 743,
+   "deezer_id": 118352442,
+   "spotify_search_uri": "spotify:search:Sace6",
+   "spotify_web_url": "https://open.spotify.com/search/Sace6",
+   "user_status": null
+  },
+  {
+   "name": "Slay Squad",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "none",
+   "why": "Outside your usual lane — a wildcard.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Slay Squad is a alternative act from California.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Drain",
+    "Return to Dust",
+    "Gatecreeper",
+    "TesseracT",
+    "Blood Incantation",
+    "Malevolence"
+   ],
+   "genre_overlap": [],
+   "top_track": "STFU (feat. Slay Squad)",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/8/1/a/0/81a33594a9798ee4597bfd810a4ea6b4.mp3?hdnea=exp=1781610530~acl=/api/1/1/8/1/a/0/81a33594a9798ee4597bfd810a4ea6b4.mp3*~data=user_id=0,application_id=42~hmac=3f4bbba89796499e87c3cafd6afd943e7f3e19f652ead2347d3aedfc94f83d0e",
+   "album": "Don't Be Dumb",
+   "image": "https://cdn-images.dzcdn.net/images/artist/c838741bb1d3e492e210da2df67eec46/250x250-000000-80-0-0.jpg",
+   "fans": 617,
+   "deezer_id": 9651326,
+   "spotify_search_uri": "spotify:search:Slay%20Squad",
+   "spotify_web_url": "https://open.spotify.com/search/Slay%20Squad",
+   "user_status": null
+  },
+  {
+   "name": "Denim",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "none",
+   "why": "Outside your usual lane — a wildcard.",
+   "genres": [
+    "rock",
+    "pop",
+    "alternative"
+   ],
+   "raw_tags": [
+    "novelty rock",
+    "bubblegum pop",
+    "synth-pop",
+    "indie pop",
+    "proto-britpop",
+    "glam rock"
+   ],
+   "bio": "Denim is a rock act from United Kingdom, active since 1992. 90s UK indie rock band.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Gene",
+    "The Wedding Present",
+    "Echobelly",
+    "The House of Love",
+    "James",
+    "Inspiral Carpets"
+   ],
+   "genre_overlap": [],
+   "top_track": "Middle of the Road",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/e/8/f/0/e8f06b30670553cbc9759e5996323c02.mp3?hdnea=exp=1781610451~acl=/api/1/1/e/8/f/0/e8f06b30670553cbc9759e5996323c02.mp3*~data=user_id=0,application_id=42~hmac=d2d28b8a7d780a6f086f572542d910af36f873225212a18275071881624988f7",
+   "album": "Back In Denim",
+   "image": "https://cdn-images.dzcdn.net/images/artist/a74256d5378cd81d95a63c2892951a9d/250x250-000000-80-0-0.jpg",
+   "fans": 535,
+   "deezer_id": 301073,
+   "spotify_search_uri": "spotify:search:Denim",
+   "spotify_web_url": "https://open.spotify.com/search/Denim",
+   "user_status": null
+  },
+  {
+   "name": "XComm",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "none",
+   "why": "Outside your usual lane — a wildcard.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "XComm is a alternative act from United States.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Angel Du$t",
+    "Turnstile",
+    "Birds in row",
+    "Ecca Vandal",
+    "Coilguns",
+    "Show Me the Body"
+   ],
+   "genre_overlap": [],
+   "top_track": "Hot Pursuit, One and Nothing",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/1/2/c/0/12c4b3f10a88f1a4c2a74c739536746a.mp3?hdnea=exp=1781610570~acl=/api/1/1/1/2/c/0/12c4b3f10a88f1a4c2a74c739536746a.mp3*~data=user_id=0,application_id=42~hmac=ac6bb3348f6db654b8bb5e803f0ff65c28a09586a2dd0f47fd24ebb8a5d87b81",
+   "album": "Time To Burn",
+   "image": "https://cdn-images.dzcdn.net/images/artist/b2e5feb227b65cb02229bd3c199eb239/250x250-000000-80-0-0.jpg",
+   "fans": 533,
+   "deezer_id": 275546541,
+   "spotify_search_uri": "spotify:search:XComm",
+   "spotify_web_url": "https://open.spotify.com/search/XComm",
+   "user_status": null
+  },
+  {
+   "name": "Rosecoloredworld",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "none",
+   "why": "Outside your usual lane — a wildcard.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Rosecoloredworld is a alternative act from Los Angeles.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Diva Bleach",
+    "Tally Spear",
+    "HIMITZU",
+    "MVSSIE",
+    "Definitely Maybe",
+    "About Monsters"
+   ],
+   "genre_overlap": [],
+   "top_track": "hanging on (by a thread)",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/b/9/2/0/b92a65f0c87fd1ca3a996e3f54f15645.mp3?hdnea=exp=1781610519~acl=/api/1/1/b/9/2/0/b92a65f0c87fd1ca3a996e3f54f15645.mp3*~data=user_id=0,application_id=42~hmac=9eb0b3d6ac7b0dd6b9c700be0e80ce81eabd0921dc144557f57926b21be91a7f",
+   "album": "beauty in the breakdown",
+   "image": "https://cdn-images.dzcdn.net/images/artist/34c494d60f0933cebfa851a04c566cde/250x250-000000-80-0-0.jpg",
+   "fans": 348,
+   "deezer_id": 56144252,
+   "spotify_search_uri": "spotify:search:Rosecoloredworld",
+   "spotify_web_url": "https://open.spotify.com/search/Rosecoloredworld",
+   "user_status": null
+  },
+  {
+   "name": "Tillie",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "none",
+   "why": "Outside your usual lane — a wildcard.",
+   "genres": [
+    "rock",
+    "pop",
+    "alternative"
+   ],
+   "raw_tags": [
+    "electropop",
+    "pop rock",
+    "alternative pop"
+   ],
+   "bio": "Tillie is a rock act.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "FKA Rayne",
+    "Banshee",
+    "DeathbyRomy",
+    "Scene Queen",
+    "Mothica",
+    "ALT BLK ERA"
+   ],
+   "genre_overlap": [],
+   "top_track": "bLeSs uR hEaRt",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/b/1/2/0/b12f804f82d3154df4d1f656dc714c90.mp3?hdnea=exp=1781610556~acl=/api/1/1/b/1/2/0/b12f804f82d3154df4d1f656dc714c90.mp3*~data=user_id=0,application_id=42~hmac=23507a08848c5b1dcef6773f369e34ffeb20c452b8b9336a6adafeb7cafb7ff1",
+   "album": "bLeSs uR hEaRt",
+   "image": "https://cdn-images.dzcdn.net/images/artist/3285e3fe644c912cc9b2944f8578373d/250x250-000000-80-0-0.jpg",
+   "fans": 322,
+   "deezer_id": 59101902,
+   "spotify_search_uri": "spotify:search:Tillie",
+   "spotify_web_url": "https://open.spotify.com/search/Tillie",
+   "user_status": null
+  },
+  {
+   "name": "Villanelle",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "none",
+   "why": "Outside your usual lane — a wildcard.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Villanelle is a alternative act.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Richard Ashcroft",
+    "Kasabian",
+    "The Courteeners",
+    "White Lies",
+    "The Cribs",
+    "DMA's"
+   ],
+   "genre_overlap": [],
+   "top_track": "Measly Means",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/8/9/d/0/89d6df091f34af3093a14dea958796ce.mp3?hdnea=exp=1781610562~acl=/api/1/1/8/9/d/0/89d6df091f34af3093a14dea958796ce.mp3*~data=user_id=0,application_id=42~hmac=12459f696058e7c3866f75daf4091deb9b1844ab148e65897ef1ffa3a78b1500",
+   "album": "Measly Means",
+   "image": "https://cdn-images.dzcdn.net/images/artist/b63de7b9cdda7a79d7ad62fba5ae2b07/250x250-000000-80-0-0.jpg",
+   "fans": 212,
+   "deezer_id": 345761421,
+   "spotify_search_uri": "spotify:search:Villanelle",
+   "spotify_web_url": "https://open.spotify.com/search/Villanelle",
+   "user_status": null
+  },
+  {
+   "name": "Brayton",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "none",
+   "why": "Outside your usual lane — a wildcard.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Brayton is a alternative act.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Julia Wolf",
+    "Mercury",
+    "Violent Vira",
+    "ivri",
+    "The Grass Museum",
+    "Slow Funeral"
+   ],
+   "genre_overlap": [],
+   "top_track": "love of your life",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/5/4/c/0/54cbe636c14addd5782bac5cffd4337b.mp3?hdnea=exp=1781610438~acl=/api/1/1/5/4/c/0/54cbe636c14addd5782bac5cffd4337b.mp3*~data=user_id=0,application_id=42~hmac=283df8492fa39ddebb03bd11f5702b1c63869bcf310e58c3f1ed761a10685903",
+   "album": "love of your life",
+   "image": "https://cdn-images.dzcdn.net/images/artist/93f0994bb443f381c3ad256b3810883b/250x250-000000-80-0-0.jpg",
+   "fans": 53,
+   "deezer_id": 4742831,
+   "spotify_search_uri": "spotify:search:Brayton",
+   "spotify_web_url": "https://open.spotify.com/search/Brayton",
+   "user_status": null
+  }
+ ]
+}
