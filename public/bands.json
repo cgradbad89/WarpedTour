@@ -3,7 +3,7 @@
   "name": "Vans Warped Tour — Long Beach 2026",
   "dates": "July 25–26, 2026",
   "venue": "Shoreline Waterfront, Long Beach, CA",
-  "band_count": 141
+  "band_count": 149
  },
  "scoring": {
   "windows": [
@@ -584,6 +584,56 @@
    "deezer_id": 12836,
    "spotify_search_uri": "spotify:search:Bayside",
    "spotify_web_url": "https://open.spotify.com/search/Bayside",
+   "user_status": null
+  },
+  {
+   "name": "Hot Mulligan",
+   "score": 5.0,
+   "bucket": "In your rotation",
+   "match_kind": "direct-now",
+   "why": "You've had this on repeat in the last month.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "emo"
+   ],
+   "raw_tags": [
+    "math rock",
+    "indie rock",
+    "emo",
+    "pop punk",
+    "midwest emo"
+   ],
+   "bio": "Hot Mulligan is a pop punk act from Lansing. US pop punk band. This one's in heavy rotation for you right now — prioritize it.",
+   "similar_you_listen": [
+    "Arm's Length",
+    "Free Throw",
+    "Movements",
+    "Tigers Jaw"
+   ],
+   "similar_general": [
+    "Tiny Moving Parts",
+    "Origami Angel",
+    "Joyce Manor",
+    "Ben Quad",
+    "Cap'n Jazz",
+    "The Story So Far"
+   ],
+   "genre_overlap": [
+    "emo",
+    "indie rock",
+    "math rock",
+    "midwest emo",
+    "pop punk"
+   ],
+   "top_track": "*Equip Sunglasses*",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/f/4/5/0/f456730f0ceebc37b8c119ac4d1b6f17.mp3?hdnea=exp=1781622298~acl=/api/1/1/f/4/5/0/f456730f0ceebc37b8c119ac4d1b6f17.mp3*~data=user_id=0,application_id=42~hmac=ce2aa60cbcbea78716d40333b0ab56a8964602ab673b9c873f0776350b47de04",
+   "album": "you'll be fine",
+   "image": "https://cdn-images.dzcdn.net/images/artist/10e5e3b0cddfb0ca0b03e95b1058f4af/250x250-000000-80-0-0.jpg",
+   "fans": 6760,
+   "deezer_id": 7087965,
+   "spotify_search_uri": "spotify:search:Hot%20Mulligan",
+   "spotify_web_url": "https://open.spotify.com/search/Hot%20Mulligan",
    "user_status": null
   },
   {
@@ -1713,6 +1763,53 @@
    "user_status": null
   },
   {
+   "name": "Hawthorne Heights",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "emo",
+    "post-hardcore",
+    "hardcore"
+   ],
+   "raw_tags": [
+    "screamo",
+    "emo pop",
+    "emo",
+    "post-hardcore"
+   ],
+   "bio": "Hawthorne Heights is a emo act from United States, active since 2001. US post hardcore band. If you like Bayside, Taking Back Sunday and From First To Last, you'll want to be there.",
+   "similar_you_listen": [
+    "Bayside",
+    "Taking Back Sunday",
+    "From First To Last"
+   ],
+   "similar_general": [
+    "Senses Fail",
+    "Mayday Parade",
+    "Emery",
+    "Say Anything",
+    "Armor for Sleep",
+    "Circa Survive"
+   ],
+   "genre_overlap": [
+    "emo",
+    "emo pop",
+    "post-hardcore",
+    "screamo"
+   ],
+   "top_track": "Ohio Is For Lovers",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/b/0/c/0/b0cc76a7f2c262b8f530577d1321e103.mp3?hdnea=exp=1781622295~acl=/api/1/1/b/0/c/0/b0cc76a7f2c262b8f530577d1321e103.mp3*~data=user_id=0,application_id=42~hmac=05cfe8410c44e32e1e503de22f7adbdb0ee461464e292dd05fe10dd168f46ddb",
+   "album": "The Silence In Black And White (Re-Issue)",
+   "image": "https://cdn-images.dzcdn.net/images/artist/b4e1d7c874cafc30d9b9cda47cd728bc/250x250-000000-80-0-0.jpg",
+   "fans": 25551,
+   "deezer_id": 949,
+   "spotify_search_uri": "spotify:search:Hawthorne%20Heights",
+   "spotify_web_url": "https://open.spotify.com/search/Hawthorne%20Heights",
+   "user_status": null
+  },
+  {
    "name": "The Ataris",
    "score": 4.5,
    "bucket": "Must see",
@@ -1755,6 +1852,49 @@
    "deezer_id": 4224,
    "spotify_search_uri": "spotify:search:The%20Ataris",
    "spotify_web_url": "https://open.spotify.com/search/The%20Ataris",
+   "user_status": null
+  },
+  {
+   "name": "The Summer Set",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "rock"
+   ],
+   "raw_tags": [
+    "rock",
+    "pop rock",
+    "pop punk"
+   ],
+   "bio": "The Summer Set is a pop punk act from United States, active since 2007. Pop rock band from Scottsdale, Arizona. If you like New Found Glory, Bayside and Taking Back Sunday, you'll want to be there.",
+   "similar_you_listen": [
+    "New Found Glory",
+    "Bayside",
+    "Taking Back Sunday"
+   ],
+   "similar_general": [
+    "All Time Low",
+    "Mayday Parade",
+    "State Champs",
+    "Never Shout Never",
+    "Bowling for Soup",
+    "Kids In Glass Houses"
+   ],
+   "genre_overlap": [
+    "pop punk"
+   ],
+   "top_track": "Chelsea",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/6/9/7/0/6971d25016f14505f4435a36132f746c.mp3?hdnea=exp=1781622318~acl=/api/1/1/6/9/7/0/6971d25016f14505f4435a36132f746c.mp3*~data=user_id=0,application_id=42~hmac=bd58ecf4be12c12e796074379e7c1c5c1e93f336c1f31a9c74699cff692ae43b",
+   "album": "Love Like This (Deluxe Edition)",
+   "image": "https://cdn-images.dzcdn.net/images/artist/26f26742309391bf4f68f9a29105a302/250x250-000000-80-0-0.jpg",
+   "fans": 19190,
+   "deezer_id": 390116,
+   "spotify_search_uri": "spotify:search:The%20Summer%20Set",
+   "spotify_web_url": "https://open.spotify.com/search/The%20Summer%20Set",
    "user_status": null
   },
   {
@@ -2027,6 +2167,56 @@
    "deezer_id": 313452,
    "spotify_search_uri": "spotify:search:Citizen",
    "spotify_web_url": "https://open.spotify.com/search/Citizen",
+   "user_status": null
+  },
+  {
+   "name": "Joyce Manor",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "emo"
+   ],
+   "raw_tags": [
+    "punk",
+    "punk rock",
+    "indie rock",
+    "power pop",
+    "emo",
+    "pop punk"
+   ],
+   "bio": "Joyce Manor is a pop punk act from United States, active since 2008. If you like Free Throw, Hot Mulligan and Tigers Jaw, you'll want to be there.",
+   "similar_you_listen": [
+    "Free Throw",
+    "Hot Mulligan",
+    "Tigers Jaw"
+   ],
+   "similar_general": [
+    "Tiny Moving Parts",
+    "Origami Angel",
+    "Cap'n Jazz",
+    "The Hotelier",
+    "Microwave",
+    "Mom Jeans."
+   ],
+   "genre_overlap": [
+    "emo",
+    "folk punk",
+    "indie rock",
+    "pop punk",
+    "punk"
+   ],
+   "top_track": "I Know Where Mark Chen Lives",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/7/6/5/0/765e10b3b80cc48ef2028d485cb5e26f.mp3?hdnea=exp=1781622301~acl=/api/1/1/7/6/5/0/765e10b3b80cc48ef2028d485cb5e26f.mp3*~data=user_id=0,application_id=42~hmac=3224266fbf8c60cf4dc147ad043f61dc0515984b8b872618fd639eb7320b11cb",
+   "album": "I Used To Go To This Bar",
+   "image": "https://cdn-images.dzcdn.net/images/artist/2108c38e7906d7811329657c0eef872b/250x250-000000-80-0-0.jpg",
+   "fans": 8306,
+   "deezer_id": 1005305,
+   "spotify_search_uri": "spotify:search:Joyce%20Manor",
+   "spotify_web_url": "https://open.spotify.com/search/Joyce%20Manor",
    "user_status": null
   },
   {
@@ -2423,6 +2613,52 @@
    "user_status": null
   },
   {
+   "name": "Third Eye Blind",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "pop punk",
+    "punk",
+    "rock"
+   ],
+   "raw_tags": [
+    "alternative rock",
+    "power pop",
+    "post-grunge",
+    "pop rock",
+    "pop punk",
+    "classic pop and rock"
+   ],
+   "bio": "Third Eye Blind is a pop punk act from United States, active since 1993. If you like Jimmy Eat World and Incubus, you'll want to be there.",
+   "similar_you_listen": [
+    "Jimmy Eat World",
+    "Incubus"
+   ],
+   "similar_general": [
+    "The Goo Goo Dolls",
+    "Everclear",
+    "Our Lady Peace",
+    "Better Than Ezra",
+    "Tonic",
+    "Eve 6"
+   ],
+   "genre_overlap": [
+    "pop punk",
+    "post-grunge"
+   ],
+   "top_track": "Semi-Charmed Life",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/a/8/6/0/a8658a64532afd53fb7f6f761d8f81ab.mp3?hdnea=exp=1781622320~acl=/api/1/1/a/8/6/0/a8658a64532afd53fb7f6f761d8f81ab.mp3*~data=user_id=0,application_id=42~hmac=2708c63f6897a8df3eb7c8e7a550cc7e2de878daeebc5a8ce5eff3b4d59ccdd5",
+   "album": "Third Eye Blind (20th Anniversary Edition)",
+   "image": "https://cdn-images.dzcdn.net/images/artist/3701937877f1cdacf055b4a409f064aa/250x250-000000-80-0-0.jpg",
+   "fans": 72247,
+   "deezer_id": 2473,
+   "spotify_search_uri": "spotify:search:Third%20Eye%20Blind",
+   "spotify_web_url": "https://open.spotify.com/search/Third%20Eye%20Blind",
+   "user_status": null
+  },
+  {
    "name": "Lagwagon",
    "score": 4.0,
    "bucket": "High match",
@@ -2464,6 +2700,50 @@
    "deezer_id": 1485,
    "spotify_search_uri": "spotify:search:Lagwagon",
    "spotify_web_url": "https://open.spotify.com/search/Lagwagon",
+   "user_status": null
+  },
+  {
+   "name": "Reel Big Fish",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Sits right next to artists you love.",
+   "genres": [
+    "punk",
+    "ska"
+   ],
+   "raw_tags": [
+    "punk",
+    "ska",
+    "ska punk",
+    "third wave ska"
+   ],
+   "bio": "Reel Big Fish is a punk act from United States, active since 1992. California ska punk band. If you like New Found Glory and NOFX, you'll want to be there.",
+   "similar_you_listen": [
+    "New Found Glory",
+    "NOFX"
+   ],
+   "similar_general": [
+    "Mad Caddies",
+    "Goldfinger",
+    "The Mighty Mighty Bosstones",
+    "Less Than Jake",
+    "Me First and the Gimme Gimmes",
+    "MxPx"
+   ],
+   "genre_overlap": [
+    "punk",
+    "ska",
+    "ska punk"
+   ],
+   "top_track": "Sell Out",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/4/9/2/0/49222d7de21ea415cd427fb833214e15.mp3?hdnea=exp=1781622308~acl=/api/1/1/4/9/2/0/49222d7de21ea415cd427fb833214e15.mp3*~data=user_id=0,application_id=42~hmac=78a3222fff301802bfedc88c63972472192d6ef48d3cf4b5bb835825460de117",
+   "album": "Turn The Radio Off",
+   "image": "https://cdn-images.dzcdn.net/images/artist/c2f8c65a03959c3848d342225f7188ff/250x250-000000-80-0-0.jpg",
+   "fans": 46418,
+   "deezer_id": 2115,
+   "spotify_search_uri": "spotify:search:Reel%20Big%20Fish",
+   "spotify_web_url": "https://open.spotify.com/search/Reel%20Big%20Fish",
    "user_status": null
   },
   {
@@ -3708,7 +3988,7 @@
    "user_status": null
   },
   {
-   "name": "Division Miniscula",
+   "name": "División Minúscula",
    "score": 1.5,
    "bucket": "Long shot",
    "match_kind": "genre",
@@ -3747,50 +4027,8 @@
    "image": "https://cdn-images.dzcdn.net/images/artist/f1abfc4f4ff75402bf255b98a71b310a/250x250-000000-80-0-0.jpg",
    "fans": 167469,
    "deezer_id": 427421,
-   "spotify_search_uri": "spotify:search:Division%20Miniscula",
-   "spotify_web_url": "https://open.spotify.com/search/Division%20Miniscula",
-   "user_status": null
-  },
-  {
-   "name": "Flogging Molly",
-   "score": 1.5,
-   "bucket": "Long shot",
-   "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
-   "genres": [
-    "punk",
-    "rock"
-   ],
-   "raw_tags": [
-    "folk",
-    "punk",
-    "american",
-    "punk rock",
-    "usa",
-    "folk rock"
-   ],
-   "bio": "Flogging Molly is a punk act from United States, active since 1997.",
-   "similar_you_listen": [],
-   "similar_general": [
-    "Dropkick Murphys",
-    "The Rumjacks",
-    "The Mahones",
-    "The Real McKenzies",
-    "The Tossers",
-    "Fiddler's Green"
-   ],
-   "genre_overlap": [
-    "folk punk",
-    "punk"
-   ],
-   "top_track": "Drunken Lullabies",
-   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/e/a/9/0/ea9481afb4fa3448e18529ce2be51f4b.mp3?hdnea=exp=1781610461~acl=/api/1/1/e/a/9/0/ea9481afb4fa3448e18529ce2be51f4b.mp3*~data=user_id=0,application_id=42~hmac=ac3f77a733717df655eb6c0ef2348454c4900620df29d355f2375bdae560b2f6",
-   "album": "Drunken Lullabies",
-   "image": "https://cdn-images.dzcdn.net/images/artist/290024a479d9a053a99ae64b98ba23ff/250x250-000000-80-0-0.jpg",
-   "fans": 114419,
-   "deezer_id": 1386,
-   "spotify_search_uri": "spotify:search:Flogging%20Molly",
-   "spotify_web_url": "https://open.spotify.com/search/Flogging%20Molly",
+   "spotify_search_uri": "spotify:search:Divisi%C3%B3n%20Min%C3%BAscula",
+   "spotify_web_url": "https://open.spotify.com/search/Divisi%C3%B3n%20Min%C3%BAscula",
    "user_status": null
   },
   {
@@ -4461,6 +4699,46 @@
    "user_status": null
   },
   {
+   "name": "DRAIN",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "punk",
+    "hardcore",
+    "metal"
+   ],
+   "raw_tags": [
+    "metal",
+    "hardcore punk",
+    "agro"
+   ],
+   "bio": "DRAIN is a punk act from Santa Cruz, active since 2014. Santa Cruz hardcore band.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Malevolence",
+    "Harm's Way",
+    "Lionheart",
+    "Kublai Khan TX",
+    "Dying Wish",
+    "CABAL"
+   ],
+   "genre_overlap": [
+    "hardcore punk",
+    "metal"
+   ],
+   "top_track": "Feel the Pressure",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/7/a/0/0/7a0821de0e459f980b8c76d256709a03.mp3?hdnea=exp=1781622289~acl=/api/1/1/7/a/0/0/7a0821de0e459f980b8c76d256709a03.mp3*~data=user_id=0,application_id=42~hmac=ad3f440b51af5ea962f51af4bf3a5fb346c31b16ed73a45ef25273e43f56bbc2",
+   "album": "California Cursed",
+   "image": "https://cdn-images.dzcdn.net/images/artist/baeaa480fa475d3c4f8d6a48993d3fa7/250x250-000000-80-0-0.jpg",
+   "fans": 4615,
+   "deezer_id": 1033306,
+   "spotify_search_uri": "spotify:search:DRAIN",
+   "spotify_web_url": "https://open.spotify.com/search/DRAIN",
+   "user_status": null
+  },
+  {
    "name": "Aries",
    "score": 1.5,
    "bucket": "Long shot",
@@ -4578,6 +4856,39 @@
    "deezer_id": 204647227,
    "spotify_search_uri": "spotify:search:Vana",
    "spotify_web_url": "https://open.spotify.com/search/Vana",
+   "user_status": null
+  },
+  {
+   "name": "BEAUTY SCHOOL DROPOUT",
+   "score": 1.5,
+   "bucket": "Long shot",
+   "match_kind": "genre",
+   "why": "Matches genres you gravitate toward.",
+   "genres": [
+    "rock"
+   ],
+   "raw_tags": [
+    "rock"
+   ],
+   "bio": "BEAUTY SCHOOL DROPOUT is a rock act from Los Angeles, active since 2020. Los Angeles-based rock group.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Jutes",
+    "Magnolia Park",
+    "Palaye Royale",
+    "Cassyette",
+    "THE HARA",
+    "Sleep Token"
+   ],
+   "genre_overlap": [],
+   "top_track": "SEE YOU IN HELL",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/a/9/1/0/a91a08c1f53a7c39e4e9b43b34c6432e.mp3?hdnea=exp=1781622286~acl=/api/1/1/a/9/1/0/a91a08c1f53a7c39e4e9b43b34c6432e.mp3*~data=user_id=0,application_id=42~hmac=0b8b081e4859d4d78b9aec64428e1539e394d11d6ff1541187d287aca2847b0a",
+   "album": "WE MADE PLANS & GOD LAUGHED",
+   "image": "https://cdn-images.dzcdn.net/images/artist/cd1fbc22610347fb96dab7f8176e9978/250x250-000000-80-0-0.jpg",
+   "fans": 1547,
+   "deezer_id": 345914,
+   "spotify_search_uri": "spotify:search:BEAUTY%20SCHOOL%20DROPOUT",
+   "spotify_web_url": "https://open.spotify.com/search/BEAUTY%20SCHOOL%20DROPOUT",
    "user_status": null
   },
   {
@@ -5212,7 +5523,7 @@
    "user_status": null
   },
   {
-   "name": "Lo Spirit",
+   "name": "Lø Spirit",
    "score": 1.0,
    "bucket": "Discovery",
    "match_kind": "none",
@@ -5238,8 +5549,8 @@
    "image": "https://cdn-images.dzcdn.net/images/artist/98d06de9e72078680db6120a6f7a836e/250x250-000000-80-0-0.jpg",
    "fans": 4304,
    "deezer_id": 156382652,
-   "spotify_search_uri": "spotify:search:Lo%20Spirit",
-   "spotify_web_url": "https://open.spotify.com/search/Lo%20Spirit",
+   "spotify_search_uri": "spotify:search:L%C3%B8%20Spirit",
+   "spotify_web_url": "https://open.spotify.com/search/L%C3%B8%20Spirit",
    "user_status": null
   },
   {
@@ -5277,7 +5588,7 @@
    "user_status": null
   },
   {
-   "name": "Lolo",
+   "name": "LØLØ",
    "score": 1.0,
    "bucket": "Discovery",
    "match_kind": "none",
@@ -5303,8 +5614,8 @@
    "image": "https://cdn-images.dzcdn.net/images/artist/1f4c4cfa7d38bb423338e55f37d488dc/250x250-000000-80-0-0.jpg",
    "fans": 2322,
    "deezer_id": 99161532,
-   "spotify_search_uri": "spotify:search:Lolo",
-   "spotify_web_url": "https://open.spotify.com/search/Lolo",
+   "spotify_search_uri": "spotify:search:L%C3%98L%C3%98",
+   "spotify_web_url": "https://open.spotify.com/search/L%C3%98L%C3%98",
    "user_status": null
   },
   {
@@ -5494,7 +5805,7 @@
    "user_status": null
   },
   {
-   "name": "Denim",
+   "name": "DENM",
    "score": 1.0,
    "bucket": "Discovery",
    "match_kind": "none",
@@ -5529,8 +5840,8 @@
    "image": "https://cdn-images.dzcdn.net/images/artist/a74256d5378cd81d95a63c2892951a9d/250x250-000000-80-0-0.jpg",
    "fans": 535,
    "deezer_id": 301073,
-   "spotify_search_uri": "spotify:search:Denim",
-   "spotify_web_url": "https://open.spotify.com/search/Denim",
+   "spotify_search_uri": "spotify:search:DENM",
+   "spotify_web_url": "https://open.spotify.com/search/DENM",
    "user_status": null
   },
   {
@@ -5630,6 +5941,37 @@
    "deezer_id": 59101902,
    "spotify_search_uri": "spotify:search:Tillie",
    "spotify_web_url": "https://open.spotify.com/search/Tillie",
+   "user_status": null
+  },
+  {
+   "name": "Surfer Girl",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "none",
+   "why": "Outside your usual lane — a wildcard.",
+   "genres": [
+    "alternative"
+   ],
+   "raw_tags": [],
+   "bio": "Surfer Girl is a alternative act.",
+   "similar_you_listen": [],
+   "similar_general": [
+    "Johnny Cosmic",
+    "The Elovaters",
+    "Dirty Heads",
+    "Pepper",
+    "Slightly Stoopid",
+    "The Hip Abduction"
+   ],
+   "genre_overlap": [],
+   "top_track": "Sunrise",
+   "preview_url": "https://cdnt-preview.dzcdn.net/api/1/1/4/0/2/0/4024039b595b9a0c5cbc395dc4b60b3d.mp3?hdnea=exp=1781622310~acl=/api/1/1/4/0/2/0/4024039b595b9a0c5cbc395dc4b60b3d.mp3*~data=user_id=0,application_id=42~hmac=ed6dcfb70f847a8dd234e118c174bf8db980a55d521745afd170401b3d7fcd91",
+   "album": "Sunrise",
+   "image": "https://cdn-images.dzcdn.net/images/artist/1c0bd11af2fb83cf62af6e7611cf4616/250x250-000000-80-0-0.jpg",
+   "fans": 300,
+   "deezer_id": 4852217,
+   "spotify_search_uri": "spotify:search:Surfer%20Girl",
+   "spotify_web_url": "https://open.spotify.com/search/Surfer%20Girl",
    "user_status": null
   },
   {
