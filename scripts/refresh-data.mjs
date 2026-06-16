@@ -257,6 +257,13 @@ async function musicbrainzArtist(name) {
 // Scoring
 // ---------------------------------------------------------------------------
 
+// NOTE: src/lib/scoring.ts is a faithful TypeScript PORT of this scoring logic
+// (constants, GENRE_RULES, the cascade, bucketForScore, whyFor). This file bakes
+// the OWNER's bands.json offline; scoring.ts re-scores those same bands live in
+// the browser against a friend's uploaded taste (PRD §10). If you change the
+// algorithm here, mirror it in scoring.ts (and update its tests) in the same
+// commit — they are intentionally two copies of one algorithm.
+
 /**
  * Score one band against my taste. Dominant signal is a direct artist match
  * (the recency window sets the tier); then a "similar artist I listen to"

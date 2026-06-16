@@ -13,11 +13,14 @@ import { StatusToggle } from "./StatusToggle";
 export function BandDetail({
   band,
   status,
+  rescored = false,
   onStatusChange,
   onClose,
 }: {
   band: Band;
   status: BandStatus | undefined;
+  /** True when the score/why/similar lists were re-scored from an uploaded profile. */
+  rescored?: boolean;
   onStatusChange: (status: BandStatus | null) => void;
   onClose: () => void;
 }) {
@@ -134,7 +137,8 @@ export function BandDetail({
 
           {/* similar artists, side by side */}
           {hasSimilar && (
-            <div className="grid grid-cols-2 gap-4">
+            <div>
+              <div className="grid grid-cols-2 gap-4">
               {band.similar_you_listen.length > 0 && (
                 <div className="min-w-0">
                   <h3 className="mb-1 text-xs font-bold text-accent">
@@ -162,6 +166,13 @@ export function BandDetail({
                     ))}
                   </ul>
                 </div>
+              )}
+              </div>
+              {rescored && (
+                <p className="mt-2 text-[11px] text-muted-foreground">
+                  Re-scored from your upload — “similar artists you listen to” is
+                  limited to the similar-artist data baked into each band.
+                </p>
               )}
             </div>
           )}

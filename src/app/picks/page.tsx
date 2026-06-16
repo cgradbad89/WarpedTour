@@ -1,10 +1,11 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { useBands } from "@/lib/bands";
+import { useExplorerData } from "@/lib/profile";
 import { usePersonalState } from "@/lib/personal";
 import type { Band, BandStatus } from "@/types";
 import { Nav } from "@/components/Nav";
+import { ProfileBar } from "@/components/ProfileBar";
 import { PicksSection } from "@/components/PicksSection";
 import { BandDetail } from "@/components/BandDetail";
 
@@ -16,7 +17,7 @@ const SECTIONS: { status: BandStatus; label: string; activeChip: string }[] = [
 ];
 
 export default function PicksPage() {
-  const { data, loading, error } = useBands();
+  const { data, loading, error, profile, setProfile, clearProfile } = useExplorerData();
   const { status, order, changeStatus, setSectionOrder, resetSectionOrder } =
     usePersonalState();
 
@@ -68,6 +69,11 @@ export default function PicksPage() {
           <h1 className="text-base font-extrabold leading-tight">My Picks</h1>
           <Nav />
         </div>
+        <ProfileBar
+          profile={profile}
+          onSetProfile={setProfile}
+          onClearProfile={clearProfile}
+        />
         <div className="grid grid-cols-4 gap-1.5 px-4 pb-3">
           {SECTIONS.map(({ status: s, label, activeChip }) => (
             <button
@@ -128,6 +134,7 @@ export default function PicksPage() {
         <BandDetail
           band={selected}
           status={status[selected.name]}
+          rescored={Boolean(profile)}
           onStatusChange={(next) => changeStatus(selected.name, next)}
           onClose={() => setSelected(null)}
         />

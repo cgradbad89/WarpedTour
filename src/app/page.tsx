@@ -1,16 +1,17 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { useBands } from "@/lib/bands";
+import { useExplorerData } from "@/lib/profile";
 import { usePersonalState } from "@/lib/personal";
 import type { Band } from "@/types";
 import { Controls, type SortKey } from "@/components/Controls";
 import { Nav } from "@/components/Nav";
+import { ProfileBar } from "@/components/ProfileBar";
 import { BandRow } from "@/components/BandRow";
 import { BandDetail } from "@/components/BandDetail";
 
 export default function Home() {
-  const { data, loading, error } = useBands();
+  const { data, loading, error, profile, setProfile, clearProfile } = useExplorerData();
   const { status, changeStatus, clearAll, pickCount } = usePersonalState();
 
   const [search, setSearch] = useState("");
@@ -96,6 +97,11 @@ export default function Home() {
             </p>
           )}
         </div>
+        <ProfileBar
+          profile={profile}
+          onSetProfile={setProfile}
+          onClearProfile={clearProfile}
+        />
         {data && (
           <Controls
             search={search}
@@ -169,6 +175,7 @@ export default function Home() {
         <BandDetail
           band={selected}
           status={status[selected.name]}
+          rescored={Boolean(profile)}
           onStatusChange={(next) => changeStatus(selected.name, next)}
           onClose={() => setSelected(null)}
         />

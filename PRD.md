@@ -7,11 +7,11 @@ A single-user, static web app that helps me prep for **Vans Warped Tour — Long
 **Core value:** open the app, see which bands to prioritize, listen to a 30-second preview, mark a personal must-see / maybe / look-into / skip, and jump to the artist on Spotify.
 
 **Scope for this build (MVP):**
-- Single user (me). No auth, no accounts, no backend.
-- All band data is pre-computed and shipped as a static `bands.json` (already built — do not regenerate as part of app work; see Section 8 for the refresh script).
-- Personal must-see/maybe/skip state persists in **browser localStorage** only (no Firestore, no cross-device sync — this is intentional).
+- Owner-first, but **shareable**: by default the app shows the owner's pre-computed scores; a friend can upload their own Spotify taste CSV to **re-score every band live in their own browser** (Section 10). Still no auth, no accounts, no backend — the re-score is 100% client-side.
+- All band data is pre-computed and shipped as a static `bands.json` (already built — do not regenerate as part of app work; see Section 8 for the refresh script). The uploaded-taste feature **reuses** `bands.json` as the catalog and recomputes only the taste-dependent fields (Section 10) — it never modifies `bands.json`.
+- Personal must-see/maybe/skip state persists in **browser localStorage** only (no Firestore, no cross-device sync — this is intentional). The uploaded profile is a separate localStorage key and never touches picks.
 
-**Explicitly out of scope for MVP** (see Section 7 backlog): multi-user Spotify OAuth, live Spotify playback (full tracks), set-times / stage assignments, cross-device sync.
+**Explicitly out of scope for MVP** (see Section 7 backlog): full multi-user Spotify **OAuth** (the upload feature is the lightweight, no-backend alternative — Section 10), live Spotify playback (full tracks), set-times / stage assignments, cross-device sync.
 
 ## 2. Page Inventory
 
@@ -86,7 +86,14 @@ Two localStorage keys hold all user-writable state. The app NEVER writes `bands.
 - **Sync:** changing or clearing a band's status removes it from every order array (no stale names accumulate); a per-section "Reset to score order" deletes that section's array; "Clear my picks" removes the whole key.
 - **Keyed by name** for the same refresh-safe reason as status.
 
-Beyond these two keys, do **not** use `localStorage` for anything else — no analytics, no caching of `bands.json` (it ships with the app).
+### 4.3 Uploaded taste profile — `warped2026:profile`
+- **Shape:** `TasteProfile` — `{ version: 1, label?: string, windows: { short_term, medium_term, long_term: { artists: string[], genres: string[] } } }`. Absent = the owner's default view (Section 10).
+- **Purpose:** holds a friend's parsed Spotify taste so the app can re-score `bands.json` against it client-side. This is the **only** writer/reader of taste data at runtime; `bands.json` is never written.
+- **Separate from picks:** loading, replacing, or clearing a profile **never** touches `warped2026:status` or `warped2026:order`. A re-score does not wipe picks (verified). Picks remain the viewer's own per-browser state.
+- **Defensive load:** the loader coerces/validates stored JSON into a `TasteProfile`; anything unusable (or an empty profile) is treated as "no profile" → default view. SSR-guarded (client-only).
+- **Clearing** ("Use default") removes only this key.
+
+Beyond these three keys, do **not** use `localStorage` for anything else — no analytics, no caching of `bands.json` (it ships with the app).
 
 ## 5. UI Requirements
 
@@ -138,13 +145,17 @@ Reference mockup behavior was approved in chat. Build to this:
 - **Status colors are rose / sky-blue / yellow / zinc** (must / maybe / look / skip) — *not* the green/amber the score chip uses. "Maybe" is sky-blue, so the yellow "Look into" is already clearly distinct from it (no amber-vs-yellow clash on the toggle). The one place yellow sits near amber is a list row, where the gold stars and an amber score chip share space with a yellow "Look" badge — they're kept apart by position and by using a brighter lemon-yellow (`yellow-400`) for status vs amber for score. When adding a fifth status, re-check this on a real row.
 - **The favicon is generated, not hand-drawn.** `scripts/gen-favicon.mjs` is the single source of truth for the guitar shape and emits both `src/app/icon.svg` (primary, Next 16 file convention) and `src/app/favicon.ico` (3-size PNG-in-ICO fallback). Edit the geometry in that script and re-run `node scripts/gen-favicon.mjs`, then commit both outputs — don't hand-edit `favicon.ico`. Next auto-wires both via the App-Router file convention (no `metadata.icons` needed); a stray `favicon.ico` plus an `icon.svg` is the intended setup.
 - **Adding a status is backward-compatible by construction.** The status validator keys off `STATUSES` (a superset after each addition), so old localStorage survives. Removing or renaming a status is *not* safe the same way — stored values for the dropped key would be silently discarded on load.
+- **Re-scored "similar artists you listen to" is bounded by `bands.json`.** On an uploaded-profile re-score (Section 10), the only matching material is each band's stored `similar_general` ∪ `similar_you_listen` (a truncated reconstruction of the original Deezer related list) and `raw_tags`. Some bands have thin similar lists, so a friend's "similar" matches can be under-counted. **Direct artist matches are exact**; similar/genre matches are best-effort. This is disclosed in the upload dialog and the detail modal — don't oversell it.
+- **The re-score algorithm lives in two places by design.** `scripts/refresh-data.mjs` bakes the owner's `bands.json` offline; `src/lib/scoring.ts` is a faithful TypeScript **port** that re-scores live in the browser. They are intentionally two copies of one algorithm — change one, mirror the other (and update `scoring.ts`'s tests). `direct-life` scores **4.5** (→ "Must see"), matching the generator, not 4.4.
+- **`normalizeArtist` is looser than the generator's match.** The re-score matches artist names with diacritics folded and all non-alphanumerics stripped (so "Panic! At The Disco" ↔ "panic at the disco"). It's applied symmetrically and only on the re-score path; the default owner view reads `bands.json` verbatim, so it's unaffected.
 
 ## 7. Feature Backlog
 
 - [ ] **Spotify artist deep-links** — resolve each band to a Spotify artist ID (via Spotify search API during the data-refresh step, server-side) and store `spotify_uri`/`spotify_url` so links open the artist page directly instead of a search.
 - [ ] **Set-times / stage view** — once Warped publishes the schedule, add day/stage fields and a "by time slot" view to plan conflicts.
 - [x] **Status filter / My Picks** — DONE: `/picks` page (bands grouped by status, reorderable with drag + arrows) plus a "show only my picks" toggle on `/`. See §2, §4.2, §5.4.
-- [ ] **Multi-user mode** — Spotify OAuth (`user-top-read`) so others can connect and get their own scores. Requires moving scoring into a runtime/server step and a backend. Large; deferred by design.
+- [x] **Friend sharing / multi-user (lightweight)** — DONE: a friend uploads their Spotify taste **CSV** and the app re-scores every band live in their browser, fully client-side (Section 10, `warped2026:profile`). No backend, no OAuth.
+- [ ] **Multi-user mode (full OAuth)** — Spotify OAuth (`user-top-read`) so others connect without exporting a CSV, and scores sync. Requires a runtime/server step and a backend. Still deferred by design; the upload feature above covers the no-backend case.
 - [ ] **Cross-device sync** of personal picks (would need a backend; localStorage is MVP).
 - [ ] **"Surprise me"** — highlight high-score bands I haven't marked yet.
 
@@ -174,3 +185,35 @@ None required for the app or the refresh script. There is no `ANTHROPIC_API_KEY`
 ## 9. Data Provenance (for reference)
 
 `bands.json` was generated against my Spotify export covering three windows (lifetime / 6-month / 1-month top artists + genres). Similar artists: Deezer. Genre tags + origin: MusicBrainz. Previews: Deezer CDN. Event: 149 bands, July 25–26 2026, Shoreline Waterfront, Long Beach (lineup re-cross-referenced against the official page). Buckets: In your rotation (26) · Must see (30) · High match (32) · Long shot (34) · Discovery (27).
+
+## 10. Upload Your Taste — Client-Side Re-Score
+
+Makes the app **shareable without a backend**. By default it shows the owner's baked scores; a friend can upload their own Spotify taste CSV and the app re-scores every band **live in their browser**. No network calls, no API keys, no server — `bands.json` is the only matching material and stays read-only.
+
+### 10.1 Data flow
+1. **Upload** (`ProfileBar` → `UploadProfileModal`): the friend picks/drops a `.csv`.
+2. **Parse** (`src/lib/tasteCsv.ts` on `src/lib/csv.ts`): extract per-window ordered **top artists + top genres** for Lifetime / 6 months / 1 month. Defensive — a malformed file shows a clear error and never corrupts state.
+3. **Store** (`src/lib/profile.ts` → `warped2026:profile`, §4.3): the parsed `TasteProfile`, separate from picks.
+4. **Re-score** (`src/lib/scoring.ts`): `rescoreDataset(bands.json, profile)` returns a new dataset with the taste-dependent fields recomputed. The pages consume the effective dataset via `useExplorerData()`.
+5. **Render**: list rows, bucket grouping, detail modal, and My-Picks score-fallback ordering all reflect the re-score. A `ProfileBar` shows whose view is active ("default" vs "your upload") with **Replace** / **Use default**.
+
+With **no** profile, `useExplorerData()` returns `bands.json` unchanged (same object reference) — the owner's default view is byte-for-byte identical.
+
+### 10.2 Recomputed vs frozen fields
+- **Recomputed per-user:** `score`, `bucket`, `match_kind`, `why`, `similar_you_listen`, `similar_general`, `genre_overlap`, and the personalised tail of `bio` (the owner's "heavy rotation" sentence is stripped; re-added only for the friend's own current-rotation bands — never leak the owner's matched artists).
+- **Frozen / reused as-is (taste-independent):** `name`, `genres`, `raw_tags`, the factual first part of `bio`, `top_track`, `preview_url`, `album`, `image`, `fans`, `deezer_id`, `spotify_search_uri`, `spotify_web_url`.
+
+### 10.3 The CSV format (parsed, not assumed positionally)
+A 2-row header over 9 columns: three windows (**Lifetime / 6 months / 1 month**), each with **Top Genres / Top artists / Top tracks**. Header row 1 = window labels (often merged → blank-filled); header row 2 = category labels. Columns are mapped by **detecting** each label (artists vs genres vs tracks), so the 1-month group's columns may be shuffled. Rank prefixes ("1. ") and embedded sub-header rows ("Your top artists from the past 6 months") are stripped. A positional fallback (Lifetime → 6mo → 1mo) covers files whose window labels aren't detectable. Tracks are parsed but unused by scoring.
+
+### 10.4 The algorithm (one source, two homes)
+`src/lib/scoring.ts` is a **faithful TypeScript port** of the scoring in `scripts/refresh-data.mjs` — same constants, `GENRE_RULES`, cascade, `bucketForScore`, and `whyFor`. The cascade: 1-month artist → 5.0 `direct-now`; 6-month → 4.5 `direct-6mo`; lifetime → 4.5 `direct-life`; else N of your artists in the band's similar pool → 3.5/4.0/4.5 `similar`; else genre overlap → 1.5 (→ 2.0 if ≥3) `genre`; else parent-genre adjacency → 2.0 `scene`; else 1.0 `none`. Artist matching uses `normalizeArtist` (diacritics folded, non-alphanumerics stripped) on both sides. **Change one copy, mirror the other** (and update `scoring.ts`'s tests).
+
+### 10.5 Constraints / sharp edges
+- No backend, no runtime network/API calls. `bands.json` is read-only and never re-saved.
+- Re-scored "similar artists you listen to" is bounded by each band's stored similar lists (some are thin) — disclosed in-UI; direct matches are exact (see §6).
+- All file/localStorage/parsing is client-only (SSR-guarded).
+- The default no-profile experience is unchanged.
+
+### 10.6 Tests
+`npm test` runs dependency-free `node --test` suites (Node ≥ 22 native TS) under `tests/`: the CSV tokenizer, the taste-CSV parser (incl. shuffled groups, sub-header stripping, positional fallback, malformed-input errors), and the scoring port (tier/bucket snapping, `similar_you_listen` recompute, bio handling, and a real-`bands.json` check that no-profile is unchanged and a re-score doesn't mutate the baked file). A test-only resolution hook (`tests/ts-resolve.mjs`) lets Node resolve the app's `@/…` and extensionless imports; `tests/` is excluded from the Next build's type-check.

@@ -4,7 +4,7 @@
 
 - **Branch**: Work directly on `main`. If a branch is created automatically, merge it into `main` before pushing.
 - **Build**: Run `npm run build` after all changes. On failure, fix and retry. Stop after 3 consecutive failures — output the full error log and make no further changes.
-- **Test**: Run `npm test` after a passing build. (No test baseline yet — this is a new project. When you add the first tests, record the count here.)
+- **Test**: Run `npm test` after a passing build. Baseline: **27 tests** (`node --test` over `tests/`, dependency-free, Node ≥ 22 native TS — covers the CSV tokenizer, taste-CSV parser, and the `scoring.ts` re-score port). Update this count when you add/remove tests.
 - **Commit**: Stage files by explicit path (`git add PRD.md public/bands.json src/...`). Never use `git add -A`. Commit and push only after build (and any tests) pass.
 - **No broken commits**: Do not commit if `npm run build` or `npm test` fail.
 
@@ -60,9 +60,11 @@ Deferred:         [anything not completed, or "none"]
 | App type | Static Next.js, no backend, no auth, single user |
 | Data layer | `public/bands.json` (read-only at runtime) |
 | Personal state | Browser localStorage only — keys `warped2026:status` (picks) + `warped2026:order` (My-Picks order) |
+| Uploaded taste | `warped2026:profile` — a friend's parsed taste for the client-side re-score (PRD §10). Separate from picks; never written to `bands.json`; absent ⇒ owner's default view |
+| Re-score algorithm | **`src/lib/scoring.ts` is the single source of the runtime algorithm** — a faithful port of `scripts/refresh-data.mjs`. Change one, mirror the other (+ its tests). PRD §10 |
 | Cross-device sync | None (intentional MVP scope) |
 | Backend / DB | None — no Firebase, no Firestore |
-| Runtime external calls | None — app is fully static |
+| Runtime external calls | None — app is fully static (the re-score is pure client-side, no API calls) |
 | Data-refresh sources | Deezer + MusicBrainz, both keyless |
 | Env vars / API keys | None. If multi-user is ever built, Spotify OAuth secrets are server-only — never `NEXT_PUBLIC_*` |
 | Spotify links | Search URLs (`spotify:search:`), not artist-ID deep links — see PRD §6 |
@@ -82,13 +84,18 @@ src/
   app/
     page.tsx        # Main list/explorer view ("/") — list, filters, "show only my picks"
     picks/page.tsx  # "My Picks" view ("/picks") — status sections, reorder (drag + arrows)
-  components/       # BandRow, BandDetail, PreviewPlayer, Controls, StatusToggle, Nav, PicksSection
-                    # (detail is an in-page modal, not a route)
+  components/       # BandRow, BandDetail, PreviewPlayer, Controls, StatusToggle, Nav, PicksSection,
+                    # ProfileBar, UploadProfileModal  (detail is an in-page modal, not a route)
   lib/
     storage.ts      # localStorage read/write for warped2026:status + warped2026:order
     personal.ts     # usePersonalState hook (status + order; shared by both pages)
     bands.ts        # Load + type bands.json
+    scoring.ts      # SINGLE SOURCE of the re-score algorithm (port of refresh-data.mjs) + TasteProfile
+    tasteCsv.ts     # Parse an uploaded Spotify taste CSV → TasteProfile (defensive)
+    csv.ts          # RFC-4180 CSV tokenizer (dependency-free)
+    profile.ts      # warped2026:profile storage + useProfile / useExplorerData (re-score seam)
   types/            # Band + dataset TypeScript interfaces (mirror bands.json)
+tests/              # node --test suites (csv / tasteCsv / scoring) + TS resolution hook
 ```
 
-**See also**: `PRD.md` — full product reference (data contract, UI requirements, sharp edges, backlog, data pipeline).
+**See also**: `PRD.md` — full product reference (data contract, UI requirements, sharp edges, backlog, data pipeline; the upload/re-score feature is **§10**).
