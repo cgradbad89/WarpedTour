@@ -80,8 +80,13 @@ export interface BandsDataset {
   bands: Band[];
 }
 
-/** Personal status — localStorage only (PRD §4). */
-export type BandStatus = "must" | "maybe" | "skip";
+/**
+ * Personal status — localStorage only (PRD §4). Display / precedence order is
+ * must → maybe → look → skip, where `look` ("Look into") means "need to listen
+ * more before deciding." That ordering is the contract: storage's STATUSES
+ * array, the My-Picks sections, and the status toggle all render in this order.
+ */
+export type BandStatus = "must" | "maybe" | "look" | "skip";
 
 /** `{ [bandName]: status }`. Absence of a key = unset. localStorage `warped2026:status`. */
 export type StatusMap = Record<string, BandStatus>;

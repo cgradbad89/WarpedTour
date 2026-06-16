@@ -11,6 +11,7 @@ import { BandDetail } from "@/components/BandDetail";
 const SECTIONS: { status: BandStatus; label: string; activeChip: string }[] = [
   { status: "must", label: "Must see", activeChip: "bg-rose-600 text-white ring-rose-600" },
   { status: "maybe", label: "Maybe", activeChip: "bg-sky-600 text-white ring-sky-600" },
+  { status: "look", label: "Look into", activeChip: "bg-yellow-400 text-black ring-yellow-400" },
   { status: "skip", label: "Skip", activeChip: "bg-zinc-600 text-white ring-zinc-600" },
 ];
 
@@ -23,6 +24,7 @@ export default function PicksPage() {
   const [shown, setShown] = useState<Record<BandStatus, boolean>>({
     must: true,
     maybe: true,
+    look: true,
     skip: true,
   });
   const [selected, setSelected] = useState<Band | null>(null);
@@ -37,7 +39,7 @@ export default function PicksPage() {
   // then any remaining picks by score desc (ties by fans desc). Names missing
   // from bands.json are skipped (a refresh can't orphan the UI).
   const sectionBands = useMemo(() => {
-    const out: Record<BandStatus, Band[]> = { must: [], maybe: [], skip: [] };
+    const out: Record<BandStatus, Band[]> = { must: [], maybe: [], look: [], skip: [] };
     if (!data) return out;
     for (const { status: s } of SECTIONS) {
       const picked = Object.keys(status).filter((n) => status[n] === s);
@@ -66,7 +68,7 @@ export default function PicksPage() {
           <h1 className="text-base font-extrabold leading-tight">My Picks</h1>
           <Nav />
         </div>
-        <div className="flex gap-2 px-4 pb-3">
+        <div className="grid grid-cols-4 gap-1.5 px-4 pb-3">
           {SECTIONS.map(({ status: s, label, activeChip }) => (
             <button
               key={s}
@@ -74,7 +76,7 @@ export default function PicksPage() {
               role="switch"
               aria-checked={shown[s]}
               onClick={() => setShown((v) => ({ ...v, [s]: !v[s] }))}
-              className={`min-h-[40px] flex-1 rounded-xl px-2 text-sm font-semibold ring-1 ring-inset transition-colors ${
+              className={`min-h-[40px] rounded-xl px-1 text-xs font-semibold leading-tight ring-1 ring-inset transition-colors ${
                 shown[s] ? activeChip : "bg-card text-muted-foreground ring-border hover:bg-muted"
               }`}
             >

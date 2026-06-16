@@ -1,7 +1,7 @@
 // localStorage read/write for the app's personal-state keys (PRD §4).
 // The app NEVER writes bands.json; these are the only user-writable state.
 //
-//   warped2026:status  { [bandName]: "must" | "maybe" | "skip" }   (absence = unset)
+//   warped2026:status  { [bandName]: "must" | "maybe" | "look" | "skip" }   (absence = unset)
 //   warped2026:order   { [status]: string[] }  ordered band names per My-Picks
 //                       section; missing/absent ⇒ fall back to score order
 //
@@ -12,7 +12,10 @@ import type { BandStatus, OrderMap, StatusMap } from "@/types";
 export const STATUS_KEY = "warped2026:status";
 export const ORDER_KEY = "warped2026:order";
 
-const STATUSES: readonly BandStatus[] = ["must", "maybe", "skip"];
+// Order matters: this is must → maybe → look → skip (PRD §4). VALID, loadOrder,
+// and removeFromOrder all derive from it, so adding "look" here threads the new
+// status through validation and order-pruning without touching personal.ts.
+const STATUSES: readonly BandStatus[] = ["must", "maybe", "look", "skip"];
 const VALID: ReadonlySet<string> = new Set<BandStatus>(STATUSES);
 
 // ---------------------------------------------------------------------------

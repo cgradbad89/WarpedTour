@@ -4,7 +4,7 @@
 
 A single-user, static web app that helps me prep for **Vans Warped Tour — Long Beach 2026** (July 25–26, Shoreline Waterfront) by browsing all ~149 bands ranked by how likely I am to enjoy them, based on my Spotify listening data.
 
-**Core value:** open the app, see which bands to prioritize, listen to a 30-second preview, mark a personal must-see / maybe / skip, and jump to the artist on Spotify.
+**Core value:** open the app, see which bands to prioritize, listen to a 30-second preview, mark a personal must-see / maybe / look-into / skip, and jump to the artist on Spotify.
 
 **Scope for this build (MVP):**
 - Single user (me). No auth, no accounts, no backend.
@@ -18,7 +18,7 @@ A single-user, static web app that helps me prep for **Vans Warped Tour — Long
 | Route | Purpose | Notes |
 |---|---|---|
 | `/` | Main list/explorer view | Search, filter, sort, band rows, plus a "show only my picks" toggle. Default landing. |
-| `/picks` | My Picks view | Real route. The bands you've marked, grouped by status (Must see / Maybe / Skip), with per-section reorder (drag + up/down-arrow fallback) and status-visibility toggles. |
+| `/picks` | My Picks view | Real route. The bands you've marked, grouped by status (Must see / Maybe / Look into / Skip), with per-section reorder (drag + up/down-arrow fallback) and status-visibility toggles. |
 | (in-page modal) | Band detail view | **Implemented as an in-page modal/drawer, not a route.** Chosen over `/band/[slug]` to avoid slug/punctuation issues (band names contain `.`, `,`, `...`). Opened from both `/` and `/picks`. Detail content per Section 5. |
 
 Two routes (`/` and `/picks`), connected by a header tab on both pages; the detail view is an in-page modal opened from either — there is **no `/band` route**. Rows, personal state, and the saved pick order are all keyed by exact band `name` (unique in the dataset), so no slugification is needed and a `bands.json` refresh never orphans them.
@@ -71,14 +71,16 @@ There is **no database**. The entire data layer is one static file: `public/band
 Two localStorage keys hold all user-writable state. The app NEVER writes `bands.json`.
 
 ### 4.1 Status — `warped2026:status`
-- **Shape:** `{ [bandName: string]: "must" | "maybe" | "skip" }`. Absence = unset.
+- **Shape:** `{ [bandName: string]: "must" | "maybe" | "look" | "skip" }`. Absence = unset.
+- **Four statuses, ordered** must → maybe → look → skip. `look` ("Look into") = "need to listen more before deciding," and sits between maybe and skip in precedence. The canonical ordered value-set lives in one place — `STATUSES` in `src/lib/storage.ts` — which `BandStatus` (types), the validator, the order-map, and the UI all key off.
+- **Backward compatible:** the loader validates each stored value against the set, which is now a *superset* of the old three, so existing `must`/`maybe`/`skip` data keeps working untouched — no migration, no data loss when the fourth status ships.
 - **Why keyed by name:** band names are unique and stable in the dataset; this survives `bands.json` refreshes without an id migration.
 - **Write:** on toggle, read the object, set/clear the band's key, write back. Clearing (toggling off) removes the key.
 - **Read:** load once on mount into app state; keep localStorage and in-memory state in sync.
 - **Reset:** a small "Clear my picks" affordance empties the key after a confirm (and also clears `warped2026:order`).
 
 ### 4.2 Pick order — `warped2026:order`
-- **Shape:** `{ [status: "must"|"maybe"|"skip"]: string[] }` — each value an ordered list of band names for that My-Picks section.
+- **Shape:** `{ [status: "must"|"maybe"|"look"|"skip"]: string[] }` — each value an ordered list of band names for that My-Picks section (four sections now, one per status).
 - **Purpose:** persists manual drag/arrow reordering on `/picks`.
 - **Fallback:** a name absent from its section's array (or a missing key) falls back to match-score order (desc, ties by `fans` desc); newly-picked bands append until moved.
 - **Sync:** changing or clearing a band's status removes it from every order array (no stale names accumulate); a per-section "Reset to score order" deletes that section's array; "Clear my picks" removes the whole key.
@@ -110,15 +112,15 @@ Reference mockup behavior was approved in chat. Build to this:
 - **Two similar-artist lists, side by side:**
   - "Similar artists you listen to" → `similar_you_listen` (emphasize visually — this is the persuasive one). If empty, omit the heading.
   - "Similar artists generally" → `similar_general` (muted). If empty, omit.
-- **Status toggle:** three-state control (Must see / Maybe / Skip) writing to localStorage per Section 4. Reflect current state; allow clearing.
+- **Status toggle:** four-state control (Must see / Maybe / Look into / Skip) writing to localStorage per Section 4. Laid out 2×2 so all four labels keep ≥44px tap targets on a phone. Reflect current state; allow clearing (tap the active one again). Colors are distinct: must = rose, maybe = sky-blue, **look into = yellow** (dark text for contrast), skip = zinc — chosen so the four read apart on a phone in sunlight.
 
 ### 5.3 Design
 - Follow the repo's `frontend-design` conventions if present. Otherwise: clean, flat, mobile-first (this gets used on a phone at the festival). Tailwind. No heavy chrome.
 - **Mobile is the priority target** — I'll use this on my phone on-site. Tap targets ≥44px, fast, works one-handed.
 
 ### 5.4 My Picks view (`/picks`)
-- Reads `warped2026:status`; shows picked bands grouped into **Must see / Maybe / Skip** sections.
-- **Status-visibility toggles** (Must / Maybe / Skip chips) at the top control which sections render — a view filter only; all on by default; does not change stored status.
+- Reads `warped2026:status`; shows picked bands grouped into **Must see / Maybe / Look into / Skip** sections, in that order. Each section has its own reorder (drag + arrows), "Reset to score order", and empty state ("Nothing marked [status] yet" — e.g. "Nothing marked Look into yet").
+- **Status-visibility toggles** (Must / Maybe / Look into / Skip chips — four now) at the top control which sections render — a view filter only; all on by default; does not change stored status.
 - **Reorder within a section:** drag the grip handle (Pointer Events — works with touch and mouse) or use the per-row up/down arrows (the touch-reliable fallback). Order persists to `warped2026:order` (§4.2). A per-section "Reset to score order" reverts to match-score order.
 - Rows reuse the list-view `BandRow` look and open the **same** detail modal (§5.2).
 - Empty states: a section with no bands shows "Nothing marked [status] yet"; with no picks at all, a friendly hint to mark bands on the Lineup.
@@ -133,6 +135,9 @@ Reference mockup behavior was approved in chat. Build to this:
 - **The lineup was the near-final March reveal.** ~8 slots were unannounced at data-build time. The app must render whatever is in `bands.json` and not assume a fixed count. When the final bands drop, regenerate via the refresh script (Section 8) — don't hardcode additions.
 - **`preview_url` is HTTP-served from Deezer's CDN.** Ensure the audio element loads over HTTPS (the URLs are https); no mixed-content.
 - **Band names contain punctuation** (`The Academy Is...`, `Drop Dead, Gorgeous`, `Letlive.`, `Bear Vs. Shark`). Slugify defensively if using routes; prefer matching by exact `name`.
+- **Status colors are rose / sky-blue / yellow / zinc** (must / maybe / look / skip) — *not* the green/amber the score chip uses. "Maybe" is sky-blue, so the yellow "Look into" is already clearly distinct from it (no amber-vs-yellow clash on the toggle). The one place yellow sits near amber is a list row, where the gold stars and an amber score chip share space with a yellow "Look" badge — they're kept apart by position and by using a brighter lemon-yellow (`yellow-400`) for status vs amber for score. When adding a fifth status, re-check this on a real row.
+- **The favicon is generated, not hand-drawn.** `scripts/gen-favicon.mjs` is the single source of truth for the guitar shape and emits both `src/app/icon.svg` (primary, Next 16 file convention) and `src/app/favicon.ico` (3-size PNG-in-ICO fallback). Edit the geometry in that script and re-run `node scripts/gen-favicon.mjs`, then commit both outputs — don't hand-edit `favicon.ico`. Next auto-wires both via the App-Router file convention (no `metadata.icons` needed); a stray `favicon.ico` plus an `icon.svg` is the intended setup.
+- **Adding a status is backward-compatible by construction.** The status validator keys off `STATUSES` (a superset after each addition), so old localStorage survives. Removing or renaming a status is *not* safe the same way — stored values for the dropped key would be silently discarded on load.
 
 ## 7. Feature Backlog
 
