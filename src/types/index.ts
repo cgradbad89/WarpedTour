@@ -83,5 +83,14 @@ export interface BandsDataset {
 /** Personal status — localStorage only (PRD §4). */
 export type BandStatus = "must" | "maybe" | "skip";
 
-/** `{ [bandName]: status }`. Absence of a key = unset. */
+/** `{ [bandName]: status }`. Absence of a key = unset. localStorage `warped2026:status`. */
 export type StatusMap = Record<string, BandStatus>;
+
+/**
+ * Manual per-section ordering for the My Picks page — localStorage key
+ * `warped2026:order` (PRD §4). Each value is an ordered list of band names for
+ * that status section. A name absent from the array (or a missing key) falls
+ * back to score order (desc, ties by fans desc). Keyed by name so a bands.json
+ * refresh never orphans entries by id.
+ */
+export type OrderMap = Partial<Record<BandStatus, string[]>>;

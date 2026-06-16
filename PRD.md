@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-A single-user, static web app that helps me prep for **Vans Warped Tour — Long Beach 2026** (July 25–26, Shoreline Waterfront) by browsing all ~141 bands ranked by how likely I am to enjoy them, based on my Spotify listening data.
+A single-user, static web app that helps me prep for **Vans Warped Tour — Long Beach 2026** (July 25–26, Shoreline Waterfront) by browsing all ~149 bands ranked by how likely I am to enjoy them, based on my Spotify listening data.
 
 **Core value:** open the app, see which bands to prioritize, listen to a 30-second preview, mark a personal must-see / maybe / skip, and jump to the artist on Spotify.
 
@@ -17,14 +17,15 @@ A single-user, static web app that helps me prep for **Vans Warped Tour — Long
 
 | Route | Purpose | Notes |
 |---|---|---|
-| `/` | Main list/explorer view | Search, filter, sort, band rows. Default landing. |
-| (in-page modal) | Band detail view | **Implemented as an in-page modal/drawer, not a route.** Chosen over `/band/[slug]` to avoid slug/punctuation issues (band names contain `.`, `,`, `...`). Detail content per Section 5. |
+| `/` | Main list/explorer view | Search, filter, sort, band rows, plus a "show only my picks" toggle. Default landing. |
+| `/picks` | My Picks view | Real route. The bands you've marked, grouped by status (Must see / Maybe / Skip), with per-section reorder (drag + up/down-arrow fallback) and status-visibility toggles. |
+| (in-page modal) | Band detail view | **Implemented as an in-page modal/drawer, not a route.** Chosen over `/band/[slug]` to avoid slug/punctuation issues (band names contain `.`, `,`, `...`). Opened from both `/` and `/picks`. Detail content per Section 5. |
 
-This is a small app and the detail view is an in-page modal opened from the list — there is **no `/band` route**. Rows and personal state are keyed by exact band `name` (unique in the dataset), so no slugification is needed.
+Two routes (`/` and `/picks`), connected by a header tab on both pages; the detail view is an in-page modal opened from either — there is **no `/band` route**. Rows, personal state, and the saved pick order are all keyed by exact band `name` (unique in the dataset), so no slugification is needed and a `bands.json` refresh never orphans them.
 
 ## 3. Data Model
 
-There is **no database**. The entire data layer is one static file: `public/bands.json` (≈184 KB, 141 bands).
+There is **no database**. The entire data layer is one static file: `public/bands.json` (≈195 KB, 149 bands).
 
 ### 3.1 Top-level shape
 
@@ -67,16 +68,23 @@ There is **no database**. The entire data layer is one static file: `public/band
 
 ## 4. Personal State (localStorage)
 
-The must-see/maybe/skip toggle is the only user-writable state.
+Two localStorage keys hold all user-writable state. The app NEVER writes `bands.json`.
 
-- **Storage key:** `warped2026:status` (single key, JSON object).
+### 4.1 Status — `warped2026:status`
 - **Shape:** `{ [bandName: string]: "must" | "maybe" | "skip" }`. Absence = unset.
 - **Why keyed by name:** band names are unique and stable in the dataset; this survives `bands.json` refreshes without an id migration.
 - **Write:** on toggle, read the object, set/clear the band's key, write back. Clearing (toggling off) removes the key.
 - **Read:** load once on mount into app state; keep localStorage and in-memory state in sync.
-- **Reset:** provide a small "Clear my picks" affordance (e.g. in a header menu) that empties the key after a confirm.
+- **Reset:** a small "Clear my picks" affordance empties the key after a confirm (and also clears `warped2026:order`).
 
-Do **not** use `localStorage` for anything else. No analytics, no caching of `bands.json` (it ships with the app).
+### 4.2 Pick order — `warped2026:order`
+- **Shape:** `{ [status: "must"|"maybe"|"skip"]: string[] }` — each value an ordered list of band names for that My-Picks section.
+- **Purpose:** persists manual drag/arrow reordering on `/picks`.
+- **Fallback:** a name absent from its section's array (or a missing key) falls back to match-score order (desc, ties by `fans` desc); newly-picked bands append until moved.
+- **Sync:** changing or clearing a band's status removes it from every order array (no stale names accumulate); a per-section "Reset to score order" deletes that section's array; "Clear my picks" removes the whole key.
+- **Keyed by name** for the same refresh-safe reason as status.
+
+Beyond these two keys, do **not** use `localStorage` for anything else — no analytics, no caching of `bands.json` (it ships with the app).
 
 ## 5. UI Requirements
 
@@ -88,7 +96,7 @@ Reference mockup behavior was approved in chat. Build to this:
   - Search input — filters by `name` (case-insensitive substring). Live/onChange.
   - Genre filter — `<select>` populated from `all_genres`; "All genres" default. A band matches if the selected genre is in its `genres` array.
   - Sort `<select>`: **Match (high→low)** [default], Name (A–Z), Genre. Match sort ties broken by `fans` desc.
-  - Optional: a status filter (All / Must see / Maybe / Skip / Unset) reading localStorage — nice-to-have, not required for MVP.
+  - A **"show only my picks"** toggle — when on, shows only bands with any saved status; composes with search/genre/sort and the live count. (Implemented; supersedes the old optional status-filter idea. Full per-status browsing lives on `/picks`, §5.4.)
 - **Rows:** each band row shows avatar (`image`, fallback to initials), `name`, genre line (`genres` joined), a star rendering of `score`, a colored score chip, and the user's status marker if set. Click/tap opens detail.
   - **Score chip color:** ≥4.5 green, 3.5–4.0 amber, <3.5 neutral/gray. (Match the buckets, not arbitrary cutoffs — `In your rotation`/`Must see` = green, `High match` = amber, rest = gray.)
 - **Grouping (optional but recommended):** group rows under `bucket` headers when sorted by Match. When sorted by Name/Genre, flat list.
@@ -108,13 +116,20 @@ Reference mockup behavior was approved in chat. Build to this:
 - Follow the repo's `frontend-design` conventions if present. Otherwise: clean, flat, mobile-first (this gets used on a phone at the festival). Tailwind. No heavy chrome.
 - **Mobile is the priority target** — I'll use this on my phone on-site. Tap targets ≥44px, fast, works one-handed.
 
+### 5.4 My Picks view (`/picks`)
+- Reads `warped2026:status`; shows picked bands grouped into **Must see / Maybe / Skip** sections.
+- **Status-visibility toggles** (Must / Maybe / Skip chips) at the top control which sections render — a view filter only; all on by default; does not change stored status.
+- **Reorder within a section:** drag the grip handle (Pointer Events — works with touch and mouse) or use the per-row up/down arrows (the touch-reliable fallback). Order persists to `warped2026:order` (§4.2). A per-section "Reset to score order" reverts to match-score order.
+- Rows reuse the list-view `BandRow` look and open the **same** detail modal (§5.2).
+- Empty states: a section with no bands shows "Nothing marked [status] yet"; with no picks at all, a friendly hint to mark bands on the Lineup.
+
 ## 6. Known Sharp Edges
 
 - **`bands.json` is read-only at runtime.** Never write to it. Personal state is localStorage only. The `user_status` field inside the JSON is a frozen `null` and must be ignored.
 - **Similar-artist data is from Deezer, not Spotify.** Spotify deprecated its Related Artists / Recommendations / Audio Features endpoints for new apps (Nov 2024), so none of those can be called from a new Spotify app. Don't try to "upgrade" similar-artists by calling Spotify — it will 403.
 - **Spotify links are search URLs, not artist-ID deep links.** `spotify:search:<name>` opens the app to a search, not directly to the artist page. This is a deliberate MVP tradeoff (no Spotify API access at build time). Exact deep-linking is a backlog item (Section 7).
 - **A few genre tags are imperfect.** MusicBrainz tagging is crowd-sourced; e.g. a band may carry a broad/odd parent genre. The data is good enough for filtering; don't hand-tune inside the app.
-- **`preview_url` can be empty** for 1 band (140/141 have previews). Always guard the player.
+- **`preview_url` can be empty** for 1 band (148/149 have previews). Always guard the player.
 - **The lineup was the near-final March reveal.** ~8 slots were unannounced at data-build time. The app must render whatever is in `bands.json` and not assume a fixed count. When the final bands drop, regenerate via the refresh script (Section 8) — don't hardcode additions.
 - **`preview_url` is HTTP-served from Deezer's CDN.** Ensure the audio element loads over HTTPS (the URLs are https); no mixed-content.
 - **Band names contain punctuation** (`The Academy Is...`, `Drop Dead, Gorgeous`, `Letlive.`, `Bear Vs. Shark`). Slugify defensively if using routes; prefer matching by exact `name`.
@@ -123,7 +138,7 @@ Reference mockup behavior was approved in chat. Build to this:
 
 - [ ] **Spotify artist deep-links** — resolve each band to a Spotify artist ID (via Spotify search API during the data-refresh step, server-side) and store `spotify_uri`/`spotify_url` so links open the artist page directly instead of a search.
 - [ ] **Set-times / stage view** — once Warped publishes the schedule, add day/stage fields and a "by time slot" view to plan conflicts.
-- [ ] **Status filter** in the list view (All / Must / Maybe / Skip / Unset).
+- [x] **Status filter / My Picks** — DONE: `/picks` page (bands grouped by status, reorderable with drag + arrows) plus a "show only my picks" toggle on `/`. See §2, §4.2, §5.4.
 - [ ] **Multi-user mode** — Spotify OAuth (`user-top-read`) so others can connect and get their own scores. Requires moving scoring into a runtime/server step and a backend. Large; deferred by design.
 - [ ] **Cross-device sync** of personal picks (would need a backend; localStorage is MVP).
 - [ ] **"Surprise me"** — highlight high-score bands I haven't marked yet.
@@ -153,4 +168,4 @@ None required for the app or the refresh script. There is no `ANTHROPIC_API_KEY`
 
 ## 9. Data Provenance (for reference)
 
-`bands.json` was generated against my Spotify export covering three windows (lifetime / 6-month / 1-month top artists + genres). Similar artists: Deezer. Genre tags + origin: MusicBrainz. Previews: Deezer CDN. Event: 141 bands, July 25–26 2026, Shoreline Waterfront, Long Beach. Buckets: In your rotation (25) · Must see (27) · High match (30) · Long shot (33) · Discovery (26).
+`bands.json` was generated against my Spotify export covering three windows (lifetime / 6-month / 1-month top artists + genres). Similar artists: Deezer. Genre tags + origin: MusicBrainz. Previews: Deezer CDN. Event: 149 bands, July 25–26 2026, Shoreline Waterfront, Long Beach (lineup re-cross-referenced against the official page). Buckets: In your rotation (26) · Must see (30) · High match (32) · Long shot (34) · Discovery (27).

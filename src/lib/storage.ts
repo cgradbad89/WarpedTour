@@ -1,13 +1,23 @@
-// localStorage read/write for the single personal-state key (PRD §4).
-//   key:   "warped2026:status"
-//   shape: { [bandName]: "must" | "maybe" | "skip" }   (absence = unset)
-// The app NEVER writes bands.json; this is the only user-writable state.
+// localStorage read/write for the app's personal-state keys (PRD §4).
+// The app NEVER writes bands.json; these are the only user-writable state.
+//
+//   warped2026:status  { [bandName]: "must" | "maybe" | "skip" }   (absence = unset)
+//   warped2026:order   { [status]: string[] }  ordered band names per My-Picks
+//                       section; missing/absent ⇒ fall back to score order
+//
+// Both are keyed by exact band name (unique, stable across bands.json refreshes).
 
-import type { BandStatus, StatusMap } from "@/types";
+import type { BandStatus, OrderMap, StatusMap } from "@/types";
 
 export const STATUS_KEY = "warped2026:status";
+export const ORDER_KEY = "warped2026:order";
 
-const VALID: ReadonlySet<string> = new Set<BandStatus>(["must", "maybe", "skip"]);
+const STATUSES: readonly BandStatus[] = ["must", "maybe", "skip"];
+const VALID: ReadonlySet<string> = new Set<BandStatus>(STATUSES);
+
+// ---------------------------------------------------------------------------
+// Status (warped2026:status)
+// ---------------------------------------------------------------------------
 
 /** Read the status map. Returns {} when unset, during SSR, or on parse error. */
 export function loadStatus(): StatusMap {
@@ -59,6 +69,64 @@ export function clearStatus(): void {
   if (typeof window === "undefined") return;
   try {
     window.localStorage.removeItem(STATUS_KEY);
+  } catch {
+    /* ignore */
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Manual order (warped2026:order)
+// ---------------------------------------------------------------------------
+
+/** Read the order map. Returns {} when unset, during SSR, or on parse error. */
+export function loadOrder(): OrderMap {
+  if (typeof window === "undefined") return {};
+  try {
+    const raw = window.localStorage.getItem(ORDER_KEY);
+    if (!raw) return {};
+    const parsed: unknown = JSON.parse(raw);
+    if (!parsed || typeof parsed !== "object") return {};
+    const out: OrderMap = {};
+    for (const status of STATUSES) {
+      const arr = (parsed as Record<string, unknown>)[status];
+      if (Array.isArray(arr)) {
+        out[status] = arr.filter((n): n is string => typeof n === "string");
+      }
+    }
+    return out;
+  } catch {
+    return {};
+  }
+}
+
+/** Persist the whole order map. Non-fatal on quota / private-mode errors. */
+export function saveOrder(map: OrderMap): void {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.setItem(ORDER_KEY, JSON.stringify(map));
+  } catch {
+    /* ignore */
+  }
+}
+
+/**
+ * Pure helper: remove a band name from every section's order. Called whenever a
+ * band's status changes or is cleared, so stale names don't accumulate (PRD §4).
+ */
+export function removeFromOrder(map: OrderMap, name: string): OrderMap {
+  const out: OrderMap = {};
+  for (const status of STATUSES) {
+    const arr = map[status];
+    if (arr) out[status] = arr.filter((n) => n !== name);
+  }
+  return out;
+}
+
+/** Wipe all saved ordering — paired with clearStatus on "Clear my picks". */
+export function clearOrder(): void {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.removeItem(ORDER_KEY);
   } catch {
     /* ignore */
   }

@@ -1,7 +1,7 @@
 "use client";
 
-// Search + genre filter + sort controls for the list view (PRD §5.1).
-// 16px control text avoids iOS focus-zoom; 44px-tall targets.
+// Search + genre filter + sort controls for the list view, plus a "show only my
+// picks" toggle (PRD §5.1). 16px control text avoids iOS focus-zoom; ≥40px targets.
 
 export type SortKey = "match" | "name" | "genre";
 
@@ -13,6 +13,8 @@ export function Controls({
   sort,
   onSort,
   allGenres,
+  onlyPicks,
+  onOnlyPicks,
 }: {
   search: string;
   onSearch: (v: string) => void;
@@ -21,6 +23,8 @@ export function Controls({
   sort: SortKey;
   onSort: (v: SortKey) => void;
   allGenres: string[];
+  onlyPicks: boolean;
+  onOnlyPicks: (v: boolean) => void;
 }) {
   const field =
     "h-11 w-full rounded-xl border border-border bg-card px-3 text-base outline-none focus:ring-2 focus:ring-accent";
@@ -67,6 +71,20 @@ export function Controls({
           <option value="genre">Genre</option>
         </select>
       </div>
+      <button
+        type="button"
+        role="switch"
+        aria-checked={onlyPicks}
+        onClick={() => onOnlyPicks(!onlyPicks)}
+        className={`flex min-h-[40px] w-full items-center justify-center gap-2 rounded-xl px-3 text-sm font-semibold ring-1 ring-inset transition-colors ${
+          onlyPicks
+            ? "bg-accent text-accent-foreground ring-accent"
+            : "bg-card text-muted-foreground ring-border hover:bg-muted"
+        }`}
+      >
+        <span aria-hidden="true">{onlyPicks ? "★" : "☆"}</span>
+        Show only my picks
+      </button>
     </div>
   );
 }

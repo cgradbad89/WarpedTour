@@ -59,7 +59,7 @@ Deferred:         [anything not completed, or "none"]
 |---|---|
 | App type | Static Next.js, no backend, no auth, single user |
 | Data layer | `public/bands.json` (read-only at runtime) |
-| Personal state | Browser localStorage only — key `warped2026:status` |
+| Personal state | Browser localStorage only — keys `warped2026:status` (picks) + `warped2026:order` (My-Picks order) |
 | Cross-device sync | None (intentional MVP scope) |
 | Backend / DB | None — no Firebase, no Firestore |
 | Runtime external calls | None — app is fully static |
@@ -80,11 +80,13 @@ scripts/
   taste_multi.json  # My 3-window Spotify export (lifetime / 6mo / 1mo)
 src/
   app/
-    page.tsx        # Main list/explorer view ("/")
-    band/           # Detail route OR detail modal lives near the list view
-  components/       # BandRow, BandDetail, PreviewPlayer, filters, StatusToggle
+    page.tsx        # Main list/explorer view ("/") — list, filters, "show only my picks"
+    picks/page.tsx  # "My Picks" view ("/picks") — status sections, reorder (drag + arrows)
+  components/       # BandRow, BandDetail, PreviewPlayer, Controls, StatusToggle, Nav, PicksSection
+                    # (detail is an in-page modal, not a route)
   lib/
-    storage.ts      # localStorage read/write for warped2026:status
+    storage.ts      # localStorage read/write for warped2026:status + warped2026:order
+    personal.ts     # usePersonalState hook (status + order; shared by both pages)
     bands.ts        # Load + type bands.json
   types/            # Band + dataset TypeScript interfaces (mirror bands.json)
 ```
