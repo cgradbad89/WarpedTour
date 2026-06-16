@@ -7,7 +7,7 @@ A single-user, static web app that helps me prep for **Vans Warped Tour — Long
 **Core value:** open the app, see which bands to prioritize, listen to a 30-second preview, mark a personal must-see / maybe / look-into / skip, and jump to the artist on Spotify.
 
 **Scope for this build (MVP):**
-- Owner-first, but **shareable**: by default the app shows the owner's pre-computed scores; a friend can upload their own Spotify taste CSV to **re-score every band live in their own browser** (Section 10). Still no auth, no accounts, no backend — the re-score is 100% client-side.
+- Owner-first, but **shareable**: by default the app shows the owner's pre-computed scores; a friend can upload their own Spotify taste CSV to **re-score every band live in their own browser** (Section 10). Still no auth, no accounts — the re-score is 100% client-side. The app is static except for one tiny keyless route, `GET /api/preview`, which resolves fresh (non-expired) 30-sec preview URLs at play time (§5.2, §8.4).
 - All band data is pre-computed and shipped as a static `bands.json` (already built — do not regenerate as part of app work; see Section 8 for the refresh script). The uploaded-taste feature **reuses** `bands.json` as the catalog and recomputes only the taste-dependent fields (Section 10) — it never modifies `bands.json`.
 - Personal must-see/maybe/skip state persists in **browser localStorage** only (no Firestore, no cross-device sync — this is intentional). The uploaded profile is a separate localStorage key and never touches picks.
 
@@ -55,7 +55,7 @@ There is **no database**. The entire data layer is one static file: `public/band
 | `similar_general` | string[] | Similar artists NOT in my library | Detail — "Similar artists generally" |
 | `genre_overlap` | string[] | My genres this band matches | Optional detail chip row |
 | `top_track` | string\|null | Most popular track title | Player label |
-| `preview_url` | string | 30-sec MP3 preview (Deezer CDN). Empty string if none (1 band). | `<audio>` source |
+| `preview_url` | string | 30-sec MP3 preview (Deezer CDN). **Expected-stale** — a signed link with a same-day TTL; not the play source. Empty string if none (1 band). | Last-ditch fallback only; the player resolves a fresh URL from `deezer_id` at play time (§5.2, §6) |
 | `album` | string | Album of the top track | Player subtitle (optional) |
 | `image` | string | Artist image URL (Deezer CDN, 250px) | Avatar |
 | `fans` | number | Deezer fan count | Secondary sort / tie-break |
@@ -114,7 +114,7 @@ Reference mockup behavior was approved in chat. Build to this:
 - Header: avatar, `name`, `genres` as pills, and the score block (number + stars + bucket label).
 - `why` line under the score.
 - `bio` paragraph.
-- **Preview player:** an `<audio>` element using `preview_url`. Custom play/pause button is fine. Show `top_track` (and `album`) as the label. If `preview_url` is empty, hide the player and show "No preview available."
+- **Preview player:** a custom play/pause button over an `<audio>` element. The stored `preview_url` is a **time-limited Deezer signed link that expires within ~a day**, so it is **not** the play source. On play we resolve a **fresh** 30-sec preview URL on demand from the band's `deezer_id` via the `GET /api/preview` route (Deezer blocks direct browser fetch via CORS — see §6/§8), set it on the `<audio>`, and play. Show a brief loading state while resolving; resolved URLs are memoised in memory for the session. Show `top_track` (and `album`) as the label. If a band has **no `deezer_id`** (and no stored URL), show "No preview available." On resolution/playback failure, show a brief "Preview unavailable" and reset the button (never the old flash-and-stop).
 - **"Open in Spotify" button:** primary action uses `spotify_search_uri` (opens the app). Because `spotify:` URIs can fail silently in some browsers, implement: try the `spotify:` URI, and provide a visible secondary link to `spotify_web_url`. Do not rely on the app URI alone.
 - **Two similar-artist lists, side by side:**
   - "Similar artists you listen to" → `similar_you_listen` (emphasize visually — this is the persuasive one). If empty, omit the heading.
@@ -138,9 +138,11 @@ Reference mockup behavior was approved in chat. Build to this:
 - **Similar-artist data is from Deezer, not Spotify.** Spotify deprecated its Related Artists / Recommendations / Audio Features endpoints for new apps (Nov 2024), so none of those can be called from a new Spotify app. Don't try to "upgrade" similar-artists by calling Spotify — it will 403.
 - **Spotify links are search URLs, not artist-ID deep links.** `spotify:search:<name>` opens the app to a search, not directly to the artist page. This is a deliberate MVP tradeoff (no Spotify API access at build time). Exact deep-linking is a backlog item (Section 7).
 - **A few genre tags are imperfect.** MusicBrainz tagging is crowd-sourced; e.g. a band may carry a broad/odd parent genre. The data is good enough for filtering; don't hand-tune inside the app.
-- **`preview_url` can be empty** for 1 band (148/149 have previews). Always guard the player.
+- **Stored `preview_url` is expected-stale and must NOT be the audio source.** It's a Deezer signed CDN link carrying an `hdnea=exp=<unix>` token with a ~same-day TTL; once expired the CDN returns **403**, the `<audio>` errors (`MEDIA_ERR_SRC_NOT_SUPPORTED`), and `play()` rejects. The player resolves a **fresh** URL at play time from `deezer_id` via `GET /api/preview` (§5.2, §8). The stored URL is kept only as a last-ditch fallback (assume it's expired).
+- **`preview_url` can be empty** for 1 band (148/149 have previews); that band (`Gritty in Pink Jam`) also has `deezer_id: null`, so it has **no** resolvable preview — keep "No preview available." Always guard the player.
+- **Deezer's API has no CORS for browsers.** `api.deezer.com` does not send `Access-Control-Allow-Origin`, so a direct client-side `fetch` is blocked. Preview resolution therefore goes through the app's own `GET /api/preview?id=<deezer_id>` route (keyless, no secrets) — the **only** runtime backend hop in the app (§8).
 - **The lineup was the near-final March reveal.** ~8 slots were unannounced at data-build time. The app must render whatever is in `bands.json` and not assume a fixed count. When the final bands drop, regenerate via the refresh script (Section 8) — don't hardcode additions.
-- **`preview_url` is HTTP-served from Deezer's CDN.** Ensure the audio element loads over HTTPS (the URLs are https); no mixed-content.
+- **Preview URLs are HTTPS from Deezer's CDN** (both the stored one and the freshly resolved one are `https://…dzcdn.net`); no mixed-content.
 - **Band names contain punctuation** (`The Academy Is...`, `Drop Dead, Gorgeous`, `Letlive.`, `Bear Vs. Shark`). Slugify defensively if using routes; prefer matching by exact `name`.
 - **Status colors are rose / sky-blue / yellow / zinc** (must / maybe / look / skip) — *not* the green/amber the score chip uses. "Maybe" is sky-blue, so the yellow "Look into" is already clearly distinct from it (no amber-vs-yellow clash on the toggle). The one place yellow sits near amber is a list row, where the gold stars and an amber score chip share space with a yellow "Look" badge — they're kept apart by position and by using a brighter lemon-yellow (`yellow-400`) for status vs amber for score. When adding a fifth status, re-check this on a real row.
 - **The favicon is generated, not hand-drawn.** `scripts/gen-favicon.mjs` is the single source of truth for the guitar shape and emits both `src/app/icon.svg` (primary, Next 16 file convention) and `src/app/favicon.ico` (3-size PNG-in-ICO fallback). Edit the geometry in that script and re-run `node scripts/gen-favicon.mjs`, then commit both outputs — don't hand-edit `favicon.ico`. Next auto-wires both via the App-Router file convention (no `metadata.icons` needed); a stray `favicon.ico` plus an `icon.svg` is the intended setup.
@@ -161,7 +163,12 @@ Reference mockup behavior was approved in chat. Build to this:
 
 ## 8. External Services & Data Refresh
 
-The app itself calls **no external services at runtime** — it's fully static. All enrichment happens offline in the data-refresh script, which is committed to the repo at `scripts/refresh-data.mjs` (or `.py`).
+The app is static except for **one** tiny runtime route: `GET /api/preview?id=<deezer_id>` resolves a fresh 30-sec preview URL from Deezer at play time (the baked `preview_url` is a same-day signed link that expires — §5.2, §6). The route is keyless, holds no secrets, and does nothing but read `data[0].preview` from `api.deezer.com`; it exists only because Deezer doesn't send CORS headers for a direct browser fetch. **All other** enrichment happens offline in the data-refresh script (committed at `scripts/refresh-data.mjs`); no other runtime external calls exist (the upload re-score in §10 is pure client-side).
+
+### 8.4 `/api/preview` route
+- **In:** `id` (a band's `deezer_id`). **Out:** `{ "preview": string | null }`.
+- **Does:** server-side `GET https://api.deezer.com/artist/{id}/top?limit=1` → returns `data[0].preview` (a freshly-signed MP3 URL). 400 on a bad/missing id; 502 on upstream failure; `Cache-Control: no-store` (URLs are short-lived). Keyless, no env vars, no secrets.
+- **Why it's the only acceptable backend:** Deezer's `api.deezer.com` omits `Access-Control-Allow-Origin`, so a direct client `fetch` is CORS-blocked (verified). A minimal server hop is the smallest fix that keeps the player working as tokens expire daily.
 
 ### 8.1 What the refresh script does
 Regenerates `public/bands.json` from two inputs:
@@ -210,7 +217,7 @@ A 2-row header over 9 columns: three windows (**Lifetime / 6 months / 1 month**)
 `src/lib/scoring.ts` is a **faithful TypeScript port** of the scoring in `scripts/refresh-data.mjs` — same constants, `GENRE_RULES`, cascade, `bucketForScore`, and `whyFor`. The cascade: 1-month artist → 5.0 `direct-now`; 6-month → 4.5 `direct-6mo`; lifetime → 4.5 `direct-life`; else N of your artists in the band's similar pool → 3.5/4.0/4.5 `similar`; else genre overlap → 1.5 (→ 2.0 if ≥3) `genre`; else parent-genre adjacency → 2.0 `scene`; else 1.0 `none`. Artist matching uses `normalizeArtist` (diacritics folded, non-alphanumerics stripped) on both sides. **Change one copy, mirror the other** (and update `scoring.ts`'s tests).
 
 ### 10.5 Constraints / sharp edges
-- No backend, no runtime network/API calls. `bands.json` is read-only and never re-saved.
+- The re-score is **pure client-side** — no backend, no network/API calls for scoring. `bands.json` is read-only and never re-saved. (The unrelated `/api/preview` route in §8.4 is the app's only runtime hop, and it's not involved in scoring.)
 - Re-scored "similar artists you listen to" is bounded by each band's stored similar lists (some are thin) — disclosed in-UI; direct matches are exact (see §6).
 - All file/localStorage/parsing is client-only (SSR-guarded).
 - The default no-profile experience is unchanged.

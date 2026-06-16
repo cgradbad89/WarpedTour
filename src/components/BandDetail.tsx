@@ -111,6 +111,8 @@ export function BandDetail({
           {band.bio && <p className="text-sm text-muted-foreground">{band.bio}</p>}
 
           <PreviewPlayer
+            key={band.name}
+            deezerId={band.deezer_id}
             previewUrl={band.preview_url}
             topTrack={band.top_track}
             album={band.album}

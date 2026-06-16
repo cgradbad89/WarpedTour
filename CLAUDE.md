@@ -57,14 +57,14 @@ Deferred:         [anything not completed, or "none"]
 
 | Item | Value |
 |---|---|
-| App type | Static Next.js, no backend, no auth, single user |
+| App type | Next.js — static except one tiny keyless API route (`/api/preview`); no auth |
 | Data layer | `public/bands.json` (read-only at runtime) |
 | Personal state | Browser localStorage only — keys `warped2026:status` (picks) + `warped2026:order` (My-Picks order) |
 | Uploaded taste | `warped2026:profile` — a friend's parsed taste for the client-side re-score (PRD §10). Separate from picks; never written to `bands.json`; absent ⇒ owner's default view |
 | Re-score algorithm | **`src/lib/scoring.ts` is the single source of the runtime algorithm** — a faithful port of `scripts/refresh-data.mjs`. Change one, mirror the other (+ its tests). PRD §10 |
 | Cross-device sync | None (intentional MVP scope) |
-| Backend / DB | None — no Firebase, no Firestore |
-| Runtime external calls | None — app is fully static (the re-score is pure client-side, no API calls) |
+| Backend / DB | No DB. One keyless route — `GET /api/preview?id=<deezer_id>` resolves fresh Deezer preview URLs (no secrets, no env). PRD §5.2/§6/§8.4 |
+| Runtime external calls | One: `/api/preview` → Deezer (server-side), because stored `preview_url`s are signed links that expire daily and Deezer has no browser CORS. Re-score (§10) is pure client-side; nothing else hits the network |
 | Data-refresh sources | Deezer + MusicBrainz, both keyless |
 | Env vars / API keys | None. If multi-user is ever built, Spotify OAuth secrets are server-only — never `NEXT_PUBLIC_*` |
 | Spotify links | Search URLs (`spotify:search:`), not artist-ID deep links — see PRD §6 |
@@ -84,12 +84,14 @@ src/
   app/
     page.tsx        # Main list/explorer view ("/") — list, filters, "show only my picks"
     picks/page.tsx  # "My Picks" view ("/picks") — status sections, reorder (drag + arrows)
+    api/preview/route.ts  # GET ?id=<deezer_id> → fresh 30s preview URL (stored ones expire; Deezer has no CORS)
   components/       # BandRow, BandDetail, PreviewPlayer, Controls, StatusToggle, Nav, PicksSection,
                     # ProfileBar, UploadProfileModal  (detail is an in-page modal, not a route)
   lib/
     storage.ts      # localStorage read/write for warped2026:status + warped2026:order
     personal.ts     # usePersonalState hook (status + order; shared by both pages)
     bands.ts        # Load + type bands.json
+    preview.ts      # resolvePreview(deezer_id) — fetch a fresh preview URL via /api/preview (session-cached)
     scoring.ts      # SINGLE SOURCE of the re-score algorithm (port of refresh-data.mjs) + TasteProfile
     tasteCsv.ts     # Parse an uploaded Spotify taste CSV → TasteProfile (defensive)
     csv.ts          # RFC-4180 CSV tokenizer (dependency-free)
