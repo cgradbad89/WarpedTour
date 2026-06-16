@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { parseTasteCsv, TasteCsvError } from "@/lib/tasteCsv";
 import type { TasteProfile } from "@/lib/scoring";
 
@@ -8,6 +9,18 @@ import type { TasteProfile } from "@/lib/scoring";
 // TasteProfile, and hands it to the parent to store + re-score. Defensive: a
 // malformed file shows a clear error and never corrupts state. Modelled on
 // BandDetail's bottom-sheet/modal for visual consistency.
+//
+// Flow: pick (or drop) a file → its name shows → press Submit to parse & apply.
+// Submit is disabled until a file is chosen; a parse error shows in-modal and the
+// dialog stays open (parent only closes on a successful onLoaded).
+//
+// Rendered via a portal to <body>: the entry point lives inside the page's sticky
+// header, whose `backdrop-blur` establishes a containing block for position:fixed.
+// Without the portal, `fixed inset-0` would resolve against the header (not the
+// viewport) and shove the panel — and its close button — above the screen.
+
+const TEMPLATE_URL =
+  "https://docs.google.com/spreadsheets/d/13VVJ-11qkHZEcCN0sQHBQ5j0a1YJzNF3TGxZ3R40NU8/edit?usp=sharing";
 
 export function UploadProfileModal({
   onLoaded,
@@ -18,12 +31,19 @@ export function UploadProfileModal({
 }) {
   const inputRef = useRef<HTMLInputElement | null>(null);
   const closeRef = useRef<HTMLButtonElement | null>(null);
+  const [mounted, setMounted] = useState(false);
+  const [file, setFile] = useState<File | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [dragOver, setDragOver] = useState(false);
 
-  // Esc to close, lock body scroll while open, focus the close button.
+  // Portal target is client-only — wait for mount before reaching for <body>.
+  useEffect(() => setMounted(true), []);
+
+  // Esc to close, lock body scroll while open, focus the close button. Runs once
+  // the portal content is committed so closeRef points at a real node.
   useEffect(() => {
+    if (!mounted) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     };
@@ -35,10 +55,19 @@ export function UploadProfileModal({
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = prevOverflow;
     };
-  }, [onClose]);
+  }, [mounted, onClose]);
 
-  const handleFile = async (file: File | undefined | null) => {
-    if (!file) return;
+  // Stage a chosen/dropped file (no parsing yet — that waits for Submit).
+  const pickFile = (f: File | undefined | null) => {
+    if (!f) return;
+    setError(null);
+    setFile(f);
+  };
+
+  // Parse + apply the staged file. On success the parent persists and closes; on
+  // failure we surface the error and keep the modal open.
+  const submit = async () => {
+    if (!file || busy) return;
     setError(null);
     setBusy(true);
     try {
@@ -55,7 +84,9 @@ export function UploadProfileModal({
     }
   };
 
-  return (
+  if (!mounted) return null;
+
+  return createPortal(
     <div
       className="fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-4"
       role="dialog"
@@ -68,8 +99,11 @@ export function UploadProfileModal({
         className="absolute inset-0 bg-black/50 backdrop-blur-sm"
       />
 
-      <div className="relative z-10 flex max-h-[92vh] w-full max-w-lg flex-col overflow-y-auto overscroll-contain rounded-t-2xl bg-card shadow-xl sm:rounded-2xl">
-        <div className="sticky top-0 z-10 flex items-start gap-3 border-b border-border bg-card/95 px-4 py-3 backdrop-blur">
+      {/* Panel: capped with dvh so it never overflows above the viewport on mobile
+          (vh overshoots behind the browser chrome). Header is a pinned, non-scrolling
+          flex child; only the body scrolls, so the X is always visible + tappable. */}
+      <div className="relative z-10 flex max-h-[88dvh] w-full max-w-lg flex-col overflow-hidden rounded-t-2xl bg-card shadow-xl sm:rounded-2xl">
+        <div className="flex shrink-0 items-start gap-3 border-b border-border bg-card px-4 py-3">
           <div className="min-w-0 flex-1">
             <h2 className="text-lg font-bold leading-tight">Use your own taste</h2>
             <p className="mt-0.5 text-xs text-muted-foreground">
@@ -81,7 +115,7 @@ export function UploadProfileModal({
             type="button"
             onClick={onClose}
             aria-label="Close"
-            className="grid h-9 w-9 shrink-0 place-items-center rounded-full text-muted-foreground hover:bg-muted"
+            className="grid h-11 w-11 shrink-0 place-items-center rounded-full text-muted-foreground hover:bg-muted"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
               <path d="M6 6l12 12M18 6L6 18" />
@@ -89,14 +123,14 @@ export function UploadProfileModal({
           </button>
         </div>
 
-        <div className="space-y-4 px-4 py-4">
+        <div className="flex-1 space-y-4 overflow-y-auto overscroll-contain px-4 py-4">
           <input
             ref={inputRef}
             type="file"
             accept=".csv,text/csv"
             className="sr-only"
             onChange={(e) => {
-              void handleFile(e.target.files?.[0]);
+              pickFile(e.target.files?.[0]);
               e.target.value = ""; // allow re-selecting the same file
             }}
           />
@@ -113,7 +147,7 @@ export function UploadProfileModal({
             onDrop={(e) => {
               e.preventDefault();
               setDragOver(false);
-              void handleFile(e.dataTransfer.files?.[0]);
+              pickFile(e.dataTransfer.files?.[0]);
             }}
             className={`flex min-h-[120px] w-full flex-col items-center justify-center gap-2 rounded-2xl border-2 border-dashed px-4 py-6 text-center transition-colors ${
               dragOver
@@ -122,10 +156,22 @@ export function UploadProfileModal({
             }`}
           >
             <span aria-hidden="true" className="text-2xl">♫</span>
-            <span className="text-sm font-semibold">
-              {busy ? "Reading your file…" : "Choose a .csv file"}
+            <span className="w-full truncate text-sm font-semibold">
+              {file ? file.name : "Choose a .csv file"}
             </span>
-            <span className="text-xs text-muted-foreground">or drag &amp; drop it here</span>
+            <span className="text-xs text-muted-foreground">
+              {file ? "Tap to choose a different file" : "or drag & drop it here"}
+            </span>
+          </button>
+
+          {/* Primary confirm — parse + apply the chosen file */}
+          <button
+            type="button"
+            onClick={() => void submit()}
+            disabled={!file || busy}
+            className="flex min-h-[44px] w-full items-center justify-center rounded-xl bg-accent px-4 text-sm font-bold text-accent-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
+          >
+            {busy ? "Reading your file…" : "Upload & re-score"}
           </button>
 
           {error && (
@@ -137,26 +183,70 @@ export function UploadProfileModal({
             </p>
           )}
 
-          <div className="space-y-2 text-xs text-muted-foreground">
+          <div className="space-y-3 border-t border-border pt-4 text-xs text-muted-foreground">
+            <div className="space-y-1.5">
+              <p>
+                <span className="font-semibold text-foreground">No file yet?</span> Start from the{" "}
+                <a
+                  href={TEMPLATE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-accent underline underline-offset-2 hover:opacity-80"
+                >
+                  CSV template
+                </a>
+                . Do <span className="whitespace-nowrap font-medium text-foreground">File → Make a copy</span>{" "}
+                first (the shared link is view-only), then fill it in with{" "}
+                <a
+                  href="https://stats.fm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-accent underline underline-offset-2 hover:opacity-80"
+                >
+                  stats.fm
+                </a>
+                :
+              </p>
+              <ol className="list-decimal space-y-1 pl-5">
+                <li>Create a stats.fm account and connect it to Spotify.</li>
+                <li>
+                  Select all the <span className="font-medium text-foreground">Genres</span> shown and
+                  paste them into the sheet (the paste format works as-is).
+                </li>
+                <li>
+                  Repeat for <span className="font-medium text-foreground">Top Tracks</span> and{" "}
+                  <span className="font-medium text-foreground">Top Artists</span> — switch stats.fm to{" "}
+                  <span className="font-medium text-foreground">Grid</span> mode so you get the full
+                  list, not just the top few.
+                </li>
+                <li>
+                  Repeat for all three windows:{" "}
+                  <span className="font-medium text-foreground">1 month</span>,{" "}
+                  <span className="font-medium text-foreground">6 months</span>, and{" "}
+                  <span className="font-medium text-foreground">Lifetime</span>.
+                </li>
+              </ol>
+            </div>
+
             <p>
-              <span className="font-semibold text-foreground">Expected format:</span> the
-              same CSV the owner used — a 2-row header over three windows (Lifetime,
-              6&nbsp;months, 1&nbsp;month), each with <em>Top Genres</em>, <em>Top
-              artists</em>, and <em>Top tracks</em> columns.
+              <span className="font-semibold text-foreground">Expected format:</span> a 2-row header
+              over three windows (Lifetime, 6&nbsp;months, 1&nbsp;month), each with <em>Top Genres</em>,{" "}
+              <em>Top artists</em>, and <em>Top tracks</em> columns — exactly what the template gives you.
             </p>
             <p>
               <span className="font-semibold text-foreground">Heads up:</span> re-scored
-              “similar artists you listen to” are limited to the similar-artist data
-              already baked into each band — some bands have short lists, so a few matches
-              may be missed. Direct artist matches are exact.
+              “similar artists you listen to” are limited to the similar-artist data already baked into
+              each band — some bands have short lists, so a few matches may be missed. Direct artist
+              matches are exact.
             </p>
             <p>
-              Nothing is uploaded anywhere. Your picks stay yours; loading a profile
-              doesn&apos;t touch them.
+              Nothing is uploaded anywhere. Your picks stay yours; loading a profile doesn&apos;t touch
+              them.
             </p>
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }
