@@ -16,6 +16,12 @@ export type MatchKind =
   | "scene"
   | "none";
 
+/**
+ * Confidence in a band's PREDICTED schedule slot (PRD §11): high = named
+ * headliner, medium = main-stage/high-draw, low = inferred.
+ */
+export type PredConfidence = "high" | "medium" | "low";
+
 /** One band — every field is present on every band in the dataset. */
 export interface Band {
   name: string;
@@ -49,11 +55,49 @@ export interface Band {
   spotify_search_uri: string;
   /** `https://open.spotify.com/search/<name>` — browser fallback. */
   spotify_web_url: string;
+
+  // --- Predicted schedule (PRD §11) — HEURISTIC, not official set times. ---
+  // Present on every band in the current dataset, but typed OPTIONAL so the
+  // Schedule grid degrades gracefully if a future band ever lacks them.
+  /** Predicted stage label (one of `Schedule.stages`), e.g. "Mainstage". */
+  pred_stage?: string;
+  /** Predicted day label (one of `Schedule.days`), e.g. "Sat Jul 25". */
+  pred_day?: string;
+  /** Predicted start time as a display string, e.g. "6:18 PM". */
+  pred_time?: string;
+  /** Predicted start in minutes since midnight (e.g. 1098 = 6:18 PM). Sort key. */
+  pred_time_min?: number;
+  /** Predicted set length in minutes. */
+  pred_setlen_min?: number;
+  /** Confidence in this prediction. */
+  pred_confidence?: PredConfidence;
+
   /**
    * Frozen `null` artifact of the data build. DO NOT read or write it —
    * all personal state lives in localStorage (PRD §4, §6).
    */
   user_status: null;
+}
+
+/**
+ * Top-level PREDICTED schedule block (PRD §11). Heuristic stage/day/time
+ * assignments — NOT official set times. `real_times_available` flips to `true`
+ * only when real on-site times are entered later. Optional on the dataset so the
+ * app still works against an older `bands.json` that predates these fields.
+ */
+export interface Schedule {
+  /** Always "PREDICTED" for now. */
+  status: string;
+  /** Prominent, user-facing "not official" disclaimer. */
+  disclaimer: string;
+  /** How the prediction was derived (shown for transparency). */
+  method: string;
+  /** Stage labels in display order. */
+  stages: string[];
+  /** Day labels in display order, e.g. ["Sat Jul 25", "Sun Jul 26"]. */
+  days: string[];
+  /** False while these are predictions; true once real times are entered. */
+  real_times_available: boolean;
 }
 
 export interface EventInfo {
@@ -78,6 +122,8 @@ export interface BandsDataset {
   /** Bucket labels, in display order. */
   buckets: string[];
   bands: Band[];
+  /** PREDICTED schedule metadata (PRD §11). Optional — older files may lack it. */
+  schedule?: Schedule;
 }
 
 /**

@@ -19,9 +19,10 @@ A single-user, static web app that helps me prep for **Vans Warped Tour — Long
 |---|---|---|
 | `/` | Main list/explorer view | Search, filter, sort, band rows, plus a "show only my picks" toggle. Default landing. |
 | `/picks` | My Picks view | Real route. The bands you've marked, grouped by status (Must see / Maybe / Look into / Skip), with per-section reorder (drag + up/down-arrow fallback) and status-visibility toggles. |
-| (in-page modal) | Band detail view | **Implemented as an in-page modal/drawer, not a route.** Chosen over `/band/[slug]` to avoid slug/punctuation issues (band names contain `.`, `,`, `...`). Opened from both `/` and `/picks`. Detail content per Section 5. |
+| `/schedule` | Predicted schedule view | Real route. Day-by-day, stage-by-stage grid of the **PREDICTED** set times (Section 11). Day toggle, one section per stage, acts in time order with a confidence dot. Prominent "not official" disclaimer. Reads the `pred_*` fields + `schedule` block from `bands.json`; taste-independent. |
+| (in-page modal) | Band detail view | **Implemented as an in-page modal/drawer, not a route.** Chosen over `/band/[slug]` to avoid slug/punctuation issues (band names contain `.`, `,`, `...`). Opened from `/`, `/picks`, and `/schedule`. Detail content per Section 5 (incl. the predicted-slot line, §11). |
 
-Two routes (`/` and `/picks`), connected by a header tab on both pages; the detail view is an in-page modal opened from either — there is **no `/band` route**. Rows, personal state, and the saved pick order are all keyed by exact band `name` (unique in the dataset), so no slugification is needed and a `bands.json` refresh never orphans them.
+Three routes (`/`, `/picks`, `/schedule`), connected by a header tab on every page; the detail view is an in-page modal opened from any of them — there is **no `/band` route**. Rows, personal state, and the saved pick order are all keyed by exact band `name` (unique in the dataset), so no slugification is needed and a `bands.json` refresh never orphans them.
 
 ## 3. Data Model
 
@@ -35,9 +36,19 @@ There is **no database**. The entire data layer is one static file: `public/band
   "scoring": { "windows": [...], "method": "...", "note": "..." },
   "all_genres": ["alternative","emo","metal", ...],   // 13 filterable parents
   "buckets": ["In your rotation","Must see","High match","Long shot","Discovery"],
+  "schedule": {                                        // PREDICTED, not official (§11)
+    "status": "PREDICTED",
+    "disclaimer": "...not official; real times post on-site...",
+    "method": "...how the prediction was derived...",
+    "stages": ["Mainstage","Side Stage","Discovery Stage","Local/Opener Stage"],
+    "days": ["Sat Jul 25","Sun Jul 26"],
+    "real_times_available": false                      // flips true when real times entered
+  },
   "bands": [ Band, ... ]
 }
 ```
+
+The `schedule` block is **additive and PREDICTED** (Section 11). Older `bands.json` files may lack it; the app treats it as optional and the Schedule page degrades to "not available."
 
 ### 3.2 Band object (the contract — every field is present on every band)
 
@@ -62,9 +73,17 @@ There is **no database**. The entire data layer is one static file: `public/band
 | `deezer_id` | number\|null | Deezer artist id | Future use |
 | `spotify_search_uri` | string | `spotify:search:<name>` — opens Spotify **app** | "Open in Spotify" primary |
 | `spotify_web_url` | string | `https://open.spotify.com/search/<name>` — browser fallback | "Open in Spotify" fallback |
+| `pred_stage` | string | **PREDICTED** stage (one of `schedule.stages`), e.g. "Mainstage" | Schedule grid section (§11) |
+| `pred_day` | string | **PREDICTED** day (one of `schedule.days`), e.g. "Sat Jul 25" | Schedule day toggle (§11) |
+| `pred_time` | string | **PREDICTED** start time, display string, e.g. "6:18 PM" | Schedule row label + detail slot line |
+| `pred_time_min` | number | **PREDICTED** start, minutes since midnight (720–1350) | Schedule sort key + conflict math |
+| `pred_setlen_min` | number | **PREDICTED** set length in minutes (25–40) | Conflict overlap math (§11) |
+| `pred_confidence` | string | **PREDICTED** confidence: `high` / `medium` / `low` | Confidence dot + legend (§11) |
 | `user_status` | null | Placeholder. **Do not read/write this field.** Personal status lives in localStorage (Section 4). | — |
 
 **Important:** `user_status` in the JSON is always `null` and is a frozen artifact of the data build. The app must NOT mutate `bands.json`. All personal state is localStorage-only.
+
+**The `pred_*` fields are PREDICTED, not official** (Section 11) — a heuristic guess at stage/day/time, **not** real set times (Warped only posts those on-site). They are taste-independent (the same for the owner and any uploaded-profile viewer) and survive a re-score unchanged. Typed **optional** in `src/types` so the Schedule grid degrades gracefully if a future band lacks them; present on every band in the current dataset.
 
 ## 4. Personal State (localStorage)
 
@@ -145,6 +164,8 @@ Reference mockup behavior was approved in chat. Build to this:
 - **Preview URLs are HTTPS from Deezer's CDN** (both the stored one and the freshly resolved one are `https://…dzcdn.net`); no mixed-content.
 - **Band names contain punctuation** (`The Academy Is...`, `Drop Dead, Gorgeous`, `Letlive.`, `Bear Vs. Shark`). Slugify defensively if using routes; prefer matching by exact `name`.
 - **Status colors are rose / sky-blue / yellow / zinc** (must / maybe / look / skip) — *not* the green/amber the score chip uses. "Maybe" is sky-blue, so the yellow "Look into" is already clearly distinct from it (no amber-vs-yellow clash on the toggle). The one place yellow sits near amber is a list row, where the gold stars and an amber score chip share space with a yellow "Look" badge — they're kept apart by position and by using a brighter lemon-yellow (`yellow-400`) for status vs amber for score. When adding a fifth status, re-check this on a real row.
+- **The predicted schedule is TASTE-INDEPENDENT and must stay that way.** The `pred_*` fields and the `schedule` block are based on artist draw, not anyone's Spotify data, so the Schedule page (§11) reads them straight from `bands.json` and renders identically for the owner and any uploaded-profile viewer (verified: the rendered grid is byte-identical with and without a profile). It works because `rescoreBand`/`rescoreDataset` spread the original band/dataset (`{...band}` / `{...dataset}`), so the `pred_*` fields and `schedule` survive a re-score untouched — do **not** add the schedule to the "recomputed per-user" list (§10.2), and don't compute slots from the profile.
+- **`pred_*` are PREDICTED, never present them as official.** The Schedule page leads with a non-dismissable "PREDICTED — not official" banner (`schedule.disclaimer`). The day split (Sat vs Sun) is the lowest-confidence dimension — render it, but the disclaimer already covers the uncertainty; don't add UI that implies the day is certain. When real on-site times are entered later, `schedule.real_times_available` flips to `true` (see §11's swap-in plan).
 - **The upload modal must portal to `<body>`.** Its entry point (`ProfileBar`) lives inside the page's sticky header, whose `backdrop-blur` (a `backdrop-filter`) establishes a containing block for `position: fixed`. Rendered in place, the modal's `fixed inset-0` resolves against the *header* — not the viewport — and shoves the panel and its close button above the screen. `UploadProfileModal` therefore `createPortal`s to `document.body`; any future modal opened from inside a transformed/filtered/`backdrop-blur` ancestor needs the same.
 - **The favicon is generated, not hand-drawn.** `scripts/gen-favicon.mjs` is the single source of truth for the guitar shape and emits both `src/app/icon.svg` (primary, Next 16 file convention) and `src/app/favicon.ico` (3-size PNG-in-ICO fallback). Edit the geometry in that script and re-run `node scripts/gen-favicon.mjs`, then commit both outputs — don't hand-edit `favicon.ico`. Next auto-wires both via the App-Router file convention (no `metadata.icons` needed); a stray `favicon.ico` plus an `icon.svg` is the intended setup.
 - **Adding a status is backward-compatible by construction.** The status validator keys off `STATUSES` (a superset after each addition), so old localStorage survives. Removing or renaming a status is *not* safe the same way — stored values for the dropped key would be silently discarded on load.
@@ -155,7 +176,7 @@ Reference mockup behavior was approved in chat. Build to this:
 ## 7. Feature Backlog
 
 - [ ] **Spotify artist deep-links** — resolve each band to a Spotify artist ID (via Spotify search API during the data-refresh step, server-side) and store `spotify_uri`/`spotify_url` so links open the artist page directly instead of a search.
-- [ ] **Set-times / stage view** — once Warped publishes the schedule, add day/stage fields and a "by time slot" view to plan conflicts.
+- [x] **Set-times / stage view** — DONE as a **prediction**: `/schedule` shows a day/stage/time grid from the baked `pred_*` fields + `schedule` block, with a must-see conflict detector (Section 11). Heuristic, not official — clearly disclaimed. Swapping in real on-site times later is the remaining step (§11).
 - [x] **Status filter / My Picks** — DONE: `/picks` page (bands grouped by status, reorderable with drag + arrows) plus a "show only my picks" toggle on `/`. See §2, §4.2, §5.4.
 - [x] **Friend sharing / multi-user (lightweight)** — DONE: a friend uploads their Spotify taste **CSV** and the app re-scores every band live in their browser, fully client-side (Section 10, `warped2026:profile`). No backend, no OAuth.
 - [ ] **Multi-user mode (full OAuth)** — Spotify OAuth (`user-top-read`) so others connect without exporting a CSV, and scores sync. Requires a runtime/server step and a backend. Still deferred by design; the upload feature above covers the no-backend case.
@@ -225,3 +246,28 @@ A 2-row header over 9 columns: three windows (**Lifetime / 6 months / 1 month**)
 
 ### 10.6 Tests
 `npm test` runs dependency-free `node --test` suites (Node ≥ 22 native TS) under `tests/`: the CSV tokenizer, the taste-CSV parser (incl. shuffled groups, sub-header stripping, positional fallback, malformed-input errors), and the scoring port (tier/bucket snapping, `similar_you_listen` recompute, bio handling, and a real-`bands.json` check that no-profile is unchanged and a re-score doesn't mutate the baked file). A test-only resolution hook (`tests/ts-resolve.mjs`) lets Node resolve the app's `@/…` and extensionless imports; `tests/` is excluded from the Next build's type-check.
+
+## 11. Predicted Schedule (`/schedule`)
+
+A day-by-day, stage-by-stage view of **when each band is predicted to play**. The whole feature hinges on one promise: **it is a heuristic prediction, never presented as official set times.**
+
+### 11.1 The data (baked into `bands.json`, read-only)
+- **Per band** (§3.2): `pred_stage`, `pred_day`, `pred_time` (display string), `pred_time_min` (minutes since midnight, the sort/conflict key), `pred_setlen_min`, `pred_confidence` (`high`/`medium`/`low`).
+- **Top-level `schedule` block** (§3.1): `status` (`"PREDICTED"`), `disclaimer`, `method`, `stages[]` (display order), `days[]` (display order), `real_times_available` (`false`).
+- **How it was derived** (`schedule.method`, for transparency): stage tier from artist draw (named-headliner status + Deezer fan count, streaming-only crossover acts dampened); day split balances draw across Sat/Sun; time slots spread each stage ~12:00 PM–10:30 PM, openers first, headliners closing. These are **read straight from the file** — the app never recomputes them.
+
+### 11.2 The page
+- **Header:** title + nav tab (Lineup / My Picks / Schedule) and a **day toggle** built from `schedule.days`.
+- **Prominent disclaimer banner** (non-dismissable, warning-colored): renders `schedule.disclaimer` under a "PREDICTED — not official" heading, plus "Real set times post on-site when gates open." This is the integrity of the feature — keep it unmissable.
+- **Confidence legend:** high = named headliner, medium = main-stage/high-draw, low = inferred (mirrors `pred_confidence`).
+- **Grid:** for the selected day, one section per stage in `schedule.stages` order; within a stage, acts sorted by `pred_time_min` ascending. Each row shows `pred_time`, band name, an optional pick badge + conflict marker, and a confidence dot. Empty stages are omitted; bands missing `pred_*` fields are silently skipped (never crash).
+- **Tapping a row** opens the shared `BandDetail` modal (§5.2), which also shows a **predicted-slot line** — `Predicted: <stage> · <day> · <time> · <confidence>` — so the slot is visible when a band is opened from any page.
+
+### 11.3 Must-see conflict detector
+If two bands the viewer marked **`must`** (`warped2026:status`) have overlapping predicted sets on the **same day** — intervals `[pred_time_min, pred_time_min + pred_setlen_min)` overlap — the page surfaces a count ("N must-see time conflicts on <day>") and marks each conflicting row. Conflicts are computed **per day** (you can't be two places at once on one day; a Sat act and a Sun act never conflict). Pure, client-only, SSR-safe (status loads in an effect; first render shows none).
+
+### 11.4 Taste independence (do not break)
+The schedule is the **same for everyone** — it's based on artist draw, not taste. The page reads `pred_*`/`schedule` from the effective dataset, and because `rescoreDataset` spreads the original band/dataset, those fields survive an uploaded-profile re-score unchanged. Opening a band from `/schedule` still shows that viewer's effective (re-scored) score in the modal — only the score is taste-dependent, never the slot. (See §6.)
+
+### 11.5 Swapping in the real schedule on the day
+When Warped posts real set times on-site, regenerate `bands.json` with the real `pred_*` values and set `schedule.status` to a non-"PREDICTED" label + `schedule.real_times_available: true`. The UI already keys its "PREDICTED" heading off `schedule.status`; a future tweak can drop/soften the banner when `real_times_available` is `true`. No band-shape change is needed — only the values flip. This stays a **data refresh** (§8), not app work.

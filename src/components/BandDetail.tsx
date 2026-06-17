@@ -6,6 +6,7 @@ import { Avatar } from "./Avatar";
 import { Stars } from "./Stars";
 import { PreviewPlayer } from "./PreviewPlayer";
 import { StatusToggle } from "./StatusToggle";
+import { ConfidenceDot } from "./ConfidenceDot";
 
 // Band detail as a bottom sheet on mobile / centered modal on larger screens
 // (PRD §5.2 — chosen over a /band route to dodge slug/punctuation issues).
@@ -109,6 +110,19 @@ export function BandDetail({
 
           <p className="text-sm font-medium">{band.why}</p>
           {band.bio && <p className="text-sm text-muted-foreground">{band.bio}</p>}
+
+          {/* Predicted schedule slot (PRD §11) — heuristic, not official. */}
+          {(band.pred_stage || band.pred_day || band.pred_time) && (
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 rounded-xl bg-muted/60 px-3 py-2 text-xs">
+              <ConfidenceDot confidence={band.pred_confidence} />
+              <span className="font-bold">Predicted:</span>
+              <span className="text-muted-foreground">
+                {[band.pred_stage, band.pred_day, band.pred_time, band.pred_confidence]
+                  .filter(Boolean)
+                  .join(" · ")}
+              </span>
+            </div>
+          )}
 
           <PreviewPlayer
             key={band.name}

@@ -3,18 +3,20 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-// Primary navigation tabs between the lineup ("/") and My Picks ("/picks").
-// Shown in the header of both pages.
+// Primary navigation tabs between the lineup ("/"), My Picks ("/picks"), and the
+// predicted Schedule ("/schedule"). Shown in the header of every page. Wraps if
+// the three tabs don't fit beside the page title on a narrow phone.
 
 const TABS = [
   { href: "/", label: "Lineup" },
   { href: "/picks", label: "My Picks" },
+  { href: "/schedule", label: "Schedule" },
 ] as const;
 
 export function Nav() {
   const pathname = usePathname();
   return (
-    <nav className="flex shrink-0 gap-1" aria-label="Primary">
+    <nav className="flex flex-wrap justify-end gap-1" aria-label="Primary">
       {TABS.map((t) => {
         const active = pathname === t.href;
         return (

@@ -84,9 +84,10 @@ src/
   app/
     page.tsx        # Main list/explorer view ("/") — list, filters, "show only my picks"
     picks/page.tsx  # "My Picks" view ("/picks") — status sections, reorder (drag + arrows)
+    schedule/page.tsx  # "Schedule" view ("/schedule") — PREDICTED day/stage/time grid + must-see conflicts (PRD §11)
     api/preview/route.ts  # GET ?id=<deezer_id> → fresh 30s preview URL (stored ones expire; Deezer has no CORS)
   components/       # BandRow, BandDetail, PreviewPlayer, Controls, StatusToggle, Nav, PicksSection,
-                    # ProfileBar, UploadProfileModal  (detail is an in-page modal, not a route)
+                    # ProfileBar, UploadProfileModal, ConfidenceDot  (detail is an in-page modal, not a route)
   lib/
     storage.ts      # localStorage read/write for warped2026:status + warped2026:order
     personal.ts     # usePersonalState hook (status + order; shared by both pages)
@@ -100,4 +101,4 @@ src/
 tests/              # node --test suites (csv / tasteCsv / scoring) + TS resolution hook
 ```
 
-**See also**: `PRD.md` — full product reference (data contract, UI requirements, sharp edges, backlog, data pipeline; the upload/re-score feature is **§10**).
+**See also**: `PRD.md` — full product reference (data contract, UI requirements, sharp edges, backlog, data pipeline; the upload/re-score feature is **§10**, the predicted schedule page is **§11**).
