@@ -1,0 +1,43 @@
+// ============================================================================
+//  Firestore security rules — Warped Tour band explorer (PRD §12)
+//
+//  ⚠️  REVIEW + MERGE BEFORE DEPLOYING — DO NOT deploy this file as-is.
+//
+//  The Firebase project "wdnnsp" is SHARED with at least one other app. This
+//  file contains ONLY the rules for THIS app's namespaced path
+//  (`warped_users/{uid}`). If you deploy it wholesale it will REPLACE the
+//  project's deployed rules and lock the other app out.
+//
+//  To deploy safely:
+//    1. Open the Firebase console → Firestore → Rules (or your existing rules
+//       file) and copy the project's CURRENT rules.
+//    2. Paste the `match /warped_users/{uid} { … }` block below INTO the existing
+//       `match /databases/{database}/documents { … }` block, alongside the other
+//       apps' matches. Do not remove or broaden anything already there.
+//    3. Deploy the MERGED rules.
+//
+//  This block is append-only and least-privilege: it grants a signed-in user
+//  read/write to ONLY their own document and touches no other collection.
+// ============================================================================
+
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // -------------------------------------------------------------------------
+    // >>> EXISTING wdnnsp PROJECT RULES GO HERE — keep them, do not delete. <<<
+    // (Whatever match blocks the other app already has, paste them in this spot.)
+    // -------------------------------------------------------------------------
+
+    // ===== Warped Tour band explorer — APPEND THIS BLOCK (PRD §12) ============
+    // Per-user personal state (picks, My-Picks order, uploaded taste profile),
+    // stored one document per user keyed by their auth uid. A user may read and
+    // write ONLY their own document; nothing else in the project is exposed.
+    match /warped_users/{uid} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+    // ==========================================================================
+
+  }
+}

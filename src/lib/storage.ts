@@ -1,16 +1,22 @@
-// localStorage read/write for the app's personal-state keys (PRD §4).
-// The app NEVER writes bands.json; these are the only user-writable state.
+// localStorage read/write for the app's personal-state keys (PRD §4, §10).
+// The app NEVER writes bands.json; these are the only user-writable state. When
+// the user is signed in (PRD §12) these same shapes are mirrored to Firestore by
+// the personal store, but this module stays purely local — it's the logged-out
+// path and the offline cache, and it must keep behaving exactly as it does today.
 //
-//   warped2026:status  { [bandName]: "must" | "maybe" | "look" | "skip" }   (absence = unset)
-//   warped2026:order   { [status]: string[] }  ordered band names per My-Picks
-//                       section; missing/absent ⇒ fall back to score order
+//   warped2026:status   { [bandName]: "must" | "maybe" | "look" | "skip" }  (absence = unset)
+//   warped2026:order    { [status]: string[] }  ordered band names per My-Picks
+//                        section; missing/absent ⇒ fall back to score order
+//   warped2026:profile  TasteProfile | absent  (uploaded-taste re-score, §10)
 //
-// Both are keyed by exact band name (unique, stable across bands.json refreshes).
+// status + order are keyed by exact band name (unique, stable across refreshes).
 
 import type { BandStatus, OrderMap, StatusMap } from "@/types";
+import type { TasteProfile, TasteWindowKey } from "./scoring";
 
 export const STATUS_KEY = "warped2026:status";
 export const ORDER_KEY = "warped2026:order";
+export const PROFILE_KEY = "warped2026:profile";
 
 // Order matters: this is must → maybe → look → skip (PRD §4). VALID, loadOrder,
 // and removeFromOrder all derive from it, so adding "look" here threads the new
@@ -130,6 +136,78 @@ export function clearOrder(): void {
   if (typeof window === "undefined") return;
   try {
     window.localStorage.removeItem(ORDER_KEY);
+  } catch {
+    /* ignore */
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Uploaded taste profile (warped2026:profile) — PRD §10
+// ---------------------------------------------------------------------------
+
+function asStringArray(v: unknown): string[] {
+  return Array.isArray(v) ? v.filter((x): x is string => typeof x === "string") : [];
+}
+
+/**
+ * Coerce arbitrary parsed JSON into a valid TasteProfile, or null if unusable.
+ * Pure (no window access) so the cloud layer and merge logic can reuse it to
+ * sanitise a profile read back from Firestore, not just localStorage.
+ */
+export function normalizeProfile(p: unknown): TasteProfile | null {
+  if (!p || typeof p !== "object") return null;
+  const obj = p as Record<string, unknown>;
+  const w = obj.windows;
+  if (!w || typeof w !== "object") return null;
+  const wins = w as Record<string, unknown>;
+
+  const win = (k: TasteWindowKey) => {
+    const x = (wins[k] ?? {}) as Record<string, unknown>;
+    return { artists: asStringArray(x.artists), genres: asStringArray(x.genres) };
+  };
+  const windows = {
+    short_term: win("short_term"),
+    medium_term: win("medium_term"),
+    long_term: win("long_term"),
+  };
+
+  const total = (["short_term", "medium_term", "long_term"] as TasteWindowKey[]).reduce(
+    (n, k) => n + windows[k].artists.length + windows[k].genres.length,
+    0,
+  );
+  if (total === 0) return null; // empty profile = no signal → treat as no profile
+
+  const label = typeof obj.label === "string" ? obj.label : undefined;
+  return { version: 1, label, windows };
+}
+
+/** Read the stored profile. Returns null when unset, during SSR, or on any error. */
+export function loadProfile(): TasteProfile | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const raw = window.localStorage.getItem(PROFILE_KEY);
+    if (!raw) return null;
+    return normalizeProfile(JSON.parse(raw));
+  } catch {
+    return null;
+  }
+}
+
+/** Persist a profile. Non-fatal on quota / private-mode errors. */
+export function saveProfile(profile: TasteProfile): void {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.setItem(PROFILE_KEY, JSON.stringify(profile));
+  } catch {
+    /* ignore */
+  }
+}
+
+/** Remove the stored profile → the app falls back to the owner's default data. */
+export function clearStoredProfile(): void {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.removeItem(PROFILE_KEY);
   } catch {
     /* ignore */
   }

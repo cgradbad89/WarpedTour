@@ -1,22 +1,14 @@
 "use client";
 
-// Shared personal-state hook used by both "/" and "/picks". Owns the in-memory
-// status + order maps, keeps them in sync with localStorage, and exposes the
-// mutations. Each page mounts its own instance and loads fresh on mount, so
-// navigating between routes always reflects the latest stored state (PRD §4).
+// Shared personal-state hook used by "/", "/picks", and "/schedule" — picks
+// (status) + My-Picks ordering (order). It is now a thin reader over the shared
+// PersonalStore (src/lib/personalStore.tsx), which owns the state and decides
+// whether it lives in localStorage (logged out — exactly as today) or syncs to
+// Firestore (logged in — PRD §12). The contract returned here is unchanged, so
+// the pages don't care which storage backs it.
 
-import { useCallback, useEffect, useState } from "react";
 import type { BandStatus, OrderMap, StatusMap } from "@/types";
-import {
-  clearOrder,
-  clearStatus,
-  loadOrder,
-  loadStatus,
-  removeFromOrder,
-  saveOrder,
-  saveStatus,
-  setBandStatus,
-} from "./storage";
+import { usePersonalStore } from "./personalStore";
 
 export interface PersonalState {
   status: StatusMap;
@@ -34,53 +26,15 @@ export interface PersonalState {
 }
 
 export function usePersonalState(): PersonalState {
-  const [status, setStatus] = useState<StatusMap>({});
-  const [order, setOrder] = useState<OrderMap>({});
-
-  // Client-only load (localStorage is undefined during SSR — avoids hydration mismatch).
-  useEffect(() => {
-    setStatus(loadStatus());
-    setOrder(loadOrder());
-  }, []);
-
-  const changeStatus = useCallback((name: string, next: BandStatus | null) => {
-    setStatus((prev) => {
-      const updated = setBandStatus(prev, name, next);
-      saveStatus(updated);
-      return updated;
-    });
-    // Any status change makes the old section's saved position stale → drop it.
-    setOrder((prev) => {
-      const updated = removeFromOrder(prev, name);
-      saveOrder(updated);
-      return updated;
-    });
-  }, []);
-
-  const setSectionOrder = useCallback((s: BandStatus, names: string[]) => {
-    setOrder((prev) => {
-      const updated = { ...prev, [s]: names };
-      saveOrder(updated);
-      return updated;
-    });
-  }, []);
-
-  const resetSectionOrder = useCallback((s: BandStatus) => {
-    setOrder((prev) => {
-      const updated = { ...prev };
-      delete updated[s];
-      saveOrder(updated);
-      return updated;
-    });
-  }, []);
-
-  const clearAll = useCallback(() => {
-    clearStatus();
-    clearOrder();
-    setStatus({});
-    setOrder({});
-  }, []);
-
+  const {
+    status,
+    order,
+    changeStatus,
+    setSectionOrder,
+    resetSectionOrder,
+    clearAll,
+    pickCount,
+  } = usePersonalStore();
   return {
     status,
     order,
@@ -88,6 +42,6 @@ export function usePersonalState(): PersonalState {
     setSectionOrder,
     resetSectionOrder,
     clearAll,
-    pickCount: Object.keys(status).length,
+    pickCount,
   };
 }

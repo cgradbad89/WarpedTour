@@ -9,9 +9,10 @@ A single-user, static web app that helps me prep for **Vans Warped Tour — Long
 **Scope for this build (MVP):**
 - Owner-first, but **shareable**: by default the app shows the owner's pre-computed scores; a friend can upload their own Spotify taste CSV to **re-score every band live in their own browser** (Section 10). Still no auth, no accounts — the re-score is 100% client-side. The app is static except for one tiny keyless route, `GET /api/preview`, which resolves fresh (non-expired) 30-sec preview URLs at play time (§5.2, §8.4).
 - All band data is pre-computed and shipped as a static `bands.json` (already built — do not regenerate as part of app work; see Section 8 for the refresh script). The uploaded-taste feature **reuses** `bands.json` as the catalog and recomputes only the taste-dependent fields (Section 10) — it never modifies `bands.json`.
-- Personal must-see/maybe/skip state persists in **browser localStorage** only (no Firestore, no cross-device sync — this is intentional). The uploaded profile is a separate localStorage key and never touches picks.
+- Personal must-see/maybe/skip state persists in **browser localStorage** by default. **Optional Google sign-in** (Section 12) layers cloud sync on top: signed-in users get their picks/order/profile synced to Firestore across devices; **signed-out behavior is unchanged** (localStorage only). Login is purely additive and never required.
+- The uploaded profile is a separate localStorage key and never touches picks (and, when signed in, syncs as its own field in the same per-user doc).
 
-**Explicitly out of scope for MVP** (see Section 7 backlog): full multi-user Spotify **OAuth** (the upload feature is the lightweight, no-backend alternative — Section 10), live Spotify playback (full tracks), set-times / stage assignments, cross-device sync.
+**Explicitly out of scope for MVP** (see Section 7 backlog): full multi-user Spotify **OAuth** (the upload feature is the lightweight, no-backend alternative — Section 10), live Spotify playback (full tracks), set-times / stage assignments. (Cross-device sync of personal picks is now **optionally** available via sign-in — Section 12 — but is never required.)
 
 ## 2. Page Inventory
 
@@ -87,7 +88,7 @@ The `schedule` block is **additive and PREDICTED** (Section 11). Older `bands.js
 
 ## 4. Personal State (localStorage)
 
-Two localStorage keys hold all user-writable state. The app NEVER writes `bands.json`.
+Three localStorage keys hold all user-writable state (`warped2026:status`, `:order`, `:profile`). The app NEVER writes `bands.json`. **When signed in (Section 12), these same three shapes sync to Firestore** (one per-user doc) with localStorage kept as a mirror/offline cache; **signed out, it is localStorage only — exactly as described below.** The read/write contracts in this section are unchanged either way: the storage backend is swapped behind `usePersonalState` / `useProfile` by the shared `PersonalStore`, so the rest of the app is agnostic.
 
 ### 4.1 Status — `warped2026:status`
 - **Shape:** `{ [bandName: string]: "must" | "maybe" | "look" | "skip" }`. Absence = unset.
@@ -180,7 +181,7 @@ Reference mockup behavior was approved in chat. Build to this:
 - [x] **Status filter / My Picks** — DONE: `/picks` page (bands grouped by status, reorderable with drag + arrows) plus a "show only my picks" toggle on `/`. See §2, §4.2, §5.4.
 - [x] **Friend sharing / multi-user (lightweight)** — DONE: a friend uploads their Spotify taste **CSV** and the app re-scores every band live in their browser, fully client-side (Section 10, `warped2026:profile`). No backend, no OAuth.
 - [ ] **Multi-user mode (full OAuth)** — Spotify OAuth (`user-top-read`) so others connect without exporting a CSV, and scores sync. Requires a runtime/server step and a backend. Still deferred by design; the upload feature above covers the no-backend case.
-- [ ] **Cross-device sync** of personal picks (would need a backend; localStorage is MVP).
+- [x] **Cross-device sync** of personal picks — DONE (optional): Google sign-in + Firestore per-user sync (Section 12). Signed-out stays localStorage-only; sign-in is additive and never required.
 - [ ] **"Surprise me"** — highlight high-score bands I haven't marked yet.
 
 ## 8. External Services & Data Refresh
@@ -272,3 +273,40 @@ The schedule is the **same for everyone** — it's based on artist draw, not tas
 
 ### 11.5 Swapping in the real schedule on the day
 When Warped posts real set times on-site, regenerate `bands.json` with the real `pred_*` values and set `schedule.status` to a non-"PREDICTED" label + `schedule.real_times_available: true`. The UI already keys its "PREDICTED" heading off `schedule.status`; a future tweak can drop/soften the banner when `real_times_available` is `true`. No band-shape change is needed — only the values flip. This stays a **data refresh** (§8), not app work.
+
+## 12. Optional Auth + Cloud Sync (Google + Firestore)
+
+Makes personal state **optionally** cross-device, without changing the default experience. **Logged out is the default and is byte-for-byte the app described in §1–§11** (localStorage only, no network for personal state, no gating). Signing in with Google switches the user's storage to a per-user Firestore document and syncs across devices. Login is **purely additive** and never required for anything.
+
+### 12.1 The model
+- **Auth:** Firebase Auth, Google provider, popup flow. A sign-in control lives in the header nav (`AuthButton`); signed in, it shows the account (avatar + name) and a sign-out menu. SSR-safe and **client-only** — Firebase initialises only in the browser.
+- **Default = logged out = unchanged.** No account → status/order/profile live in localStorage exactly as §4 describes. Nothing about the list, picks, schedule, or upload re-score changes.
+- **Signed in = Firestore-backed.** Reads/writes go to the user's Firestore doc; localStorage is kept as a **mirror / offline cache** so signing out retains data and the page never blocks on the network.
+- **Graceful degradation:** if Firebase can't initialise (missing/blank `NEXT_PUBLIC_FIREBASE_*` env, network/init failure, or SSR), the app silently falls back to the logged-out localStorage behavior and the sign-in control renders nothing. It must **never** white-screen on auth.
+
+### 12.2 The seam (storage-agnostic by construction)
+A single client provider, `PersonalStore` (`src/lib/personalStore.tsx`), owns the user's whole writable state — `{ status, order, profile }` (a **`PersonalSnapshot`**) — and decides whether it's backed by localStorage (logged out) or Firestore (logged in). `usePersonalState` and `useProfile`/`useExplorerData` are now **thin readers over this provider**, so their contracts are unchanged and the rest of the app is agnostic to the backend. `bands.json`, scoring, schedule prediction, and the upload re-score are all **taste-/data-independent and untouched** — this feature only moves the *user's personal state* to optional cloud sync.
+
+### 12.3 Firestore shape + namespacing (shared project — do not break)
+- The Firebase project (`wdnnsp`, project id from env) is **SHARED** with at least one other app. This app touches **exactly one** collection: `warped_users`, one document per user keyed by auth uid — **`warped_users/{uid}`**. It never reads/writes the project root or any other collection.
+- **Doc shape:** `{ data: string, schemaVersion: 1, updatedAt: <serverTimestamp> }`, where `data` is `JSON.stringify(PersonalSnapshot)`. The snapshot is stored as a **JSON string** (not structured Firestore maps) specifically because band names — the keys of the `status` map — contain punctuation Firestore disallows in nested map keys (`Letlive.`, `The Academy Is...`, `Drop Dead, Gorgeous`). The doc is only ever read whole by uid, never queried, so the blob has no downside. Reads coerce defensively via `coerceSnapshot`.
+
+### 12.4 First-login merge (never lose marks)
+On login the device's local snapshot is **merged into** the cloud doc (`src/lib/merge.ts`, pure + unit-tested):
+- **status:** UNION of picks; on the **same** band, **cloud wins** (the established source). A local-only mark is never dropped.
+- **order:** per section, cloud order first, then any local-only names appended (deduped).
+- **profile:** cloud if present, else local.
+
+The merge is **idempotent and non-destructive** (`merge(x, x) === x`; it never deletes a pick), so it's safe to run on every login — repeat logins don't re-run destructively. The store only writes the merge back when it actually added something the cloud lacked (skips a redundant write and avoids clobbering a concurrent remote write). After the merge it live-subscribes (`onSnapshot`) for cross-device updates, mirroring each remote change into localStorage. **Known semantic:** because picks are a union, a pick deleted on one device can be *resurrected* by another device's first-login local data — this is the deliberate "never silently lose marks" tradeoff, not a bug. Concurrent multi-device writes are last-write-wins at doc granularity (acceptable for this app's scale).
+
+### 12.5 Security rules (output-only — deploy manually, append-scoped)
+A user may read/write **only their own doc**: `allow read, write: if request.auth != null && request.auth.uid == uid;` scoped to `match /warped_users/{uid}`. The rules are in **`firestore.rules`** with a prominent "merge, don't replace" warning, and are **NOT deployed by this session** — they must be **appended** to the shared project's existing rules and deployed manually (deploying the file as-is would lock the other app out). Least-privilege: it exposes nothing outside `warped_users/{uid}`.
+
+### 12.6 Env / config (public by design)
+Firebase web config is read from `NEXT_PUBLIC_FIREBASE_*` (`API_KEY`, `AUTH_DOMAIN`, `PROJECT_ID`, `STORAGE_BUCKET`, `MESSAGING_SENDER_ID`, `APP_ID`) — inlined at build time, never hardcoded in source. These values are **public by design**: the Firebase web SDK config ships to the browser and access is gated by **security rules, not secrecy** — so the "secrets are server-only" rule (§8.3, for hypothetical Spotify OAuth) does **not** apply to them. They live in `.env.local` (gitignored) and Vercel env. Authorized auth domains: `localhost` + the Vercel domain.
+
+### 12.7 Sharp edges
+- **All Firebase/Firestore/auth calls are client-only** (guard `window`/`localStorage`); the providers render empty on the server, so pages still prerender static and there's no hydration mismatch (`AuthButton` also guards on a mounted flag).
+- **Never break the logged-out path.** `storage.ts` stays purely local; the cloud layer is layered on top by `PersonalStore`. If you touch the store, re-verify logged-out behavior is unchanged.
+- **Don't widen the Firestore footprint.** Stay inside `warped_users/{uid}`; never write the root or another collection in the shared project. If you change the doc shape, bump `schemaVersion` and keep `coerceSnapshot` tolerant of old docs.
+- **`bands.json` is still read-only and NOT in Firestore.** Only the user's personal state syncs.
