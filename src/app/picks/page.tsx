@@ -5,7 +5,6 @@ import { useExplorerData } from "@/lib/profile";
 import { usePersonalState } from "@/lib/personal";
 import type { Band, BandStatus } from "@/types";
 import { Nav } from "@/components/Nav";
-import { ProfileBar } from "@/components/ProfileBar";
 import { PicksSection } from "@/components/PicksSection";
 import { BandDetail } from "@/components/BandDetail";
 
@@ -17,9 +16,15 @@ const SECTIONS: { status: BandStatus; label: string; activeChip: string }[] = [
 ];
 
 export default function PicksPage() {
-  const { data, loading, error, profile, setProfile, clearProfile } = useExplorerData();
-  const { status, order, changeStatus, setSectionOrder, resetSectionOrder } =
+  const { data, loading, error, profile } = useExplorerData();
+  const { status, order, changeStatus, setSectionOrder, resetSectionOrder, clearAll, pickCount } =
     usePersonalState();
+
+  const clearPicks = () => {
+    if (pickCount === 0) return;
+    if (!window.confirm("Clear all your picks? This can't be undone.")) return;
+    clearAll();
+  };
 
   // Which sections are visible — a pure view filter, doesn't change stored status.
   const [shown, setShown] = useState<Record<BandStatus, boolean>>({
@@ -62,18 +67,37 @@ export default function PicksPage() {
 
   const totalPicks = Object.keys(status).length;
 
+  // Per-status counts for the visibility chips (display only — derived from the
+  // stored status map, so they're correct before bands.json finishes loading).
+  const counts = useMemo(() => {
+    const c: Record<BandStatus, number> = { must: 0, maybe: 0, look: 0, skip: 0 };
+    for (const s of Object.values(status)) c[s] += 1;
+    return c;
+  }, [status]);
+
   return (
     <div className="mx-auto flex min-h-dvh w-full max-w-lg flex-col">
       <header className="sticky top-0 z-30 border-b border-border bg-background/90 backdrop-blur">
-        <div className="flex items-center justify-between gap-2 px-4 pt-4 pb-2">
-          <h1 className="text-base font-extrabold leading-tight">My Picks</h1>
+        {/* Shared nav strip: tabs left, account right, one pinned row. */}
+        <div className="px-4 pt-3 pb-2">
           <Nav />
         </div>
-        <ProfileBar
-          profile={profile}
-          onSetProfile={setProfile}
-          onClearProfile={clearProfile}
-        />
+        {/* Title + Clear — Clear lives on this page, next to the picks it clears. */}
+        <div className="flex items-center justify-between gap-2 px-4 pb-2">
+          <h1 className="text-base font-extrabold leading-tight">My picks</h1>
+          {pickCount > 0 && (
+            <button
+              type="button"
+              onClick={clearPicks}
+              className="inline-flex min-h-[44px] shrink-0 items-center rounded-xl px-3 text-xs font-semibold text-muted-foreground ring-1 ring-inset ring-border transition-colors hover:bg-muted"
+            >
+              Clear ({pickCount})
+            </button>
+          )}
+        </div>
+        {/* Status-visibility chips — the primary control row. Count stacked under
+            each label so chips stay narrow enough to keep all four on one row at
+            375px (the grid wraps gracefully on anything narrower). */}
         <div className="grid grid-cols-4 gap-1.5 px-4 pb-3">
           {SECTIONS.map(({ status: s, label, activeChip }) => (
             <button
@@ -82,11 +106,12 @@ export default function PicksPage() {
               role="switch"
               aria-checked={shown[s]}
               onClick={() => setShown((v) => ({ ...v, [s]: !v[s] }))}
-              className={`min-h-[40px] rounded-xl px-1 text-xs font-semibold leading-tight ring-1 ring-inset transition-colors ${
+              className={`flex min-h-[44px] flex-col items-center justify-center gap-0.5 rounded-xl px-1 text-xs font-semibold leading-tight ring-1 ring-inset transition-colors ${
                 shown[s] ? activeChip : "bg-card text-muted-foreground ring-border hover:bg-muted"
               }`}
             >
-              {label}
+              <span>{label}</span>
+              <span className="text-[11px] font-bold tabular-nums opacity-70">{counts[s]}</span>
             </button>
           ))}
         </div>

@@ -159,8 +159,8 @@ export default function SchedulePage() {
   return (
     <div className="mx-auto flex min-h-dvh w-full max-w-lg flex-col lg:max-w-5xl">
       <header className="sticky top-0 z-30 border-b border-border bg-background/90 backdrop-blur">
-        <div className="flex items-center justify-between gap-2 px-4 pt-4 pb-2">
-          <h1 className="text-base font-extrabold leading-tight">Schedule</h1>
+        {/* Shared nav strip: tabs left, account right, one pinned row. */}
+        <div className="px-4 pt-3 pb-2">
           <Nav />
         </div>
         {days.length > 0 && (
@@ -174,7 +174,7 @@ export default function SchedulePage() {
                   role="tab"
                   aria-selected={active}
                   onClick={() => setDay(d)}
-                  className={`min-h-[40px] flex-1 rounded-xl px-2 text-sm font-semibold ring-1 ring-inset transition-colors ${
+                  className={`min-h-[44px] flex-1 rounded-xl px-2 text-sm font-semibold ring-1 ring-inset transition-colors ${
                     active
                       ? "bg-accent text-accent-foreground ring-accent"
                       : "bg-card text-muted-foreground ring-border hover:bg-muted"

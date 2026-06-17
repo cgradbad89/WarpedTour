@@ -15,6 +15,8 @@ export function Controls({
   allGenres,
   onlyPicks,
   onOnlyPicks,
+  pickCount,
+  onClearPicks,
 }: {
   search: string;
   onSearch: (v: string) => void;
@@ -25,6 +27,8 @@ export function Controls({
   allGenres: string[];
   onlyPicks: boolean;
   onOnlyPicks: (v: boolean) => void;
+  pickCount: number;
+  onClearPicks: () => void;
 }) {
   const field =
     "h-11 w-full rounded-xl border border-border bg-card px-3 text-base outline-none focus:ring-2 focus:ring-accent";
@@ -71,20 +75,33 @@ export function Controls({
           <option value="genre">Genre</option>
         </select>
       </div>
-      <button
-        type="button"
-        role="switch"
-        aria-checked={onlyPicks}
-        onClick={() => onOnlyPicks(!onlyPicks)}
-        className={`flex min-h-[40px] w-full items-center justify-center gap-2 rounded-xl px-3 text-sm font-semibold ring-1 ring-inset transition-colors ${
-          onlyPicks
-            ? "bg-accent text-accent-foreground ring-accent"
-            : "bg-card text-muted-foreground ring-border hover:bg-muted"
-        }`}
-      >
-        <span aria-hidden="true">{onlyPicks ? "★" : "☆"}</span>
-        Show only my picks
-      </button>
+      {/* Only-my-picks toggle (flex-grow) + Clear, side by side — Clear lives next
+          to the filters it relates to, not floating in the nav zone. */}
+      <div className="flex items-center gap-2">
+        <button
+          type="button"
+          role="switch"
+          aria-checked={onlyPicks}
+          onClick={() => onOnlyPicks(!onlyPicks)}
+          className={`flex min-h-[44px] flex-1 items-center justify-center gap-2 rounded-xl px-3 text-sm font-semibold ring-1 ring-inset transition-colors ${
+            onlyPicks
+              ? "bg-accent text-accent-foreground ring-accent"
+              : "bg-card text-muted-foreground ring-border hover:bg-muted"
+          }`}
+        >
+          <span aria-hidden="true">{onlyPicks ? "★" : "☆"}</span>
+          Only my picks
+        </button>
+        {pickCount > 0 && (
+          <button
+            type="button"
+            onClick={onClearPicks}
+            className="inline-flex min-h-[44px] shrink-0 items-center rounded-xl px-3 text-xs font-semibold text-muted-foreground ring-1 ring-inset ring-border transition-colors hover:bg-muted"
+          >
+            Clear ({pickCount})
+          </button>
+        )}
+      </div>
     </div>
   );
 }

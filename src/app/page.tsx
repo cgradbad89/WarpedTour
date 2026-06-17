@@ -67,19 +67,9 @@ export default function Home() {
   return (
     <div className="mx-auto flex min-h-dvh w-full max-w-lg flex-col">
       <header className="sticky top-0 z-30 border-b border-border bg-background/90 backdrop-blur">
-        <div className="flex items-center gap-2 px-4 pt-3 pb-2">
-          {pickCount > 0 && (
-            <button
-              type="button"
-              onClick={clearPicks}
-              className="min-h-[40px] shrink-0 rounded-lg px-2.5 text-xs font-semibold text-muted-foreground ring-1 ring-inset ring-border hover:bg-muted"
-            >
-              Clear picks ({pickCount})
-            </button>
-          )}
-          <div className="ml-auto">
-            <Nav />
-          </div>
+        {/* Shared nav strip: tabs left, account right, one pinned row. */}
+        <div className="px-4 pt-3 pb-2">
+          <Nav />
         </div>
         <div className="px-4 pb-2">
           <h1 className="text-base font-extrabold leading-tight">
@@ -87,15 +77,13 @@ export default function Home() {
           </h1>
           <p className="mt-0.5 text-xs text-muted-foreground">
             {data
-              ? `${data.event.dates} · ${data.event.venue}`
+              ? `${data.event.dates} · ${data.event.venue.split(",")[0]} · ${
+                  visible.length === total
+                    ? `${total}`
+                    : `${visible.length} of ${total}`
+                } ${total === 1 && visible.length === 1 ? "band" : "bands"}`
               : "July 25–26, 2026"}
           </p>
-          {data && (
-            <p className="mt-1 text-xs font-medium text-muted-foreground">
-              {visible.length} {visible.length === 1 ? "band" : "bands"}
-              {visible.length !== total ? ` of ${total}` : ""}
-            </p>
-          )}
         </div>
         <ProfileBar
           profile={profile}
@@ -113,6 +101,8 @@ export default function Home() {
             allGenres={data.all_genres}
             onlyPicks={onlyPicks}
             onOnlyPicks={setOnlyPicks}
+            pickCount={pickCount}
+            onClearPicks={clearPicks}
           />
         )}
       </header>

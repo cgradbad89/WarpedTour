@@ -42,7 +42,7 @@ export function AuthButton() {
   if (!mounted || !available) return null;
 
   const pill =
-    "min-h-[40px] rounded-full px-3 py-2 text-sm font-semibold transition-colors";
+    "inline-flex min-h-[44px] items-center justify-center rounded-full px-3 text-sm font-semibold transition-colors";
 
   if (!ready) {
     // Auth still resolving — a stable placeholder avoids a layout jump.
@@ -81,10 +81,13 @@ export function AuthButton() {
         aria-haspopup="menu"
         aria-expanded={open}
         aria-label={`Account: ${fullName}`}
-        className="flex min-h-[40px] items-center gap-1.5 rounded-full py-1 pl-1 pr-2.5 ring-1 ring-inset ring-border transition-colors hover:bg-muted"
+        className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full transition-colors hover:bg-muted lg:min-w-0 lg:justify-start lg:gap-1.5 lg:py-1 lg:pl-1 lg:pr-2.5 lg:ring-1 lg:ring-inset lg:ring-border"
       >
-        <Avatar name={fullName} image={user.photoURL ?? ""} size={28} />
-        <span className="max-w-[5.5rem] truncate text-sm font-semibold">{firstName}</span>
+        <Avatar name={fullName} image={user.photoURL ?? ""} size={32} />
+        {/* Name is the biggest space waster on a phone — desktop only (lg+). */}
+        <span className="hidden max-w-[8rem] truncate text-sm font-semibold lg:inline">
+          {firstName}
+        </span>
       </button>
 
       {open && (

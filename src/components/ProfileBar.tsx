@@ -21,7 +21,7 @@ export function ProfileBar({
   const [open, setOpen] = useState(false);
 
   const smallBtn =
-    "min-h-[36px] shrink-0 rounded-lg px-2.5 text-xs font-semibold ring-1 ring-inset transition-colors";
+    "inline-flex min-h-[44px] shrink-0 items-center rounded-lg px-3 text-sm font-semibold ring-1 ring-inset transition-colors";
 
   return (
     <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5 px-4 pb-2">
@@ -57,16 +57,15 @@ export function ProfileBar({
         </>
       ) : (
         <>
-          <span className="text-xs text-muted-foreground">
-            Scores: <span className="font-semibold text-foreground">default</span>{" "}
-            (owner&apos;s taste)
+          <span className="text-sm text-muted-foreground">
+            Scores: <span className="font-semibold text-foreground">default</span>
           </span>
           <button
             type="button"
             onClick={() => setOpen(true)}
             className={`${smallBtn} ml-auto bg-accent text-accent-foreground ring-accent hover:opacity-90`}
           >
-            Upload your taste
+            Upload taste
           </button>
         </>
       )}
