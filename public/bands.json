@@ -11,8 +11,9 @@
    "6 months (0.7)",
    "lifetime (0.55)"
   ],
-  "method": "Recency-weighted artist match (dominant) + genre floor. Similar artists via Deezer, genre tags via MusicBrainz, previews via Deezer.",
-  "note": "5.0 = currently in your rotation; 4.5 = must-see by taste; lower = exploratory."
+  "method": "direct play counts (even-weighted, 30s+ real listens, ambient filtered) primary; Deezer similar-artist + genre fallback",
+  "note": "5.0 = currently in your rotation; 4.5 = must-see by taste; lower = exploratory.",
+  "source": "spotify_streaming_history_2025_2026"
  },
  "all_genres": [
   "alternative",
@@ -41,8 +42,8 @@
    "name": "Jimmy Eat World",
    "score": 5.0,
    "bucket": "In your rotation",
-   "match_kind": "direct-now",
-   "why": "You've had this on repeat in the last month.",
+   "match_kind": "direct-listen",
+   "why": "You've played Jimmy Eat World 18 times — a top rotation band for you.",
    "genres": [
     "pop punk",
     "punk",
@@ -58,10 +59,8 @@
    ],
    "bio": "Jimmy Eat World is a pop punk act from United States, active since 1993. This one's in heavy rotation for you right now — prioritize it.",
    "similar_you_listen": [
-    "New Found Glory",
-    "blink-182",
-    "AFI",
-    "Green Day"
+    "Yellowcard",
+    "Goldfinger"
    ],
    "similar_general": [
     "Yellowcard",
@@ -97,8 +96,8 @@
    "name": "Underoath",
    "score": 5.0,
    "bucket": "In your rotation",
-   "match_kind": "direct-now",
-   "why": "You've had this on repeat in the last month.",
+   "match_kind": "direct-listen",
+   "why": "You've played Underoath 23 times — a top rotation band for you.",
    "genres": [
     "post-hardcore",
     "metalcore",
@@ -114,7 +113,10 @@
    ],
    "bio": "Underoath is a post-hardcore act from United States, active since 1997. This one's in heavy rotation for you right now — prioritize it.",
    "similar_you_listen": [
-    "From First To Last"
+    "Silverstein",
+    "A Day to Remember",
+    "Escape the Fate",
+    "Alexisonfire"
    ],
    "similar_general": [
     "Silverstein",
@@ -149,10 +151,10 @@
   },
   {
    "name": "The Devil Wears Prada",
-   "score": 5.0,
-   "bucket": "In your rotation",
-   "match_kind": "direct-now",
-   "why": "You've had this on repeat in the last month.",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played The Devil Wears Prada 3 times this year.",
    "genres": [
     "post-hardcore",
     "metalcore",
@@ -168,7 +170,8 @@
    ],
    "bio": "The Devil Wears Prada is a post-hardcore act from United States, active since 2005. This one's in heavy rotation for you right now — prioritize it.",
    "similar_you_listen": [
-    "Crown The Empire"
+    "Of Mice & Men",
+    "We Came As Romans"
    ],
    "similar_general": [
     "Memphis May Fire",
@@ -204,8 +207,8 @@
    "name": "Crown the Empire",
    "score": 5.0,
    "bucket": "In your rotation",
-   "match_kind": "direct-now",
-   "why": "You've had this on repeat in the last month.",
+   "match_kind": "direct-listen",
+   "why": "You've played Crown the Empire 15 times — a top rotation band for you.",
    "genres": [
     "post-hardcore",
     "metalcore",
@@ -220,7 +223,11 @@
     "post-screamo"
    ],
    "bio": "Crown the Empire is a post-hardcore act from United States, active since 2010. This one's in heavy rotation for you right now — prioritize it.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "We Came As Romans",
+    "Asking Alexandria",
+    "Of Mice & Men"
+   ],
    "similar_general": [
     "We Came As Romans",
     "Blessthefall",
@@ -251,10 +258,10 @@
   },
   {
    "name": "Taking Back Sunday",
-   "score": 5.0,
-   "bucket": "In your rotation",
-   "match_kind": "direct-now",
-   "why": "You've had this on repeat in the last month.",
+   "score": 4.7,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played Taking Back Sunday 9 times this year.",
    "genres": [
     "emo",
     "rock",
@@ -267,9 +274,11 @@
    ],
    "bio": "Taking Back Sunday is a emo act from United States, active since 1999. This one's in heavy rotation for you right now — prioritize it.",
    "similar_you_listen": [
-    "New Found Glory",
-    "Bayside",
-    "Motion City Soundtrack"
+    "Brand New",
+    "The Used",
+    "Hawthorne Heights",
+    "Senses Fail",
+    "Mayday Parade"
    ],
    "similar_general": [
     "Brand New",
@@ -300,10 +309,10 @@
   },
   {
    "name": "Story of the Year",
-   "score": 5.0,
-   "bucket": "In your rotation",
-   "match_kind": "direct-now",
-   "why": "You've had this on repeat in the last month.",
+   "score": 4.7,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played Story of the Year 8 times this year.",
    "genres": [
     "pop punk",
     "punk",
@@ -319,9 +328,9 @@
    ],
    "bio": "Story of the Year is a pop punk act from United States, active since 2002. This one's in heavy rotation for you right now — prioritize it.",
    "similar_you_listen": [
-    "Thrice",
-    "Underoath",
-    "From First To Last"
+    "A Day to Remember",
+    "Silverstein",
+    "Escape the Fate"
    ],
    "similar_general": [
     "The Red Jumpsuit Apparatus",
@@ -359,8 +368,8 @@
    "name": "Thrice",
    "score": 5.0,
    "bucket": "In your rotation",
-   "match_kind": "direct-now",
-   "why": "You've had this on repeat in the last month.",
+   "match_kind": "direct-listen",
+   "why": "You've played Thrice 318 times — a top rotation band for you.",
    "genres": [
     "punk",
     "emo",
@@ -376,11 +385,11 @@
    ],
    "bio": "Thrice is a punk act from United States, active since 1998. This one's in heavy rotation for you right now — prioritize it.",
    "similar_you_listen": [
-    "Underoath",
-    "Story Of The Year",
-    "AFI",
-    "From First To Last",
-    "Rise Against"
+    "Alexisonfire",
+    "Coheed and Cambria",
+    "Silverstein",
+    "The Used",
+    "A Day to Remember"
    ],
    "similar_general": [
     "Alexisonfire",
@@ -415,10 +424,10 @@
   },
   {
    "name": "From First to Last",
-   "score": 5.0,
-   "bucket": "In your rotation",
-   "match_kind": "direct-now",
-   "why": "You've had this on repeat in the last month.",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played From First to Last 4 times this year.",
    "genres": [
     "emo",
     "post-hardcore",
@@ -434,9 +443,11 @@
    ],
    "bio": "From First to Last is a emo act from Los Angeles, active since 1999. This one's in heavy rotation for you right now — prioritize it.",
    "similar_you_listen": [
-    "Thrice",
-    "Underoath",
-    "Story Of The Year"
+    "Alexisonfire",
+    "Silverstein",
+    "A Day to Remember",
+    "Scary Kids Scaring Kids",
+    "The Used"
    ],
    "similar_general": [
     "Saosin",
@@ -469,10 +480,10 @@
   },
   {
    "name": "Norma Jean",
-   "score": 5.0,
-   "bucket": "In your rotation",
-   "match_kind": "direct-now",
-   "why": "You've had this on repeat in the last month.",
+   "score": 4.7,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played Norma Jean 10 times this year.",
    "genres": [
     "alternative"
    ],
@@ -481,7 +492,9 @@
    ],
    "bio": "Norma Jean is a alternative act from United States, active since 1938. Country artist Norma Jean Beasler. This one's in heavy rotation for you right now — prioritize it.",
    "similar_you_listen": [
-    "All That Remains"
+    "August Burns Red",
+    "Attila",
+    "Stick To Your Guns"
    ],
    "similar_general": [
     "Caliban",
@@ -512,10 +525,10 @@
   },
   {
    "name": "Motion City Soundtrack",
-   "score": 5.0,
-   "bucket": "In your rotation",
-   "match_kind": "direct-now",
-   "why": "You've had this on repeat in the last month.",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played Motion City Soundtrack 5 times this year.",
    "genres": [
     "pop punk",
     "punk",
@@ -528,9 +541,7 @@
     "punk"
    ],
    "bio": "Motion City Soundtrack is a pop punk act from United States, active since 1997. Minnesota pop punk band. This one's in heavy rotation for you right now — prioritize it.",
-   "similar_you_listen": [
-    "Taking Back Sunday"
-   ],
+   "similar_you_listen": [],
    "similar_general": [
     "Relient K",
     "Something Corporate",
@@ -561,10 +572,10 @@
   },
   {
    "name": "Set Your Goals",
-   "score": 5.0,
-   "bucket": "In your rotation",
-   "match_kind": "direct-now",
-   "why": "You've had this on repeat in the last month.",
+   "score": 4.7,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played Set Your Goals 8 times this year.",
    "genres": [
     "pop punk",
     "punk",
@@ -578,7 +589,9 @@
    ],
    "bio": "Set Your Goals is a pop punk act from United States, active since 2004. This one's in heavy rotation for you right now — prioritize it.",
    "similar_you_listen": [
-    "New Found Glory"
+    "The Story So Far",
+    "Alkaline Trio",
+    "Yellowcard"
    ],
    "similar_general": [
     "The Story So Far",
@@ -612,8 +625,8 @@
    "name": "Bayside",
    "score": 5.0,
    "bucket": "In your rotation",
-   "match_kind": "direct-now",
-   "why": "You've had this on repeat in the last month.",
+   "match_kind": "direct-listen",
+   "why": "You've played Bayside 15 times — a top rotation band for you.",
    "genres": [
     "punk",
     "emo",
@@ -627,9 +640,11 @@
    ],
    "bio": "Bayside is a punk act from United States, active since 2000. This one's in heavy rotation for you right now — prioritize it.",
    "similar_you_listen": [
-    "New Found Glory",
-    "Taking Back Sunday",
-    "Motion City Soundtrack"
+    "Mayday Parade",
+    "The Used",
+    "Senses Fail",
+    "All Time Low",
+    "Brand New"
    ],
    "similar_general": [
     "Mayday Parade",
@@ -660,10 +675,10 @@
   },
   {
    "name": "Hot Mulligan",
-   "score": 5.0,
-   "bucket": "In your rotation",
-   "match_kind": "direct-now",
-   "why": "You've had this on repeat in the last month.",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played Hot Mulligan 4 times this year.",
    "genres": [
     "pop punk",
     "punk",
@@ -678,10 +693,9 @@
    ],
    "bio": "Hot Mulligan is a pop punk act from Lansing. US pop punk band. This one's in heavy rotation for you right now — prioritize it.",
    "similar_you_listen": [
-    "Arm's Length",
-    "Free Throw",
-    "Movements",
-    "Tigers Jaw"
+    "Joyce Manor",
+    "Ben Quad",
+    "The Story So Far"
    ],
    "similar_general": [
     "Tiny Moving Parts",
@@ -716,10 +730,10 @@
   },
   {
    "name": "Amigo the Devil",
-   "score": 5.0,
-   "bucket": "In your rotation",
-   "match_kind": "direct-now",
-   "why": "You've had this on repeat in the last month.",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played Amigo the Devil 3 times this year.",
    "genres": [
     "alternative"
    ],
@@ -761,19 +775,17 @@
   },
   {
    "name": "Acceptance",
-   "score": 5.0,
-   "bucket": "In your rotation",
-   "match_kind": "direct-now",
-   "why": "You've had this on repeat in the last month.",
+   "score": 4.7,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played Acceptance 10 times this year.",
    "genres": [
     "alternative"
    ],
    "raw_tags": [],
    "bio": "Acceptance is a alternative act from United States, active since 1998. This one's in heavy rotation for you right now — prioritize it.",
    "similar_you_listen": [
-    "Jimmy Eat World",
-    "Motion City Soundtrack",
-    "AFI"
+    "The Used"
    ],
    "similar_general": [
     "Finch",
@@ -802,10 +814,10 @@
   },
   {
    "name": "Free Throw",
-   "score": 5.0,
-   "bucket": "In your rotation",
-   "match_kind": "direct-now",
-   "why": "You've had this on repeat in the last month.",
+   "score": 4.7,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played Free Throw 7 times this year.",
    "genres": [
     "pop punk",
     "punk",
@@ -818,8 +830,8 @@
    ],
    "bio": "Free Throw is a pop punk act from Nashville, active since 2012. US emo group. This one's in heavy rotation for you right now — prioritize it.",
    "similar_you_listen": [
-    "Hot Mulligan",
-    "Tigers Jaw"
+    "Joyce Manor",
+    "saturdays at your place"
    ],
    "similar_general": [
     "Joyce Manor",
@@ -852,10 +864,10 @@
   },
   {
    "name": "Boundaries",
-   "score": 5.0,
-   "bucket": "In your rotation",
-   "match_kind": "direct-now",
-   "why": "You've had this on repeat in the last month.",
+   "score": 4.7,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played Boundaries 6 times this year.",
    "genres": [
     "metalcore",
     "metal"
@@ -894,10 +906,10 @@
   },
   {
    "name": "The Wrecks",
-   "score": 5.0,
-   "bucket": "In your rotation",
-   "match_kind": "direct-now",
-   "why": "You've had this on repeat in the last month.",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played The Wrecks 4 times this year.",
    "genres": [
     "rock",
     "pop"
@@ -906,7 +918,9 @@
     "pop rock"
    ],
    "bio": "The Wrecks is a rock act from Los Angeles, active since 2015. LA-based indie-rock band. This one's in heavy rotation for you right now — prioritize it.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Panic! At the Disco"
+   ],
    "similar_general": [
     "Weathers",
     "The Happy Fits",
@@ -934,16 +948,20 @@
   },
   {
    "name": "Guilt Trip",
-   "score": 5.0,
-   "bucket": "In your rotation",
-   "match_kind": "direct-now",
-   "why": "You've had this on repeat in the last month.",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played Guilt Trip 4 times this year.",
    "genres": [
     "alternative"
    ],
    "raw_tags": [],
    "bio": "Guilt Trip is a alternative act from Sweden, active since 1999. Swedish industrial band. This one's in heavy rotation for you right now — prioritize it.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Nasty",
+    "Get The Shot",
+    "Kublai Khan TX"
+   ],
    "similar_general": [
     "Nasty",
     "Malevolence",
@@ -971,10 +989,10 @@
   },
   {
    "name": "Daisy Grenade",
-   "score": 5.0,
-   "bucket": "In your rotation",
-   "match_kind": "direct-now",
-   "why": "You've had this on repeat in the last month.",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played Daisy Grenade 3 times this year.",
    "genres": [
     "pop punk",
     "punk",
@@ -987,7 +1005,10 @@
     "power pop"
    ],
    "bio": "Daisy Grenade is a pop punk act from Brooklyn. New York bubblegrunge duo. This one's in heavy rotation for you right now — prioritize it.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Honey Revenge",
+    "Hot Milk"
+   ],
    "similar_general": [
     "Honey Revenge",
     "Lilith Czar",
@@ -1017,19 +1038,16 @@
   },
   {
    "name": "Raue",
-   "score": 5.0,
-   "bucket": "In your rotation",
-   "match_kind": "direct-now",
-   "why": "You've had this on repeat in the last month.",
+   "score": 4.7,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played Raue 10 times this year.",
    "genres": [
     "alternative"
    ],
    "raw_tags": [],
    "bio": "Raue is a alternative act from Santa Cruz, active since 2020. This one's in heavy rotation for you right now — prioritize it.",
-   "similar_you_listen": [
-    "Title Fight",
-    "Narrow Head"
-   ],
+   "similar_you_listen": [],
    "similar_general": [
     "Midrift",
     "Fleshwater",
@@ -1059,8 +1077,8 @@
    "name": "Arm's Length",
    "score": 5.0,
    "bucket": "In your rotation",
-   "match_kind": "direct-now",
-   "why": "You've had this on repeat in the last month.",
+   "match_kind": "direct-listen",
+   "why": "You've played Arm's Length 16 times — a top rotation band for you.",
    "genres": [
     "pop punk",
     "punk",
@@ -1072,9 +1090,8 @@
    ],
    "bio": "Arm's Length is a pop punk act from Canada. Emo band from Ontario. This one's in heavy rotation for you right now — prioritize it.",
    "similar_you_listen": [
-    "Free Throw",
-    "Hot Mulligan",
-    "Movements"
+    "The Story So Far",
+    "Ben Quad"
    ],
    "similar_general": [
     "Heart Attack Man",
@@ -1106,10 +1123,10 @@
   },
   {
    "name": "Bear Vs. Shark",
-   "score": 5.0,
-   "bucket": "In your rotation",
-   "match_kind": "direct-now",
-   "why": "You've had this on repeat in the last month.",
+   "score": 4.7,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played Bear Vs. Shark 6 times this year.",
    "genres": [
     "post-hardcore",
     "hardcore"
@@ -1148,10 +1165,10 @@
   },
   {
    "name": "Bad Cop Bad Cop",
-   "score": 5.0,
-   "bucket": "In your rotation",
-   "match_kind": "direct-now",
-   "why": "You've had this on repeat in the last month.",
+   "score": 4.7,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played Bad Cop Bad Cop 6 times this year.",
    "genres": [
     "punk",
     "rock"
@@ -1161,9 +1178,7 @@
     "punk rock"
    ],
    "bio": "Bad Cop Bad Cop is a punk act from United States, active since 2011. This one's in heavy rotation for you right now — prioritize it.",
-   "similar_you_listen": [
-    "NOFX"
-   ],
+   "similar_you_listen": [],
    "similar_general": [
     "Propagandhi",
     "Descendents",
@@ -1193,10 +1208,10 @@
   },
   {
    "name": "Big Ass Truck I.E.",
-   "score": 5.0,
-   "bucket": "In your rotation",
-   "match_kind": "direct-now",
-   "why": "You've had this on repeat in the last month.",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played Big Ass Truck I.E. 5 times this year.",
    "genres": [
     "metalcore",
     "hardcore",
@@ -1208,9 +1223,7 @@
     "beatdown hardcore"
    ],
    "bio": "Big Ass Truck I.E. is a metalcore act from California. Metalcore band from California. This one's in heavy rotation for you right now — prioritize it.",
-   "similar_you_listen": [
-    "Guilt Trip"
-   ],
+   "similar_you_listen": [],
    "similar_general": [
     "Varials",
     "Bodysnatcher",
@@ -1243,8 +1256,8 @@
    "name": "Whispers",
    "score": 5.0,
    "bucket": "In your rotation",
-   "match_kind": "direct-now",
-   "why": "You've had this on repeat in the last month.",
+   "match_kind": "direct-listen",
+   "why": "You've played Whispers 13 times — a top rotation band for you.",
    "genres": [
     "rock",
     "pop"
@@ -1286,10 +1299,10 @@
   },
   {
    "name": "Simple Plan",
-   "score": 4.5,
+   "score": 4.4,
    "bucket": "Must see",
    "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "why": "Similar to Yellowcard, All Time Low, who you listen to.",
    "genres": [
     "pop punk",
     "punk",
@@ -1305,11 +1318,10 @@
    ],
    "bio": "Simple Plan is a pop punk act from Canada, active since 1999. If you like Sum 41, New Found Glory and Jimmy Eat World, you'll want to be there.",
    "similar_you_listen": [
-    "Sum 41",
-    "New Found Glory",
-    "Jimmy Eat World",
-    "blink-182",
-    "Green Day"
+    "Yellowcard",
+    "All Time Low",
+    "Fall Out Boy",
+    "Paramore"
    ],
    "similar_general": [
     "Good Charlotte",
@@ -1340,10 +1352,10 @@
   },
   {
    "name": "All Time Low",
-   "score": 4.5,
-   "bucket": "Must see",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've played All Time Low once this year.",
    "genres": [
     "pop punk",
     "punk",
@@ -1359,9 +1371,10 @@
    ],
    "bio": "All Time Low is a pop punk act from United States, active since 2003. Pop punk from Maryland. If you like New Found Glory, Taking Back Sunday and Story Of The Year, you'll want to be there.",
    "similar_you_listen": [
-    "New Found Glory",
-    "Taking Back Sunday",
-    "Story Of The Year"
+    "Mayday Parade",
+    "Fall Out Boy",
+    "Stand Atlantic",
+    "Yellowcard"
    ],
    "similar_general": [
     "Mayday Parade",
@@ -1395,10 +1408,10 @@
   },
   {
    "name": "Hoobastank",
-   "score": 4.5,
-   "bucket": "Must see",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "score": 4.2,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've listened to Hoobastank a couple of times.",
    "genres": [
     "metal",
     "rock",
@@ -1414,11 +1427,11 @@
    ],
    "bio": "Hoobastank is a metal act from United States, active since 1994. If you like Sum 41, AFI and Green Day, you'll want to be there.",
    "similar_you_listen": [
-    "Sum 41",
-    "AFI",
-    "Green Day",
-    "Rise Against",
-    "The Offspring"
+    "Thirty Seconds to Mars",
+    "Nickelback",
+    "The Rasmus",
+    "Linkin Park",
+    "Seether"
    ],
    "similar_general": [
     "3 Doors Down",
@@ -1452,10 +1465,10 @@
   },
   {
    "name": "Escape the Fate",
-   "score": 4.5,
+   "score": 4.7,
    "bucket": "Must see",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "match_kind": "direct-listen",
+   "why": "You've played Escape the Fate 6 times this year.",
    "genres": [
     "emo",
     "post-hardcore",
@@ -1471,10 +1484,11 @@
    ],
    "bio": "Escape the Fate is a emo act from United States, active since 2004. If you like Bring Me The Horizon, Crown The Empire and Underoath, you'll want to be there.",
    "similar_you_listen": [
-    "Bring Me The Horizon",
-    "Crown The Empire",
-    "Underoath",
-    "Story Of The Year"
+    "A Day to Remember",
+    "Our Last Night",
+    "Falling In Reverse",
+    "Silverstein",
+    "Asking Alexandria"
    ],
    "similar_general": [
     "A Day to Remember",
@@ -1509,10 +1523,10 @@
   },
   {
    "name": "The Used",
-   "score": 4.5,
+   "score": 4.7,
    "bucket": "Must see",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "match_kind": "direct-listen",
+   "why": "You've played The Used 8 times this year.",
    "genres": [
     "pop punk",
     "punk",
@@ -1528,10 +1542,9 @@
    ],
    "bio": "The Used is a pop punk act from United States, active since 2001. American post hardcore band. If you like Thrice, Taking Back Sunday and Story Of The Year, you'll want to be there.",
    "similar_you_listen": [
-    "Thrice",
-    "Taking Back Sunday",
-    "Story Of The Year",
-    "AFI"
+    "All Time Low",
+    "Coheed and Cambria",
+    "Funeral for a Friend"
    ],
    "similar_general": [
     "All Time Low",
@@ -1568,8 +1581,8 @@
    "name": "We Came as Romans",
    "score": 4.5,
    "bucket": "Must see",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "match_kind": "direct-listen",
+   "why": "You've played We Came as Romans 5 times this year.",
    "genres": [
     "post-hardcore",
     "metalcore",
@@ -1585,8 +1598,8 @@
    ],
    "bio": "We Came as Romans is a post-hardcore act from United States, active since 2005. If you like Crown The Empire and The Devil Wears Prada, you'll want to be there.",
    "similar_you_listen": [
-    "Crown The Empire",
-    "The Devil Wears Prada"
+    "Of Mice & Men",
+    "I Prevail"
    ],
    "similar_general": [
     "The Amity Affliction",
@@ -1622,8 +1635,8 @@
    "name": "Bowling for Soup",
    "score": 4.5,
    "bucket": "Must see",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "match_kind": "direct-listen",
+   "why": "You've played Bowling for Soup 3 times this year.",
    "genres": [
     "pop punk",
     "punk",
@@ -1635,10 +1648,8 @@
    ],
    "bio": "Bowling for Soup is a pop punk act from United States, active since 1994. If you like New Found Glory, Jimmy Eat World and blink-182, you'll want to be there.",
    "similar_you_listen": [
-    "New Found Glory",
-    "Jimmy Eat World",
-    "blink-182",
-    "Taking Back Sunday"
+    "Yellowcard",
+    "MxPx"
    ],
    "similar_general": [
     "American Hi-Fi",
@@ -1671,8 +1682,8 @@
    "name": "Silverstein",
    "score": 4.5,
    "bucket": "Must see",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "match_kind": "direct-listen",
+   "why": "You've played Silverstein 3 times this year.",
    "genres": [
     "pop punk",
     "punk",
@@ -1688,9 +1699,9 @@
    ],
    "bio": "Silverstein is a pop punk act from Canada, active since 2000. If you like Underoath, Story Of The Year and From First To Last, you'll want to be there.",
    "similar_you_listen": [
-    "Underoath",
-    "Story Of The Year",
-    "From First To Last"
+    "Escape the Fate",
+    "A Day to Remember",
+    "Dance Gavin Dance"
    ],
    "similar_general": [
     "Sleeping With Sirens",
@@ -1726,10 +1737,10 @@
   },
   {
    "name": "Mayday Parade",
-   "score": 4.5,
-   "bucket": "Must see",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "score": 4.2,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've listened to Mayday Parade a couple of times.",
    "genres": [
     "pop punk",
     "punk",
@@ -1745,8 +1756,7 @@
    ],
    "bio": "Mayday Parade is a pop punk act from United States, active since 2005. US pop punk/emo pop band. If you like Bayside and Taking Back Sunday, you'll want to be there.",
    "similar_you_listen": [
-    "Bayside",
-    "Taking Back Sunday"
+    "All Time Low"
    ],
    "similar_general": [
     "All Time Low",
@@ -1780,10 +1790,10 @@
   },
   {
    "name": "Alexisonfire",
-   "score": 4.5,
-   "bucket": "Must see",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "score": 5.0,
+   "bucket": "In your rotation",
+   "match_kind": "direct-listen",
+   "why": "You've played Alexisonfire 19 times — a top rotation band for you.",
    "genres": [
     "punk",
     "emo",
@@ -1799,11 +1809,11 @@
    ],
    "bio": "Alexisonfire is a punk act from Canada, active since 2001. Canadian post‐hardcore band. If you like Thrice, Underoath and Story Of The Year, you'll want to be there.",
    "similar_you_listen": [
-    "Thrice",
-    "Underoath",
-    "Story Of The Year",
-    "AFI",
-    "From First To Last"
+    "A Day to Remember",
+    "Silverstein",
+    "Coheed and Cambria",
+    "The Used",
+    "Escape the Fate"
    ],
    "similar_general": [
     "A Day to Remember",
@@ -1839,10 +1849,10 @@
   },
   {
    "name": "MxPx",
-   "score": 4.5,
-   "bucket": "Must see",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "score": 4.2,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've listened to MxPx a couple of times.",
    "genres": [
     "pop punk",
     "punk",
@@ -1858,10 +1868,9 @@
    ],
    "bio": "MxPx is a pop punk act from United States, active since 1992. American punk rock band. If you like New Found Glory, blink-182 and AFI, you'll want to be there.",
    "similar_you_listen": [
-    "New Found Glory",
-    "blink-182",
-    "AFI",
-    "NOFX"
+    "Goldfinger",
+    "Alkaline Trio",
+    "The Ataris"
    ],
    "similar_general": [
     "Goldfinger",
@@ -1896,8 +1905,8 @@
    "name": "Dance Gavin Dance",
    "score": 4.5,
    "bucket": "Must see",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "match_kind": "direct-listen",
+   "why": "You've played Dance Gavin Dance 5 times this year.",
    "genres": [
     "emo",
     "post-hardcore",
@@ -1913,8 +1922,7 @@
    ],
    "bio": "Dance Gavin Dance is a emo act from United States, active since 2005. If you like Crown The Empire and Underoath, you'll want to be there.",
    "similar_you_listen": [
-    "Crown The Empire",
-    "Underoath"
+    "We Came As Romans"
    ],
    "similar_general": [
     "Issues",
@@ -1950,10 +1958,10 @@
   },
   {
    "name": "The Story So Far",
-   "score": 4.5,
-   "bucket": "Must see",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "score": 4.2,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've listened to The Story So Far a couple of times.",
    "genres": [
     "pop punk",
     "punk",
@@ -1965,9 +1973,7 @@
    ],
    "bio": "The Story So Far is a pop punk act from United States, active since 2007. Pop punk band from Walnut Creek, CA, 2007–present. If you like New Found Glory, Bayside and Taking Back Sunday, you'll want to be there.",
    "similar_you_listen": [
-    "New Found Glory",
-    "Bayside",
-    "Taking Back Sunday"
+    "Mayday Parade"
    ],
    "similar_general": [
     "Neck Deep",
@@ -1998,10 +2004,10 @@
   },
   {
    "name": "Hawthorne Heights",
-   "score": 4.5,
+   "score": 4.7,
    "bucket": "Must see",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "match_kind": "direct-listen",
+   "why": "You've played Hawthorne Heights 9 times this year.",
    "genres": [
     "emo",
     "post-hardcore",
@@ -2015,9 +2021,9 @@
    ],
    "bio": "Hawthorne Heights is a emo act from United States, active since 2001. US post hardcore band. If you like Bayside, Taking Back Sunday and From First To Last, you'll want to be there.",
    "similar_you_listen": [
-    "Bayside",
-    "Taking Back Sunday",
-    "From First To Last"
+    "Senses Fail",
+    "Mayday Parade",
+    "Emery"
    ],
    "similar_general": [
     "Senses Fail",
@@ -2051,10 +2057,10 @@
   },
   {
    "name": "The Ataris",
-   "score": 4.5,
-   "bucket": "Must see",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "score": 4.2,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've listened to The Ataris a couple of times.",
    "genres": [
     "pop punk",
     "punk",
@@ -2066,11 +2072,11 @@
    ],
    "bio": "The Ataris is a pop punk act from United States, active since 1996. US pop/punk band. If you like New Found Glory, Jimmy Eat World and blink-182, you'll want to be there.",
    "similar_you_listen": [
-    "New Found Glory",
-    "Jimmy Eat World",
-    "blink-182",
-    "Taking Back Sunday",
-    "AFI"
+    "Alkaline Trio",
+    "MxPx",
+    "The Menzingers",
+    "Yellowcard",
+    "Anti-Flag"
    ],
    "similar_general": [
     "Alkaline Trio",
@@ -2102,10 +2108,10 @@
   },
   {
    "name": "The Summer Set",
-   "score": 4.5,
-   "bucket": "Must see",
+   "score": 4.0,
+   "bucket": "High match",
    "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "why": "Similar to All Time Low, Mayday Parade, who you listen to.",
    "genres": [
     "pop punk",
     "punk",
@@ -2118,9 +2124,9 @@
    ],
    "bio": "The Summer Set is a pop punk act from United States, active since 2007. Pop rock band from Scottsdale, Arizona. If you like New Found Glory, Bayside and Taking Back Sunday, you'll want to be there.",
    "similar_you_listen": [
-    "New Found Glory",
-    "Bayside",
-    "Taking Back Sunday"
+    "All Time Low",
+    "Mayday Parade",
+    "Bowling for Soup"
    ],
    "similar_general": [
     "All Time Low",
@@ -2151,10 +2157,10 @@
   },
   {
    "name": "Scary Kids Scaring Kids",
-   "score": 4.5,
-   "bucket": "Must see",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've played Scary Kids Scaring Kids once this year.",
    "genres": [
     "post-hardcore",
     "hardcore"
@@ -2164,10 +2170,8 @@
    ],
    "bio": "Scary Kids Scaring Kids is a post-hardcore act from United States, active since 2002. If you like Thrice, Underoath and Story Of The Year, you'll want to be there.",
    "similar_you_listen": [
-    "Thrice",
-    "Underoath",
-    "Story Of The Year",
-    "From First To Last"
+    "Silverstein",
+    "Escape the Fate"
    ],
    "similar_general": [
     "Four Year Strong",
@@ -2198,10 +2202,10 @@
   },
   {
    "name": "Emery",
-   "score": 4.5,
-   "bucket": "Must see",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've played Emery once this year.",
    "genres": [
     "post-hardcore",
     "hardcore"
@@ -2212,9 +2216,8 @@
    ],
    "bio": "Emery is a post-hardcore act from United States, active since 2001. US post-hardcore band. If you like Bayside, Taking Back Sunday and From First To Last, you'll want to be there.",
    "similar_you_listen": [
-    "Bayside",
-    "Taking Back Sunday",
-    "From First To Last"
+    "Hawthorne Heights",
+    "Senses Fail"
    ],
    "similar_general": [
     "Saosin",
@@ -2245,10 +2248,10 @@
   },
   {
    "name": "Drop Dead, Gorgeous",
-   "score": 4.5,
-   "bucket": "Must see",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've played Drop Dead, Gorgeous once this year.",
    "genres": [
     "post-hardcore",
     "hardcore"
@@ -2259,10 +2262,7 @@
     "post-hardcore"
    ],
    "bio": "Drop Dead, Gorgeous is a post-hardcore act from United States, active since 2004. Denver, CO post-hardcore band. If you like Crown The Empire and The Devil Wears Prada, you'll want to be there.",
-   "similar_you_listen": [
-    "Crown The Empire",
-    "The Devil Wears Prada"
-   ],
+   "similar_you_listen": [],
    "similar_general": [
     "The Amity Affliction",
     "Enter Shikari",
@@ -2294,10 +2294,10 @@
   },
   {
    "name": "Glassjaw",
-   "score": 4.5,
-   "bucket": "Must see",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've played Glassjaw once this year.",
    "genres": [
     "post-hardcore",
     "hardcore",
@@ -2313,11 +2313,11 @@
    ],
    "bio": "Glassjaw is a post-hardcore act from United States, active since 1993. If you like Thrice, Underoath and Story Of The Year, you'll want to be there.",
    "similar_you_listen": [
-    "Thrice",
-    "Underoath",
-    "Story Of The Year",
-    "AFI",
-    "From First To Last"
+    "Alexisonfire",
+    "Coheed and Cambria",
+    "Funeral for a Friend",
+    "The Fall of Troy",
+    "The Used"
    ],
    "similar_general": [
     "Alexisonfire",
@@ -2352,10 +2352,10 @@
   },
   {
    "name": "The Starting Line",
-   "score": 4.5,
-   "bucket": "Must see",
+   "score": 3.4,
+   "bucket": "High match",
    "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "why": "Similar to Hawthorne Heights, who you listen to.",
    "genres": [
     "pop punk",
     "punk",
@@ -2367,9 +2367,7 @@
    ],
    "bio": "The Starting Line is a pop punk act from Philadelphia, active since 1999. US rock. If you like Bayside, Taking Back Sunday and Motion City Soundtrack, you'll want to be there.",
    "similar_you_listen": [
-    "Bayside",
-    "Taking Back Sunday",
-    "Motion City Soundtrack"
+    "Hawthorne Heights"
    ],
    "similar_general": [
     "Four Year Strong",
@@ -2403,8 +2401,8 @@
    "name": "Citizen",
    "score": 4.5,
    "bucket": "Must see",
-   "match_kind": "direct-life",
-   "why": "A longtime favorite in your library.",
+   "match_kind": "direct-listen",
+   "why": "You've played Citizen 5 times this year.",
    "genres": [
     "emo",
     "post-hardcore",
@@ -2420,12 +2418,10 @@
    ],
    "bio": "Citizen is a emo act from United States, active since 2009. Michigan/Ohio emo band. Already one of yours — an easy set to lock in.",
    "similar_you_listen": [
-    "Free Throw",
-    "Hot Mulligan",
-    "Movements",
-    "Tigers Jaw",
-    "Balance and Composure",
-    "Title Fight"
+    "La Dispute",
+    "Sweet Pill",
+    "Moose Blood",
+    "Joyce Manor"
    ],
    "similar_general": [
     "La Dispute",
@@ -2459,10 +2455,10 @@
   },
   {
    "name": "Joyce Manor",
-   "score": 4.5,
-   "bucket": "Must see",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've played Joyce Manor once this year.",
    "genres": [
     "pop punk",
     "punk",
@@ -2478,9 +2474,7 @@
    ],
    "bio": "Joyce Manor is a pop punk act from United States, active since 2008. If you like Free Throw, Hot Mulligan and Tigers Jaw, you'll want to be there.",
    "similar_you_listen": [
-    "Free Throw",
-    "Hot Mulligan",
-    "Tigers Jaw"
+    "Microwave"
    ],
    "similar_general": [
     "Tiny Moving Parts",
@@ -2515,10 +2509,10 @@
   },
   {
    "name": "Dinosaur Pile-Up",
-   "score": 4.5,
+   "score": 4.7,
    "bucket": "Must see",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "match_kind": "direct-listen",
+   "why": "You've played Dinosaur Pile-Up 11 times this year.",
    "genres": [
     "rock",
     "alternative"
@@ -2531,10 +2525,10 @@
    ],
    "bio": "Dinosaur Pile-Up is a rock act from United Kingdom, active since 2007. If you like Thrice, Rise Against and The Offspring, you'll want to be there.",
    "similar_you_listen": [
-    "Thrice",
-    "Rise Against",
-    "The Offspring",
-    "Foo Fighters"
+    "Frank Carter & The Rattlesnakes",
+    "Marmozets",
+    "Turnstile",
+    "Billy Talent"
    ],
    "similar_general": [
     "Frank Carter & The Rattlesnakes",
@@ -2565,10 +2559,10 @@
   },
   {
    "name": "The Early November",
-   "score": 4.5,
-   "bucket": "Must see",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "score": 4.2,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've listened to The Early November a couple of times.",
    "genres": [
     "emo"
    ],
@@ -2578,9 +2572,8 @@
    ],
    "bio": "The Early November is a emo act from United States, active since 1999. If you like New Found Glory, Taking Back Sunday and Motion City Soundtrack, you'll want to be there.",
    "similar_you_listen": [
-    "New Found Glory",
-    "Taking Back Sunday",
-    "Motion City Soundtrack"
+    "Senses Fail",
+    "The Story So Far"
    ],
    "similar_general": [
     "Senses Fail",
@@ -2611,10 +2604,10 @@
   },
   {
    "name": "The Paradox",
-   "score": 4.5,
-   "bucket": "Must see",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've played The Paradox once this year.",
    "genres": [
     "pop punk",
     "punk",
@@ -2626,9 +2619,9 @@
    ],
    "bio": "The Paradox is a pop punk act from United States, active since 2024. US pop punk band. If you like New Found Glory, Taking Back Sunday and Motion City Soundtrack, you'll want to be there.",
    "similar_you_listen": [
-    "New Found Glory",
-    "Taking Back Sunday",
-    "Motion City Soundtrack"
+    "Yellowcard",
+    "The Story So Far",
+    "Alkaline Trio"
    ],
    "similar_general": [
     "State Champs",
@@ -2660,10 +2653,10 @@
   },
   {
    "name": "Meet Me @ The Altar",
-   "score": 4.5,
-   "bucket": "Must see",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "score": 4.2,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've listened to Meet Me @ The Altar a couple of times.",
    "genres": [
     "pop punk",
     "punk",
@@ -2678,10 +2671,7 @@
    ],
    "bio": "Meet Me @ The Altar is a pop punk act from United States, active since 2015. American pop punk band. If you like New Found Glory, Bayside and Taking Back Sunday, you'll want to be there.",
    "similar_you_listen": [
-    "New Found Glory",
-    "Bayside",
-    "Taking Back Sunday",
-    "Motion City Soundtrack"
+    "Stand Atlantic"
    ],
    "similar_general": [
     "Waterparks",
@@ -2714,10 +2704,10 @@
   },
   {
    "name": "Origami Angel",
-   "score": 4.5,
-   "bucket": "Must see",
+   "score": 3.7,
+   "bucket": "High match",
    "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "why": "Similar to saturdays at your place, Ben Quad, who you listen to.",
    "genres": [
     "emo",
     "rock"
@@ -2729,9 +2719,8 @@
    ],
    "bio": "Origami Angel is a emo act from United States, active since 2016. If you like Free Throw, Hot Mulligan and Tigers Jaw, you'll want to be there.",
    "similar_you_listen": [
-    "Free Throw",
-    "Hot Mulligan",
-    "Tigers Jaw"
+    "saturdays at your place",
+    "Ben Quad"
    ],
    "similar_general": [
     "Mom Jeans.",
@@ -2764,19 +2753,17 @@
    "name": "Winona Fighter",
    "score": 4.5,
    "bucket": "Must see",
-   "match_kind": "direct-life",
-   "why": "A longtime favorite in your library.",
+   "match_kind": "direct-listen",
+   "why": "You've played Winona Fighter 5 times this year.",
    "genres": [
     "alternative"
    ],
    "raw_tags": [],
    "bio": "Winona Fighter is a alternative act from Nashville, active since 2022. Already one of yours — an easy set to lock in.",
    "similar_you_listen": [
-    "Sum 41",
-    "Thrice",
-    "AFI",
-    "My Chemical Romance",
-    "Rise Against"
+    "All Time Low",
+    "Fall Out Boy",
+    "Coheed and Cambria"
    ],
    "similar_general": [
     "All Time Low",
@@ -2805,10 +2792,10 @@
   },
   {
    "name": "Millington",
-   "score": 4.5,
-   "bucket": "Must see",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "score": 4.2,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've listened to Millington a couple of times.",
    "genres": [
     "pop punk",
     "punk",
@@ -2822,9 +2809,10 @@
    ],
    "bio": "Millington is a pop punk act from New York, active since 2018. Brass Emo band. If you like New Found Glory, blink-182 and Taking Back Sunday, you'll want to be there.",
    "similar_you_listen": [
-    "New Found Glory",
-    "blink-182",
-    "Taking Back Sunday"
+    "Alkaline Trio",
+    "Goldfinger",
+    "Fenix TX",
+    "The Ataris"
    ],
    "similar_general": [
     "Alkaline Trio",
@@ -2857,10 +2845,10 @@
   },
   {
    "name": "Papa Roach",
-   "score": 4.0,
-   "bucket": "High match",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "score": 4.7,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played Papa Roach 6 times this year.",
    "genres": [
     "metal",
     "rock",
@@ -2876,7 +2864,11 @@
    ],
    "bio": "Papa Roach is a metal act from United States, active since 1993. If you like Rise Against, you'll want to be there.",
    "similar_you_listen": [
-    "Rise Against"
+    "Seether",
+    "Linkin Park",
+    "Breaking Benjamin",
+    "Three Days Grace",
+    "Thirty Seconds to Mars"
    ],
    "similar_general": [
     "Seether",
@@ -2913,8 +2905,8 @@
    "name": "Plain White T's",
    "score": 4.0,
    "bucket": "High match",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "match_kind": "direct-listen",
+   "why": "You've played Plain White T's once this year.",
    "genres": [
     "pop punk",
     "punk",
@@ -2929,9 +2921,7 @@
     "pop punk"
    ],
    "bio": "Plain White T's is a pop punk act from United States, active since 1997. If you like Jimmy Eat World, you'll want to be there.",
-   "similar_you_listen": [
-    "Jimmy Eat World"
-   ],
+   "similar_you_listen": [],
    "similar_general": [
     "Secondhand Serenade",
     "The Fray",
@@ -2962,10 +2952,10 @@
   },
   {
    "name": "Third Eye Blind",
-   "score": 4.0,
+   "score": 4.2,
    "bucket": "High match",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "match_kind": "direct-listen",
+   "why": "You've listened to Third Eye Blind a couple of times.",
    "genres": [
     "pop punk",
     "punk",
@@ -2980,10 +2970,7 @@
     "classic pop and rock"
    ],
    "bio": "Third Eye Blind is a pop punk act from United States, active since 1993. If you like Jimmy Eat World and Incubus, you'll want to be there.",
-   "similar_you_listen": [
-    "Jimmy Eat World",
-    "Incubus"
-   ],
+   "similar_you_listen": [],
    "similar_general": [
     "The Goo Goo Dolls",
     "Everclear",
@@ -3014,10 +3001,10 @@
   },
   {
    "name": "Lagwagon",
-   "score": 4.0,
-   "bucket": "High match",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "genre",
+   "why": "Matches genres you listen to.",
    "genres": [
     "punk",
     "ska",
@@ -3030,10 +3017,7 @@
     "skate punk"
    ],
    "bio": "Lagwagon is a punk act from United States, active since 1990. If you like AFI and NOFX, you'll want to be there.",
-   "similar_you_listen": [
-    "AFI",
-    "NOFX"
-   ],
+   "similar_you_listen": [],
    "similar_general": [
     "Pennywise",
     "Millencolin",
@@ -3064,10 +3048,10 @@
   },
   {
    "name": "Reel Big Fish",
-   "score": 4.0,
+   "score": 3.7,
    "bucket": "High match",
    "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "why": "Similar to Goldfinger, MxPx, who you listen to.",
    "genres": [
     "punk",
     "ska"
@@ -3080,8 +3064,8 @@
    ],
    "bio": "Reel Big Fish is a punk act from United States, active since 1992. California ska punk band. If you like New Found Glory and NOFX, you'll want to be there.",
    "similar_you_listen": [
-    "New Found Glory",
-    "NOFX"
+    "Goldfinger",
+    "MxPx"
    ],
    "similar_general": [
     "Mad Caddies",
@@ -3114,10 +3098,10 @@
   },
   {
    "name": "Phantom Planet",
-   "score": 4.0,
+   "score": 4.2,
    "bucket": "High match",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "match_kind": "direct-listen",
+   "why": "You've listened to Phantom Planet a couple of times.",
    "genres": [
     "rock",
     "pop",
@@ -3133,7 +3117,8 @@
    ],
    "bio": "Phantom Planet is a rock act from United States, active since 1994. US rock band. If you like Jimmy Eat World, you'll want to be there.",
    "similar_you_listen": [
-    "Jimmy Eat World"
+    "Third Eye Blind",
+    "Plain White T's"
    ],
    "similar_general": [
     "Busted",
@@ -3164,10 +3149,10 @@
   },
   {
    "name": "I Set My Friends on Fire",
-   "score": 4.0,
+   "score": 3.7,
    "bucket": "High match",
    "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "why": "Similar to Silverstein, Alexisonfire, who you listen to.",
    "genres": [
     "post-hardcore",
     "metalcore",
@@ -3183,8 +3168,8 @@
    ],
    "bio": "I Set My Friends on Fire is a post-hardcore act from United States, active since 2007. If you like Underoath and From First To Last, you'll want to be there.",
    "similar_you_listen": [
-    "Underoath",
-    "From First To Last"
+    "Silverstein",
+    "Alexisonfire"
    ],
    "similar_general": [
     "Silverstein",
@@ -3217,10 +3202,10 @@
   },
   {
    "name": "Magnolia Park",
-   "score": 4.0,
+   "score": 4.2,
    "bucket": "High match",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "match_kind": "direct-listen",
+   "why": "You've listened to Magnolia Park a couple of times.",
    "genres": [
     "pop punk",
     "punk",
@@ -3232,8 +3217,7 @@
    ],
    "bio": "Magnolia Park is a pop punk act from United States. Pop punk/alternative rock band. If you like Crown The Empire and The Devil Wears Prada, you'll want to be there.",
    "similar_you_listen": [
-    "Crown The Empire",
-    "The Devil Wears Prada"
+    "Boston Manor"
    ],
    "similar_general": [
     "Point North",
@@ -3266,8 +3250,8 @@
    "name": "Stand Atlantic",
    "score": 4.0,
    "bucket": "High match",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "match_kind": "direct-listen",
+   "why": "You've played Stand Atlantic once this year.",
    "genres": [
     "pop punk",
     "punk",
@@ -3278,7 +3262,7 @@
    ],
    "bio": "Stand Atlantic is a pop punk act from Australia, active since 2015. If you like New Found Glory, you'll want to be there.",
    "similar_you_listen": [
-    "New Found Glory"
+    "All Time Low"
    ],
    "similar_general": [
     "Yours Truly",
@@ -3309,10 +3293,10 @@
   },
   {
    "name": "South Arcade",
-   "score": 4.0,
+   "score": 3.7,
    "bucket": "High match",
    "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "why": "Similar to Honey Revenge, Hot Milk, who you listen to.",
    "genres": [
     "pop punk",
     "punk",
@@ -3324,7 +3308,8 @@
    ],
    "bio": "South Arcade is a pop punk act from United Kingdom, active since 2021. If you like Bring Me The Horizon, you'll want to be there.",
    "similar_you_listen": [
-    "Bring Me The Horizon"
+    "Honey Revenge",
+    "Hot Milk"
    ],
    "similar_general": [
     "Palaye Royale",
@@ -3355,10 +3340,10 @@
   },
   {
    "name": "Dying Wish",
-   "score": 4.0,
-   "bucket": "High match",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "genre",
+   "why": "Matches genres you listen to.",
    "genres": [
     "metalcore",
     "hardcore",
@@ -3371,10 +3356,7 @@
     "melodic metalcore"
    ],
    "bio": "Dying Wish is a metalcore act from Portland. Portland hardcore. If you like Guilt Trip and Boundaries, you'll want to be there.",
-   "similar_you_listen": [
-    "Guilt Trip",
-    "Boundaries"
-   ],
+   "similar_you_listen": [],
    "similar_general": [
     "Malevolence",
     "Thornhill",
@@ -3406,19 +3388,16 @@
   },
   {
    "name": "Fox Lake",
-   "score": 4.0,
+   "score": 4.2,
    "bucket": "High match",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "match_kind": "direct-listen",
+   "why": "You've listened to Fox Lake a couple of times.",
    "genres": [
     "alternative"
    ],
    "raw_tags": [],
    "bio": "Fox Lake is a alternative act from Denver, active since 2017. Denver hardcore/nu-metal. If you like Guilt Trip and Boundaries, you'll want to be there.",
-   "similar_you_listen": [
-    "Guilt Trip",
-    "Boundaries"
-   ],
+   "similar_you_listen": [],
    "similar_general": [
     "Counterparts",
     "Varials",
@@ -3446,10 +3425,10 @@
   },
   {
    "name": "Pain of Truth",
-   "score": 4.0,
+   "score": 3.4,
    "bucket": "High match",
    "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "why": "Similar to Nasty, who you listen to.",
    "genres": [
     "metalcore",
     "hardcore",
@@ -3463,7 +3442,7 @@
    ],
    "bio": "Pain of Truth is a metalcore act from Long Island, active since 2020. Beatdown from Long Island, NY. If you like Guilt Trip, you'll want to be there.",
    "similar_you_listen": [
-    "Guilt Trip"
+    "Nasty"
    ],
    "similar_general": [
     "Defeater",
@@ -3496,19 +3475,18 @@
   },
   {
    "name": "Leisure Hour",
-   "score": 4.0,
+   "score": 3.7,
    "bucket": "High match",
    "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "why": "Similar to Modern Baseball, La Dispute, who you listen to.",
    "genres": [
     "alternative"
    ],
    "raw_tags": [],
    "bio": "Leisure Hour is a alternative act from Muncie, active since 2020. If you like Free Throw, Hot Mulligan and The Front Bottoms, you'll want to be there.",
    "similar_you_listen": [
-    "Free Throw",
-    "Hot Mulligan",
-    "The Front Bottoms"
+    "Modern Baseball",
+    "La Dispute"
    ],
    "similar_general": [
     "Mom Jeans.",
@@ -3537,10 +3515,10 @@
   },
   {
    "name": "Haywire",
-   "score": 4.0,
+   "score": 3.7,
    "bucket": "High match",
    "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "why": "Similar to Stick To Your Guns, Nasty, who you listen to.",
    "genres": [
     "rock"
    ],
@@ -3549,8 +3527,8 @@
    ],
    "bio": "Haywire is a rock act from Canada, active since 1982. Canadian hard rock band. If you like Guilt Trip and Boundaries, you'll want to be there.",
    "similar_you_listen": [
-    "Guilt Trip",
-    "Boundaries"
+    "Stick To Your Guns",
+    "Nasty"
    ],
    "similar_general": [
     "LOCKED SHUT",
@@ -3584,15 +3562,16 @@
    "score": 4.0,
    "bucket": "High match",
    "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "why": "Similar to The Wonder Years, Yellowcard, who you listen to.",
    "genres": [
     "alternative"
    ],
    "raw_tags": [],
    "bio": "Trxvis is a alternative act from California. Travis Riker. If you like New Found Glory and Motion City Soundtrack, you'll want to be there.",
    "similar_you_listen": [
-    "New Found Glory",
-    "Motion City Soundtrack"
+    "The Wonder Years",
+    "Yellowcard",
+    "Millington"
    ],
    "similar_general": [
     "The Wonder Years",
@@ -3621,10 +3600,10 @@
   },
   {
    "name": "The Academy Is...",
-   "score": 3.5,
+   "score": 4.0,
    "bucket": "High match",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "match_kind": "direct-listen",
+   "why": "You've played The Academy Is... once this year.",
    "genres": [
     "pop punk",
     "punk",
@@ -3639,7 +3618,10 @@
    ],
    "bio": "The Academy Is... is a pop punk act from United States, active since 2003. Chicago rock band. If you like Motion City Soundtrack, you'll want to be there.",
    "similar_you_listen": [
-    "Motion City Soundtrack"
+    "Hawthorne Heights",
+    "Alkaline Trio",
+    "Mayday Parade",
+    "Brand New"
    ],
    "similar_general": [
     "Hawthorne Heights",
@@ -3671,10 +3653,10 @@
   },
   {
    "name": "Doobie",
-   "score": 3.5,
+   "score": 4.0,
    "bucket": "High match",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "match_kind": "direct-listen",
+   "why": "You've played Doobie once this year.",
    "genres": [
     "rock",
     "pop"
@@ -3689,7 +3671,8 @@
    ],
    "bio": "Doobie is a rock act from United States, active since 1970. If you like All That Remains, you'll want to be there.",
    "similar_you_listen": [
-    "All That Remains"
+    "Killswitch Engage",
+    "Saliva"
    ],
    "similar_general": [
     "Bad Wolves",
@@ -3720,10 +3703,10 @@
   },
   {
    "name": "Mad Caddies",
-   "score": 3.5,
+   "score": 3.7,
    "bucket": "High match",
    "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "why": "Similar to Streetlight Manifesto, Catch 22, who you listen to.",
    "genres": [
     "punk",
     "ska",
@@ -3739,7 +3722,8 @@
    ],
    "bio": "Mad Caddies is a punk act from United States, active since 1995. If you like NOFX, you'll want to be there.",
    "similar_you_listen": [
-    "NOFX"
+    "Streetlight Manifesto",
+    "Catch 22"
    ],
    "similar_general": [
     "Streetlight Manifesto",
@@ -3772,10 +3756,10 @@
   },
   {
    "name": "Waterparks",
-   "score": 3.5,
+   "score": 4.0,
    "bucket": "High match",
    "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "why": "Similar to Panic! At the Disco, Fall Out Boy, who you listen to.",
    "genres": [
     "pop punk",
     "punk",
@@ -3791,7 +3775,9 @@
    ],
    "bio": "Waterparks is a pop punk act from Houston, active since 2011. US rock band. If you like My Chemical Romance, you'll want to be there.",
    "similar_you_listen": [
-    "My Chemical Romance"
+    "Panic! At the Disco",
+    "Fall Out Boy",
+    "All Time Low"
    ],
    "similar_general": [
     "Panic! At the Disco",
@@ -3823,17 +3809,18 @@
   },
   {
    "name": "Fame on Fire",
-   "score": 3.5,
+   "score": 3.7,
    "bucket": "High match",
    "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "why": "Similar to Our Last Night, We Came As Romans, who you listen to.",
    "genres": [
     "alternative"
    ],
    "raw_tags": [],
    "bio": "Fame on Fire is a alternative act from United States. If you like Crown The Empire, you'll want to be there.",
    "similar_you_listen": [
-    "Crown The Empire"
+    "Our Last Night",
+    "We Came As Romans"
    ],
    "similar_general": [
     "Our Last Night",
@@ -3862,10 +3849,10 @@
   },
   {
    "name": "Kennyhoopla",
-   "score": 3.5,
+   "score": 4.0,
    "bucket": "High match",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "match_kind": "direct-listen",
+   "why": "You've played Kennyhoopla once this year.",
    "genres": [
     "alternative"
    ],
@@ -3876,7 +3863,8 @@
    ],
    "bio": "Kennyhoopla is a alternative act from Cleveland, active since 1997. Indie/alternative artist from Cleveland, Ohio. If you like New Found Glory, you'll want to be there.",
    "similar_you_listen": [
-    "New Found Glory"
+    "Stand Atlantic",
+    "Girlfriends"
    ],
    "similar_general": [
     "Stand Atlantic",
@@ -3905,10 +3893,10 @@
   },
   {
    "name": "Boston Manor",
-   "score": 3.5,
-   "bucket": "High match",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played Boston Manor 5 times this year.",
    "genres": [
     "rock"
    ],
@@ -3917,7 +3905,8 @@
    ],
    "bio": "Boston Manor is a rock act from Blackpool, active since 2013. If you like Crown The Empire, you'll want to be there.",
    "similar_you_listen": [
-    "Crown The Empire"
+    "Our Last Night",
+    "Hot Milk"
    ],
    "similar_general": [
     "DON BROCO",
@@ -3946,17 +3935,19 @@
   },
   {
    "name": "Games we Play",
-   "score": 3.5,
-   "bucket": "High match",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "score": 4.7,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played Games we Play 7 times this year.",
    "genres": [
     "alternative"
    ],
    "raw_tags": [],
    "bio": "Games we Play is a alternative act from United States. Pop punk band. If you like New Found Glory, you'll want to be there.",
    "similar_you_listen": [
-    "New Found Glory"
+    "KennyHoopla",
+    "Stand Atlantic",
+    "Girlfriends"
    ],
    "similar_general": [
     "KennyHoopla",
@@ -3985,18 +3976,16 @@
   },
   {
    "name": "Blnko",
-   "score": 3.5,
-   "bucket": "High match",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "genre",
+   "why": "Matches genres you listen to.",
    "genres": [
     "alternative"
    ],
    "raw_tags": [],
    "bio": "Blnko is a alternative act from Mexico. If you like División Minúscula, you'll want to be there.",
-   "similar_you_listen": [
-    "División Minúscula"
-   ],
+   "similar_you_listen": [],
    "similar_general": [
     "San Venus",
     "José Madero",
@@ -4024,17 +4013,18 @@
   },
   {
    "name": "Lakeview",
-   "score": 3.5,
+   "score": 4.0,
    "bucket": "High match",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "match_kind": "direct-listen",
+   "why": "You've played Lakeview once this year.",
    "genres": [
     "alternative"
    ],
    "raw_tags": [],
    "bio": "Lakeview is a alternative act from Nashville. Country band from Nashville, formerly Pittsburgh. If you like The Devil Wears Prada, you'll want to be there.",
    "similar_you_listen": [
-    "The Devil Wears Prada"
+    "Ice Nine Kills",
+    "We Came As Romans"
    ],
    "similar_general": [
     "Royale Lynn",
@@ -4063,10 +4053,10 @@
   },
   {
    "name": "Codefendants",
-   "score": 3.5,
+   "score": 4.0,
    "bucket": "High match",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "match_kind": "direct-listen",
+   "why": "You've played Codefendants once this year.",
    "genres": [
     "punk",
     "rock",
@@ -4078,9 +4068,7 @@
     "folk punk"
    ],
    "bio": "Codefendants is a punk act from United States, active since 2022. Hip-hop/punk group formed by Fat Mike of NOFX and Sam King. If you like NOFX, you'll want to be there.",
-   "similar_you_listen": [
-    "NOFX"
-   ],
+   "similar_you_listen": [],
    "similar_general": [
     "Social Distortion",
     "Good Riddance",
@@ -4110,17 +4098,17 @@
   },
   {
    "name": "Oxymorrons",
-   "score": 3.5,
+   "score": 4.0,
    "bucket": "High match",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "match_kind": "direct-listen",
+   "why": "You've played Oxymorrons once this year.",
    "genres": [
     "alternative"
    ],
    "raw_tags": [],
    "bio": "Oxymorrons is a alternative act, active since 2016. If you like The Devil Wears Prada, you'll want to be there.",
    "similar_you_listen": [
-    "The Devil Wears Prada"
+    "Her Last Sight"
    ],
    "similar_general": [
     "Annisokay",
@@ -4149,10 +4137,10 @@
   },
   {
    "name": "Vienna Vienna",
-   "score": 3.5,
+   "score": 4.2,
    "bucket": "High match",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "match_kind": "direct-listen",
+   "why": "You've listened to Vienna Vienna a couple of times.",
    "genres": [
     "pop"
    ],
@@ -4165,9 +4153,7 @@
     "charlie puth"
    ],
    "bio": "Vienna Vienna is a pop act from United States. F/k/a \"James Barre\". If you like The Wrecks, you'll want to be there.",
-   "similar_you_listen": [
-    "The Wrecks"
-   ],
+   "similar_you_listen": [],
    "similar_general": [
     "Friday Pilots Club",
     "Rare Americans",
@@ -4197,20 +4183,16 @@
   },
   {
    "name": "Scarlet House",
-   "score": 3.5,
-   "bucket": "High match",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "score": 1.0,
+   "bucket": "Discovery",
+   "match_kind": "genre",
+   "why": "Matches genres you listen to.",
    "genres": [
     "alternative"
    ],
    "raw_tags": [],
    "bio": "Scarlet House is a alternative act from Charlotte. If you like Basement, Superheaven and Narrow Head, you'll want to be there.",
-   "similar_you_listen": [
-    "Basement",
-    "Superheaven",
-    "Narrow Head"
-   ],
+   "similar_you_listen": [],
    "similar_general": [
     "Bleed",
     "Soul Blind",
@@ -4238,10 +4220,10 @@
   },
   {
    "name": "Hot Milk",
-   "score": 3.5,
+   "score": 4.0,
    "bucket": "High match",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "match_kind": "direct-listen",
+   "why": "You've played Hot Milk once this year.",
    "genres": [
     "rock"
    ],
@@ -4251,7 +4233,8 @@
    ],
    "bio": "Hot Milk is a rock act from United Kingdom, active since 2018. Manchester, UK. If you like Story Of The Year, you'll want to be there.",
    "similar_you_listen": [
-    "Story Of The Year"
+    "All Time Low",
+    "Silverstein"
    ],
    "similar_general": [
     "All Time Low",
@@ -4282,18 +4265,16 @@
   },
   {
    "name": "Good Sleepy",
-   "score": 3.5,
-   "bucket": "High match",
-   "match_kind": "similar",
-   "why": "Sits right next to artists you love.",
+   "score": 4.7,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played Good Sleepy 7 times this year.",
    "genres": [
     "alternative"
    ],
    "raw_tags": [],
    "bio": "Good Sleepy is a alternative act. If you like Free Throw, you'll want to be there.",
-   "similar_you_listen": [
-    "Free Throw"
-   ],
+   "similar_you_listen": [],
    "similar_general": [
     "Midwest Pen Pals",
     "Trsh",
@@ -4321,10 +4302,10 @@
   },
   {
    "name": "Jutes",
-   "score": 2.0,
-   "bucket": "Long shot",
-   "match_kind": "scene",
-   "why": "Adjacent to bands you're into.",
+   "score": 3.4,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Similar to The Home Team, who you listen to.",
    "genres": [
     "pop",
     "hip hop"
@@ -4338,7 +4319,9 @@
     "life"
    ],
    "bio": "Jutes is a pop act from Toronto.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "The Home Team"
+   ],
    "similar_general": [
     "The Home Team",
     "Sleep Token",
@@ -4366,16 +4349,20 @@
   },
   {
    "name": "Honey Revenge",
-   "score": 2.0,
-   "bucket": "Long shot",
-   "match_kind": "scene",
-   "why": "Adjacent to bands you're into.",
+   "score": 4.2,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've listened to Honey Revenge a couple of times.",
    "genres": [
     "alternative"
    ],
    "raw_tags": [],
    "bio": "Honey Revenge is a alternative act from California, active since 2021. 2020s California pop-rock duo.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Hot Milk",
+    "Stand Atlantic",
+    "Beauty School Dropout"
+   ],
    "similar_general": [
     "Arrows in Action",
     "Hot Milk",
@@ -4403,10 +4390,10 @@
   },
   {
    "name": "Suicide Silence",
-   "score": 1.5,
-   "bucket": "Long shot",
-   "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've played Suicide Silence once this year.",
    "genres": [
     "metalcore",
     "metal"
@@ -4418,7 +4405,10 @@
     "nu metal"
    ],
    "bio": "Suicide Silence is a metalcore act from United States, active since 2002.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Thy Art Is Murder",
+    "Whitechapel"
+   ],
    "similar_general": [
     "Chelsea Grin",
     "Slaughter to Prevail",
@@ -4450,10 +4440,10 @@
   },
   {
    "name": "Sleeping With Sirens",
-   "score": 1.5,
-   "bucket": "Long shot",
-   "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Similar to Dance Gavin Dance, Escape the Fate, who you listen to.",
    "genres": [
     "pop punk",
     "punk",
@@ -4468,7 +4458,11 @@
     "alternative rock"
    ],
    "bio": "Sleeping With Sirens is a pop punk act from United States, active since 2009.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Dance Gavin Dance",
+    "Escape the Fate",
+    "Falling In Reverse"
+   ],
    "similar_general": [
     "Dance Gavin Dance",
     "Escape the Fate",
@@ -4501,10 +4495,10 @@
   },
   {
    "name": "3OH!3",
-   "score": 1.5,
-   "bucket": "Long shot",
-   "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "score": 4.2,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've listened to 3OH!3 a couple of times.",
    "genres": [
     "rock",
     "pop",
@@ -4519,7 +4513,9 @@
     "pop rock"
    ],
    "bio": "3OH!3 is a rock act from United States, active since 2004.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Panic! At the Disco"
+   ],
    "similar_general": [
     "Cobra Starship",
     "Brokencyde",
@@ -4547,10 +4543,10 @@
   },
   {
    "name": "División Minúscula",
-   "score": 1.5,
-   "bucket": "Long shot",
-   "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "score": 4.7,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played División Minúscula 7 times this year.",
    "genres": [
     "punk",
     "rock",
@@ -4597,10 +4593,10 @@
   },
   {
    "name": "Grandson",
-   "score": 1.5,
-   "bucket": "Long shot",
-   "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "score": 3.4,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Similar to Bohnes, who you listen to.",
    "genres": [
     "metal",
     "rock",
@@ -4615,7 +4611,9 @@
     "politically charged"
    ],
    "bio": "Grandson is a metal act from Canada, active since 1993.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Bohnes"
+   ],
    "similar_general": [
     "Bohnes",
     "Arrested Youth",
@@ -4646,10 +4644,10 @@
   },
   {
    "name": "Jinjer",
-   "score": 1.5,
-   "bucket": "Long shot",
-   "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've played Jinjer once this year.",
    "genres": [
     "metalcore",
     "hardcore",
@@ -4699,10 +4697,10 @@
   },
   {
    "name": "Set It Off",
-   "score": 1.5,
-   "bucket": "Long shot",
+   "score": 1.0,
+   "bucket": "Discovery",
    "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "why": "Matches genres you listen to.",
    "genres": [
     "pop punk",
     "punk",
@@ -4749,9 +4747,9 @@
   {
    "name": "Hot Chelle Rae",
    "score": 1.5,
-   "bucket": "Long shot",
-   "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "bucket": "Discovery",
+   "match_kind": "direct-listen",
+   "why": "You've played Hot Chelle Rae once this year.",
    "genres": [
     "pop"
    ],
@@ -4761,7 +4759,9 @@
     "teen pop"
    ],
    "bio": "Hot Chelle Rae is a pop act from United States, active since 2005.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Kelly Clarkson"
+   ],
    "similar_general": [
     "Owl City",
     "Hedley",
@@ -4789,10 +4789,10 @@
   },
   {
    "name": "Breathe Carolina",
-   "score": 1.5,
-   "bucket": "Long shot",
+   "score": 1.0,
+   "bucket": "Discovery",
    "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "why": "Matches genres you listen to.",
    "genres": [
     "emo",
     "post-hardcore",
@@ -4838,10 +4838,10 @@
   },
   {
    "name": "The Ghost Inside",
-   "score": 1.5,
-   "bucket": "Long shot",
-   "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "score": 4.4,
+   "bucket": "Must see",
+   "match_kind": "similar",
+   "why": "Similar to Fit For A King, Stick To Your Guns, who you listen to.",
    "genres": [
     "punk",
     "post-hardcore",
@@ -4855,7 +4855,12 @@
     "melodic hardcore"
    ],
    "bio": "The Ghost Inside is a punk act from United States, active since 2006.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Fit For A King",
+    "Stick To Your Guns",
+    "August Burns Red",
+    "Attila"
+   ],
    "similar_general": [
     "Fit For A King",
     "Wage War",
@@ -4888,10 +4893,10 @@
   },
   {
    "name": "Attila",
-   "score": 1.5,
-   "bucket": "Long shot",
-   "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played Attila 4 times this year.",
    "genres": [
     "metalcore",
     "hardcore",
@@ -4904,7 +4909,11 @@
     "hardcore"
    ],
    "bio": "Attila is a metalcore act from United States, active since 2005. US metalcore band.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "August Burns Red",
+    "As I Lay Dying",
+    "Fit For A King"
+   ],
    "similar_general": [
     "Caliban",
     "August Burns Red",
@@ -4936,10 +4945,10 @@
   },
   {
    "name": "Upon a Burning Body",
-   "score": 1.5,
-   "bucket": "Long shot",
-   "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "score": 3.7,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Similar to Attila, Whitechapel, who you listen to.",
    "genres": [
     "metalcore",
     "hardcore",
@@ -4952,7 +4961,10 @@
     "deathcore"
    ],
    "bio": "Upon a Burning Body is a metalcore act from United States, active since 2005.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Attila",
+    "Whitechapel"
+   ],
    "similar_general": [
     "Attila",
     "Emmure",
@@ -4985,10 +4997,10 @@
   },
   {
    "name": "Nova Twins",
-   "score": 1.5,
-   "bucket": "Long shot",
-   "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "score": 3.7,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Similar to Poppy, Dead Poet Society, who you listen to.",
    "genres": [
     "punk",
     "metal",
@@ -5003,7 +5015,10 @@
     "punk rock"
    ],
    "bio": "Nova Twins is a punk act from United Kingdom, active since 2014.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Poppy",
+    "Dead Poet Society"
+   ],
    "similar_general": [
     "Poppy",
     "Cassyette",
@@ -5035,10 +5050,10 @@
   },
   {
    "name": "Letlive.",
-   "score": 1.5,
-   "bucket": "Long shot",
-   "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "score": 4.7,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played Letlive. 6 times this year.",
    "genres": [
     "punk",
     "emo",
@@ -5053,7 +5068,9 @@
     "emo"
    ],
    "bio": "Letlive. is a punk act from United States, active since 2002.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Ice Nine Kills"
+   ],
    "similar_general": [
     "DON BROCO",
     "Bury Tomorrow",
@@ -5087,10 +5104,10 @@
   },
   {
    "name": "The Aggrolites",
-   "score": 1.5,
-   "bucket": "Long shot",
-   "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "score": 4.2,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've listened to The Aggrolites a couple of times.",
    "genres": [
     "ska",
     "rock",
@@ -5103,7 +5120,9 @@
     "classic pop and rock"
    ],
    "bio": "The Aggrolites is a ska act from United States, active since 2002. US reggae band.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Hepcat"
+   ],
    "similar_general": [
     "The Slackers",
     "Hepcat",
@@ -5133,10 +5152,10 @@
   },
   {
    "name": "Save Ferris",
-   "score": 1.5,
-   "bucket": "Long shot",
-   "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "score": 4.2,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've listened to Save Ferris a couple of times.",
    "genres": [
     "punk",
     "ska"
@@ -5147,7 +5166,9 @@
     "third wave ska"
    ],
    "bio": "Save Ferris is a punk act from United States, active since 1995. USA ska punk.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Streetlight Manifesto"
+   ],
    "similar_general": [
     "Reel Big Fish",
     "The Mighty Mighty Bosstones",
@@ -5178,10 +5199,10 @@
   },
   {
    "name": "Caskets",
-   "score": 1.5,
-   "bucket": "Long shot",
-   "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played Caskets 4 times this year.",
    "genres": [
     "post-hardcore",
     "metalcore",
@@ -5228,10 +5249,10 @@
   },
   {
    "name": "Deathbyromy",
-   "score": 1.5,
-   "bucket": "Long shot",
-   "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've played Deathbyromy once this year.",
    "genres": [
     "rock",
     "pop",
@@ -5246,7 +5267,10 @@
     "electropop"
    ],
    "bio": "Deathbyromy is a rock act from United States, active since 1999.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Vana",
+    "Poppy"
+   ],
    "similar_general": [
     "Vana",
     "Poppy",
@@ -5274,10 +5298,10 @@
   },
   {
    "name": "Hepcat",
-   "score": 1.5,
-   "bucket": "Long shot",
-   "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've played Hepcat once this year.",
    "genres": [
     "ska",
     "rock"
@@ -5287,7 +5311,9 @@
     "rocksteady"
    ],
    "bio": "Hepcat is a ska act from United States, active since 1989.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "The Aggrolites"
+   ],
    "similar_general": [
     "The Slackers",
     "The Aggrolites",
@@ -5317,10 +5343,10 @@
   },
   {
    "name": "Girlfriends",
-   "score": 1.5,
-   "bucket": "Long shot",
-   "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've played Girlfriends once this year.",
    "genres": [
     "pop punk",
     "punk",
@@ -5330,7 +5356,9 @@
     "pop punk"
    ],
    "bio": "Girlfriends is a pop punk act from Riverside, active since 2020. Pop punk duo from California.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "KennyHoopla"
+   ],
    "similar_general": [
     "Mod Sun",
     "jxdn",
@@ -5360,10 +5388,10 @@
   },
   {
    "name": "DRAIN",
-   "score": 1.5,
-   "bucket": "Long shot",
-   "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "score": 3.4,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Similar to Kublai Khan TX, who you listen to.",
    "genres": [
     "punk",
     "hardcore",
@@ -5375,7 +5403,9 @@
     "agro"
    ],
    "bio": "DRAIN is a punk act from Santa Cruz, active since 2014. Santa Cruz hardcore band.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Kublai Khan TX"
+   ],
    "similar_general": [
     "Malevolence",
     "Harm's Way",
@@ -5406,10 +5436,10 @@
   },
   {
    "name": "Aries",
-   "score": 1.5,
-   "bucket": "Long shot",
+   "score": 1.0,
+   "bucket": "Discovery",
    "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "why": "Matches genres you listen to.",
    "genres": [
     "pop",
     "hip hop"
@@ -5448,10 +5478,10 @@
   },
   {
    "name": "Jiluka",
-   "score": 1.5,
-   "bucket": "Long shot",
-   "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played Jiluka 5 times this year.",
    "genres": [
     "metalcore",
     "metal",
@@ -5497,10 +5527,10 @@
   },
   {
    "name": "Vana",
-   "score": 1.5,
-   "bucket": "Long shot",
-   "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "score": 4.2,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've listened to Vana a couple of times.",
    "genres": [
     "metal",
     "rock",
@@ -5514,7 +5544,10 @@
     "darkcore"
    ],
    "bio": "Vana is a metal act from Auckland. Singer and rock guitarist from New Zealand.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "DeathbyRomy",
+    "Poppy"
+   ],
    "similar_general": [
     "DeathbyRomy",
     "Poppy",
@@ -5544,10 +5577,10 @@
   },
   {
    "name": "BEAUTY SCHOOL DROPOUT",
-   "score": 1.5,
-   "bucket": "Long shot",
-   "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played BEAUTY SCHOOL DROPOUT 4 times this year.",
    "genres": [
     "rock"
    ],
@@ -5555,7 +5588,9 @@
     "rock"
    ],
    "bio": "BEAUTY SCHOOL DROPOUT is a rock act from Los Angeles, active since 2020. Los Angeles-based rock group.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Magnolia Park"
+   ],
    "similar_general": [
     "Jutes",
     "Magnolia Park",
@@ -5583,10 +5618,10 @@
   },
   {
    "name": "Chase Petra",
-   "score": 1.5,
-   "bucket": "Long shot",
-   "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played Chase Petra 3 times this year.",
    "genres": [
     "pop punk",
     "punk",
@@ -5627,10 +5662,10 @@
   },
   {
    "name": "Lower Definition",
-   "score": 1.5,
-   "bucket": "Long shot",
+   "score": 1.0,
+   "bucket": "Discovery",
    "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "why": "Matches genres you listen to.",
    "genres": [
     "punk",
     "post-hardcore",
@@ -5675,10 +5710,10 @@
   },
   {
    "name": "Good Terms",
-   "score": 1.5,
-   "bucket": "Long shot",
-   "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've played Good Terms once this year.",
    "genres": [
     "punk",
     "emo"
@@ -5688,7 +5723,9 @@
     "punk"
    ],
    "bio": "Good Terms is a punk act from Los Angeles. Emo Band.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Magnolia Park"
+   ],
    "similar_general": [
     "Being As An Ocean",
     "The Amity Affliction",
@@ -5719,10 +5756,10 @@
   },
   {
    "name": "Who Cares",
-   "score": 1.5,
-   "bucket": "Long shot",
-   "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "score": 4.5,
+   "bucket": "Must see",
+   "match_kind": "direct-listen",
+   "why": "You've played Who Cares 4 times this year.",
    "genres": [
     "rock"
    ],
@@ -5764,10 +5801,10 @@
   },
   {
    "name": "Initiate",
-   "score": 1.5,
-   "bucket": "Long shot",
-   "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've played Initiate once this year.",
    "genres": [
     "punk",
     "hardcore"
@@ -5777,7 +5814,9 @@
     "hardcore punk"
    ],
    "bio": "Initiate is a punk act from California, active since 2016. Hardcore from California.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Haywire 617"
+   ],
    "similar_general": [
     "Have Heart",
     "Incendiary",
@@ -5808,10 +5847,10 @@
   },
   {
    "name": "Start Today",
-   "score": 1.5,
-   "bucket": "Long shot",
+   "score": 1.0,
+   "bucket": "Discovery",
    "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "why": "Matches genres you listen to.",
    "genres": [
     "punk",
     "hardcore"
@@ -5850,10 +5889,10 @@
   },
   {
    "name": "Gritty in Pink Jam",
-   "score": 1.5,
-   "bucket": "Long shot",
+   "score": 1.0,
+   "bucket": "Discovery",
    "match_kind": "genre",
-   "why": "Matches genres you gravitate toward.",
+   "why": "Matches genres you listen to.",
    "genres": [
     "rock",
     "pop",
@@ -5896,10 +5935,10 @@
   },
   {
    "name": "G-Eazy",
-   "score": 1.0,
+   "score": 1.5,
    "bucket": "Discovery",
-   "match_kind": "none",
-   "why": "Outside your usual lane — a wildcard.",
+   "match_kind": "direct-listen",
+   "why": "You've played G-Eazy once this year.",
    "genres": [
     "hip hop"
    ],
@@ -5936,10 +5975,10 @@
   },
   {
    "name": "Gym Class Heroes",
-   "score": 1.0,
-   "bucket": "Discovery",
-   "match_kind": "none",
-   "why": "Outside your usual lane — a wildcard.",
+   "score": 4.2,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've listened to Gym Class Heroes a couple of times.",
    "genres": [
     "pop",
     "hip hop"
@@ -5979,10 +6018,10 @@
   },
   {
    "name": "Yelawolf",
-   "score": 1.0,
+   "score": 1.5,
    "bucket": "Discovery",
-   "match_kind": "none",
-   "why": "Outside your usual lane — a wildcard.",
+   "match_kind": "direct-listen",
+   "why": "You've played Yelawolf once this year.",
    "genres": [
     "hip hop"
    ],
@@ -5992,7 +6031,9 @@
     "phone skit"
    ],
    "bio": "Yelawolf is a hip hop act from United States, active since 1979. US rapper.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Eminem"
+   ],
    "similar_general": [
     "Tech N9ne",
     "Chris Webby",
@@ -6020,16 +6061,19 @@
   },
   {
    "name": "The Cab",
-   "score": 1.0,
-   "bucket": "Discovery",
-   "match_kind": "none",
-   "why": "Outside your usual lane — a wildcard.",
+   "score": 4.2,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've listened to The Cab a couple of times.",
    "genres": [
     "alternative"
    ],
    "raw_tags": [],
    "bio": "The Cab is a alternative act from United States, active since 2004.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Fall Out Boy",
+    "Panic! At the Disco"
+   ],
    "similar_general": [
     "Against The Current",
     "Marianas Trench",
@@ -6057,10 +6101,10 @@
   },
   {
    "name": "Allison",
-   "score": 1.0,
-   "bucket": "Discovery",
-   "match_kind": "none",
-   "why": "Outside your usual lane — a wildcard.",
+   "score": 4.2,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've listened to Allison a couple of times.",
    "genres": [
     "alternative"
    ],
@@ -6093,8 +6137,8 @@
    "name": "The Expendables",
    "score": 1.0,
    "bucket": "Discovery",
-   "match_kind": "none",
-   "why": "Outside your usual lane — a wildcard.",
+   "match_kind": "genre",
+   "why": "Matches genres you listen to.",
    "genres": [
     "alternative"
    ],
@@ -6128,10 +6172,10 @@
   },
   {
    "name": "Shakewell",
-   "score": 1.0,
+   "score": 1.5,
    "bucket": "Discovery",
-   "match_kind": "none",
-   "why": "Outside your usual lane — a wildcard.",
+   "match_kind": "direct-listen",
+   "why": "You've played Shakewell once this year.",
    "genres": [
     "hip hop"
    ],
@@ -6139,7 +6183,9 @@
     "hip hop"
    ],
    "bio": "Shakewell is a hip hop act from United States. Rapper.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "$uicideboy$"
+   ],
    "similar_general": [
     "$uicideboy$",
     "Pouya",
@@ -6167,10 +6213,10 @@
   },
   {
    "name": "Sammy Adams",
-   "score": 1.0,
-   "bucket": "Discovery",
-   "match_kind": "none",
-   "why": "Outside your usual lane — a wildcard.",
+   "score": 3.4,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Similar to Bryce Vine, who you listen to.",
    "genres": [
     "pop",
     "hip hop"
@@ -6180,7 +6226,9 @@
     "hip hop"
    ],
    "bio": "Sammy Adams is a pop act from United States, active since 1987.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Bryce Vine"
+   ],
    "similar_general": [
     "B.o.B",
     "Flo Rida",
@@ -6208,10 +6256,10 @@
   },
   {
    "name": "Carolesdaughter",
-   "score": 1.0,
-   "bucket": "Discovery",
-   "match_kind": "none",
-   "why": "Outside your usual lane — a wildcard.",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've played Carolesdaughter once this year.",
    "genres": [
     "pop",
     "alternative"
@@ -6248,16 +6296,18 @@
   },
   {
    "name": "Red Leather",
-   "score": 1.0,
-   "bucket": "Discovery",
-   "match_kind": "none",
-   "why": "Outside your usual lane — a wildcard.",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've played Red Leather once this year.",
    "genres": [
     "alternative"
    ],
    "raw_tags": [],
    "bio": "Red Leather is a alternative act from United States, active since 2022.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "VOILÀ"
+   ],
    "similar_general": [
     "Connor Kauffman",
     "Stellar",
@@ -6285,16 +6335,18 @@
   },
   {
    "name": "Wesghost",
-   "score": 1.0,
-   "bucket": "Discovery",
-   "match_kind": "none",
-   "why": "Outside your usual lane — a wildcard.",
+   "score": 3.4,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Similar to VOILÀ, who you listen to.",
    "genres": [
     "alternative"
    ],
    "raw_tags": [],
    "bio": "Wesghost is a alternative act from United States.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "VOILÀ"
+   ],
    "similar_general": [
     "Mylie Taylor",
     "Diggy Graves",
@@ -6324,8 +6376,8 @@
    "name": "Lø Spirit",
    "score": 1.0,
    "bucket": "Discovery",
-   "match_kind": "none",
-   "why": "Outside your usual lane — a wildcard.",
+   "match_kind": "genre",
+   "why": "Matches genres you listen to.",
    "genres": [
     "alternative"
    ],
@@ -6361,8 +6413,8 @@
    "name": "Peelingflesh",
    "score": 1.0,
    "bucket": "Discovery",
-   "match_kind": "none",
-   "why": "Outside your usual lane — a wildcard.",
+   "match_kind": "genre",
+   "why": "Matches genres you listen to.",
    "genres": [
     "metal"
    ],
@@ -6399,10 +6451,10 @@
   },
   {
    "name": "LØLØ",
-   "score": 1.0,
-   "bucket": "Discovery",
-   "match_kind": "none",
-   "why": "Outside your usual lane — a wildcard.",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've played LØLØ once this year.",
    "genres": [
     "alternative"
    ],
@@ -6436,10 +6488,10 @@
   },
   {
    "name": "Delux",
-   "score": 1.0,
-   "bucket": "Discovery",
-   "match_kind": "none",
-   "why": "Outside your usual lane — a wildcard.",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've played Delux once this year.",
    "genres": [
     "alternative"
    ],
@@ -6473,16 +6525,18 @@
   },
   {
    "name": "Alemeda",
-   "score": 1.0,
-   "bucket": "Discovery",
-   "match_kind": "none",
-   "why": "Outside your usual lane — a wildcard.",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've played Alemeda once this year.",
    "genres": [
     "alternative"
    ],
    "raw_tags": [],
    "bio": "Alemeda is a alternative act from United States.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Lily Allen"
+   ],
    "similar_general": [
     "Lily Allen",
     "Absolutely",
@@ -6510,16 +6564,18 @@
   },
   {
    "name": "Holy Wars",
-   "score": 1.0,
-   "bucket": "Discovery",
-   "match_kind": "none",
-   "why": "Outside your usual lane — a wildcard.",
+   "score": 3.4,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Similar to Poppy, who you listen to.",
    "genres": [
     "alternative"
    ],
    "raw_tags": [],
    "bio": "Holy Wars is a alternative act from United States, active since 2013.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Poppy"
+   ],
    "similar_general": [
     "Cassyette",
     "Lilith Czar",
@@ -6547,16 +6603,19 @@
   },
   {
    "name": "People R Ugly",
-   "score": 1.0,
-   "bucket": "Discovery",
-   "match_kind": "none",
-   "why": "Outside your usual lane — a wildcard.",
+   "score": 3.7,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Similar to mgk, Games We Play, who you listen to.",
    "genres": [
     "alternative"
    ],
    "raw_tags": [],
    "bio": "People R Ugly is a alternative act.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "mgk",
+    "Games We Play"
+   ],
    "similar_general": [
     "The Maine",
     "Mod Sun",
@@ -6584,10 +6643,10 @@
   },
   {
    "name": "Sace6",
-   "score": 1.0,
-   "bucket": "Discovery",
-   "match_kind": "none",
-   "why": "Outside your usual lane — a wildcard.",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've played Sace6 once this year.",
    "genres": [
     "alternative"
    ],
@@ -6621,10 +6680,10 @@
   },
   {
    "name": "Slay Squad",
-   "score": 1.0,
-   "bucket": "Discovery",
-   "match_kind": "none",
-   "why": "Outside your usual lane — a wildcard.",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've played Slay Squad once this year.",
    "genres": [
     "alternative"
    ],
@@ -6658,10 +6717,10 @@
   },
   {
    "name": "DENM",
-   "score": 1.0,
-   "bucket": "Discovery",
-   "match_kind": "none",
-   "why": "Outside your usual lane — a wildcard.",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've played DENM once this year.",
    "genres": [
     "rock",
     "pop",
@@ -6704,16 +6763,19 @@
   },
   {
    "name": "XComm",
-   "score": 1.0,
-   "bucket": "Discovery",
-   "match_kind": "none",
-   "why": "Outside your usual lane — a wildcard.",
+   "score": 3.7,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Similar to Turnstile, Ecca Vandal, who you listen to.",
    "genres": [
     "alternative"
    ],
    "raw_tags": [],
    "bio": "XComm is a alternative act from United States.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Turnstile",
+    "Ecca Vandal"
+   ],
    "similar_general": [
     "Angel Du$t",
     "Turnstile",
@@ -6741,10 +6803,10 @@
   },
   {
    "name": "Rosecoloredworld",
-   "score": 1.0,
-   "bucket": "Discovery",
-   "match_kind": "none",
-   "why": "Outside your usual lane — a wildcard.",
+   "score": 4.2,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've listened to Rosecoloredworld a couple of times.",
    "genres": [
     "alternative"
    ],
@@ -6778,10 +6840,10 @@
   },
   {
    "name": "Tillie",
-   "score": 1.0,
-   "bucket": "Discovery",
-   "match_kind": "none",
-   "why": "Outside your usual lane — a wildcard.",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've played Tillie once this year.",
    "genres": [
     "rock",
     "pop",
@@ -6793,7 +6855,10 @@
     "alternative pop"
    ],
    "bio": "Tillie is a rock act.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Banshee",
+    "DeathbyRomy"
+   ],
    "similar_general": [
     "FKA Rayne",
     "Banshee",
@@ -6823,8 +6888,8 @@
    "name": "Surfer Girl",
    "score": 1.0,
    "bucket": "Discovery",
-   "match_kind": "none",
-   "why": "Outside your usual lane — a wildcard.",
+   "match_kind": "genre",
+   "why": "Matches genres you listen to.",
    "genres": [
     "alternative"
    ],
@@ -6858,10 +6923,10 @@
   },
   {
    "name": "Villanelle",
-   "score": 1.0,
-   "bucket": "Discovery",
-   "match_kind": "none",
-   "why": "Outside your usual lane — a wildcard.",
+   "score": 4.0,
+   "bucket": "High match",
+   "match_kind": "direct-listen",
+   "why": "You've played Villanelle once this year.",
    "genres": [
     "alternative"
    ],
@@ -6895,16 +6960,18 @@
   },
   {
    "name": "Brayton",
-   "score": 1.0,
-   "bucket": "Discovery",
-   "match_kind": "none",
-   "why": "Outside your usual lane — a wildcard.",
+   "score": 3.4,
+   "bucket": "High match",
+   "match_kind": "similar",
+   "why": "Similar to Mercury, who you listen to.",
    "genres": [
     "alternative"
    ],
    "raw_tags": [],
    "bio": "Brayton is a alternative act.",
-   "similar_you_listen": [],
+   "similar_you_listen": [
+    "Mercury"
+   ],
    "similar_general": [
     "Julia Wolf",
     "Mercury",
