@@ -7,6 +7,7 @@ import type { Band, BandStatus } from "@/types";
 import { Nav } from "@/components/Nav";
 import { PicksSection } from "@/components/PicksSection";
 import { BandDetail } from "@/components/BandDetail";
+import { DayFilter, shortDayLabel } from "@/components/DayFilter";
 
 const SECTIONS: { status: BandStatus; label: string; activeChip: string }[] = [
   { status: "must", label: "Must see", activeChip: "bg-rose-600 text-white ring-rose-600" },
@@ -33,7 +34,13 @@ export default function PicksPage() {
     look: true,
     skip: true,
   });
+  // Sat/Sun day filter — null = all days (default). Schedule data, taste-
+  // independent (PRD §11.4); reads each band's pred_day, never writes.
+  const [day, setDay] = useState<string | null>(null);
   const [selected, setSelected] = useState<Band | null>(null);
+
+  const days = data?.schedule?.days ?? [];
+  const matchesDay = (b: Band) => day === null || b.pred_day === day;
 
   const byName = useMemo(() => {
     const m = new Map<string, Band>();
@@ -64,6 +71,25 @@ export default function PicksPage() {
     }
     return out;
   }, [data, status, order, byName]);
+
+  // Persist a reorder. With no day filter the section's full order is what the
+  // user reordered. Under a day filter the section only renders one day's picks,
+  // so we re-weave the new visible order back into the full order — the hidden
+  // day's picks keep their saved positions (a day filter must never drop or
+  // scramble the other day).
+  const persistReorder = (s: BandStatus, visibleOrder: string[]) => {
+    if (day === null) {
+      setSectionOrder(s, visibleOrder);
+      return;
+    }
+    const full = sectionBands[s].map((b) => b.name);
+    const matchSet = new Set(
+      sectionBands[s].filter(matchesDay).map((b) => b.name),
+    );
+    const q = [...visibleOrder];
+    const merged = full.map((n) => (matchSet.has(n) ? (q.shift() as string) : n));
+    setSectionOrder(s, merged);
+  };
 
   const totalPicks = Object.keys(status).length;
 
@@ -98,7 +124,7 @@ export default function PicksPage() {
         {/* Status-visibility chips — the primary control row. Count stacked under
             each label so chips stay narrow enough to keep all four on one row at
             375px (the grid wraps gracefully on anything narrower). */}
-        <div className="grid grid-cols-4 gap-1.5 px-4 pb-3">
+        <div className="grid grid-cols-4 gap-1.5 px-4 pb-2">
           {SECTIONS.map(({ status: s, label, activeChip }) => (
             <button
               key={s}
@@ -115,6 +141,13 @@ export default function PicksPage() {
             </button>
           ))}
         </div>
+        {/* Sat/Sun day filter — schedule data, filters each status section by
+            pred_day. Composes with the status-visibility chips above. */}
+        {days.length > 0 && (
+          <div className="px-4 pb-3">
+            <DayFilter days={days} value={day} onChange={setDay} />
+          </div>
+        )}
       </header>
 
       <main className="flex-1">
@@ -138,21 +171,23 @@ export default function PicksPage() {
         )}
         {data &&
           totalPicks > 0 &&
-          SECTIONS.map(
-            ({ status: s, label }) =>
-              shown[s] && (
-                <PicksSection
-                  key={s}
-                  label={label}
-                  status={s}
-                  bands={sectionBands[s]}
-                  hasManualOrder={(order[s]?.length ?? 0) > 0}
-                  onReorder={(names) => setSectionOrder(s, names)}
-                  onReset={() => resetSectionOrder(s)}
-                  onOpen={setSelected}
-                />
-              ),
-          )}
+          SECTIONS.map(({ status: s, label }) => {
+            if (!shown[s]) return null;
+            const visibleBands = sectionBands[s].filter(matchesDay);
+            return (
+              <PicksSection
+                key={s}
+                label={label}
+                status={s}
+                bands={visibleBands}
+                hasManualOrder={(order[s]?.length ?? 0) > 0}
+                emptyDayLabel={day === null ? null : shortDayLabel(day)}
+                onReorder={(names) => persistReorder(s, names)}
+                onReset={() => resetSectionOrder(s)}
+                onOpen={setSelected}
+              />
+            );
+          })}
       </main>
 
       {selected && (

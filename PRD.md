@@ -37,13 +37,14 @@ There is **no database**. The entire data layer is one static file: `public/band
   "scoring": { "windows": [...], "method": "...", "note": "..." },
   "all_genres": ["alternative","emo","metal", ...],   // 13 filterable parents
   "buckets": ["In your rotation","Must see","High match","Long shot","Discovery"],
-  "schedule": {                                        // PREDICTED, not official (§11)
+  "schedule": {                                        // days OFFICIAL; stage/time PREDICTED (§11)
     "status": "PREDICTED",
-    "disclaimer": "...not official; real times post on-site...",
+    "disclaimer": "...days now official; stage/times not official; real times post on-site...",
     "method": "...how the prediction was derived...",
     "stages": ["Mainstage","Side Stage","Discovery Stage","Local/Opener Stage"],
     "days": ["Sat Jul 25","Sun Jul 26"],
-    "real_times_available": false                      // flips true when real times entered
+    "real_times_available": false,                     // flips true when real times entered
+    "days_official": true                              // Sat/Sun split is the released day-by-day lineup (optional; older files lack it)
   },
   "bands": [ Band, ... ]
 }
@@ -125,7 +126,8 @@ Reference mockup behavior was approved in chat. Build to this:
   - Search input — filters by `name` (case-insensitive substring). Live/onChange.
   - Genre filter — `<select>` populated from `all_genres`; "All genres" default. A band matches if the selected genre is in its `genres` array.
   - Sort `<select>`: **Match (high→low)** [default], Name (A–Z), Genre. Match sort ties broken by `fans` desc.
-  - A **"show only my picks"** toggle — when on, shows only bands with any saved status; composes with search/genre/sort and the live count. (Implemented; supersedes the old optional status-filter idea. Full per-status browsing lives on `/picks`, §5.4.)
+  - A **Sat/Sun day filter** (`DayFilter`) — a compact 3-way toggle **All / Sat 25 / Sun 26** (default **All**). Reads each band's `pred_day` (schedule data, taste-independent); when set to a day, only that day's bands show and the live count reflects the filtered set. **Composes** with search/genre/sort/only-picks (an additional filter, not a replacement). Day labels are read from `schedule.days` and shortened for mobile; a band with no `pred_day` (shouldn't happen — all 149 carry one) never matches a specific day, so it's simply hidden under Sat/Sun, never a crash.
+  - A **"show only my picks"** toggle — when on, shows only bands with any saved status; composes with search/genre/sort/day and the live count. (Implemented; supersedes the old optional status-filter idea. Full per-status browsing lives on `/picks`, §5.4.)
 - **Rows:** each band row shows avatar (`image`, fallback to initials), `name`, genre line (`genres` joined), a star rendering of `score`, a colored score chip, and the user's status marker if set. Click/tap opens detail.
   - **Score chip color:** ≥4.5 green, 3.5–4.0 amber, <3.5 neutral/gray. (Match the buckets, not arbitrary cutoffs — `In your rotation`/`Must see` = green, `High match` = amber, rest = gray.)
 - **Grouping (optional but recommended):** group rows under `bucket` headers when sorted by Match. When sorted by Name/Genre, flat list.
@@ -148,6 +150,7 @@ Reference mockup behavior was approved in chat. Build to this:
 ### 5.4 My Picks view (`/picks`)
 - Reads `warped2026:status`; shows picked bands grouped into **Must see / Maybe / Look into / Skip** sections, in that order. Each section has its own reorder (drag + arrows), "Reset to score order", and empty state ("Nothing marked [status] yet" — e.g. "Nothing marked Look into yet").
 - **Status-visibility toggles** (Must / Maybe / Look into / Skip chips — four now) at the top control which sections render — a view filter only; all on by default; does not change stored status.
+- **Sat/Sun day filter** (the same `DayFilter` All / Sat 25 / Sun 26 control, default **All**) sits under the status chips. When set to a day, each status section shows only the picks playing that day (by `pred_day`); a section with no picks for that day shows a "Nothing marked [status] for [day]" empty state. **Reorder under a day filter is safe:** the new visible order is re-woven back into the full saved section order, so the hidden day's picks keep their positions (a day filter never drops or scrambles the other day). Default **All** is unchanged behavior. Taste-independent — works the same logged in/out and with/without an uploaded profile.
 - **Reorder within a section:** drag the grip handle (Pointer Events — works with touch and mouse) or use the per-row up/down arrows (the touch-reliable fallback). Order persists to `warped2026:order` (§4.2). A per-section "Reset to score order" reverts to match-score order.
 - Rows reuse the list-view `BandRow` look and open the **same** detail modal (§5.2).
 - Empty states: a section with no bands shows "Nothing marked [status] yet"; with no picks at all, a friendly hint to mark bands on the Lineup.
@@ -166,7 +169,7 @@ Reference mockup behavior was approved in chat. Build to this:
 - **Band names contain punctuation** (`The Academy Is...`, `Drop Dead, Gorgeous`, `Letlive.`, `Bear Vs. Shark`). Slugify defensively if using routes; prefer matching by exact `name`.
 - **Status colors are rose / sky-blue / yellow / zinc** (must / maybe / look / skip) — *not* the green/amber the score chip uses. "Maybe" is sky-blue, so the yellow "Look into" is already clearly distinct from it (no amber-vs-yellow clash on the toggle). The one place yellow sits near amber is a list row, where the gold stars and an amber score chip share space with a yellow "Look" badge — they're kept apart by position and by using a brighter lemon-yellow (`yellow-400`) for status vs amber for score. When adding a fifth status, re-check this on a real row.
 - **The predicted schedule is TASTE-INDEPENDENT and must stay that way.** The `pred_*` fields and the `schedule` block are based on artist draw, not anyone's Spotify data, so the Schedule page (§11) reads them straight from `bands.json` and renders identically for the owner and any uploaded-profile viewer (verified: the rendered grid is byte-identical with and without a profile). It works because `rescoreBand`/`rescoreDataset` spread the original band/dataset (`{...band}` / `{...dataset}`), so the `pred_*` fields and `schedule` survive a re-score untouched — do **not** add the schedule to the "recomputed per-user" list (§10.2), and don't compute slots from the profile.
-- **`pred_*` are PREDICTED, never present them as official.** The Schedule page leads with a non-dismissable "PREDICTED — not official" banner (`schedule.disclaimer`). The day split (Sat vs Sun) is the lowest-confidence dimension — render it, but the disclaimer already covers the uncertainty; don't add UI that implies the day is certain. When real on-site times are entered later, `schedule.real_times_available` flips to `true` (see §11's swap-in plan).
+- **`pred_*` stage/time are PREDICTED, never present them as official.** The Schedule page leads with a non-dismissable "PREDICTED — not official" banner (`schedule.disclaimer`). **Days (Sat vs Sun) are now OFFICIAL** (`schedule.days_official: true`) — the released day-by-day lineup, no longer the lowest-confidence guess — so the Sat/Sun day toggle and the new Sat/Sun day filter on Lineup/Picks (§5.1, §5.4) read official day data. Stage and start-time remain heuristic predictions; the disclaimer wording reflects that ("days official, times predicted"). When real on-site times are entered later, `schedule.real_times_available` flips to `true` (see §11's swap-in plan).
 - **The upload modal must portal to `<body>`.** Its entry point (`ProfileBar`) lives inside the page's sticky header, whose `backdrop-blur` (a `backdrop-filter`) establishes a containing block for `position: fixed`. Rendered in place, the modal's `fixed inset-0` resolves against the *header* — not the viewport — and shoves the panel and its close button above the screen. `UploadProfileModal` therefore `createPortal`s to `document.body`; any future modal opened from inside a transformed/filtered/`backdrop-blur` ancestor needs the same.
 - **The favicon is generated, not hand-drawn.** `scripts/gen-favicon.mjs` is the single source of truth for the guitar shape and emits both `src/app/icon.svg` (primary, Next 16 file convention) and `src/app/favicon.ico` (3-size PNG-in-ICO fallback). Edit the geometry in that script and re-run `node scripts/gen-favicon.mjs`, then commit both outputs — don't hand-edit `favicon.ico`. Next auto-wires both via the App-Router file convention (no `metadata.icons` needed); a stray `favicon.ico` plus an `icon.svg` is the intended setup.
 - **Adding a status is backward-compatible by construction.** The status validator keys off `STATUSES` (a superset after each addition), so old localStorage survives. Removing or renaming a status is *not* safe the same way — stored values for the dropped key would be silently discarded on load.
@@ -254,8 +257,9 @@ A day-by-day, stage-by-stage view of **when each band is predicted to play**. Th
 
 ### 11.1 The data (baked into `bands.json`, read-only)
 - **Per band** (§3.2): `pred_stage`, `pred_day`, `pred_time` (display string), `pred_time_min` (minutes since midnight, the sort/conflict key), `pred_setlen_min`, `pred_confidence` (`high`/`medium`/`low`).
-- **Top-level `schedule` block** (§3.1): `status` (`"PREDICTED"`), `disclaimer`, `method`, `stages[]` (display order), `days[]` (display order), `real_times_available` (`false`).
-- **How it was derived** (`schedule.method`, for transparency): stage tier from artist draw (named-headliner status + Deezer fan count, streaming-only crossover acts dampened); day split balances draw across Sat/Sun; time slots spread each stage ~12:00 PM–10:30 PM, openers first, headliners closing. These are **read straight from the file** — the app never recomputes them.
+- **Top-level `schedule` block** (§3.1): `status` (`"PREDICTED"`), `disclaimer`, `method`, `stages[]` (display order), `days[]` (display order), `real_times_available` (`false`), and **`days_official`** (`true`).
+- **Days are now OFFICIAL.** As of the latest data swap, `pred_day` is the **released day-by-day lineup** (Warped published which bands play Saturday vs Sunday), and `schedule.days_official` is `true`. The disclaimer was updated to say *days are official, stage/time predictions remain*. The Sat/Sun split is no longer a guess. (Scoring fields — `score`/`bucket`/etc. — were unchanged by this swap; only the schedule fields were rebuilt within each official day.)
+- **How it was derived** (`schedule.method`, for transparency): **day from the official released lineup**; within each day, stage tier from artist draw (named-headliner status + Deezer fan count, streaming-only crossover acts dampened, press-named headliners promoted to Mainstage); time slots spread each stage ~12:00 PM–10:30 PM, openers first, headliners closing. These are **read straight from the file** — the app never recomputes them.
 
 ### 11.2 The page
 - **Header:** title + nav tab (Lineup / My Picks / Schedule) and a **day toggle** built from `schedule.days`.

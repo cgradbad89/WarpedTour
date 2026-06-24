@@ -1,7 +1,11 @@
 "use client";
 
-// Search + genre filter + sort controls for the list view, plus a "show only my
-// picks" toggle (PRD §5.1). 16px control text avoids iOS focus-zoom; ≥40px targets.
+// Search + genre filter + sort controls for the list view, plus a Sat/Sun day
+// filter and a "show only my picks" toggle (PRD §5.1). The day filter composes
+// with all the others (it's an additional filter, not a replacement). 16px
+// control text avoids iOS focus-zoom; ≥44px targets.
+
+import { DayFilter } from "./DayFilter";
 
 export type SortKey = "match" | "name" | "genre";
 
@@ -13,6 +17,9 @@ export function Controls({
   sort,
   onSort,
   allGenres,
+  days,
+  day,
+  onDay,
   onlyPicks,
   onOnlyPicks,
   pickCount,
@@ -25,6 +32,11 @@ export function Controls({
   sort: SortKey;
   onSort: (v: SortKey) => void;
   allGenres: string[];
+  /** Day labels from schedule.days; empty if the dataset has no schedule. */
+  days: string[];
+  /** Selected day (full label) or null for "All days". */
+  day: string | null;
+  onDay: (v: string | null) => void;
   onlyPicks: boolean;
   onOnlyPicks: (v: boolean) => void;
   pickCount: number;
@@ -75,6 +87,9 @@ export function Controls({
           <option value="genre">Genre</option>
         </select>
       </div>
+      {/* Sat/Sun day filter — schedule data, composes with search/genre/sort/
+          only-picks. Hidden if the dataset ships no schedule days. */}
+      <DayFilter days={days} value={day} onChange={onDay} />
       {/* Only-my-picks toggle (flex-grow) + Clear, side by side — Clear lives next
           to the filters it relates to, not floating in the nav zone. */}
       <div className="flex items-center gap-2">

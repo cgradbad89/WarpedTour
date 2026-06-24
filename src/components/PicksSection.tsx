@@ -36,6 +36,7 @@ export function PicksSection({
   status,
   bands,
   hasManualOrder,
+  emptyDayLabel = null,
   onReorder,
   onReset,
   onOpen,
@@ -44,6 +45,9 @@ export function PicksSection({
   status: BandStatus;
   bands: Band[];
   hasManualOrder: boolean;
+  /** Compact day label (e.g. "Sat 25") when a day filter is active; null = all
+   *  days. Drives the empty-state copy so it reads "for [day]" under a filter. */
+  emptyDayLabel?: string | null;
   onReorder: (names: string[]) => void;
   onReset: () => void;
   onOpen: (band: Band) => void;
@@ -121,7 +125,9 @@ export function PicksSection({
 
       {bands.length === 0 ? (
         <p className="px-4 py-4 text-sm text-muted-foreground">
-          Nothing marked {label} yet.
+          {emptyDayLabel
+            ? `Nothing marked ${label} for ${emptyDayLabel}.`
+            : `Nothing marked ${label} yet.`}
         </p>
       ) : (
         <ul ref={listRef}>

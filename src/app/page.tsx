@@ -17,8 +17,13 @@ export default function Home() {
   const [search, setSearch] = useState("");
   const [genre, setGenre] = useState("");
   const [sort, setSort] = useState<SortKey>("match");
+  const [day, setDay] = useState<string | null>(null);
   const [onlyPicks, setOnlyPicks] = useState(false);
   const [selected, setSelected] = useState<Band | null>(null);
+
+  // Schedule days drive the Sat/Sun filter (taste-independent; PRD §11.4). Empty
+  // if a dataset ever ships without a schedule block.
+  const days = data?.schedule?.days ?? [];
 
   const clearPicks = () => {
     if (pickCount === 0) return;
@@ -26,7 +31,9 @@ export default function Home() {
     clearAll();
   };
 
-  // Filter (search + genre + only-picks) then sort. Match-sort ties by fans desc.
+  // Filter (search + genre + day + only-picks) then sort. Match-sort ties by fans
+  // desc. The day filter reads pred_day; a band lacking it (shouldn't happen — all
+  // 149 carry one) never matches a specific day, so it's hidden under Sat/Sun.
   const visible = useMemo(() => {
     if (!data) return [];
     const q = search.trim().toLowerCase();
@@ -34,6 +41,7 @@ export default function Home() {
       (b) =>
         (q === "" || b.name.toLowerCase().includes(q)) &&
         (genre === "" || b.genres.includes(genre)) &&
+        (day === null || b.pred_day === day) &&
         (!onlyPicks || status[b.name] !== undefined),
     );
     const sorted = [...list];
@@ -49,7 +57,7 @@ export default function Home() {
       );
     }
     return sorted;
-  }, [data, search, genre, sort, onlyPicks, status]);
+  }, [data, search, genre, sort, day, onlyPicks, status]);
 
   // Group under bucket headers only when sorted by Match (PRD §5.1).
   const grouped = useMemo(() => {
@@ -99,6 +107,9 @@ export default function Home() {
             sort={sort}
             onSort={setSort}
             allGenres={data.all_genres}
+            days={days}
+            day={day}
+            onDay={setDay}
             onlyPicks={onlyPicks}
             onOnlyPicks={setOnlyPicks}
             pickCount={pickCount}

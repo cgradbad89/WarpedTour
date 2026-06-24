@@ -98,6 +98,11 @@ export interface Schedule {
   days: string[];
   /** False while these are predictions; true once real times are entered. */
   real_times_available: boolean;
+  /**
+   * True once the Sat/Sun day split is the OFFICIAL released day-by-day lineup
+   * (stage/time within each day stay predicted). Optional — older files lack it.
+   */
+  days_official?: boolean;
 }
 
 export interface EventInfo {
