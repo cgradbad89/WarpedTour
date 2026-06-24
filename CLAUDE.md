@@ -4,7 +4,7 @@
 
 - **Branch**: Work directly on `main`. If a branch is created automatically, merge it into `main` before pushing.
 - **Build**: Run `npm run build` after all changes. On failure, fix and retry. Stop after 3 consecutive failures — output the full error log and make no further changes.
-- **Test**: Run `npm test` after a passing build. Baseline: **36 tests** (`node --test` over `tests/`, dependency-free, Node ≥ 22 native TS — covers the CSV tokenizer, taste-CSV parser, the `scoring.ts` re-score port, and the `merge.ts` cloud-sync merge/coerce). Update this count when you add/remove tests.
+- **Test**: Run `npm test` after a passing build. Baseline: **41 tests** (`node --test` over `tests/`, dependency-free, Node ≥ 22 native TS — covers the CSV tokenizer, taste-CSV parser, the `scoring.ts` re-score port, the `merge.ts` cloud-sync merge/coerce, and the `spotifyExport.ts` export-ordering helper). Update this count when you add/remove tests.
 - **Commit**: Stage files by explicit path (`git add PRD.md public/bands.json src/...`). Never use `git add -A`. Commit and push only after build (and any tests) pass.
 - **No broken commits**: Do not commit if `npm run build` or `npm test` fail.
 
@@ -66,9 +66,10 @@ Deferred:         [anything not completed, or "none"]
 | Cross-device sync | **Optional** — Google sign-in + Firestore per-user doc (PRD §12). Off by default (logged out = localStorage only) |
 | Backend / DB | No DB for band data (`bands.json` read-only, NOT in Firestore). Backends: keyless `/api/preview` route; **optional** Firestore for signed-in personal state only, namespaced to `warped_users/{uid}` in the **shared `wdnnsp`** project. PRD §5.2/§6/§8.4/§12 |
 | Firebase / Firestore | Shared `wdnnsp` project (hosts another app — **do not break it**). This app touches ONLY `warped_users/{uid}`; never the root or other collections. Security rules are **append-only** (scoped to that path) and live in `firestore.rules` — output for **manual** deploy, never auto-deployed; never replace/broaden the project's existing rules |
-| Runtime external calls | `/api/preview` → Deezer (server-side; stored `preview_url`s expire and Deezer has no browser CORS); **optional** Firebase Auth + Firestore when signed in (client-side). Re-score (§10) is pure client-side; logged out, nothing but `/api/preview` hits the network |
+| Runtime external calls | `/api/preview` → Deezer (server-side; stored `preview_url`s expire and Deezer has no browser CORS); **optional** Firebase Auth + Firestore when signed in (client-side); **optional** Spotify (`accounts.spotify.com` + `api.spotify.com`) client-side when the user connects Spotify for export (PRD §13). Re-score (§10) is pure client-side; logged out / not connected, nothing but `/api/preview` hits the network |
 | Data-refresh sources | Deezer + MusicBrainz, both keyless |
-| Env vars / API keys | App/refresh: none. **Firebase web config:** `NEXT_PUBLIC_FIREBASE_*` (API_KEY, AUTH_DOMAIN, PROJECT_ID, STORAGE_BUCKET, MESSAGING_SENDER_ID, APP_ID) in `.env.local` (gitignored) + Vercel. **Public by design** — the web SDK config ships to the browser and is gated by security rules, not secrecy, so the `ANTHROPIC_API_KEY`-style secrecy rule does NOT apply. Never hardcode them in source (read from `process.env`). A hypothetical future Spotify OAuth secret would still be server-only — never `NEXT_PUBLIC_*` |
+| Env vars / API keys | App/refresh: none. **Firebase web config:** `NEXT_PUBLIC_FIREBASE_*` (API_KEY, AUTH_DOMAIN, PROJECT_ID, STORAGE_BUCKET, MESSAGING_SENDER_ID, APP_ID) in `.env.local` (gitignored) + Vercel. **Public by design** — the web SDK config ships to the browser and is gated by security rules, not secrecy, so the `ANTHROPIC_API_KEY`-style secrecy rule does NOT apply. Never hardcode them in source (read from `process.env`). **Spotify export (PRD §13):** `NEXT_PUBLIC_SPOTIFY_CLIENT_ID` — a PKCE public-client id, also **public by design** (PKCE uses no client secret), `.env.local` + Vercel; missing ⇒ Export feature hidden, app unaffected. Any hypothetical server-side Spotify secret would still be server-only — never `NEXT_PUBLIC_*` |
+| Spotify export | **Optional, allowlist-only** (Spotify **development mode** — no production approval). Authorization Code + **PKCE** (no secret), scope `playlist-modify-private`, redirect `/callback` derived from `window.location.origin`. A **SECOND OAuth, fully separate** from the Firebase Google sign-in (§12). Tokens in-memory only (PKCE verifier transiently in `sessionStorage`); reads picks → creates a **private** playlist (2–3 tracks/band). Off (button hidden) when `NEXT_PUBLIC_SPOTIFY_CLIENT_ID` is unset. PRD §13 |
 | Spotify links | Search URLs (`spotify:search:`), not artist-ID deep links — see PRD §6 |
 | Deploy target | Vercel |
 | Local repo | https://github.com/cgradbad89/WarpedTour |
@@ -83,18 +84,22 @@ scripts/
   lineup.txt        # Band names, one per line (edit when bands announced)
   taste_multi.json  # My 3-window Spotify export (lifetime / 6mo / 1mo)
 firestore.rules    # Firestore security rules — OUTPUT ONLY, append-scoped to warped_users/{uid}; deploy MANUALLY, never replace shared-project rules (PRD §12.5)
-.env.local         # NEXT_PUBLIC_FIREBASE_* (gitignored; mirrored in Vercel) — never committed
+.env.local         # NEXT_PUBLIC_FIREBASE_* + NEXT_PUBLIC_SPOTIFY_CLIENT_ID (gitignored; mirrored in Vercel) — never committed
 src/
   app/
-    layout.tsx      # Wraps app in <AuthProvider> + <PersonalStoreProvider> (SSR-safe; degrades to logged-out)
+    layout.tsx      # Wraps app in <AuthProvider> + <PersonalStoreProvider> + <SpotifyProvider> (SSR-safe; degrades to logged-out / unconfigured)
     page.tsx        # Main list/explorer view ("/") — list, filters, "show only my picks"
-    picks/page.tsx  # "My Picks" view ("/picks") — status sections, reorder (drag + arrows)
+    picks/page.tsx  # "My Picks" view ("/picks") — status sections, reorder (drag + arrows), Export to Spotify (PRD §13)
     schedule/page.tsx  # "Schedule" view ("/schedule") — PREDICTED day/stage/time grid + must-see conflicts (PRD §11)
+    callback/page.tsx  # Spotify OAuth redirect target — PKCE token exchange → /picks (client-only; PRD §13)
     api/preview/route.ts  # GET ?id=<deezer_id> → fresh 30s preview URL (stored ones expire; Deezer has no CORS)
   components/       # BandRow, BandDetail, PreviewPlayer, Controls, StatusToggle, Nav, PicksSection,
-                    # ProfileBar, UploadProfileModal, ConfidenceDot, AuthButton  (detail is an in-page modal, not a route)
+                    # ProfileBar, UploadProfileModal, ConfidenceDot, AuthButton, ExportToSpotify  (detail is an in-page modal, not a route)
   lib/
     storage.ts      # localStorage read/write for warped2026:status + :order + :profile (logged-out path + cloud cache)
+    spotify.ts      # Spotify PKCE auth + in-memory tokens + config gate (client-only; PRD §13) — SEPARATE from Firebase auth
+    spotifyConnection.tsx # SpotifyProvider + useSpotify — connection state seam over spotify.ts (mirrors auth.tsx)
+    spotifyExport.ts # Spotify Web API: search artist → top tracks → create private playlist + add (429 backoff); bandsForExport is pure + unit-tested
     personal.ts     # usePersonalState — thin reader over PersonalStore (status + order)
     profile.ts      # useProfile / useExplorerData — thin readers over PersonalStore (re-score seam); re-exports profile storage
     personalStore.tsx # OWNS {status,order,profile}; switches localStorage↔Firestore by auth; first-login merge + onSnapshot (PRD §12)
@@ -108,7 +113,7 @@ src/
     tasteCsv.ts     # Parse an uploaded Spotify taste CSV → TasteProfile (defensive)
     csv.ts          # RFC-4180 CSV tokenizer (dependency-free)
   types/            # Band + dataset TypeScript interfaces (mirror bands.json)
-tests/              # node --test suites (csv / tasteCsv / scoring / merge) + TS resolution hook
+tests/              # node --test suites (csv / tasteCsv / scoring / merge / spotifyExport) + TS resolution hook
 ```
 
-**See also**: `PRD.md` — full product reference (data contract, UI requirements, sharp edges, backlog, data pipeline; the upload/re-score feature is **§10**, the predicted schedule page is **§11**).
+**See also**: `PRD.md` — full product reference (data contract, UI requirements, sharp edges, backlog, data pipeline; the upload/re-score feature is **§10**, the predicted schedule page is **§11**, the Spotify export is **§13**).

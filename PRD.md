@@ -11,6 +11,7 @@ A single-user, static web app that helps me prep for **Vans Warped Tour — Long
 - All band data is pre-computed and shipped as a static `bands.json` (already built — do not regenerate as part of app work; see Section 8 for the refresh script). The uploaded-taste feature **reuses** `bands.json` as the catalog and recomputes only the taste-dependent fields (Section 10) — it never modifies `bands.json`.
 - Personal must-see/maybe/skip state persists in **browser localStorage** by default. **Optional Google sign-in** (Section 12) layers cloud sync on top: signed-in users get their picks/order/profile synced to Firestore across devices; **signed-out behavior is unchanged** (localStorage only). Login is purely additive and never required.
 - The uploaded profile is a separate localStorage key and never touches picks (and, when signed in, syncs as its own field in the same per-user doc).
+- **Optional Spotify export** (Section 13): from My Picks, connect a Spotify account (Authorization Code + PKCE, **a second OAuth, fully separate from the Google sign-in above**) and create a private playlist of your picks — 2–3 top tracks per band. Allowlist-only (Spotify dev mode). Additive: when unconfigured or not connected, the app is exactly as before.
 
 **Explicitly out of scope for MVP** (see Section 7 backlog): full multi-user Spotify **OAuth** (the upload feature is the lightweight, no-backend alternative — Section 10), live Spotify playback (full tracks), set-times / stage assignments. (Cross-device sync of personal picks is now **optionally** available via sign-in — Section 12 — but is never required.)
 
@@ -21,6 +22,7 @@ A single-user, static web app that helps me prep for **Vans Warped Tour — Long
 | `/` | Main list/explorer view | Search, filter, sort, band rows, plus a "show only my picks" toggle. Default landing. |
 | `/picks` | My Picks view | Real route. The bands you've marked, grouped by status (Must see / Maybe / Look into / Skip), with per-section reorder (drag + up/down-arrow fallback) and status-visibility toggles. |
 | `/schedule` | Predicted schedule view | Real route. A **PREDICTED** time-grid (Section 11): stages are columns over a shared time axis, acts time-sorted with same-start acts aligned across columns and a confidence dot. Day toggle; a mobile stage picker shows 1–2 columns on a phone (all stages on desktop). Prominent "not official" disclaimer. Reads the `pred_*` fields + `schedule` block from `bands.json`; taste-independent. |
+| `/callback` | Spotify OAuth redirect target | Real route, client-only. Receives `?code&state` from Spotify, exchanges the code for tokens (PKCE), then routes to `/picks` (Section 13). Shows a spinner + friendly error/allowlist message. No content of its own. |
 | (in-page modal) | Band detail view | **Implemented as an in-page modal/drawer, not a route.** Chosen over `/band/[slug]` to avoid slug/punctuation issues (band names contain `.`, `,`, `...`). Opened from `/`, `/picks`, and `/schedule`. Detail content per Section 5 (incl. the predicted-slot line, §11). |
 
 Three routes (`/`, `/picks`, `/schedule`), connected by a header tab on every page; the detail view is an in-page modal opened from any of them — there is **no `/band` route**. Rows, personal state, and the saved pick order are all keyed by exact band `name` (unique in the dataset), so no slugification is needed and a `bands.json` refresh never orphans them.
@@ -185,6 +187,7 @@ Reference mockup behavior was approved in chat. Build to this:
 - [x] **Friend sharing / multi-user (lightweight)** — DONE: a friend uploads their Spotify taste **CSV** and the app re-scores every band live in their browser, fully client-side (Section 10, `warped2026:profile`). No backend, no OAuth.
 - [ ] **Multi-user mode (full OAuth)** — Spotify OAuth (`user-top-read`) so others connect without exporting a CSV, and scores sync. Requires a runtime/server step and a backend. Still deferred by design; the upload feature above covers the no-backend case.
 - [x] **Cross-device sync** of personal picks — DONE (optional): Google sign-in + Firestore per-user sync (Section 12). Signed-out stays localStorage-only; sign-in is additive and never required.
+- [x] **Export picks to a Spotify playlist** — DONE (optional, Section 13): connect Spotify (Authorization Code + PKCE, separate from the Google sign-in) and build a private playlist from your picks, 2–3 tracks/band. Allowlist-only (Spotify dev mode). Additive — off when unconfigured/not connected.
 - [ ] **"Surprise me"** — highlight high-score bands I haven't marked yet.
 
 ## 8. External Services & Data Refresh
@@ -314,3 +317,36 @@ Firebase web config is read from `NEXT_PUBLIC_FIREBASE_*` (`API_KEY`, `AUTH_DOMA
 - **Never break the logged-out path.** `storage.ts` stays purely local; the cloud layer is layered on top by `PersonalStore`. If you touch the store, re-verify logged-out behavior is unchanged.
 - **Don't widen the Firestore footprint.** Stay inside `warped_users/{uid}`; never write the root or another collection in the shared project. If you change the doc shape, bump `schemaVersion` and keep `coerceSnapshot` tolerant of old docs.
 - **`bands.json` is still read-only and NOT in Firestore.** Only the user's personal state syncs.
+
+## 13. Export to Spotify (optional, allowlist-only)
+
+From the **My Picks** page the user can create a **private Spotify playlist** of their picks in their **own** account — 2–3 top tracks per band. This is **additive**: when it isn't configured or the user hasn't connected, the app behaves exactly as §1–§12 describe. It **reads picks only** — it never writes `bands.json` or personal state.
+
+### 13.1 A SECOND, separate OAuth (not the Google sign-in)
+- The export uses **Spotify** Authorization Code + **PKCE** — a **public client, NO client secret in the frontend**. It is **completely separate** from the optional Firebase **Google** sign-in (§12, which syncs picks). A user can be signed in (or not) and connected to Spotify (or not) independently; the two are never merged and are clearly labelled ("Connect Spotify" vs "Sign in").
+- **Scope:** `playlist-modify-private` only (we always create **private** playlists; `playlist-modify-public` is intentionally not requested).
+- **Redirect URI:** the app's own `/callback` route, derived at runtime from `window.location.origin` so it works on `localhost` and the Vercel domain (both must be on the Spotify app's allowlist).
+- **Tokens:** held **in memory for the session** (module-scope in `src/lib/spotify.ts`), refreshed via the refresh token as needed. **Nothing sensitive is persisted** — only the PKCE **code-verifier** + state live transiently in `sessionStorage` across the auth redirect, and are deleted on token exchange. A full page reload ends the Spotify session (expected, by design).
+
+### 13.2 Env / config (public client id)
+- **`NEXT_PUBLIC_SPOTIFY_CLIENT_ID`** — the only Spotify env var; **public by design** (a PKCE public-client id, not a secret), read from `process.env`, set in `.env.local` (gitignored) + Vercel.
+- **If it's missing, the feature is OFF:** `isSpotifyConfigured()` is false, the Export button **renders nothing**, and the app is unaffected. No crash, no console noise.
+- There is **no Spotify client secret** anywhere (PKCE doesn't need one). A hypothetical future server-side Spotify secret would still be server-only — never `NEXT_PUBLIC_*`.
+
+### 13.3 The flow
+1. **Connect** (`ExportToSpotify`): the Export button opens a dialog; if not connected it shows **"Connect Spotify"**, which begins PKCE and redirects to Spotify's consent screen.
+2. **Callback** (`/callback`): Spotify redirects back with `?code&state`; the page validates state, exchanges the code for tokens (client-side, no secret), then routes to `/picks?spotify=connected`, which auto-opens the dialog at the status step.
+3. **Select statuses**: checkboxes for **Must / Maybe / Look into** (default **Must** checked; the user can add the others). **Skip is never exportable.** A live count shows "Export N bands → playlist".
+4. **Export** (`src/lib/spotifyExport.ts`): for each selected band (ordered **Must → Maybe → Look into**, within each by score desc, ties by fans), search the artist on Spotify, take their top **2–3** tracks, **dedupe** across bands (cap 300 total), create a **private** playlist named `Warped Long Beach 2026 — My Picks (Jul 25-26)`, and add the tracks.
+5. **Result**: success shows a **link to open the playlist**, the **track count**, and a **"couldn't find on Spotify"** list of skipped bands. One unmatched band never fails the whole export.
+
+### 13.4 Track resolution
+- Artist match prefers a **normalized exact** name match (reusing `scoring.ts`'s `normalizeArtist` — diacritics folded, non-alnum stripped); otherwise it trusts Spotify's relevance ranking (first result). No match → the band is **skipped and reported**, not an error.
+- Top tracks come from `GET /v1/artists/{id}/top-tracks`, using the user's market (from `/v1/me`, falling back to `US`). Tracks are deduped by id; up to `TRACKS_PER_BAND` (3) per band.
+
+### 13.5 Sharp edges / constraints
+- **Allowlist-only (Spotify development mode).** We do **not** attempt production approval. If Spotify denies a non-allowlisted account (`error=access_denied` on the callback, or an auth error), the UI shows a **friendly message**: the account must be added to the app's allowlist, and the owner can add their Spotify email. Assume the user is allowlisted.
+- **Rate limits (429):** the API helper honours `Retry-After` with a bounded backoff (≤3 retries). Auth failure / network / playlist errors all show a clear message and **reset the button — never a stuck spinner**.
+- **`bands.json` is read-only; picks are read, not modified.** The export reads the existing `status` map; nothing about picks, scoring, schedule, the day filter, or Firebase sync changes.
+- **SSR-safe + client-only.** All PKCE/crypto/token/window/`sessionStorage` code runs only in the browser. `SpotifyProvider` (in `layout.tsx`) is inert until mounted and renders nothing extra when unconfigured, so static prerender and the logged-out/not-connected experience are byte-for-byte unchanged.
+- **Live OAuth round-trip + real playlist creation require a real allowlisted Spotify account** and a browser — they can't be driven headless and are **user-verified only**.

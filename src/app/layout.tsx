@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/lib/auth";
 import { PersonalStoreProvider } from "@/lib/personalStore";
+import { SpotifyProvider } from "@/lib/spotifyConnection";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,9 +33,13 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         {/* Optional auth + cloud sync (PRD §12). Both providers are SSR-safe and
             degrade to the logged-out localStorage app if Firebase is unavailable,
-            so wrapping here never changes the default (logged-out) experience. */}
+            so wrapping here never changes the default (logged-out) experience.
+            SpotifyProvider (PRD §13) is a SEPARATE, optional connect flow for the
+            Export feature; inert (renders nothing extra) when unconfigured. */}
         <AuthProvider>
-          <PersonalStoreProvider>{children}</PersonalStoreProvider>
+          <PersonalStoreProvider>
+            <SpotifyProvider>{children}</SpotifyProvider>
+          </PersonalStoreProvider>
         </AuthProvider>
       </body>
     </html>

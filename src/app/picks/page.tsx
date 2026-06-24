@@ -8,6 +8,7 @@ import { Nav } from "@/components/Nav";
 import { PicksSection } from "@/components/PicksSection";
 import { BandDetail } from "@/components/BandDetail";
 import { DayFilter, shortDayLabel } from "@/components/DayFilter";
+import { ExportToSpotify } from "@/components/ExportToSpotify";
 
 const SECTIONS: { status: BandStatus; label: string; activeChip: string }[] = [
   { status: "must", label: "Must see", activeChip: "bg-rose-600 text-white ring-rose-600" },
@@ -167,6 +168,14 @@ export default function PicksPage() {
             <p className="mt-1 text-xs text-muted-foreground">
               Open a band on the Lineup and pick Must see / Maybe / Skip.
             </p>
+          </div>
+        )}
+        {/* Export to Spotify (PRD §13) — renders nothing when the feature isn't
+            configured, so the page is unchanged by default. Reads picks; never
+            writes them. Separate from the Firebase account sign-in. */}
+        {data && totalPicks > 0 && (
+          <div className="px-4 pt-3">
+            <ExportToSpotify bands={data.bands} status={status} />
           </div>
         )}
         {data &&
