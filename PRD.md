@@ -11,7 +11,7 @@ A single-user, static web app that helps me prep for **Vans Warped Tour — Long
 - All band data is pre-computed and shipped as a static `bands.json` (already built — do not regenerate as part of app work; see Section 8 for the refresh script). The uploaded-taste feature **reuses** `bands.json` as the catalog and recomputes only the taste-dependent fields (Section 10) — it never modifies `bands.json`.
 - Personal must-see/maybe/skip state persists in **browser localStorage** by default. **Optional Google sign-in** (Section 12) layers cloud sync on top: signed-in users get their picks/order/profile synced to Firestore across devices; **signed-out behavior is unchanged** (localStorage only). Login is purely additive and never required.
 - The uploaded profile is a separate localStorage key and never touches picks (and, when signed in, syncs as its own field in the same per-user doc).
-- **Optional Spotify export** (Section 13): from My Picks, connect a Spotify account (Authorization Code + PKCE, **a second OAuth, fully separate from the Google sign-in above**) and create a private playlist of your picks — 2–3 top tracks per band. Allowlist-only (Spotify dev mode). Additive: when unconfigured or not connected, the app is exactly as before.
+- **Spotify export** (Section 13) — **currently DISABLED**: Spotify's May 2025 policy blocks playlist creation for development-mode apps (403 for everyone), with no quota path for a hobbyist app. The feature is gated off (`SPOTIFY_EXPORT_ENABLED = false`); the code is left intact. See §13 for the full diagnosis.
 
 **Explicitly out of scope for MVP** (see Section 7 backlog): full multi-user Spotify **OAuth** (the upload feature is the lightweight, no-backend alternative — Section 10), live Spotify playback (full tracks), set-times / stage assignments. (Cross-device sync of personal picks is now **optionally** available via sign-in — Section 12 — but is never required.)
 
@@ -187,7 +187,7 @@ Reference mockup behavior was approved in chat. Build to this:
 - [x] **Friend sharing / multi-user (lightweight)** — DONE: a friend uploads their Spotify taste **CSV** and the app re-scores every band live in their browser, fully client-side (Section 10, `warped2026:profile`). No backend, no OAuth.
 - [ ] **Multi-user mode (full OAuth)** — Spotify OAuth (`user-top-read`) so others connect without exporting a CSV, and scores sync. Requires a runtime/server step and a backend. Still deferred by design; the upload feature above covers the no-backend case.
 - [x] **Cross-device sync** of personal picks — DONE (optional): Google sign-in + Firestore per-user sync (Section 12). Signed-out stays localStorage-only; sign-in is additive and never required.
-- [x] **Export picks to a Spotify playlist** — DONE (optional, Section 13): connect Spotify (Authorization Code + PKCE, separate from the Google sign-in) and build a private playlist from your picks, 2–3 tracks/band. Allowlist-only (Spotify dev mode). Additive — off when unconfigured/not connected.
+- [~] **Export picks to a Spotify playlist** — BUILT then DISABLED (Section 13): connect Spotify (Authorization Code + PKCE) and build a private playlist from your picks, 2–3 tracks/band. **Blocked by Spotify's May 2025 dev-mode policy** (playlist writes return 403 for all dev-mode apps; Extended Quota unavailable to a hobbyist app). Gated off via `SPOTIFY_EXPORT_ENABLED`; code retained for if quota is ever granted.
 - [ ] **"Surprise me"** — highlight high-score bands I haven't marked yet.
 
 ## 8. External Services & Data Refresh
@@ -318,7 +318,29 @@ Firebase web config is read from `NEXT_PUBLIC_FIREBASE_*` (`API_KEY`, `AUTH_DOMA
 - **Don't widen the Firestore footprint.** Stay inside `warped_users/{uid}`; never write the root or another collection in the shared project. If you change the doc shape, bump `schemaVersion` and keep `coerceSnapshot` tolerant of old docs.
 - **`bands.json` is still read-only and NOT in Firestore.** Only the user's personal state syncs.
 
-## 13. Export to Spotify (optional, allowlist-only)
+## 13. Export to Spotify (optional, allowlist-only) — **DISABLED (Spotify policy block)**
+
+> **⚠️ CURRENTLY DISABLED (May 2025 Spotify policy change).** Spotify now blocks
+> apps in **development mode** from all **playlist-write** endpoints
+> (`POST /users/{id}/playlists`, `POST/DELETE /playlists/{id}/tracks`) with
+> **403 Forbidden** — for *everyone*, including the app owner and allowlisted
+> users — and restricts some catalog reads (e.g. artist top-tracks) as well.
+> This is **not** a code/scope bug: the authorize request already requests
+> `playlist-modify-private`, `/me` and `/search` still return 200, and
+> reconnecting does not help (a platform block, not a stale consent). The only
+> escape is **Extended Quota mode**, whose eligibility was tightened to require a
+> registered business + a service with **250k+ monthly active users** —
+> unavailable to a hobbyist app. See Spotify SDK issue
+> [spotify/spotify-web-api-ts-sdk#159](https://github.com/spotify/spotify-web-api-ts-sdk/issues/159).
+>
+> **State of the code:** the feature is gated **off** at a single chokepoint —
+> the constant `SPOTIFY_EXPORT_ENABLED = false` in `src/lib/spotify.ts`, which
+> forces `isSpotifyConfigured()` to return `false`. The Export button therefore
+> **renders nothing** and no Spotify auth/network is ever initiated (it reuses the
+> exact same "off" path as an unset client id). **All PKCE/export code below is
+> left intact** — flip `SPOTIFY_EXPORT_ENABLED` back to `true` *only if* this app
+> is ever granted Extended Quota. The rest of §13 documents the design as built,
+> for that eventuality.
 
 From the **My Picks** page the user can create a **private Spotify playlist** of their picks in their **own** account — 2–3 top tracks per band. This is **additive**: when it isn't configured or the user hasn't connected, the app behaves exactly as §1–§12 describe. It **reads picks only** — it never writes `bands.json` or personal state.
 
@@ -345,6 +367,7 @@ From the **My Picks** page the user can create a **private Spotify playlist** of
 - Top tracks come from `GET /v1/artists/{id}/top-tracks`, using the user's market (from `/v1/me`, falling back to `US`). Tracks are deduped by id; up to `TRACKS_PER_BAND` (3) per band.
 
 ### 13.5 Sharp edges / constraints
+- **⚠️ Playlist writes are blocked in Spotify development mode (May 2025).** This is what disabled the feature (see the banner at the top of §13). `POST /users/{id}/playlists` and `POST/DELETE /playlists/{id}/tracks` return **403 Forbidden** for dev-mode apps regardless of scope or who is calling; some catalog reads (top-tracks) are restricted too, while `/me` and `/search` keep working. **No client-side code change fixes this** — switching to `POST /me/playlists` hits the same block. Extended Quota mode is the only path and is unavailable to a hobbyist app. The gate is `SPOTIFY_EXPORT_ENABLED` in `src/lib/spotify.ts`.
 - **Allowlist-only (Spotify development mode).** We do **not** attempt production approval. If Spotify denies a non-allowlisted account (`error=access_denied` on the callback, or an auth error), the UI shows a **friendly message**: the account must be added to the app's allowlist, and the owner can add their Spotify email. Assume the user is allowlisted.
 - **Rate limits (429):** the API helper honours `Retry-After` with a bounded backoff (≤3 retries). Auth failure / network / playlist errors all show a clear message and **reset the button — never a stuck spinner**.
 - **`bands.json` is read-only; picks are read, not modified.** The export reads the existing `status` map; nothing about picks, scoring, schedule, the day filter, or Firebase sync changes.

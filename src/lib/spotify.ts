@@ -66,14 +66,36 @@ export function subscribeSpotify(listener: () => void): () => void {
   };
 }
 
+// KILL SWITCH — the Spotify export is disabled (May 2025 Spotify policy change).
+// Apps in Spotify *development mode* are now blocked with 403 Forbidden from all
+// playlist-write endpoints (POST /users/{id}/playlists, POST/DELETE
+// /playlists/{id}/tracks) — for EVERYONE, including the app owner and allowlisted
+// users — and some catalog reads (e.g. artist top-tracks) are restricted too.
+// This is NOT a scope/consent bug (the authorize request already requests
+// `playlist-modify-private`); reconnecting can't fix a platform-level block. The
+// only escape is Extended Quota mode, whose eligibility now requires a registered
+// business + a service with 250k+ monthly active users — unavailable to this app.
+// See Spotify SDK issue spotify/spotify-web-api-ts-sdk#159 and PRD §13.
+//
+// Until/unless this app is granted Extended Quota, the whole feature is gated OFF
+// here (the single chokepoint feeding `useSpotify().configured`): the Export
+// button renders nothing and no Spotify auth/network is ever initiated. All the
+// PKCE/export code is left intact — flip this back to `true` to re-enable if the
+// quota situation ever changes.
+const SPOTIFY_EXPORT_ENABLED = false;
+
 /** The PUBLIC client id, or "" when unset (feature then stays disabled). */
 export function getSpotifyClientId(): string {
   return process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_ID ?? "";
 }
 
-/** True when a client id is configured — gates whether the feature shows at all. */
+/**
+ * True when the export feature should show at all — requires both a configured
+ * client id AND the kill switch above. Returns false while the feature is
+ * disabled, so the entire Spotify UI/flow stays off (PRD §13).
+ */
 export function isSpotifyConfigured(): boolean {
-  return getSpotifyClientId().length > 0;
+  return SPOTIFY_EXPORT_ENABLED && getSpotifyClientId().length > 0;
 }
 
 /** True when we currently hold Spotify tokens for this session. */
