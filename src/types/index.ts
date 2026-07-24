@@ -150,3 +150,9 @@ export type StatusMap = Record<string, BandStatus>;
  * refresh never orphans entries by id.
  */
 export type OrderMap = Partial<Record<BandStatus, string[]>>;
+
+/**
+ * Text comments associated with bands — localStorage key `warped2026:comments`.
+ * Keyed by band name. Comments are preserved even if the status is cleared.
+ */
+export type CommentMap = Record<string, string>;

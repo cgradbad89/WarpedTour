@@ -7,12 +7,13 @@
 // Firestore (logged in — PRD §12). The contract returned here is unchanged, so
 // the pages don't care which storage backs it.
 
-import type { BandStatus, OrderMap, StatusMap } from "@/types";
+import type { BandStatus, CommentMap, OrderMap, StatusMap } from "@/types";
 import { usePersonalStore } from "./personalStore";
 
 export interface PersonalState {
   status: StatusMap;
   order: OrderMap;
+  comments: CommentMap;
   /** Set or clear (null) a band's status; also prunes it from any saved order. */
   changeStatus: (name: string, next: BandStatus | null) => void;
   /** Persist an explicit ordered name list for one status section. */
@@ -23,25 +24,31 @@ export interface PersonalState {
   clearAll: () => void;
   /** Number of bands with any status set. */
   pickCount: number;
+  /** Set or clear a comment for a band. Empty string clears it. */
+  setComment: (name: string, comment: string) => void;
 }
 
 export function usePersonalState(): PersonalState {
   const {
     status,
     order,
+    comments,
     changeStatus,
     setSectionOrder,
     resetSectionOrder,
     clearAll,
     pickCount,
+    setComment,
   } = usePersonalStore();
   return {
     status,
     order,
+    comments,
     changeStatus,
     setSectionOrder,
     resetSectionOrder,
     clearAll,
     pickCount,
+    setComment,
   };
 }

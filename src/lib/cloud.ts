@@ -99,6 +99,6 @@ function parseDoc(data: unknown): PersonalSnapshot {
   try {
     return coerceSnapshot(JSON.parse(raw));
   } catch {
-    return { status: {}, order: {}, profile: null };
+    return { status: {}, order: {}, comments: {}, profile: null };
   }
 }

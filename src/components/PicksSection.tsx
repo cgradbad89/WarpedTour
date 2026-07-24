@@ -35,15 +35,18 @@ export function PicksSection({
   label,
   status,
   bands,
+  comments,
   hasManualOrder,
   emptyDayLabel = null,
   onReorder,
   onReset,
   onOpen,
+  onSetComment,
 }: {
   label: string;
   status: BandStatus;
   bands: Band[];
+  comments: Record<string, string>;
   hasManualOrder: boolean;
   /** Compact day label (e.g. "Sat 25") when a day filter is active; null = all
    *  days. Drives the empty-state copy so it reads "for [day]" under a filter. */
@@ -51,11 +54,17 @@ export function PicksSection({
   onReorder: (names: string[]) => void;
   onReset: () => void;
   onOpen: (band: Band) => void;
+  onSetComment: (name: string, comment: string) => void;
 }) {
   const listRef = useRef<HTMLUListElement>(null);
   const geom = useRef<{ rowH: number; listTop: number; grabY: number } | null>(null);
   const dragRef = useRef<{ from: number; to: number } | null>(null);
   const [drag, setDrag] = useState<DragState | null>(null);
+  const [expandedComments, setExpandedComments] = useState<Record<string, boolean>>({});
+
+  const toggleComment = (name: string) => {
+    setExpandedComments((prev) => ({ ...prev, [name]: !prev[name] }));
+  };
 
   const move = (from: number, to: number) => {
     if (to < 0 || to >= bands.length || from === to) return;
@@ -143,7 +152,7 @@ export function PicksSection({
             return (
               <li
                 key={band.name}
-                className={`relative flex items-center border-b border-border bg-card ${
+                className={`relative flex flex-col border-b border-border bg-card ${
                   isDragged ? "shadow-lg" : ""
                 }`}
                 style={{
@@ -152,7 +161,8 @@ export function PicksSection({
                   zIndex: isDragged ? 10 : undefined,
                 }}
               >
-                <button
+                <div className="flex w-full items-center">
+                  <button
                   type="button"
                   aria-label={`Drag to reorder ${band.name}`}
                   onPointerDown={(e) => onHandleDown(e, i)}
@@ -199,6 +209,60 @@ export function PicksSection({
                       <path d="M6 10l6 6 6-6" />
                     </svg>
                   </button>
+                </div>
+                </div>
+
+                {/* Comment Section */}
+                <div className="w-full pl-[88px] pr-12 pb-3 -mt-1">
+                  {expandedComments[band.name] ? (
+                    <div className="flex flex-col gap-2">
+                      <textarea
+                        className="w-full rounded-md border border-border bg-muted/50 p-2 text-sm outline-none focus:ring-2 focus:ring-accent"
+                        rows={3}
+                        maxLength={500}
+                        placeholder="Add a comment..."
+                        defaultValue={comments[band.name] || ""}
+                        onBlur={(e) => {
+                          const val = e.target.value.trim();
+                          if (val !== (comments[band.name] || "")) {
+                            onSetComment(band.name, val);
+                          }
+                        }}
+                      />
+                      <div className="flex justify-between items-center">
+                        <span className="text-xs text-muted-foreground">Saves automatically</span>
+                        <button
+                          type="button"
+                          onClick={() => toggleComment(band.name)}
+                          className="text-xs font-semibold text-accent hover:underline"
+                        >
+                          Close
+                        </button>
+                      </div>
+                    </div>
+                  ) : comments[band.name] ? (
+                    <div className="flex flex-col gap-1 rounded-md bg-muted/30 p-2 text-sm">
+                      <p className="whitespace-pre-wrap">{comments[band.name]}</p>
+                      <button
+                        type="button"
+                        onClick={() => toggleComment(band.name)}
+                        className="self-start text-[11px] font-semibold text-accent hover:underline"
+                      >
+                        Edit comment
+                      </button>
+                    </div>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => toggleComment(band.name)}
+                      className="flex items-center gap-1.5 text-xs font-semibold text-muted-foreground hover:text-foreground"
+                    >
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                      </svg>
+                      Add comment
+                    </button>
+                  )}
                 </div>
               </li>
             );

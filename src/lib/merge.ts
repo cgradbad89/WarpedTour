@@ -6,13 +6,14 @@
 // My-Picks ordering (order), and the uploaded taste profile (profile). It's the
 // shape we mirror between localStorage and the per-user Firestore doc.
 
-import type { BandStatus, OrderMap, StatusMap } from "@/types";
+import type { BandStatus, CommentMap, OrderMap, StatusMap } from "@/types";
 import type { TasteProfile } from "./scoring";
 import { normalizeProfile } from "./storage";
 
 export interface PersonalSnapshot {
   status: StatusMap;
   order: OrderMap;
+  comments: CommentMap;
   profile: TasteProfile | null;
 }
 
@@ -21,7 +22,7 @@ const STATUSES: readonly BandStatus[] = ["must", "maybe", "look", "skip"];
 const VALID: ReadonlySet<string> = new Set<BandStatus>(STATUSES);
 
 /** An empty snapshot — the baseline when neither side has data. */
-export const EMPTY_SNAPSHOT: PersonalSnapshot = { status: {}, order: {}, profile: null };
+export const EMPTY_SNAPSHOT: PersonalSnapshot = { status: {}, order: {}, comments: {}, profile: null };
 
 /**
  * Defensively coerce arbitrary data (a Firestore doc, parsed JSON, anything)
@@ -29,7 +30,7 @@ export const EMPTY_SNAPSHOT: PersonalSnapshot = { status: {}, order: {}, profile
  * thrown — a hand-edited or partial cloud doc must not crash the app.
  */
 export function coerceSnapshot(raw: unknown): PersonalSnapshot {
-  if (!raw || typeof raw !== "object") return { status: {}, order: {}, profile: null };
+  if (!raw || typeof raw !== "object") return { status: {}, order: {}, comments: {}, profile: null };
   const obj = raw as Record<string, unknown>;
 
   const status: StatusMap = {};
@@ -52,7 +53,15 @@ export function coerceSnapshot(raw: unknown): PersonalSnapshot {
     }
   }
 
-  return { status, order, profile: normalizeProfile(obj.profile) };
+  const comments: CommentMap = {};
+  const c = obj.comments;
+  if (c && typeof c === "object") {
+    for (const [name, val] of Object.entries(c as Record<string, unknown>)) {
+      if (typeof val === "string") comments[name] = val;
+    }
+  }
+
+  return { status, order, comments, profile: normalizeProfile(obj.profile) };
 }
 
 /**
@@ -72,6 +81,7 @@ export function mergeSnapshots(
   cloud: PersonalSnapshot,
 ): PersonalSnapshot {
   const status: StatusMap = { ...local.status, ...cloud.status };
+  const comments: CommentMap = { ...local.comments, ...cloud.comments };
 
   const order: OrderMap = {};
   for (const st of STATUSES) {
@@ -88,7 +98,7 @@ export function mergeSnapshots(
     if (merged.length) order[st] = merged;
   }
 
-  return { status, order, profile: cloud.profile ?? local.profile ?? null };
+  return { status, order, comments, profile: cloud.profile ?? local.profile ?? null };
 }
 
 /**
@@ -101,6 +111,11 @@ export function snapshotsEqual(a: PersonalSnapshot, b: PersonalSnapshot): boolea
   const bk = Object.keys(b.status);
   if (ak.length !== bk.length) return false;
   for (const k of ak) if (a.status[k] !== b.status[k]) return false;
+
+  const ack = Object.keys(a.comments);
+  const bck = Object.keys(b.comments);
+  if (ack.length !== bck.length) return false;
+  for (const k of ack) if (a.comments[k] !== b.comments[k]) return false;
 
   for (const st of STATUSES) {
     const aa = a.order[st] ?? [];

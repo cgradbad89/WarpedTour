@@ -24,14 +24,16 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import type { BandStatus, OrderMap, StatusMap } from "@/types";
+import type { BandStatus, CommentMap, OrderMap, StatusMap } from "@/types";
 import type { TasteProfile } from "./scoring";
 import {
   clearStoredProfile,
+  loadComments,
   loadOrder,
   loadProfile,
   loadStatus,
   removeFromOrder,
+  saveComments,
   saveOrder,
   saveProfile,
   saveStatus,
@@ -58,12 +60,14 @@ export interface PersonalStore {
   /** True once localStorage has been read on the client (mirrors useProfile.ready). */
   profileReady: boolean;
   pickCount: number;
+  comments: CommentMap;
   changeStatus: (name: string, next: BandStatus | null) => void;
   setSectionOrder: (status: BandStatus, names: string[]) => void;
   resetSectionOrder: (status: BandStatus) => void;
   clearAll: () => void;
   setProfile: (profile: TasteProfile) => void;
   clearProfile: () => void;
+  setComment: (name: string, comment: string) => void;
 }
 
 // Safe logged-out default if a consumer is ever used outside the provider (it
@@ -74,12 +78,14 @@ const DEFAULT_STORE: PersonalStore = {
   profile: null,
   profileReady: false,
   pickCount: 0,
+  comments: {},
   changeStatus: () => {},
   setSectionOrder: () => {},
   resetSectionOrder: () => {},
   clearAll: () => {},
   setProfile: () => {},
   clearProfile: () => {},
+  setComment: () => {},
 };
 
 const StoreContext = createContext<PersonalStore | null>(null);
@@ -103,6 +109,7 @@ export function PersonalStoreProvider({ children }: { children: ReactNode }) {
     setCore(next);
     saveStatus(next.status);
     saveOrder(next.order);
+    saveComments(next.comments);
     if (next.profile) saveProfile(next.profile);
     else clearStoredProfile();
   }, []);
@@ -124,6 +131,7 @@ export function PersonalStoreProvider({ children }: { children: ReactNode }) {
     const local: PersonalSnapshot = {
       status: loadStatus(),
       order: loadOrder(),
+      comments: loadComments(),
       profile: loadProfile(),
     };
     coreRef.current = local;
@@ -146,6 +154,7 @@ export function PersonalStoreProvider({ children }: { children: ReactNode }) {
       const local: PersonalSnapshot = {
         status: loadStatus(),
         order: loadOrder(),
+        comments: loadComments(),
         profile: loadProfile(),
       };
       const cloud = await loadCloudSnapshot(uid);
@@ -180,6 +189,7 @@ export function PersonalStoreProvider({ children }: { children: ReactNode }) {
       commit({
         status: setBandStatus(cur.status, name, next),
         order: removeFromOrder(cur.order, name), // status change stales its order slot
+        comments: cur.comments,
         profile: cur.profile,
       });
     },
@@ -204,9 +214,9 @@ export function PersonalStoreProvider({ children }: { children: ReactNode }) {
     [commit],
   );
 
-  // Clears picks + order; leaves the uploaded profile untouched (as today).
+  // Clears picks + order; leaves the uploaded profile and comments untouched.
   const clearAll = useCallback(() => {
-    commit({ status: {}, order: {}, profile: coreRef.current.profile });
+    commit({ status: {}, order: {}, comments: coreRef.current.comments, profile: coreRef.current.profile });
   }, [commit]);
 
   const setProfile = useCallback(
@@ -220,6 +230,20 @@ export function PersonalStoreProvider({ children }: { children: ReactNode }) {
     commit({ ...coreRef.current, profile: null });
   }, [commit]);
 
+  const setComment = useCallback(
+    (name: string, comment: string) => {
+      const cur = coreRef.current;
+      const nextComments = { ...cur.comments };
+      if (!comment.trim()) {
+        delete nextComments[name];
+      } else {
+        nextComments[name] = comment;
+      }
+      commit({ ...cur, comments: nextComments });
+    },
+    [commit],
+  );
+
   const value = useMemo<PersonalStore>(
     () => ({
       status: core.status,
@@ -227,12 +251,14 @@ export function PersonalStoreProvider({ children }: { children: ReactNode }) {
       profile: core.profile,
       profileReady,
       pickCount: Object.keys(core.status).length,
+      comments: core.comments,
       changeStatus,
       setSectionOrder,
       resetSectionOrder,
       clearAll,
       setProfile,
       clearProfile,
+      setComment,
     }),
     [
       core,
@@ -243,6 +269,7 @@ export function PersonalStoreProvider({ children }: { children: ReactNode }) {
       clearAll,
       setProfile,
       clearProfile,
+      setComment,
     ],
   );
 

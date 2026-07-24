@@ -19,7 +19,7 @@ const SECTIONS: { status: BandStatus; label: string; activeChip: string }[] = [
 
 export default function PicksPage() {
   const { data, loading, error, profile } = useExplorerData();
-  const { status, order, changeStatus, setSectionOrder, resetSectionOrder, clearAll, pickCount } =
+  const { status, order, comments, changeStatus, setSectionOrder, resetSectionOrder, clearAll, pickCount, setComment } =
     usePersonalState();
 
   const clearPicks = () => {
@@ -189,11 +189,13 @@ export default function PicksPage() {
                 label={label}
                 status={s}
                 bands={visibleBands}
+                comments={comments}
                 hasManualOrder={(order[s]?.length ?? 0) > 0}
                 emptyDayLabel={day === null ? null : shortDayLabel(day)}
                 onReorder={(names) => persistReorder(s, names)}
                 onReset={() => resetSectionOrder(s)}
                 onOpen={setSelected}
+                onSetComment={setComment}
               />
             );
           })}

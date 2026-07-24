@@ -11,11 +11,12 @@
 //
 // status + order are keyed by exact band name (unique, stable across refreshes).
 
-import type { BandStatus, OrderMap, StatusMap } from "@/types";
+import type { BandStatus, CommentMap, OrderMap, StatusMap } from "@/types";
 import type { TasteProfile, TasteWindowKey } from "./scoring";
 
 export const STATUS_KEY = "warped2026:status";
 export const ORDER_KEY = "warped2026:order";
+export const COMMENT_KEY = "warped2026:comments";
 export const PROFILE_KEY = "warped2026:profile";
 
 // Order matters: this is must → maybe → look → skip (PRD §4). VALID, loadOrder,
@@ -136,6 +137,63 @@ export function clearOrder(): void {
   if (typeof window === "undefined") return;
   try {
     window.localStorage.removeItem(ORDER_KEY);
+  } catch {
+    /* ignore */
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Comments (warped2026:comments)
+// ---------------------------------------------------------------------------
+
+/** Read the comments map. Returns {} when unset, during SSR, or on parse error. */
+export function loadComments(): CommentMap {
+  if (typeof window === "undefined") return {};
+  try {
+    const raw = window.localStorage.getItem(COMMENT_KEY);
+    if (!raw) return {};
+    const parsed: unknown = JSON.parse(raw);
+    if (!parsed || typeof parsed !== "object") return {};
+    const out: CommentMap = {};
+    for (const [name, val] of Object.entries(parsed as Record<string, unknown>)) {
+      if (typeof val === "string") out[name] = val;
+    }
+    return out;
+  } catch {
+    return {};
+  }
+}
+
+/** Persist the whole comments map. Non-fatal on quota / private-mode errors. */
+export function saveComments(map: CommentMap): void {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.setItem(COMMENT_KEY, JSON.stringify(map));
+  } catch {
+    /* ignore */
+  }
+}
+
+/**
+ * Pure helper: return a new map with `name` set to `comment`, or with the key
+ * removed when `comment` is empty.
+ */
+export function setBandComment(
+  map: CommentMap,
+  name: string,
+  comment: string,
+): CommentMap {
+  const next = { ...map };
+  if (!comment.trim()) delete next[name];
+  else next[name] = comment;
+  return next;
+}
+
+/** Wipe all saved comments. */
+export function clearComments(): void {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.removeItem(COMMENT_KEY);
   } catch {
     /* ignore */
   }
