@@ -146,6 +146,19 @@ export function clearOrder(): void {
 // Comments (warped2026:comments)
 // ---------------------------------------------------------------------------
 
+/** Coerce only a plain band-name/comment record; arrays and other containers are invalid. */
+export function coerceCommentMap(value: unknown): CommentMap {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return {};
+  const prototype = Object.getPrototypeOf(value);
+  if (prototype !== Object.prototype && prototype !== null) return {};
+
+  const out: CommentMap = {};
+  for (const [name, val] of Object.entries(value as Record<string, unknown>)) {
+    if (typeof val === "string") out[name] = val;
+  }
+  return out;
+}
+
 /** Read the comments map. Returns {} when unset, during SSR, or on parse error. */
 export function loadComments(): CommentMap {
   if (typeof window === "undefined") return {};
@@ -153,12 +166,7 @@ export function loadComments(): CommentMap {
     const raw = window.localStorage.getItem(COMMENT_KEY);
     if (!raw) return {};
     const parsed: unknown = JSON.parse(raw);
-    if (!parsed || typeof parsed !== "object") return {};
-    const out: CommentMap = {};
-    for (const [name, val] of Object.entries(parsed as Record<string, unknown>)) {
-      if (typeof val === "string") out[name] = val;
-    }
-    return out;
+    return coerceCommentMap(parsed);
   } catch {
     return {};
   }

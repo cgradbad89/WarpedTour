@@ -4,7 +4,7 @@
 
 - **Branch**: Work directly on `main`. If a branch is created automatically, merge it into `main` before pushing.
 - **Build**: Run `npm run build` after all changes. On failure, fix and retry. Stop after 3 consecutive failures — output the full error log and make no further changes.
-- **Test**: Run `npm test` after a passing build. Baseline: **41 tests** (`node --test` over `tests/`, dependency-free, Node ≥ 22 native TS — covers the CSV tokenizer, taste-CSV parser, the `scoring.ts` re-score port, the `merge.ts` cloud-sync merge/coerce, and the `spotifyExport.ts` export-ordering helper). Update this count when you add/remove tests.
+- **Test**: Run `npm test` after a passing build. Baseline: **43 tests** (`node --test` over `tests/`, dependency-free, Node ≥ 22 native TS — covers the CSV tokenizer, taste-CSV parser, the `scoring.ts` re-score port, the comments-aware `merge.ts` cloud-sync merge/coerce contract, and the `spotifyExport.ts` export-ordering helper). Update this count when you add/remove tests.
 - **Commit**: Stage files by explicit path (`git add PRD.md public/bands.json src/...`). Never use `git add -A`. Commit and push only after build (and any tests) pass.
 - **No broken commits**: Do not commit if `npm run build` or `npm test` fail.
 
@@ -12,7 +12,7 @@
 
 - **`public/bands.json` is the canonical, read-only data layer.** The app reads it; the app never writes it.
 - **Do not regenerate `bands.json` as part of app/UI work.** It is regenerated only by `scripts/refresh-data.*`, and only when a task explicitly authorizes it (e.g. new bands announced, updated Spotify export).
-- The `user_status` field inside `bands.json` is a frozen `null`. **Ignore it.** All personal state lives in localStorage (key `warped2026:status`).
+- The `user_status` field inside `bands.json` is a frozen `null`. **Ignore it.** Personal state lives in localStorage by default (keys `warped2026:status`, `warped2026:order`, `warped2026:comments`, and `warped2026:profile`) and optionally syncs to Firestore when signed in.
 - If you change the band object shape, update **both** the refresh script and PRD.md Section 3 in the same commit.
 
 ## Refreshing the Data
@@ -59,10 +59,10 @@ Deferred:         [anything not completed, or "none"]
 |---|---|
 | App type | Next.js — static pages + one keyless API route (`/api/preview`). **Optional** Google auth + Firestore cloud sync (client-only); logged out = no backend, exactly as before. PRD §12 |
 | Data layer | `public/bands.json` (read-only at runtime). NOT in Firestore — only the user's personal state syncs |
-| Personal state | Browser localStorage by default — keys `warped2026:status` (picks) + `warped2026:order` (My-Picks order) + `warped2026:profile` (uploaded taste). **Optionally** syncs to Firestore when signed in (PRD §12); logged out is localStorage-only and unchanged |
+| Personal state | Browser localStorage by default — keys `warped2026:status` (picks) + `warped2026:order` (My-Picks order) + `warped2026:comments` (per-band comments) + `warped2026:profile` (uploaded taste). **Optionally** syncs to Firestore when signed in (PRD §12); logged out is localStorage-only and unchanged |
 | Uploaded taste | `warped2026:profile` — a friend's parsed taste for the client-side re-score (PRD §10). Separate from picks; never written to `bands.json`; absent ⇒ owner's default view. Syncs as its own field in the per-user doc when signed in |
 | Re-score algorithm | **`src/lib/scoring.ts` is the single source of the runtime algorithm** — a faithful port of `scripts/refresh-data.mjs`. Change one, mirror the other (+ its tests). PRD §10 |
-| Storage seam | **`src/lib/personalStore.tsx` owns `{status,order,profile}` and switches localStorage↔Firestore by auth.** `usePersonalState`/`useProfile` are thin readers over it — don't break those contracts. Login merge is pure in `src/lib/merge.ts`. PRD §12 |
+| Storage seam | **`src/lib/personalStore.tsx` owns `{status,order,comments,profile}` and switches localStorage↔Firestore by auth.** `usePersonalState`/`useProfile` are thin readers over it — don't break those contracts. Login merge is pure in `src/lib/merge.ts`. PRD §12 |
 | Cross-device sync | **Optional** — Google sign-in + Firestore per-user doc (PRD §12). Off by default (logged out = localStorage only) |
 | Backend / DB | No DB for band data (`bands.json` read-only, NOT in Firestore). Backends: keyless `/api/preview` route; **optional** Firestore for signed-in personal state only, namespaced to `warped_users/{uid}` in the **shared `wdnnsp`** project. PRD §5.2/§6/§8.4/§12 |
 | Firebase / Firestore | Shared `wdnnsp` project (hosts another app — **do not break it**). This app touches ONLY `warped_users/{uid}`; never the root or other collections. Security rules are **append-only** (scoped to that path) and live in `firestore.rules` — output for **manual** deploy, never auto-deployed; never replace/broaden the project's existing rules |
@@ -96,13 +96,13 @@ src/
   components/       # BandRow, BandDetail, PreviewPlayer, Controls, StatusToggle, Nav, PicksSection,
                     # ProfileBar, UploadProfileModal, ConfidenceDot, AuthButton, ExportToSpotify  (detail is an in-page modal, not a route)
   lib/
-    storage.ts      # localStorage read/write for warped2026:status + :order + :profile (logged-out path + cloud cache)
+    storage.ts      # localStorage read/write for warped2026:status + :order + :comments + :profile (logged-out path + cloud cache)
     spotify.ts      # Spotify PKCE auth + in-memory tokens + config gate (client-only; PRD §13) — SEPARATE from Firebase auth
     spotifyConnection.tsx # SpotifyProvider + useSpotify — connection state seam over spotify.ts (mirrors auth.tsx)
     spotifyExport.ts # Spotify Web API: search artist → top tracks → create private playlist + add (429 backoff); bandsForExport is pure + unit-tested
-    personal.ts     # usePersonalState — thin reader over PersonalStore (status + order)
+    personal.ts     # usePersonalState — thin reader over PersonalStore (status + order + comments)
     profile.ts      # useProfile / useExplorerData — thin readers over PersonalStore (re-score seam); re-exports profile storage
-    personalStore.tsx # OWNS {status,order,profile}; switches localStorage↔Firestore by auth; first-login merge + onSnapshot (PRD §12)
+    personalStore.tsx # OWNS {status,order,comments,profile}; switches localStorage↔Firestore by auth; first-login merge + onSnapshot (PRD §12)
     auth.tsx        # AuthProvider + useAuth — optional Google sign-in (client-only, degrades to logged-out)
     firebase.ts     # Client-only Firebase init from NEXT_PUBLIC_FIREBASE_*; returns null when unavailable (never throws)
     cloud.ts        # Firestore read/write/subscribe for warped_users/{uid} (JSON-blob doc; namespaced; shared project)

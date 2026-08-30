@@ -9,8 +9,8 @@ A single-user, static web app that helps me prep for **Vans Warped Tour — Long
 **Scope for this build (MVP):**
 - Owner-first, but **shareable**: by default the app shows the owner's pre-computed scores; a friend can upload their own Spotify taste CSV to **re-score every band live in their own browser** (Section 10). Still no auth, no accounts — the re-score is 100% client-side. The app is static except for one tiny keyless route, `GET /api/preview`, which resolves fresh (non-expired) 30-sec preview URLs at play time (§5.2, §8.4).
 - All band data is pre-computed and shipped as a static `bands.json` (already built — do not regenerate as part of app work; see Section 8 for the refresh script). The uploaded-taste feature **reuses** `bands.json` as the catalog and recomputes only the taste-dependent fields (Section 10) — it never modifies `bands.json`.
-- Personal must-see/maybe/skip state persists in **browser localStorage** by default. **Optional Google sign-in** (Section 12) layers cloud sync on top: signed-in users get their picks/order/profile synced to Firestore across devices; **signed-out behavior is unchanged** (localStorage only). Login is purely additive and never required.
-- The uploaded profile is a separate localStorage key and never touches picks (and, when signed in, syncs as its own field in the same per-user doc).
+- Personal must-see/maybe/skip state persists in **browser localStorage** by default. **Optional Google sign-in** (Section 12) layers cloud sync on top: signed-in users get their picks/order/comments/profile synced to Firestore across devices; **signed-out behavior is unchanged** (localStorage only). Login is purely additive and never required.
+- Per-band comments and the uploaded profile use separate localStorage keys and never touch picks (and, when signed in, sync as fields in the same per-user snapshot).
 - **Spotify export** (Section 13) — **currently DISABLED**: Spotify's May 2025 policy blocks playlist creation for development-mode apps (403 for everyone), with no quota path for a hobbyist app. The feature is gated off (`SPOTIFY_EXPORT_ENABLED = false`); the code is left intact. See §13 for the full diagnosis.
 
 **Explicitly out of scope for MVP** (see Section 7 backlog): full multi-user Spotify **OAuth** (the upload feature is the lightweight, no-backend alternative — Section 10), live Spotify playback (full tracks), set-times / stage assignments. (Cross-device sync of personal picks is now **optionally** available via sign-in — Section 12 — but is never required.)
@@ -85,13 +85,13 @@ The `schedule` block is **additive and PREDICTED** (Section 11). Older `bands.js
 | `pred_confidence` | string | **PREDICTED** confidence: `high` / `medium` / `low` | Confidence dot + legend (§11) |
 | `user_status` | null | Placeholder. **Do not read/write this field.** Personal status lives in localStorage (Section 4). | — |
 
-**Important:** `user_status` in the JSON is always `null` and is a frozen artifact of the data build. The app must NOT mutate `bands.json`. All personal state is localStorage-only.
+**Important:** `user_status` in the JSON is always `null` and is a frozen artifact of the data build. The app must NOT mutate `bands.json`. Personal state uses localStorage by default and may optionally sync to Firestore when signed in (Section 12).
 
 **The `pred_*` fields are PREDICTED, not official** (Section 11) — a heuristic guess at stage/day/time, **not** real set times (Warped only posts those on-site). They are taste-independent (the same for the owner and any uploaded-profile viewer) and survive a re-score unchanged. Typed **optional** in `src/types` so the Schedule grid degrades gracefully if a future band lacks them; present on every band in the current dataset.
 
 ## 4. Personal State (localStorage)
 
-Three localStorage keys hold all user-writable state (`warped2026:status`, `:order`, `:profile`). The app NEVER writes `bands.json`. **When signed in (Section 12), these same three shapes sync to Firestore** (one per-user doc) with localStorage kept as a mirror/offline cache; **signed out, it is localStorage only — exactly as described below.** The read/write contracts in this section are unchanged either way: the storage backend is swapped behind `usePersonalState` / `useProfile` by the shared `PersonalStore`, so the rest of the app is agnostic.
+Four localStorage keys hold all user-writable state (`warped2026:status`, `:order`, `:comments`, `:profile`). The app NEVER writes `bands.json`. **When signed in (Section 12), these same four shapes sync to Firestore** (one per-user doc) with localStorage kept as a mirror/offline cache; **signed out, it is localStorage only — exactly as described below.** The read/write contracts in this section are unchanged either way: the storage backend is swapped behind `usePersonalState` / `useProfile` by the shared `PersonalStore`, so the rest of the app is agnostic.
 
 ### 4.1 Status — `warped2026:status`
 - **Shape:** `{ [bandName: string]: "must" | "maybe" | "look" | "skip" }`. Absence = unset.
@@ -109,14 +109,20 @@ Three localStorage keys hold all user-writable state (`warped2026:status`, `:ord
 - **Sync:** changing or clearing a band's status removes it from every order array (no stale names accumulate); a per-section "Reset to score order" deletes that section's array; "Clear my picks" removes the whole key.
 - **Keyed by name** for the same refresh-safe reason as status.
 
-### 4.3 Uploaded taste profile — `warped2026:profile`
+### 4.3 Band comments — `warped2026:comments`
+- **Shape:** `{ [bandName: string]: string }`. Absence of a band key means no saved comment.
+- **Purpose:** persists the plain-text note entered for a band on `/picks`; keyed by exact band name, like status and order.
+- **Independent from picks and profile:** changing or clearing a status, reordering/resetting a section, clearing all picks, or loading/replacing/clearing a taste profile never removes comments. An empty/whitespace-only edit removes only that band's comment.
+- **Defensive load:** absent legacy data and malformed comment containers become `{}`; valid string values survive and non-string values are discarded.
+
+### 4.4 Uploaded taste profile — `warped2026:profile`
 - **Shape:** `TasteProfile` — `{ version: 1, label?: string, windows: { short_term, medium_term, long_term: { artists: string[], genres: string[] } } }`. Absent = the owner's default view (Section 10).
 - **Purpose:** holds a friend's parsed Spotify taste so the app can re-score `bands.json` against it client-side. This is the **only** writer/reader of taste data at runtime; `bands.json` is never written.
-- **Separate from picks:** loading, replacing, or clearing a profile **never** touches `warped2026:status` or `warped2026:order`. A re-score does not wipe picks (verified). Picks remain the viewer's own per-browser state.
+- **Separate from picks and comments:** loading, replacing, or clearing a profile **never** touches `warped2026:status`, `warped2026:order`, or `warped2026:comments`. A re-score does not wipe picks or comments. Picks and comments remain the viewer's own personal state.
 - **Defensive load:** the loader coerces/validates stored JSON into a `TasteProfile`; anything unusable (or an empty profile) is treated as "no profile" → default view. SSR-guarded (client-only).
 - **Clearing** ("Use default") removes only this key.
 
-Beyond these three keys, do **not** use `localStorage` for anything else — no analytics, no caching of `bands.json` (it ships with the app).
+Beyond these four keys, do **not** use `localStorage` for anything else — no analytics, no caching of `bands.json` (it ships with the app).
 
 ## 5. UI Requirements
 
@@ -159,7 +165,7 @@ Reference mockup behavior was approved in chat. Build to this:
 
 ## 6. Known Sharp Edges
 
-- **`bands.json` is read-only at runtime.** Never write to it. Personal state is localStorage only. The `user_status` field inside the JSON is a frozen `null` and must be ignored.
+- **`bands.json` is read-only at runtime.** Never write to it. Personal state is localStorage-backed by default and optionally syncs to Firestore when signed in. The `user_status` field inside the JSON is a frozen `null` and must be ignored.
 - **Similar-artist data is from Deezer, not Spotify.** Spotify deprecated its Related Artists / Recommendations / Audio Features endpoints for new apps (Nov 2024), so none of those can be called from a new Spotify app. Don't try to "upgrade" similar-artists by calling Spotify — it will 403.
 - **Spotify links are search URLs, not artist-ID deep links.** `spotify:search:<name>` opens the app to a search, not directly to the artist page. This is a deliberate MVP tradeoff (no Spotify API access at build time). Exact deep-linking is a backlog item (Section 7).
 - **A few genre tags are imperfect.** MusicBrainz tagging is crowd-sourced; e.g. a band may carry a broad/odd parent genre. The data is good enough for filtering; don't hand-tune inside the app.
@@ -287,24 +293,25 @@ Makes personal state **optionally** cross-device, without changing the default e
 
 ### 12.1 The model
 - **Auth:** Firebase Auth, Google provider, popup flow. A sign-in control lives in the header nav (`AuthButton`); signed in, it shows the account (avatar + name) and a sign-out menu. SSR-safe and **client-only** — Firebase initialises only in the browser.
-- **Default = logged out = unchanged.** No account → status/order/profile live in localStorage exactly as §4 describes. Nothing about the list, picks, schedule, or upload re-score changes.
+- **Default = logged out = unchanged.** No account → status/order/comments/profile live in localStorage exactly as §4 describes. Nothing about the list, picks, schedule, or upload re-score changes.
 - **Signed in = Firestore-backed.** Reads/writes go to the user's Firestore doc; localStorage is kept as a **mirror / offline cache** so signing out retains data and the page never blocks on the network.
 - **Graceful degradation:** if Firebase can't initialise (missing/blank `NEXT_PUBLIC_FIREBASE_*` env, network/init failure, or SSR), the app silently falls back to the logged-out localStorage behavior and the sign-in control renders nothing. It must **never** white-screen on auth.
 
 ### 12.2 The seam (storage-agnostic by construction)
-A single client provider, `PersonalStore` (`src/lib/personalStore.tsx`), owns the user's whole writable state — `{ status, order, profile }` (a **`PersonalSnapshot`**) — and decides whether it's backed by localStorage (logged out) or Firestore (logged in). `usePersonalState` and `useProfile`/`useExplorerData` are now **thin readers over this provider**, so their contracts are unchanged and the rest of the app is agnostic to the backend. `bands.json`, scoring, schedule prediction, and the upload re-score are all **taste-/data-independent and untouched** — this feature only moves the *user's personal state* to optional cloud sync.
+A single client provider, `PersonalStore` (`src/lib/personalStore.tsx`), owns the user's whole writable state — `{ status, order, comments, profile }` (a **`PersonalSnapshot`**) — and decides whether it's backed by localStorage (logged out) or Firestore (logged in). `usePersonalState` and `useProfile`/`useExplorerData` are now **thin readers over this provider**, so their contracts are unchanged and the rest of the app is agnostic to the backend. `bands.json`, scoring, schedule prediction, and the upload re-score are all **taste-/data-independent and untouched** — this feature only moves the *user's personal state* to optional cloud sync.
 
 ### 12.3 Firestore shape + namespacing (shared project — do not break)
 - The Firebase project (`wdnnsp`, project id from env) is **SHARED** with at least one other app. This app touches **exactly one** collection: `warped_users`, one document per user keyed by auth uid — **`warped_users/{uid}`**. It never reads/writes the project root or any other collection.
-- **Doc shape:** `{ data: string, schemaVersion: 1, updatedAt: <serverTimestamp> }`, where `data` is `JSON.stringify(PersonalSnapshot)`. The snapshot is stored as a **JSON string** (not structured Firestore maps) specifically because band names — the keys of the `status` map — contain punctuation Firestore disallows in nested map keys (`Letlive.`, `The Academy Is...`, `Drop Dead, Gorgeous`). The doc is only ever read whole by uid, never queried, so the blob has no downside. Reads coerce defensively via `coerceSnapshot`.
+- **Doc shape:** `{ data: string, schemaVersion: 1, updatedAt: <serverTimestamp> }`, where `data` is `JSON.stringify(PersonalSnapshot)`. The snapshot is stored as a **JSON string** (not structured Firestore maps) specifically because band names — the keys of the `status` and `comments` maps — contain punctuation Firestore disallows in nested map keys (`Letlive.`, `The Academy Is...`, `Drop Dead, Gorgeous`). The doc is only ever read whole by uid, never queried, so the blob has no downside. Reads coerce defensively via `coerceSnapshot`; legacy snapshots without `comments` load with an empty comments map.
 
 ### 12.4 First-login merge (never lose marks)
 On login the device's local snapshot is **merged into** the cloud doc (`src/lib/merge.ts`, pure + unit-tested):
 - **status:** UNION of picks; on the **same** band, **cloud wins** (the established source). A local-only mark is never dropped.
 - **order:** per section, cloud order first, then any local-only names appended (deduped).
+- **comments:** UNION by band name; local-only and cloud-only comments survive, and on the **same** band, **cloud wins**.
 - **profile:** cloud if present, else local.
 
-The merge is **idempotent and non-destructive** (`merge(x, x) === x`; it never deletes a pick), so it's safe to run on every login — repeat logins don't re-run destructively. The store only writes the merge back when it actually added something the cloud lacked (skips a redundant write and avoids clobbering a concurrent remote write). After the merge it live-subscribes (`onSnapshot`) for cross-device updates, mirroring each remote change into localStorage. **Known semantic:** because picks are a union, a pick deleted on one device can be *resurrected* by another device's first-login local data — this is the deliberate "never silently lose marks" tradeoff, not a bug. Concurrent multi-device writes are last-write-wins at doc granularity (acceptable for this app's scale).
+The merge is **idempotent and non-destructive** (`merge(x, x) === x`; it never deletes a pick or comment), so it's safe to run on every login — repeat logins don't re-run destructively. The store only writes the merge back when it actually added something the cloud lacked (skips a redundant write and avoids clobbering a concurrent remote write). After the merge it live-subscribes (`onSnapshot`) for cross-device updates, mirroring each remote change into localStorage. **Known semantic:** because picks and comments are unions, a pick or comment deleted on one device can be *resurrected* by another device's first-login local data — this is the deliberate "never silently lose personal state" tradeoff, not a bug. Concurrent multi-device writes are last-write-wins at doc granularity (acceptable for this app's scale).
 
 ### 12.5 Security rules (output-only — deploy manually, append-scoped)
 A user may read/write **only their own doc**: `allow read, write: if request.auth != null && request.auth.uid == uid;` scoped to `match /warped_users/{uid}`. The rules are in **`firestore.rules`** with a prominent "merge, don't replace" warning, and are **NOT deployed by this session** — they must be **appended** to the shared project's existing rules and deployed manually (deploying the file as-is would lock the other app out). Least-privilege: it exposes nothing outside `warped_users/{uid}`.

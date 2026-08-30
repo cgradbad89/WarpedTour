@@ -8,7 +8,7 @@
 
 import type { BandStatus, CommentMap, OrderMap, StatusMap } from "@/types";
 import type { TasteProfile } from "./scoring";
-import { normalizeProfile } from "./storage";
+import { coerceCommentMap, normalizeProfile } from "./storage";
 
 export interface PersonalSnapshot {
   status: StatusMap;
@@ -53,13 +53,7 @@ export function coerceSnapshot(raw: unknown): PersonalSnapshot {
     }
   }
 
-  const comments: CommentMap = {};
-  const c = obj.comments;
-  if (c && typeof c === "object") {
-    for (const [name, val] of Object.entries(c as Record<string, unknown>)) {
-      if (typeof val === "string") comments[name] = val;
-    }
-  }
+  const comments = coerceCommentMap(obj.comments);
 
   return { status, order, comments, profile: normalizeProfile(obj.profile) };
 }
