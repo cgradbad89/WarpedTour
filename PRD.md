@@ -23,6 +23,8 @@ A single-user, static web app that helps me prep for **Vans Warped Tour — Long
 | `/picks` | My Picks view | Real route. The bands you've marked, grouped by status (Must see / Maybe / Look into / Skip), with per-section reorder (drag + up/down-arrow fallback) and status-visibility toggles. |
 | `/schedule` | Predicted schedule view | Real route. A **PREDICTED** time-grid (Section 11): stages are columns over a shared time axis, acts time-sorted with same-start acts aligned across columns and a confidence dot. Day toggle; a mobile stage picker shows 1–2 columns on a phone (all stages on desktop). Prominent "not official" disclaimer. Reads the `pred_*` fields + `schedule` block from `bands.json`; taste-independent. |
 | `/callback` | Spotify OAuth redirect target | Real route, client-only. Receives `?code&state` from Spotify, exchanges the code for tokens (PKCE), then routes to `/picks` (Section 13). Shows a spinner + friendly error/allowlist message. No content of its own. |
+| `/api/play` | Personal one-tap "play my playlist" endpoint (Section 14) | **Server-only `POST` route, no UI.** For an Apple Watch Shortcut. Shared-secret header; starts one fixed playlist on the owner's phone via the Spotify player API. |
+| `/api/spotify/owner-auth`, `/api/spotify/owner-callback` | One-time owner consent for `/api/play` (Section 14) | **Server-only `GET` routes.** `owner-auth` (gated by `?key=PLAY_SECRET`) redirects to Spotify; `owner-callback` shows the refresh token once. |
 | (in-page modal) | Band detail view | **Implemented as an in-page modal/drawer, not a route.** Chosen over `/band/[slug]` to avoid slug/punctuation issues (band names contain `.`, `,`, `...`). Opened from `/`, `/picks`, and `/schedule`. Detail content per Section 5 (incl. the predicted-slot line, §11). |
 
 Three routes (`/`, `/picks`, `/schedule`), connected by a header tab on every page; the detail view is an in-page modal opened from any of them — there is **no `/band` route**. Rows, personal state, and the saved pick order are all keyed by exact band `name` (unique in the dataset), so no slugification is needed and a `bands.json` refresh never orphans them.
@@ -380,3 +382,26 @@ From the **My Picks** page the user can create a **private Spotify playlist** of
 - **`bands.json` is read-only; picks are read, not modified.** The export reads the existing `status` map; nothing about picks, scoring, schedule, the day filter, or Firebase sync changes.
 - **SSR-safe + client-only.** All PKCE/crypto/token/window/`sessionStorage` code runs only in the browser. `SpotifyProvider` (in `layout.tsx`) is inert until mounted and renders nothing extra when unconfigured, so static prerender and the logged-out/not-connected experience are byte-for-byte unchanged.
 - **Live OAuth round-trip + real playlist creation require a real allowlisted Spotify account** and a browser — they can't be driven headless and are **user-verified only**.
+
+## 14. Personal "Play My Playlist" Endpoint (Apple Watch Shortcut)
+
+A **single-user, server-side** feature, unrelated to the band data or the (disabled) §13 export. `POST /api/play` starts one fixed Spotify playlist on the owner's iPhone Spotify app so an Apple Watch Shortcut can do it in one tap. It does **not** touch `bands.json`, personal state, the export flag (`SPOTIFY_EXPORT_ENABLED` stays `false`), or any existing route.
+
+### 14.1 Pieces
+- `src/lib/spotifyPlayer.ts` — **server-only** (reads secrets; never import from a client component). All Spotify calls + the pure helpers (`pickDevice`, `secretsMatch`, `normalizePlaylistUri`, `resultForSpotifyStatus`, `readPlayConfig`, `playConfiguredPlaylist`). Unit-tested in `tests/spotifyPlayer.test.ts` (mocked `fetch`).
+- `GET /api/spotify/owner-auth?key=<PLAY_SECRET>` — 401 unless the key matches (constant-time; unset secret fails closed). Mints PKCE verifier + random `state`, stores `<state>.<verifier>` in a 10-min **httpOnly** cookie (`spotify_owner_pkce`, path `/api/spotify`), redirects to Spotify with scopes `user-modify-playback-state user-read-playback-state`.
+- `GET /api/spotify/owner-callback` — verifies `state`, exchanges the code (PKCE), renders a no-store/CSP-locked page with the refresh token **once**, plus a live `GET /me/player/devices` "Player API check". Nothing stored or logged.
+- `POST /api/play` — header `x-play-secret` (constant-time) → refresh access token → `GET /me/player/devices` → pick device → (optional `PUT /me/player/shuffle?state=true`) → `PUT /me/player/play?device_id=…` with `{"context_uri": <playlist>}`. Returns `{ok, message}` JSON.
+
+### 14.2 Auth model
+Authorization Code + **PKCE, no client secret** — same public client id as §13 (`NEXT_PUBLIC_SPOTIFY_CLIENT_ID`), refresh is `grant_type=refresh_token` + `client_id`. The refresh token lives in the `SPOTIFY_OWNER_REFRESH_TOKEN` env var (no DB). Redirect URI is derived from the request origin: `https://<prod-domain>/api/spotify/owner-callback` — must be registered exactly in the Spotify dashboard.
+
+### 14.3 Env (all server-only except the shared client id)
+`PLAY_SECRET`, `SPOTIFY_OWNER_REFRESH_TOKEN`, `SPOTIFY_PLAYLIST_URI` (URI or open.spotify.com link), `SPOTIFY_DEVICE_NAME` (optional; case-insensitive, substring ok), `SPOTIFY_SHUFFLE` (`true` to enable). Template in `.env.example` (un-ignored in `.gitignore` via `!.env.example`).
+
+### 14.4 Sharp edges
+- **Dev-mode viability is documented but must be confirmed live.** Spotify's Feb-2026 dev-mode changelog lists `GET /me/player/devices`, `PUT /me/player/play`, `PUT /me/player/shuffle` as still available (owner must be Premium; ≤5 authorized users). Nothing documents `context_uri` playback specifically — the first real `POST /api/play` is the true test.
+- **The phone must be a visible Spotify device.** The iPhone only appears in `/me/player/devices` if the Spotify app was recently active; otherwise the endpoint answers "Open Spotify on your iPhone once, then retry".
+- **Refresh tokens last ~6 months** (not extended by refreshing). Re-run owner auth on "Refresh token invalid". If Spotify rotates the token on refresh, the route logs a warning (never the token) and keeps working with the old one.
+- **`?key=` is in a URL** (owner-auth only; `Referrer-Policy: no-referrer`, but it can land in access logs/browser history). Rotate `PLAY_SECRET` if that matters to you.
+- **No rate limiting on `/api/play`** beyond the secret; the secret is the only gate.

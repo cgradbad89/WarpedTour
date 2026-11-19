@@ -4,7 +4,7 @@
 
 - **Branch**: Work directly on `main`. If a branch is created automatically, merge it into `main` before pushing.
 - **Build**: Run `npm run build` after all changes. On failure, fix and retry. Stop after 3 consecutive failures — output the full error log and make no further changes.
-- **Test**: Run `npm test` after a passing build. Baseline: **43 tests** (`node --test` over `tests/`, dependency-free, Node ≥ 22 native TS — covers the CSV tokenizer, taste-CSV parser, the `scoring.ts` re-score port, the comments-aware `merge.ts` cloud-sync merge/coerce contract, and the `spotifyExport.ts` export-ordering helper). Update this count when you add/remove tests.
+- **Test**: Run `npm test` after a passing build. Baseline: **56 tests** (`node --test` over `tests/`, dependency-free, Node ≥ 22 native TS — covers the CSV tokenizer, taste-CSV parser, the `scoring.ts` re-score port, the comments-aware `merge.ts` cloud-sync merge/coerce contract, the `spotifyExport.ts` export-ordering helper, and the `spotifyPlayer.ts` personal play-endpoint helpers). Update this count when you add/remove tests.
 - **Commit**: Stage files by explicit path (`git add PRD.md public/bands.json src/...`). Never use `git add -A`. Commit and push only after build (and any tests) pass.
 - **No broken commits**: Do not commit if `npm run build` or `npm test` fail.
 
